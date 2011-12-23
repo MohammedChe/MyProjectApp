@@ -1,24 +1,31 @@
 <?php
 
-$username='user_081a1e6e';
-$password='xlC4F!dR0%$A$&';
-$database='db_081a1e6e';
 
-$con = mysql_connect("a.db.shared.orchestra.io",$username,$password);
-if (!$con)
-{
-	die('Could not connect: ' . mysql_error());
-}
+$username="username";
+$password="password";
+$database="your_database";
 
-
+mysql_connect("a.db.shared.orchestra.io",$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
+$query="SELECT * FROM User";
+$result=mysql_query($query);
 
+$num=mysql_numrows($result);
 
-$query = "INSERT INTO Users VALUES ('','mo@hotmail.com','password')";
+mysql_close();
 
-mysql_query($query);
+echo "<b><center>Database Output</center></b><br><br>";
 
-mysql_close($con);
+$i=0;
+while ($i < $num) {
+
+$email=mysql_result($result,$i,"Email");
+$password=mysql_result($result,$i,"Password");
+
+echo "<b>Email:$email</b><br>Password: $password<br>";
+
+$i++;
+}
 
 ?>
 
