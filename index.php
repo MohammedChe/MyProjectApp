@@ -7,9 +7,14 @@ $database="db_081a1e6e";
 
 mysql_connect("a.db.shared.orchestra.io",$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
+
+
+$query2 = "INSERT INTO User VALUES ('','agvfkjgvca','hvcakhgkcsc')";
+mysql_query($query2);
+
+
 $query="SELECT * FROM User";
 $result=mysql_query($query);
-
 $num=mysql_numrows($result);
 
 mysql_close();
