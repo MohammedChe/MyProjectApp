@@ -1,8 +1,8 @@
 <?php
 
-$username="user_081a1e6e";
+$username='user_081a1e6e';
 $password='xlC4F!dR0%$A$&';
-$database="db_081a1e6e";
+$database='db_081a1e6e';
 
 $con = mysql_connect("a.db.shared.orchestra.io",$username,$password);
 if (!$con)
