@@ -38,7 +38,7 @@ $i++;
 
 <body>
 <p>
-TESTING
+<a href="Register/">Register</a>
 </p>
 </body>
 </html>

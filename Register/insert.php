@@ -16,4 +16,6 @@ $query = "INSERT INTO User VALUES ('','$email','$passw')";
 mysql_query($query);
 
 mysql_close();
+
+header("Location: ../"); 
 ?>
