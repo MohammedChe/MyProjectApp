@@ -9,7 +9,7 @@ $email=$_POST['email'];
 $passw=$_POST['passw'];
 
 
-mysql_connect(localhost,$username,$password);
+mysql_connect("a.db.shared.orchestra.io",$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 
 $query = "INSERT INTO User VALUES ('','$email','$passw')";
