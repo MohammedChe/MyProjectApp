@@ -111,7 +111,5 @@ else
 	//header("Location: index.php");
 }
 
-echo "email2:   " +validateEmail($email);
-echo "pass:   " +validatePassword();
  
 ?>
