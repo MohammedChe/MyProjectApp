@@ -15,6 +15,15 @@ $passConError = "";
 function validateEmail()
 {
    $isEmailValid = false;
+   
+	if (!filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL))
+    {
+   		 $emailError = "This email is not valid";
+    }
+  else
+    {
+		$isEmailValid = true;
+    }
 	
 	return $isEmailValid;
 }
@@ -28,6 +37,10 @@ function validatePassword()
 	if ($passw === $passcon)
 	{
 		$isPassValid = true;
+	}
+	else
+	{
+		$passConError = "Does not match your password";
 	}
 	
 	return $isPassValid;
@@ -66,7 +79,7 @@ else
 
 <body>
 
-<form action="register.php" method="post">
+<form action="" method="post">
 <table width="200" border="1">
   <tr>
     <th scope="row">Email:</th>
