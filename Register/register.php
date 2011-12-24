@@ -53,9 +53,7 @@ else
 	
 	//header("Location: index.php");
 }
-echo $email;
-echo $passw;
-echo $passcon;
+
 echo validateEmail();
 echo validatePassword();
 echo isValid();
