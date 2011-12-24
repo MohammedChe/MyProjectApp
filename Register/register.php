@@ -9,10 +9,8 @@ $passw=$_POST['passw'];
 $passcon=$_POST['passcon'];
 
 function validateEmail()
-{
-	$isEmailValid = false;
-
-	return $isEmailValid;
+{	
+	return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
 
