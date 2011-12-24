@@ -89,7 +89,7 @@ else
 }
 
 
-if ($isEmailValid = true && $isPassValid = true)
+if ($isEmailValid == true && $isPassValid == true)
 {
 	$isValid = true;
 }
@@ -98,7 +98,7 @@ else
 	$isValid = false;
 }
 
-if ($isValid = true)
+if ($isValid == true)
 {
 	
 	mysql_connect("a.db.shared.orchestra.io",$username,$password);
