@@ -38,7 +38,7 @@ $i++;
 
 <body>
 <p>
-<a href="Register/">Register</a>
+<a href="register.php">Register</a>
 </p>
 </body>
 </html>
