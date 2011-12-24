@@ -8,7 +8,7 @@ $email=$_POST['email'];
 $passw=$_POST['passw'];
 $passcon=$_POST['passcon'];
 
-function validateEmail($email)
+function validateEmail()
 {
    $isValid = true;
    $atIndex = strrpos($email, "@");
@@ -89,7 +89,7 @@ function validatePassword()
 
 function isValid()
 {
-	return validateEmail($email) && validatePassword();
+	return validateEmail() && validatePassword();
 }
 
 if (isValid())
