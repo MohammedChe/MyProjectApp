@@ -7,7 +7,7 @@
 
 <body>
 
-<form action="insert.php" method="post">
+<form action="register.php" method="post">
 Email: <input type="text" name="email"><br>
 Password: <input type="password" name="passw"><br>
 Confirm Password: <input type="password" name="passcon"><br>
