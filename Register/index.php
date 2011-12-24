@@ -8,9 +8,11 @@
 <body>
 
 <form action="register.php" method="post">
+
 Email: <input type="text" name="email"><br>
 Password: <input type="password" name="passw"><br>
 Confirm Password: <input type="password" name="passcon"><br>
+
 <input type="Submit">
 </form>
 
