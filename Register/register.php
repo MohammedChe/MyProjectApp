@@ -4,9 +4,13 @@ $username="user_081a1e6e";
 $password='xlC4F!dR0%$A$&';
 $database="db_081a1e6e";
 
-$email=$_POST['email'];
-$passw=$_POST['passw'];
-$passcon=$_POST['passcon'];
+//$email=$_POST['email'];
+//$passw=$_POST['passw'];
+//$passcon=$_POST['passcon'];
+
+$email="sff";
+$passw="sss";
+$passcon="ssss";
 
 function validateEmail()
 {
