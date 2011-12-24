@@ -21,7 +21,7 @@ function validateEmail()
 
 
 
-function validatePassword()
+function validatePassword($passw, $passcon)
 {
 	$isPassValid = false;
 	
@@ -33,12 +33,12 @@ function validatePassword()
 	return $isPassValid;
 }
 
-function isValid()
-{
-	return validateEmail() && validatePassword();
-}
+//function isValid()
+//{
+//	return validateEmail() && validatePassword();
+//}
 
-if (isValid())
+if (validateEmail() && validatePassword($passw, $passcon))
 {
 	
 	mysql_connect("a.db.shared.orchestra.io",$username,$password);
