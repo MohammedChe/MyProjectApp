@@ -45,14 +45,19 @@ if (isValid())
 
 	mysql_close();
 
-	header("Location: ../");
+	//header("Location: ../");
 
 }
 else
 {
-	echo $email;
+	
 	//header("Location: index.php");
 }
-
+echo $email;
+echo $passw;
+echo $passcon;
+echo validateEmail();
+echo validatePassword();
+echo isValid();
  
 ?>
