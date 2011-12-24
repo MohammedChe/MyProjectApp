@@ -12,6 +12,11 @@ $passcon=$_POST['passcon'];
 function validateEmail()
 {
    $isEmailValid = true;
+   
+   if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+   {
+	   $isEmailValid = false;
+   }
   
    return $isEmailValid;
 }
