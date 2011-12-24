@@ -1,142 +1,84 @@
-<?php
+<?php 
+//register.php
 
-$username="user_081a1e6e";
-$password='xlC4F!dR0%$A$&';
-$database="db_081a1e6e";
+require_once 'includes/global.inc.php';
 
-$email=$_POST['email'];
-$passw=$_POST['passw'];
-$passcon=$_POST['passcon'];
+//initialize php variables used in the form
+$username = "";
+$password = "";
+$password_confirm = "";
+$email = "";
+$error = "";
 
-$emailError = "";
-$passError = "";
-$passConError = "";
+//check to see that the form has been submitted
+if(isset($_POST['submit-form'])) { 
 
-function validateEmail()
-{
-   $isEmailValid = false;
-   
-	if (!filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL))
-    {
-   		 $emailError = "This email is not valid";
-    }
-  else
-    {
-		$isEmailValid = true;
-    }
+	//retrieve the $_POST variables
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$password_confirm = $_POST['password-confirm'];
+	$email = $_POST['email'];
+
+	//initialize variables for form validation
+	$success = true;
+	$userTools = new UserTools();
 	
-	return $isEmailValid;
-}
-
-
-
-function validatePassword()
-{
-	$isPassValid = false;
-	
-	if ($passw === $passcon)
+	//validate that the form was filled out correctly
+	//check to see if user name already exists
+	if($userTools->checkUsernameExists($username))
 	{
-		$isPassValid = true;
+	    $error .= "That username is already taken.<br/> \n\r";
+	    $success = false;
 	}
-	else
+
+	//check to see if passwords match
+	if($password != $password_confirm) {
+	    $error .= "Passwords do not match.<br/> \n\r";
+	    $success = false;
+	}
+
+	if($success)
 	{
-		$passConError = "Does not match your password";
+	    //prep the data for saving in a new user object
+	    $data['username'] = $username;
+	    $data['password'] = md5($password); //encrypt the password for storage
+	    $data['email'] = $email;
+	
+	    //create the new user object
+	    $newUser = new User($data);
+	
+	    //save the new user to the database
+	    $newUser->save(true);
+	
+	    //log them in
+	    $userTools->login($username, $password);
+	
+	    //redirect them to a welcome page
+	    header("Location: welcome.php");
+	    
 	}
-	
-	return $isPassValid;
-}
-
-function isValid()
-{
-	return validateEmail() && validatePassword();
-}
-
-if (isValid())
-{
-	
-	mysql_connect("a.db.shared.orchestra.io",$username,$password);
-	@mysql_select_db($database) or die( "Unable to select database");
-
-	$query = "INSERT INTO User VALUES ('','$email','$passw')";
-	mysql_query($query);
-
-	mysql_close();
 
 }
-else
-{
-}
 
- 
+//If the form wasn't submitted, or didn't validate
+//then we show the registration form again
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>MyProjectApp</title>
+	<title>Registration</title>
 </head>
-
 <body>
-
-<form action="" method="post">
-<table width="200" border="1">
-  <tr>
-    <th scope="row">Email:</th>
-    <td><input type="text" name="email"></td>
-	<?PHP
-	if ($emailError != "")
-	{
-	?>
-    <td>
-    <?PHP
-	echo $emailError;
-	?>
-    </td>
-    <?PHP
-	}
-    ?>
-  </tr>
-  <tr>
-    <th scope="row">Password</th>
-    <td><input type="password" name="passw"></td>
-    <?PHP
-	if ($passError != "")
-	{
-	?>
-    <td>
-    <?PHP
-	echo $passError;
-	?>
-    </td>
-    <?PHP
-	}
-    ?>
-  </tr>
-  <tr>
-    <th scope="row">Confirm Password</th>
-    <td><input type="password" name="passcon"></td>
-    <?PHP
-	if ($passConError != "")
-	{
-	?>
-    <td>
-    <?PHP
-	echo $passConError;
-	?>
-    </td>
-    <?PHP
-	}
-    ?>
-  </tr>
-  <tr>
-  <td colspan="3">
-  <input type="Submit">
-  </td>
-  </tr>
-</table>
-</form>
-
-
+	<?php echo ($error != "") ? $error : ""; ?>
+	<form action="register.php" method="post">
+	
+	Username: <input type="text" value="<?php echo $username; ?>" name="username" /><br/>
+	Password: <input type="password" value="<?php echo $password; ?>" name="password" /><br/>
+	Password (confirm): <input type="password" value="<?php echo $password_confirm; ?>" name="password-confirm" /><br/>
+	E-Mail: <input type="text" value="<?php echo $email; ?>" name="email" /><br/>
+	<input type="submit" value="Register" name="submit-form" />
+	
+	</form>
 </body>
 </html>
