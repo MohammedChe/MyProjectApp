@@ -3,15 +3,13 @@
 $username="user_081a1e6e";
 $password='xlC4F!dR0%$A$&';
 $database="db_081a1e6e";
-$isValid = false;
-$isPassValid = false;
 
 $email=$_POST['email'];
 $passw=$_POST['passw'];
 $passcon=$_POST['passcon'];
 
 
-function validate($email)
+function validateEmail()
 {
    $isEmailValid = true;
    $atIndex = strrpos($email, "@");
@@ -78,27 +76,25 @@ function validate($email)
 }
 
 
-if ($passw === $passcon)
-{
-	$isPassValid = true;
-}
-   
-else
+
+function validatePassword()
 {
 	$isPassValid = false;
+	
+	if ($passw === $passcon)
+	{
+		$isPassValid = true;
+	}
+	
+	return $isPassValid;
 }
 
-
-if ($isEmailValid == true && $isPassValid == true)
+function isValid()
 {
-	$isValid = true;
-}
-else
-{
-	$isValid = false;
+	return validateEmail() && validatePassword();
 }
 
-if ($isValid == true)
+if (isValid())
 {
 	
 	mysql_connect("a.db.shared.orchestra.io",$username,$password);
