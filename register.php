@@ -90,7 +90,7 @@ else
 	?>
     <td>
     <?PHP
-	$emailError
+	echo $emailError;
 	?>
     </td>
     <?PHP
@@ -106,7 +106,7 @@ else
 	?>
     <td>
     <?PHP
-	$passError
+	echo $passError;
 	?>
     </td>
     <?PHP
@@ -122,7 +122,7 @@ else
 	?>
     <td>
     <?PHP
-	$passConError
+	echo $passConError;
 	?>
     </td>
     <?PHP
