@@ -11,10 +11,7 @@ $passcon=$_POST['passcon'];
 function validateEmail()
 {
 	$isEmailValid = false;
-	if($email === "hello")
-	{
-		$isEmailValid = true;
-	}
+
 	return $isEmailValid;
 }
 
