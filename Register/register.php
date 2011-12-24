@@ -12,14 +12,12 @@ function validateEmail()
 {
 	if (!filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL))
     {
-		echo "E-Mail is not valid";
-    	return false;
+    	return true;
     }
 	
  	else
     {
-		echo "E-Mail valid";
-   		return true;
+   		return false;
     }
 }
 
@@ -31,12 +29,7 @@ function validatePassword()
 	
 	if ($passw === $passcon)
 	{
-		echo "Password valid";
 		$isPassValid = true;
-	}
-	else
-	{
-		echo "Password is not valid";
 	}
 	
 	return $isPassValid;
