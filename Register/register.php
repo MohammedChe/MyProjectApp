@@ -9,7 +9,7 @@ $passw=$_POST['passw'];
 $passcon=$_POST['passcon'];
 
 function validateEmail()
-{	
+{
 	return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
@@ -48,8 +48,11 @@ if (isValid())
 }
 else
 {
-	header("Location: index.php");
+	//header("Location: index.php");
 }
 
+echo "email:   " +filter_var($email, FILTER_VALIDATE_EMAIL);
+echo "email2:   " +validateEmail();
+echo "pass:   " +validatePassword();
  
 ?>
