@@ -89,7 +89,7 @@ else
 }
 
 
-if ($isEmailValid && $isPassValid)
+if ($isEmailValid = true && $isPassValid = true)
 {
 	$isValid = true;
 }
