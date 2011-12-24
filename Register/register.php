@@ -8,17 +8,9 @@ $email=$_POST['email'];
 $passw=$_POST['passw'];
 $passcon=$_POST['passcon'];
 
-
 function validateEmail()
 {
-   $isEmailValid = false;
-   
-   if(filter_var($email, FILTER_VALIDATE_EMAIL))
-   {
-	   $isEmailValid = true;
-   }
-  
-   return $isEmailValid;
+   	return eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email);
 }
 
 
