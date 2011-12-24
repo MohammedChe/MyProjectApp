@@ -12,11 +12,6 @@ function validateEmail()
 {
    $isEmailValid = false;
 	
-	if ($email === $passcon)
-	{
-		$isEmailValid = true;
-	}
-	
 	return $isEmailValid;
 }
 
@@ -55,6 +50,7 @@ if (isValid())
 }
 else
 {
+	echo $email;
 	//header("Location: index.php");
 }
 
