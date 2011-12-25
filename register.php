@@ -41,11 +41,20 @@ if(isset($_POST['submit-form'])) {
 	    $success = false;
 	}
 	
-	if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)) 
+//	if(eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", $email)) 
+//	{
+//	}
+//	
+//	else 
+//	{
+//		$error .= "Email address not valid.<br/> \n\r";
+//		$success = false;
+//	}
+
+	if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == TRUE) 
 	{
 	}
-	
-	else 
+	else
 	{
 		$error .= "Email address not valid.<br/> \n\r";
 		$success = false;
