@@ -51,10 +51,7 @@ if(isset($_POST['submit-form'])) {
 //		$success = false;
 //	}
 
-	if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == TRUE) 
-	{
-	}
-	else
+	if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE) 
 	{
 		$error .= "Email address not valid.<br/> \n\r";
 		$success = false;
