@@ -6,18 +6,16 @@ require_once 'DB.class.php';
 class User {
 
 	public $id;
-	public $username;
-	public $hashedPassword;
 	public $email;
+	public $hashedPassword;
 	public $joinDate;
 
 	//Constructor is called whenever a new object is created.
 	//Takes an associative array with the DB row as an argument.
 	function __construct($data) {
 		$this->id = (isset($data['id'])) ? $data['id'] : "";
-		$this->username = (isset($data['username'])) ? $data['username'] : "";
-		$this->hashedPassword = (isset($data['password'])) ? $data['password'] : "";
 		$this->email = (isset($data['email'])) ? $data['email'] : "";
+		$this->hashedPassword = (isset($data['password'])) ? $data['password'] : "";
 		$this->joinDate = (isset($data['join_date'])) ? $data['join_date'] : "";
 	}
 
@@ -30,9 +28,8 @@ class User {
 		if(!$isNewUser) {
 			//set the data array
 			$data = array(
-				"username" => "'$this->username'",
-				"password" => "'$this->hashedPassword'",
-				"email" => "'$this->email'"
+				"email" => "'$this->email'",
+				"password" => "'$this->hashedPassword'"
 			);
 			
 			//update the row in the database
@@ -40,9 +37,8 @@ class User {
 		}else {
 		//if the user is being registered for the first time.
 			$data = array(
-				"username" => "'$this->username'",
-				"password" => "'$this->hashedPassword'",
 				"email" => "'$this->email'",
+				"password" => "'$this->hashedPassword'",
 				"join_date" => "'".date("Y-m-d H:i:s",time())."'"
 			);
 			
