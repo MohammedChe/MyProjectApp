@@ -3,7 +3,7 @@ require_once 'UserTools.class.php';
 require_once 'DB.class.php';
 
 
-class Category {
+class Bookmark {
 
 	public $id;
 	public $category;
