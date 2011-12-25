@@ -3,6 +3,12 @@
 
 require_once 'includes/global.inc.php';
 
+if(!isset($_SESSION['logged_in'])) {
+	header("Location: login.php");
+}
+
+$user = unserialize($_SESSION['user']);
+
 //initialize php variables used in the form
 $email = "";
 $password = "";
@@ -79,16 +85,11 @@ if(isset($_POST['submit-form'])) {
 <body>
 <?php echo ($error != "") ? $error : ""; ?>
 <form action="home.php" method="post">
-  E-Mail:
-  <input type="text" value="<?php echo $email; ?>" name="email" />
+  Title:
+  <input type="text" value="<?php echo $title; ?>" name="title" />
+  <input type="hidden" value="<?php echo $user->id; ?>" name="id" />
   <br/>
-  Password:
-  <input type="password" value="<?php echo $password; ?>" name="password" />
-  <br/>
-  Password (confirm):
-  <input type="password" value="<?php echo $password_confirm; ?>" name="password-confirm" />
-  <br/>
-  <input type="submit" value="Register" name="submit-form" />
+  <input type="submit" value="Add" name="submit-form" />
 </form>
 </body>
 </html>
