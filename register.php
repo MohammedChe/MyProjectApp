@@ -30,6 +30,12 @@ if(isset($_POST['submit-form'])) {
 	    $error .= "That username is already taken.<br/> \n\r";
 	    $success = false;
 	}
+	
+	if(strlen($username) < 6)
+	{
+	    $error .= "Username must be 6 characters or over.<br/> \n\r";
+	    $success = false;
+	}
 
 	//check to see if passwords match
 	if($password != $password_confirm) {
