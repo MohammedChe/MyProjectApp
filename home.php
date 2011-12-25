@@ -85,5 +85,6 @@ hdbcjshacjhsdcjsc
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
+<?php echo $user->id; ?>
 </body>
 </html>
