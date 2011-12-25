@@ -18,7 +18,8 @@ if(isset($_POST['submit-form'])) {
 
 	//retrieve the $_POST variables
 	$title = $_POST['title'];
-
+	$owner = $_POST['owner'];
+	
 	//initialize variables for form validation
 	$success = true;
 	$userTools = new UserTools();
@@ -27,7 +28,7 @@ if(isset($_POST['submit-form'])) {
 	{
 	    //prep the data for saving in a new user object
 	    $data['title'] = $title;
-	
+		$data['owner'] = $owner;
 	    //create the new user object
 	    $newCat = new Category($data);
 	
