@@ -2,6 +2,8 @@
 //global.inc.php
 
 require_once 'classes/User.class.php';
+require_once 'classes/Category.class.php';
+require_once 'classes/Bookmark.class.php';
 require_once 'classes/UserTools.class.php';
 require_once 'classes/DB.class.php';
 
