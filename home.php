@@ -58,8 +58,15 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <body>
 
 <?php 
-if (!is_null($userTools->getCategories($user->id))){
+if (is_null($userTools->getCategories($user->id))){
 ?> 
+
+hdbcjshacjhsdcjsc
+<?php 
+}
+else
+{
+?>
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
   
@@ -68,12 +75,6 @@ if (!is_null($userTools->getCategories($user->id))){
    
   </select>
 </form>
-<?php 
-}
-else
-{
-?>
-hdbcjshacjhsdcjsc
 <?php 
 }
 ?>
