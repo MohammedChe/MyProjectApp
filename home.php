@@ -63,7 +63,7 @@ if(isset($_POST['submit-form'])) {
 	    $userTools->login($email, $password);
 	
 	    //redirect them to a welcome page
-	    header("Location: home.php");
+	    header("Location: welcome.php");
 	    
 	}
 
@@ -74,11 +74,11 @@ if(isset($_POST['submit-form'])) {
 ?>
 <html>
 <head>
-<title>Registration</title>
+<title>Categories</title>
 </head>
 <body>
 <?php echo ($error != "") ? $error : ""; ?>
-<form action="register.php" method="post">
+<form action="home.php" method="post">
   E-Mail:
   <input type="text" value="<?php echo $email; ?>" name="email" />
   <br/>
