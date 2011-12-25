@@ -4,21 +4,21 @@
 require_once 'includes/global.inc.php';
 
 $error = "";
-$username = "";
+$email = "";
 $password = "";
 
 //check to see if they've submitted the login form
 if(isset($_POST['submit-login'])) { 
 
-	$username = $_POST['username'];
+	$email = $_POST['email'];
 	$password = $_POST['password'];
 
 	$userTools = new UserTools();
-	if($userTools->login($username, $password)){ 
+	if($userTools->login($email, $password)){ 
 		//successful login, redirect them to a page
 		header("Location: index.php");
 	}else{
-		$error = "Incorrect username or password. Please try again.";
+		$error = "Incorrect email or password. Please try again.";
 	}
 }
 ?>
@@ -35,7 +35,7 @@ if($error != "")
 }
 ?>
 	<form action="login.php" method="post">
-	    Username: <input type="text" name="username" value="<?php echo $username; ?>" /><br/>
+	    Email: <input type="text" name="email" value="<?php echo $email; ?>" /><br/>
 	    Password: <input type="password" name="password" value="<?php echo $password; ?>" /><br/>
 	    <input type="submit" value="Login" name="submit-login" />
 	</form>
