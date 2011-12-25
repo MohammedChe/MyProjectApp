@@ -48,8 +48,35 @@ if(isset($_POST['submit-form'])) {
 <html>
 <head>
 <title>Categories</title>
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+</script>
 </head>
 <body>
+
+<?php 
+if ($userTools->getCategories($user->id) != null){
+?> 
+<form name="form" id="form">
+  <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
+  
+    <option value="sample">sample1</option>
+    <option value="sample">sample1</option>
+   
+  </select>
+</form>
+<?php 
+}
+else
+{
+?>
+hdbcjshacjhsdcjsc
+<?php 
+}
+?>
 <?php echo ($error != "") ? $error : ""; ?>
 <form action="home.php" method="post">
   Title:

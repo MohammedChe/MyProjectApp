@@ -55,6 +55,23 @@ class UserTools {
 		return new User($result);
 	}
 	
+	public function getCategories($owner)
+	{
+		$db = new DB();
+		$result = mysql_query("select id from category where owner='$owner'");
+    	
+		return new Category($result);
+	}
+	
+	
+	public function getCategory($id)
+	{
+		$db = new DB();
+		$result = $db->select('category', "id = $id");
+		
+		return new Category($result);
+	}
+	
 }
 
 ?>
