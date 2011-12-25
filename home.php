@@ -71,7 +71,7 @@ else
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
   <?php 
-  echo "<option value='£cat'>sample1</option>"
+  echo "<option value='£cat'>£cat</option>"
 ?>
        
   </select>
