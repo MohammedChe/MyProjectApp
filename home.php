@@ -53,7 +53,7 @@ if(isset($_POST['submit-form'])) {
 <form action="home.php" method="post">
   Title:
   <input type="text" value="<?php echo $title; ?>" name="title" />
-  <input type="hidden" value="<?php echo $user->id; ?>" name="id" />
+  <input type="hidden" value="16" name="id" />
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
