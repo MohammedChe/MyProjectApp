@@ -59,14 +59,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
 <?php 
 $cat = $userTools->getCategories($user->id);
-if (is_null($cat)){
-?> 
-
-hdbcjshacjhsdcjsc
-<?php 
-}
-else
-{
 ?>
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
@@ -74,17 +66,13 @@ else
   
 foreach ($cat as $key => $value) 
 {
-    echo " <option value=$value[title]>$value[title]</option>";
-
+    echo "<option value=$value[title]>$value[title]</option>";
 }
 
 ?>
        
   </select>
 </form>
-<?php 
-}
-?>
 <?php echo ($error != "") ? $error : ""; ?>
 <form action="home.php" method="post">
   Title:
@@ -102,7 +90,7 @@ foreach ($cat as $key => $value)
     echo "Key: $key; Value: $value[title]<br />\n";
 }
 
-//echo ""; print_r($cat); echo "";
+echo ""; print_r($cat); echo "";
 ?>
 </body>
 </html>
