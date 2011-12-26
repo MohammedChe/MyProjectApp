@@ -36,8 +36,8 @@ class DB {
 	//Select rows from the database.
 	//returns a full row or rows from $table using $where as the where clause.
 	//return value is an associative array with column names as keys.
-	public function select($table, $where) {
-		$sql = "SELECT * FROM $table WHERE $where";
+	public function select($what, $table, $where) {
+		$sql = "SELECT $what FROM $table WHERE $where";
 		$result = mysql_query($sql);
 		if(mysql_num_rows($result) == 1)
 			return $this->processRowSet($result, true);
