@@ -70,11 +70,12 @@ else
 ?>
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
-  <?php 
-  echo "<option value='$cat[1]['title'];'>$cat[1]['title'];</option>";
-  echo "<option value=$cat[1]['title'];>$cat[1]['title'];</option>";
-   echo "<option>$cat[1]['title'];</option>";
-   echo "<option>$cat[1]['title']</option>";
+<?php 
+  
+foreach ($cat as $key => $value) 
+{
+    echo "Key: $key; Value: $value<br />\n";
+}
 
 ?>
        
