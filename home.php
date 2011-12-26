@@ -184,6 +184,6 @@ echo "$selectedCatIndex <br /> <br />";
 
 //echo ""; print_r($marks); echo "";
 ?>   
-<img src="http://immediatenet.com/t/t_a?Size=1024x768&URL=www.google.com" /> 
+<img src="http://immediatenet.com/t/s?Size=1024x768&URL=www.google.com" /> 
 </body>
 </html>
