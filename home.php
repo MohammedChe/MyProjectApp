@@ -95,7 +95,12 @@ foreach ($cat as $key => $value)
 <?php echo $cat[1]['title']; ?>
 
 <?php 
-echo ""; print_r($cat); echo "";
+foreach ($cat as $key => $value) 
+{
+    echo "Key: $key; Value: $value<br />\n";
+}
+
+//echo ""; print_r($cat); echo "";
 ?>
 </body>
 </html>
