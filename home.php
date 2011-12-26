@@ -93,6 +93,9 @@ else
 <?php echo $cat->title; ?>
 <br/>
 <br/>
+<?php echo $cat[1]->title; ?>
+<br/>
+<br/>
 <?php echo $cat->id; ?>
 <br/>
 <br/>
