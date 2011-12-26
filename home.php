@@ -153,7 +153,7 @@ echo "<br /> <br /> $selectedCat <br /> <br />";
 ?>
 <br />
 <br />
-<form action="home.php" method="post">
+<form name="addBookmarkForm" action="home.php" method="post">
   Save URL:
   <input type="text" value="<?php echo $url; ?>" name="url" />
   In:
@@ -169,7 +169,7 @@ echo "<br /> <br /> $selectedCat <br /> <br />";
   </select>
   <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
   <br/>
-  <input type="submit" value="Add" name="submit-form2" />
+  <input type="submit" value="Save" name="submit-form2" />
 </form>
 </body>
 </html>
