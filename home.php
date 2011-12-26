@@ -182,6 +182,7 @@ echo "$selectedCatIndex <br /> <br />";
 		echo htmlentities($value["url"]);
 	}
 
+echo ""; print_r($marks); echo "";
 ?>   
 
 </body>
