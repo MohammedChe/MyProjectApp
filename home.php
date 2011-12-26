@@ -87,29 +87,8 @@ else
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
-<?php echo $cat[1][title]; ?>
-<br/>
-<br/>
-<?php echo $cat->title; ?>
-<br/>
-<br/>
-<?php echo $cat[1]->title; ?>
-<br/>
-<br/>
-<?php echo $cat->id; ?>
-<br/>
-<br/>
-<?php echo $user->id; ?>
-<br/>
-<br/>
-<?php echo $user->email; ?>
-<br/>
-<br/>
-<?php 
-echo "print_r($cat)";
-?>
-<br/>
-<br/>
+<?php echo $cat[1]['title']; ?>
+
 <?php 
 echo ""; print_r($cat); echo "";
 ?>
