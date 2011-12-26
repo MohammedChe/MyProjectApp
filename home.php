@@ -52,7 +52,7 @@ $selectedCat = $_POST['categoryList'];
 }
 
 else{
-	if (!isset($cat[0])){
+	if (isset($cat[0])){
 		$selectedCat = $cat[0]['title'];
 	}
 	else{
