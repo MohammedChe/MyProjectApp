@@ -73,6 +73,8 @@ else
   <?php 
   echo "<option value='$cat[1]['title'];'>$cat[1]['title'];</option>";
   echo "<option value=$cat[1]['title'];>$cat[1]['title'];</option>";
+   echo "<option>$cat[1]['title'];</option>";
+   echo "<option>$cat[1]['title']</option>";
 
 ?>
        
