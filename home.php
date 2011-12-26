@@ -12,6 +12,7 @@ $user = unserialize($_SESSION['user']);
 //initialize php variables used in the form
 $title = "";
 $error = "";
+$url = "";
 
 //check to see that the form has been submitted
 if(isset($_POST['submit-form'])) { 
@@ -94,6 +95,7 @@ else{
 	}
 }
 
+
 //If the form wasn't submitted, or didn't validate
 //then we show the registration form again
 ?>
@@ -152,10 +154,11 @@ echo "<br /> <br /> $selectedCat <br /> <br />";
 <br />
 <br />
 <form action="home.php" method="post">
-  Title:
+  Save URL:
   <input type="text" value="<?php echo $url; ?>" name="url" />
+  In:
   <select name="pickCat" id="pickCat" onChange="this.form.submit()" onClick="hideFirst()" >
-  <option id="" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
+  <option id="first" disabled="disabled">Pick A Category</option>
 	<?php 
 	foreach ($cat as $key => $value) 
 	{
