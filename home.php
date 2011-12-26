@@ -184,6 +184,6 @@ echo "$selectedCatIndex <br /> <br />";
 
 //echo ""; print_r($marks); echo "";
 ?>   
-
+<img name="" src="http://images.w3snapshot.com/?url=http://www.google.com&size=L&key=1234567890&format=jpg&quality=80" width="32" height="32" alt="">
 </body>
 </html>
