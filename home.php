@@ -179,7 +179,7 @@ echo "$selectedCatIndex <br /> <br />";
 <?php 
 	foreach ($marks as $key => $value) 
 	{
-		echo $value["url"];
+		echo htmlentities($value["url"]);
 	}
 
 ?>   
