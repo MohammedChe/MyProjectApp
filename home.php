@@ -93,11 +93,19 @@ foreach ($cat as $key => $value)
   <input type="submit" value="Add" name="submit-form" />
 </form>
 <?php echo $cat[1]['title']; ?>
-
+<br />
 <?php 
+
 foreach ($cat as $key => $value) 
 {
-    echo "Key: $key; Value: $value<br />\n";
+    echo "Key: $key; Value: $value[title]<br />\n";
+}
+echo "<br />";
+echo "<br />";
+echo "<br />";
+foreach ($cat as $key => $value) 
+{
+    echo "Key: $key; Value: " + $value['title'] +"<br />\n";
 }
 
 //echo ""; print_r($cat); echo "";
