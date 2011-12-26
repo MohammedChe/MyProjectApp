@@ -92,8 +92,6 @@ foreach ($cat as $key => $value)
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
-<?php echo $cat[1]['title']; ?>
-<br />
 <?php 
 //echo ""; print_r($cat); echo "";
 ?>
