@@ -42,21 +42,55 @@ if(isset($_POST['submit-form'])) {
 
 }
 
+if(isset($_POST['submit-form2'])) { 
+
+	//retrieve the $_POST variables
+	$url = $_POST['url'];
+	$owner = $_POST['owner'];
+	$cat = $_POST['pickCat'];
+	
+	//initialize variables for form validation
+	$success = true;
+	$userTools = new UserTools();
+	
+	if($success)
+	{
+	    //prep the data for saving in a new user object
+	    $data['url'] = $url;
+		$data['cat'] = $cat;
+		$data['owner'] = $owner;
+	    //create the new user object
+	    $newBookmark = new Bookmark($data);
+	
+	    //save the new user to the database
+	    $newBookmark->save(true);
+	
+	    //redirect them to a welcome page
+	    header("Location: home.php");
+	    
+	}
+
+}
+
 $cat = $userTools->getCategories($user->id);
+
 
 if(isset($_POST['categoryList'])) { 
 
-$selectedCat = $_POST['categoryList'];
-
+$theCat = $userTools->getCategory($_POST['categoryList']);
+$selectedCat = $theCat->title;
+$selectedCatIndex = $theCat->id;
 
 }
 
 else{
 	if (isset($cat[0])){
 		$selectedCat = $cat[0]['title'];
+		$selectedCatIndex = $cat[0]['id'];
 	}
 	else{
 		$selectedCat = "NONE";
+		$selectedCatIndex = "NONE";
 	}
 }
 
@@ -87,11 +121,11 @@ else
 ?>
 <form name="categoryForm" id="categoryForm" method="post">
   <select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
-  <option id="first" value="$selectedCat"><?php echo $selectedCat ?></option>
+  <option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
 <?php 
 foreach ($cat as $key => $value) 
 {
-	echo "<option value=\"" . htmlentities($value["title"]) . "\">" . htmlentities($value["title"]) . "</option>";
+	echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
 }
 
 ?>
@@ -115,5 +149,24 @@ echo "<br /> <br /> $selectedCat <br /> <br />";
 <?php 
 //echo ""; print_r($cat); echo "";
 ?>
+<br />
+<br />
+<form action="home.php" method="post">
+  Title:
+  <input type="text" value="<?php echo $url; ?>" name="url" />
+  <select name="pickCat" id="pickCat" onChange="this.form.submit()" onClick="hideFirst()" >
+  <option id="" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
+	<?php 
+	foreach ($cat as $key => $value) 
+	{
+		echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+	}
+
+	?>      
+  </select>
+  <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
+  <br/>
+  <input type="submit" value="Add" name="submit-form2" />
+</form>
 </body>
 </html>
