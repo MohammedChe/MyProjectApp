@@ -50,25 +50,24 @@ class UserTools {
 	public function get($id)
 	{
 		$db = new DB();
-		$result = $db->select("*", 'category', "id = $id");
+		$result = $db->select('users', "id = $id");
 		
 		return new User($result);
 	}
 	
 	public function getCategories($owner)
 	{
-		$db = new DB();
-		$result = $db->select("title", 'category', "owner = $owner");
+		//$db = new DB();
+		$result = mysql_query("select title from category where owner='$owner'");
 		
-	   	return $result;
-		
+		return $result;
 	}
 	
 	
 	public function getCategory($id)
 	{
 		$db = new DB();
-		$result = $db->select("*", 'category', "id = $id");
+		$result = $db->select('category', "id = $id");
 		
 		return new Category($result);
 	}
