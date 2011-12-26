@@ -40,9 +40,13 @@ class DB {
 		$sql = "SELECT * FROM $table WHERE $where";
 		$result = mysql_query($sql);
 		if(mysql_num_rows($result) == 1)
+		{
 			return $this->processRowSet($result, true);
-		
-		return $this->processRowSet($result);
+		}
+		else
+		{
+			return $this->processRowSet($result);
+		}
 	}
 	
 	//Updates a current row in the database.
