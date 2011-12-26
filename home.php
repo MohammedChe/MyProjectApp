@@ -87,7 +87,7 @@ else
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
-<?php echo $cat[1]; ?>
+<?php echo $cat[1][title]; ?>
 <br/>
 <br/>
 <?php echo $cat->title; ?>
