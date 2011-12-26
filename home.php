@@ -73,7 +73,7 @@ else
 <?php 
 foreach ($cat as $index) 
 {
-	echo "<option>$cat[$index]['title']</option>";
+	echo "<option>$cat[0]['title']</option>";
 }
 foreach ($cat as $index) 
 {
@@ -103,7 +103,7 @@ foreach ($cat as $index)
 echo ""; print_r($cat); echo "";
 
 
-$cat[$index]['title'];
+$cat[0]['title'];
 ?>
 </body>
 </html>
