@@ -95,6 +95,7 @@ else{
 	}
 }
 
+$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
 
 //If the form wasn't submitted, or didn't validate
 //then we show the registration form again
@@ -138,8 +139,8 @@ foreach ($cat as $key => $value)
 }
 ?>
 <?php 
-echo "<br /> <br /> $selectedCat <br /> <br />";
-echo "<br /> <br /> $selectedCatIndex <br /> <br />";
+echo "<br /> <br /> $selectedCat <br />";
+echo "$selectedCatIndex <br /> <br />";
 
 ?>
 <?php echo ($error != "") ? $error : ""; ?>
@@ -172,5 +173,16 @@ echo "<br /> <br /> $selectedCatIndex <br /> <br />";
   <br/>
   <input type="submit" value="Save" name="submit-form2" />
 </form>
+<br />
+<br />
+<br />
+<?php 
+	foreach ($marks as $key => $value) 
+	{
+		echo $value["url"];
+	}
+
+?>   
+
 </body>
 </html>

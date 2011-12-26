@@ -72,6 +72,22 @@ class UserTools {
 		return new Category($result);
 	}
 	
+	public function getBookmarks($category, $owner)
+	{
+		$db = new DB();
+		$result = $db->select('bookmark', "category = $category AND owner = $owner");
+		
+		return $result;
+	}
+	
+	public function getBookmark($id)
+	{
+		$db = new DB();
+		$result = $db->select('bookmark', "id = $id");
+		
+		return new Bookmark($result);
+	}
+	
 }
 
 ?>
