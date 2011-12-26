@@ -58,7 +58,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <body>
 
 <?php 
-$cat = $userTools->getCategories($user->id);
+$cat = 16;
+//$userTools->getCategories($user->id);
 if (is_null($cat)){
 ?> 
 
@@ -71,7 +72,7 @@ else
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
   <?php 
-  echo "<option value='£cat'>£cat</option>"
+  echo "<option value='$cat'>$cat</option>"
 ?>
        
   </select>
