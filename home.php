@@ -42,18 +42,19 @@ if(isset($_POST['submit-form'])) {
 
 }
 
+if(isset($_POST['categoryList'])) { 
+
+$selectedCat = $_POST['categoryList'];
+
+
+}
+
 //If the form wasn't submitted, or didn't validate
 //then we show the registration form again
 ?>
 <html>
 <head>
 <title>Categories</title>
-<script type="text/javascript">
-function MM_jumpMenu(targ,selObj,restore){ //v3.0
-  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-  if (restore) selObj.selectedIndex=0;
-}
-</script>
 </head>
 <body>
 
@@ -68,8 +69,8 @@ hdbcjshacjhsdcjsc
 else
 {
 ?>
-<form name="form" id="form">
-  <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
+<form name="categoryForm" id="categoryForm" method="post">
+  <select name="categoryList" id="categoryList" onChange="categoryList.submit()">
 <?php 
   
 foreach ($cat as $key => $value) 
@@ -83,6 +84,9 @@ foreach ($cat as $key => $value)
 </form>
 <?php 
 }
+?>
+<?php 
+echo "<br /> <br /> $selectedCat; <br /> <br />";
 ?>
 <?php echo ($error != "") ? $error : ""; ?>
 <form action="home.php" method="post">
