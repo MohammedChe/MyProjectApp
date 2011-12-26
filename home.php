@@ -58,8 +58,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <body>
 
 <?php 
-$cat = 16;
-//$userTools->getCategories($user->id);
+$cat = $userTools->getCategories(16);
 if (is_null($cat)){
 ?> 
 
