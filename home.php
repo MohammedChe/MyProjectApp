@@ -95,10 +95,26 @@ foreach ($cat as $key => $value)
 <?php echo $cat[1]['title']; ?>
 <br />
 <?php 
+if (isset($cat[0])){
 
 foreach ($cat as $key => $value) 
 {
     echo "Key: $key; Value: $value[title]<br />\n";
+}
+}
+else{
+	echo "this is 1";
+}
+
+if (isset($cat)){
+
+foreach ($cat as $key => $value) 
+{
+    echo "Key: $key; Value: $value[title]<br />\n";
+}
+}
+else{
+	echo "this is 2";
 }
 
 //echo ""; print_r($cat); echo "";
