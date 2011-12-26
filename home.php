@@ -42,11 +42,22 @@ if(isset($_POST['submit-form'])) {
 
 }
 
+$cat = $userTools->getCategories($user->id);
+
 if(isset($_POST['categoryList'])) { 
 
 $selectedCat = $_POST['categoryList'];
 
 
+}
+
+else{
+	if (!isset($cat[0])){
+		$selectedCat = $cat[0]['title'];
+	}
+	else{
+		$selectedCat = "NONE";
+	}
 }
 
 //If the form wasn't submitted, or didn't validate
@@ -59,7 +70,6 @@ $selectedCat = $_POST['categoryList'];
 <body>
 
 <?php 
-$cat = $userTools->getCategories($user->id);
 if (!isset($cat[0])){
 ?> 
 
@@ -71,8 +81,8 @@ else
 ?>
 <form name="categoryForm" id="categoryForm" method="post">
   <select name="categoryList" id="categoryList" onChange="this.form.submit()">
+  <option value="$selectedCat"><?php echo $selectedCat ?></option>
 <?php 
-  
 foreach ($cat as $key => $value) 
 {
     echo "<option value=$value[title]>$value[title]</option>";
