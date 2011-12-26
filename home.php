@@ -74,7 +74,8 @@ else
   
 foreach ($cat as $key => $value) 
 {
-    echo "Key: $key; Value: $value<br />\n";
+    echo " <option value=$value[title]>$value[title]</option>";
+
 }
 
 ?>
@@ -99,13 +100,6 @@ foreach ($cat as $key => $value)
 foreach ($cat as $key => $value) 
 {
     echo "Key: $key; Value: $value[title]<br />\n";
-}
-echo "<br />";
-echo "<br />";
-echo "<br />";
-foreach ($cat as $key => $value) 
-{
-    echo "Key: $key; Value: " + $value['title'] +"<br />\n";
 }
 
 //echo ""; print_r($cat); echo "";
