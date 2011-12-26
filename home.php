@@ -70,19 +70,9 @@ else
 ?>
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
-<?php 
-foreach ($cat as $index) 
-{
-	echo "<option>$cat[0]['title']</option>";
-}
-foreach ($cat as $index) 
-{
-	echo "<option>$cat[$index]['title'];</option>";
-}
-foreach ($cat as $index) 
-{
-	echo "<option value=$cat[$index]['title'];>$cat[$index]['title'];</option>";
-}
+  <?php 
+  echo "<option value='$cat[1]['title'];'>$cat[1]['title'];</option>";
+  echo "<option value=$cat[1]['title'];>$cat[1]['title'];</option>";
 
 ?>
        
@@ -99,11 +89,10 @@ foreach ($cat as $index)
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
+<?php echo $cat[1]['title']; ?>
+
 <?php 
 echo ""; print_r($cat); echo "";
-
-
-$cat[0]['title'];
 ?>
 </body>
 </html>
