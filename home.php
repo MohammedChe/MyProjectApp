@@ -59,7 +59,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
 <?php 
 $cat = $userTools->getCategories($user->id);
-if (is_null($cat[0])){
+if (isset($cat[0])){
 ?> 
 
 hdbcjshacjhsdcjsc
