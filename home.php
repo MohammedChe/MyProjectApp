@@ -57,7 +57,7 @@ if(isset($_POST['submit-form2'])) {
 	if($success)
 	{
 	    //prep the data for saving in a new user object
-	    $data['cat'] = $cat;
+	    $data['category'] = $cat;
 		$data['owner'] = $owner;
 		$data['url'] = $url;
 	    //create the new user object
