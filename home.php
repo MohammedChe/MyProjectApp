@@ -139,6 +139,8 @@ foreach ($cat as $key => $value)
 ?>
 <?php 
 echo "<br /> <br /> $selectedCat <br /> <br />";
+echo "<br /> <br /> $selectedCatIndex <br /> <br />";
+
 ?>
 <?php echo ($error != "") ? $error : ""; ?>
 <form action="home.php" method="post">
