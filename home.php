@@ -58,7 +58,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 <body>
 
 <?php 
-$cat =  unserialize($userTools->getCategories($user->id));
+$cat = $userTools->getCategories($user->id);
 if (is_null($cat)){
 ?> 
 
@@ -103,5 +103,15 @@ else
 <br/>
 <br/>
 <?php echo $user->email; ?>
+<br/>
+<br/>
+<?php 
+echo "print_r($cat)";
+?>
+<br/>
+<br/>
+<?php 
+echo ""; print_r($cat); echo "";
+?>
 </body>
 </html>
