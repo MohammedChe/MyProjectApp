@@ -157,7 +157,7 @@ echo "<br /> <br /> $selectedCat <br /> <br />";
   Save URL:
   <input type="text" value="<?php echo $url; ?>" name="url" />
   In:
-  <select name="pickCat" id="pickCat" onChange="this.form.submit()" onClick="hideFirst()" >
+  <select name="pickCat" id="pickCat" onClick="hideFirst()" >
   <option id="first" disabled="disabled">Pick A Category</option>
 	<?php 
 	foreach ($cat as $key => $value) 
