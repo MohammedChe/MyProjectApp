@@ -85,7 +85,7 @@ else
 <?php 
 foreach ($cat as $key => $value) 
 {
-    echo "<option value=$value[title]>$value[title]</option>";
+	echo "<option value=\"" . htmlentities($value["title"]) . "\">" . htmlentities($value["title"]) . "</option>";
 }
 
 ?>
@@ -96,7 +96,7 @@ foreach ($cat as $key => $value)
 }
 ?>
 <?php 
-echo "<br /> <br /> $selectedCat; <br /> <br />";
+echo "<br /> <br /> $selectedCat <br /> <br />";
 ?>
 <?php echo ($error != "") ? $error : ""; ?>
 <form action="home.php" method="post">
