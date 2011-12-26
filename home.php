@@ -66,6 +66,12 @@ else{
 <html>
 <head>
 <title>Categories</title>
+<script>
+function hideFirst()
+{
+	first.style.display = "none";
+}
+</script>
 </head>
 <body>
 
@@ -80,8 +86,8 @@ else
 {
 ?>
 <form name="categoryForm" id="categoryForm" method="post">
-  <select name="categoryList" id="categoryList" onChange="this.form.submit()">
-  <option value="$selectedCat"><?php echo $selectedCat ?></option>
+  <select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
+  <option id="first" value="$selectedCat"><?php echo $selectedCat ?></option>
 <?php 
 foreach ($cat as $key => $value) 
 {
