@@ -71,7 +71,7 @@ else
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
   <?php 
-  echo "<option value='$cat[0]'>$cat[0]</option>"
+  echo "<option value='$cat[1]'>$cat[1]</option>"
 ?>
        
   </select>
@@ -87,8 +87,8 @@ else
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
-<?php echo $cat[0]; ?>
-<?php echo $cat[0]->title; ?>
+<?php echo $cat[1]; ?>
+<?php echo $cat[1]->title; ?>
 <?php echo $user->id; ?>
 <?php echo $user->email; ?>
 </body>
