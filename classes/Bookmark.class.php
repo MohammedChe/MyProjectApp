@@ -28,11 +28,11 @@ class Bookmark {
 		if(!$isNewMark) {
 			//set the data array
 			$data = array(
-				//"title" => "'$this->title'"
+				//"url" => "'$this->url'"
 			);
 			
 			//update the row in the database
-			//$db->update($data, 'category', 'id = '.$this->id);
+			//$db->update($data, 'bookmark', 'id = '.$this->id);
 		}else {
 		//if the user is being registered for the first time.
 			$data = array(

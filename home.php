@@ -57,9 +57,9 @@ if(isset($_POST['submit-form2'])) {
 	if($success)
 	{
 	    //prep the data for saving in a new user object
-	    $data['url'] = $url;
-		$data['cat'] = $cat;
+	    $data['cat'] = $cat;
 		$data['owner'] = $owner;
+		$data['url'] = $url;
 	    //create the new user object
 	    $newBookmark = new Bookmark($data);
 	
@@ -158,7 +158,6 @@ echo "<br /> <br /> $selectedCat <br /> <br />";
   <input type="text" value="<?php echo $url; ?>" name="url" />
   In:
   <select name="pickCat" id="pickCat" onClick="hideFirst()" >
-  <option id="first" disabled="disabled">Pick A Category</option>
 	<?php 
 	foreach ($cat as $key => $value) 
 	{
