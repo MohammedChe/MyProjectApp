@@ -88,6 +88,7 @@ else
   <input type="submit" value="Add" name="submit-form" />
 </form>
 <?php echo $cat[0]; ?>
+<?php echo $cat[0]->title; ?>
 <?php echo $user->id; ?>
 <?php echo $user->email; ?>
 </body>
