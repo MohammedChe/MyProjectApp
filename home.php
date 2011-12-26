@@ -70,8 +70,11 @@ else
 ?>
 <form name="form" id="form">
   <select name="jumpMenu" id="jumpMenu" onChange="MM_jumpMenu('parent',this,0)">
-  <?php 
-  echo "<option value='$cat[1]'>$cat[1]</option>"
+<?php 
+foreach ($cat as $index) 
+{
+	echo "<option value='$cat[$index]['title']'>$cat[$index]['title']]</option>";
+}
 ?>
        
   </select>
@@ -87,10 +90,8 @@ else
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
-<?php echo $cat[1]['title']; ?>
-
-<?php 
-echo ""; print_r($cat); echo "";
-?>
+//<?php 
+//echo ""; print_r($cat); echo "";
+//?>
 </body>
 </html>
