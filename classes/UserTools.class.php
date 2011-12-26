@@ -57,9 +57,9 @@ class UserTools {
 	
 	public function getCategories($owner)
 	{
-		//$db = new DB();
-		$result = mysql_query("select title from category where owner='$owner'");
-		
+		$db = new DB();
+		$result = $db->select('category', "owner = $owner");
+
 		return $result;
 	}
 	
