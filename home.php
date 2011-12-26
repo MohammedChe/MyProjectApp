@@ -73,8 +73,9 @@ else
 <?php 
 foreach ($cat as $index) 
 {
-	echo "<option value='$cat[$index]['title']'>$cat[$index]['title']]</option>";
+	echo "<option value='$cat[$index]['title']'>$cat[$index]['title']</option>";
 }
+
 ?>
        
   </select>
