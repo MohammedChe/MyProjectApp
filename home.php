@@ -70,7 +70,7 @@ else
 {
 ?>
 <form name="categoryForm" id="categoryForm" method="post">
-  <select name="categoryList" id="categoryList" onChange="categoryList.submit()">
+  <select name="categoryList" id="categoryList" onChange="this.form.submit()">
 <?php 
   
 foreach ($cat as $key => $value) 
