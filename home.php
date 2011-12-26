@@ -73,7 +73,15 @@ else
 <?php 
 foreach ($cat as $index) 
 {
-	echo "<option value='$cat[$index]['title']'>$cat[$index]['title']</option>";
+	echo "<option>$cat[$index]['title']</option>";
+}
+foreach ($cat as $index) 
+{
+	echo "<option>$cat[$index]['title'];</option>";
+}
+foreach ($cat as $index) 
+{
+	echo "<option value=$cat[$index]['title'];>$cat[$index]['title'];</option>";
 }
 
 ?>
@@ -91,8 +99,11 @@ foreach ($cat as $index)
   <br/>
   <input type="submit" value="Add" name="submit-form" />
 </form>
-//<?php 
-//echo ""; print_r($cat); echo "";
-//?>
+<?php 
+echo ""; print_r($cat); echo "";
+
+
+$cat[$index]['title'];
+?>
 </body>
 </html>
