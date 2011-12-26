@@ -180,6 +180,8 @@ echo "$selectedCatIndex <br /> <br />";
 	foreach ($marks as $key => $value) 
 	{
 		echo htmlentities($value["url"]);
+		echo htmlentities($value["id"]);
+		echo ""; print_r($value["url"]); echo "";
 	}
 
 echo ""; print_r($marks); echo "";
