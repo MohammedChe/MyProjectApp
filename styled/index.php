@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="styles/960_fluid.css" />
 <link rel="stylesheet" href="styles/main.css" />
 <link rel="stylesheet" href="styles/bar_nav.css" />
+<link rel="stylesheet" href="styles/side_nav.css" />
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
