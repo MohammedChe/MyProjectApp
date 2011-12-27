@@ -208,7 +208,11 @@ foreach ($marks as $key => $value)
 		echo htmlentities($value["url"]);
 	}
 }
-else if(isset($marks[0]) &! isset($marks[1])) {
+
+else if(isset($marks[0])) {
+	echo "TEST";
+}
+else if(isset($marks[0]) && !isset($marks[1])) {
 	echo "HAS 1";
 }
 else{
