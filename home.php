@@ -188,15 +188,31 @@ echo "$selectedCatIndex <br /> <br />";
 <br />
 <?php 
 if(isAssoc($marks)){
+	echo "ONLY HAS 1";
+}
+else{
 	foreach ($marks as $key => $value) 
+	{
+		echo htmlentities($value["url"]);
+	}
+	
+	}
+	
+	echo "<br/>";
+	echo "<br/>";
+	echo "<br/>";
+	
+if(is_array($marks[0])) {
+foreach ($marks as $key => $value) 
 	{
 		echo htmlentities($value["url"]);
 	}
 }
 else{
 	echo "ONLY HAS 1";
+	
+	
 	}
-
 //echo ""; print_r($marks); echo "";
 ?>   
 <br/>
