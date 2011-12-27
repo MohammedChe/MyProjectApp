@@ -201,15 +201,15 @@ else{
 	echo "<br/>";
 	echo "<br/>";
 	echo "<br/>";
-	
-if(isset($marks[1])) {
+if(isset($marks[0]) && isset($marks[1])) {
+
 foreach ($marks as $key => $value) 
 	{
 		echo htmlentities($value["url"]);
 	}
 }
-else if(isset($marks[0])) {
-	echo "ONLY HAS 1";
+else if(isset($marks[0]) &! isset($marks[1])) {
+	echo "HAS 1";
 }
 else{
 	echo "NONE";
