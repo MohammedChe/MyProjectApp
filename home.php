@@ -202,7 +202,7 @@ else{
 	echo "<br/>";
 	echo "<br/>";
 	
-if(!isset($marks['title'])) {
+if(isset($marks[1])) {
 foreach ($marks as $key => $value) 
 	{
 		echo htmlentities($value["url"]);
