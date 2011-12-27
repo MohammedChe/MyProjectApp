@@ -39,14 +39,9 @@ class DB {
 	public function select($table, $where) {
 		$sql = "SELECT * FROM $table WHERE $where";
 		$result = mysql_query($sql);
-		if(mysql_num_rows($result) == 1)
-		{
-			return $this->processRowSet($result, true);
-		}
-		else
-		{
+		
 			return $this->processRowSet($result);
-		}
+		
 	}
 	
 	//Updates a current row in the database.
