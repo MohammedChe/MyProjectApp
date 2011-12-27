@@ -209,15 +209,15 @@ foreach ($marks as $key => $value)
 	}
 }
 
-else if(isset($marks[0])) {
+if(isset($marks[0])) {
 	echo "TEST";
 }
-else if(isset($marks[0]) && !isset($marks[1])) {
+if(isset($marks[0]) && !isset($marks[1])) {
 	echo "HAS 1";
 }
-else{
-	echo "NONE";
-}
+//else{
+//	echo "NONE";
+//}
 //echo ""; print_r($marks); echo "";
 ?>   
 <br/>
