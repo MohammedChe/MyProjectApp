@@ -51,8 +51,8 @@ if(isset($_POST['submit-form2'])) {
 	$cat = $_POST['pickCat'];
 	
 	//initialize variables for form validation
-	$success = true;
 	$userTools = new UserTools();
+	$success = $userTools->checkURL($url);
 	
 	if($success)
 	{
@@ -69,6 +69,10 @@ if(isset($_POST['submit-form2'])) {
 	    //redirect them to a welcome page
 	    header("Location: home.php");
 	    
+	}
+	else
+	{
+		echo "URL doesnt exist";
 	}
 
 }

@@ -57,8 +57,16 @@ class DB {
 		//}
 		//else
 		//{
-			return $this->processRowSet($result);
+			//return $this->processRowSet($result);
 		//}
+		
+		$resultArray = array();
+		while($row = mysql_fetch_assoc($result))
+		{
+			array_push($resultArray, $row);
+		}
+			
+		return $resultArray;
 	}
 	
 	//Updates a current row in the database.
