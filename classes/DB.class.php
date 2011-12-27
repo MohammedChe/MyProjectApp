@@ -27,8 +27,8 @@ class DB {
 			array_push($resultArray, $row);
 		}
 		
-		if($singleRow === true)
-			return $resultArray[0];
+		//if($singleRow === true)
+		//	return $resultArray[0];
 			
 		return $resultArray;
 	}
