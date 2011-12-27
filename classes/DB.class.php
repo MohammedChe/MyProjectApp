@@ -19,6 +19,21 @@ class DB {
 	//takes a mysql row set and returns an associative array, where the keys
 	//in the array are the column names in the row set. If singleRow is set to
 	//true, then it will return a single row instead of an array of rows.
+	
+	/*public function processRowSet($rowSet, $singleRow=false)
+	{
+		$resultArray = array();
+		while($row = mysql_fetch_assoc($rowSet))
+		{
+			array_push($resultArray, $row);
+		}
+		
+		if($singleRow === true)
+			return $resultArray[0];
+			
+		return $resultArray;
+	}*/
+	
 	public function processRowSet($rowSet)
 	{
 		$resultArray = array();
