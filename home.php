@@ -187,7 +187,7 @@ echo "$selectedCatIndex <br /> <br />";
 <br />
 <br />
 <?php 
-if(isAssoc($arr)){
+if(isAssoc($marks)){
 	foreach ($marks as $key => $value) 
 	{
 		echo htmlentities($value["url"]);
