@@ -103,6 +103,12 @@ $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
 
 //If the form wasn't submitted, or didn't validate
 //then we show the registration form again
+
+
+function isAssoc($arr)
+{
+    return array_keys($arr) !== range(0, count($arr) - 1);
+}
 ?>
 <html>
 <head>
@@ -181,13 +187,19 @@ echo "$selectedCatIndex <br /> <br />";
 <br />
 <br />
 <?php 
+if(isAssoc($arr)){
 	foreach ($marks as $key => $value) 
 	{
 		echo htmlentities($value["url"]);
 	}
+}
+else{
+	echo "ONLY HAS 1";
+	}
 
 //echo ""; print_r($marks); echo "";
 ?>   
+<br/>
 <img src="http://immediatenet.com/t/s?Size=1024x768&URL=www.google.com" /> 
 </body>
 </html>
