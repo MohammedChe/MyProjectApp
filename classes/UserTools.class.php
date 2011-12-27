@@ -89,21 +89,23 @@ class UserTools {
 	}
 	
 	
-	public function checkURL($site)
-	{
-	if (isDomainAvailible($site))
-       {
-		   //exists
-               return true;
-       }
-       else
-       {
-		   //doesnt exists
-               return false;
-       }
-
-       //returns true, if domain is availible, false if not
-       function isDomainAvailible($domain)
+//	public function checkURL($site)
+//	{
+//	if (isDomainAvailible($site))
+//       {
+//		   //exists
+//               return true;
+//       }
+//       else
+//       {
+//		   //doesnt exists
+//               return false;
+//       }
+//   
+//	}
+	
+	 //returns true, if domain is availible, false if not
+      public function checkURL($domain)
        {
                //check, if a valid url is provided
                if(!filter_var($domain, FILTER_VALIDATE_URL))
@@ -127,8 +129,6 @@ class UserTools {
 
                return false;
        }
-	   
-	}
 
 	
 }
