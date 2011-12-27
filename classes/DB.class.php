@@ -28,7 +28,7 @@ class DB {
 		}
 		
 		if($singleRow === true)
-			return $resultArray;
+			return $resultArray[0];
 			
 		return $resultArray;
 	}
