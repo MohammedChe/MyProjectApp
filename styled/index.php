@@ -35,6 +35,46 @@
 					<img src="images/icons/grey/admin_user.png">
 					Home</a>
 				</li> 
+                <li><a href="#">
+					<img src="images/icons/grey/chart_6.png">
+					Mixed
+					<span class="icon">&nbsp;</span></a>
+					<ul>
+						<li><a href="#">North America</a>
+							<span class="icon">&nbsp;</span>
+							<div class="accordion">
+								<a href="http://www.google.ie">Paris</a>
+								<a href="#">Lyon</a>
+								<a href="#">Marseille</a>
+								<a href="#">Toulouse</a>
+							</div>
+						</li>
+						<li><a href="#">Europe</a>
+							<span class="icon">&nbsp;</span>	
+							<ul>
+								<li><a href="#">Eastern</a></li>
+								<li><a href="#">Central</a></li>
+								<li><a href="#">Western</a>	
+									<span class="icon">&nbsp;</span>		
+									<ul>
+										<li><a href="#">Germany</a></li>
+										<li><a href="#">Netherlands</a></li>
+										<li><a href="#">France</a>
+											<span class="icon">&nbsp;</span>									
+											<div class="accordion">
+												<a href="#">Paris</a>
+												<a href="#">Lyon</a>
+												<a href="#">Marseille</a>
+												<a href="#">Toulouse</a>
+											</div>					
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="http://www.google.com">Asia</a></li>
+					</ul>
+				</li>	
 				<li><a href="#">
 <!--					<img src="images/icons/grey/settings_2.png">
 -->	
@@ -113,46 +153,7 @@
 						</li>
 					</ul>					
 				</li>	
-				<li><a href="#">
-					<img src="images/icons/grey/chart_6.png">
-					Mixed
-					<span class="icon">&nbsp;</span></a>
-					<ul>
-						<li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
-						<li><a href="#">Europe</a>
-							<span class="icon">&nbsp;</span>	
-							<ul>
-								<li><a href="#">Eastern</a></li>
-								<li><a href="#">Central</a></li>
-								<li><a href="#">Western</a>	
-									<span class="icon">&nbsp;</span>		
-									<ul>
-										<li><a href="#">Germany</a></li>
-										<li><a href="#">Netherlands</a></li>
-										<li><a href="#">France</a>
-											<span class="icon">&nbsp;</span>									
-											<div class="accordion">
-												<a href="#">Paris</a>
-												<a href="#">Lyon</a>
-												<a href="#">Marseille</a>
-												<a href="#">Toulouse</a>
-											</div>					
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="http://www.google.com">Asia</a></li>
-					</ul>
-				</li>				
+							
 				<li><a href="#">
 					<img src="images/icons/grey/Book.png">
 					Link</a>
