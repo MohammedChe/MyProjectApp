@@ -185,7 +185,7 @@ if(isset($_POST['submit-login'])) {
 					<a id="navy" href="#"><span>Navy</span></a>
 					<a id="brown" href="#"><span>Brown</span></a>
 			</div>
-            <a href="#" class="minimize round_right"><span>minimize</span></a>
+            <a href="#" class="minimize round_bottom"><span>minimize</span></a>
          </div>
         
         
