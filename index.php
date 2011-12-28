@@ -172,12 +172,10 @@ if(isset($_POST['submit-login'])) {
         
         
         
-        <div id="footer_wrapper" class="container_16">
-			<div id="footer" class="grid_16 nav_up bar_nav round_all clearfix">
+        <div id="side_nav" class="side_nav grid_3 push_down">
 			<a href="#" class="minimize round_top"><span>minimize</span></a>
             
             <div id="colour_switcher" class="grid_16 alpha omega switcher">
-					<h3>Colour Themes</h3>
 					<a id="blue" href="#"><span>Blue</span></a>
 					<a id="red" href="#"><span>Red</span></a>
 					<a id="green" href="#"><span>Green</span></a>
@@ -187,9 +185,7 @@ if(isset($_POST['submit-login'])) {
 					<a id="purple" href="#"><span>Purple</span></a>
 					<a id="navy" href="#"><span>Navy</span></a>
 					<a id="brown" href="#"><span>Brown</span></a>
-				</div>
-            
-            </div>
+			</div>
          </div>
         
         
