@@ -1,3 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0;">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+
+<title>Sherpa | Complete Navigation System (JS Edition)</title>
+
+<link rel="stylesheet" href="styles/reset.css" />
+<link rel="stylesheet" href="styles/text.css" />
+<link rel="stylesheet" href="styles/960_fluid.css" />
+<link rel="stylesheet" href="styles/main.css" />
+<link rel="stylesheet" href="styles/bar_nav.css" />
+<link rel="stylesheet" href="styles/side_nav.css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
+
+<script type="text/javascript" src="scripts/sherpa_ui.js"></script>
 <?php
 //login.php
 
@@ -24,32 +50,6 @@ if(isset($_POST['submit-login'])) {
 	}
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1.0;">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
-
-<title>Sherpa | Complete Navigation System (JS Edition)</title>
-
-<link rel="stylesheet" href="styles/reset.css" />
-<link rel="stylesheet" href="styles/text.css" />
-<link rel="stylesheet" href="styles/960_fluid.css" />
-<link rel="stylesheet" href="styles/main.css" />
-<link rel="stylesheet" href="styles/bar_nav.css" />
-<link rel="stylesheet" href="styles/side_nav.css" />
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-
-<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
-<script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
-
-<script type="text/javascript" src="scripts/sherpa_ui.js"></script>
-
 </head>
 
 <body>
