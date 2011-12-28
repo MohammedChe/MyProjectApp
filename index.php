@@ -132,7 +132,7 @@ if(isset($_POST['submit-login'])) {
 						}
 					?>
                     
-						<form  action="login.php" method="post" style="width:160px">
+						<form  action="#" method="post" style="width:160px">
 							<fieldset>
 								<label>Email</label><input type="text" class="round_all" name="email" value="<?php echo $email; ?>">
 							</fieldset>
