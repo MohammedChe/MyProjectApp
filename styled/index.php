@@ -40,6 +40,18 @@
 					Latest
 					<span class="icon">&nbsp;</span></a>
 					<ul>
+						<li><a href="#">North America</a></li>
+						<li><a href="#">Asia</a></li>
+					</ul>
+				</li>	
+				<li><a href="#">
+<!--					<img src="images/icons/grey/settings_2.png">
+-->	
+					<img src="images/icons/grey/Book.png">
+
+					Bookmarks
+					<span class="icon">&nbsp;</span></a>
+                    <ul>
 						<li><a href="#">North America</a>
 							<span class="icon">&nbsp;</span>
 							<div class="accordion">
@@ -68,71 +80,7 @@
 							</div>
 						</li>
 					</ul>
-				</li>	
-				<li><a href="#">
-<!--					<img src="images/icons/grey/settings_2.png">
--->	
-					<img src="images/icons/grey/Book.png">
-
-					Bookmarks
-					<span class="icon">&nbsp;</span></a>
-					<ul>
-						<li><a href="#">North America</a></li>
-						<li><a href="#">Europe</a>
-							<span class="icon">&nbsp;</span>	
-							<ul>
-								<li><a href="#">
-									<img src="images/icons/grey/sign_post.png">Eastern</a></li>
-								<li><a href="#">
-									<img src="images/icons/grey/strategy_2.png">Central</a></li>
-								<li><a href="#">
-									<img src="images/icons/grey/refresh_2.png">Western</a>	
-									<span class="icon">&nbsp;</span>		
-									<ul>
-										<li><a href="#">
-											<img src="images/icons/grey/post_card.png">Germany</a></li>
-										<li><a href="#">
-											<img src="images/icons/grey/speech_bubble.png">Netherlands</a></li>
-										<li><a href="#">
-											<img src="images/icons/grey/tags_2.png">France</a>
-											<span class="left icon">&nbsp;</span>									
-											<ul class="slide_left">
-												<li><a href="#">Paris</a></li>
-												<li><a href="#">Lyon</a></li>
-												<li><a href="#">Marseille</a></li>
-												<li><a href="#">Toulouse</a></li>
-											</ul>					
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#">Asia</a></li>
-					</ul>
 				</li>
-				<li class="has_mega_menu send_right"><a href="#">
-						<img src="images/icons/grey/Chrome.png">
-						Mega Menu
-						<span class="icon">&nbsp;</span></a>
-						<div class="mega_menu container_16"> 
-							<div class="grid_8"> 
-								<h2>Welcome to Sherpa Nav System</h2> 
-								<p><img class="float_left" src="images/sherpa_crest.jpg" width="132" height="132"><strong>Sherpas</strong> were immeasurably valuable to early explorers of the Himalayan region, serving as guides and porters at the extreme altitudes of the peaks and passes in the region. Today, the term is used casually to refer to almost any guide or porter hired for mountaineering expeditions in the Himalayas.</p>
-								<p>In Nepal, however, <strong>Sherpas</strong> insist on making the distinction between themselves and general porters, because <strong>Sherpas</strong> often serve in a more guide-like role and command higher pay and respect from the community.</p>
-							</div> 
-							<div class="grid_4"> 
-								<h4>1/4 Column</h4> 
-								<p><strong>Sherpas</strong> are short in stature to accelerate the speed of circulation around the body and also breathe more quickly than the average person to extract more oxygen from the thin air.</p>
-							</div> 
-							<div class="grid_4"> 
-								<h4>1/4 Column</h4> 
-								<p><strong>Sherpas</strong> are renowned in the international climbing and mountaineering community for their hardiness, expertise, and experience at high altitudes.</p>
-							</div> 
-							<div class="grid_8"> 
-								<p>It has been speculated that a portion of the <strong>Sherpas</strong>' climbing ability is the result of a genetic adaptation to living in high altitudes. Some of these adaptations include unique hemoglobin-binding enzymes, doubled nitric oxide production, hearts that can utilize glucose, and lungs with an increased efficiency in low oxygen conditions.</p>
-							</div> 
-						</div> 
-					</li>	
 				<li class="send_right"><a class="round_right" href="#">
 					<img src="images/icons/grey/magnifying_glass.png">
 					Search
@@ -161,7 +109,30 @@
 							<button class="send_right">Login</button>
 						</form>
 					</div>
-				</li>				
+				</li>
+                <li class="send_right has_mega_menu"><a href="#">
+						<img src="images/icons/grey/Chrome.png">
+						Add
+						<span class="icon">&nbsp;</span></a>
+						<div class="mega_menu container_16"> 
+							<div class="grid_8"> 
+								<h2>Welcome to Sherpa Nav System</h2> 
+								<p><img class="float_left" src="images/sherpa_crest.jpg" width="132" height="132"><strong>Sherpas</strong> were immeasurably valuable to early explorers of the Himalayan region, serving as guides and porters at the extreme altitudes of the peaks and passes in the region. Today, the term is used casually to refer to almost any guide or porter hired for mountaineering expeditions in the Himalayas.</p>
+								<p>In Nepal, however, <strong>Sherpas</strong> insist on making the distinction between themselves and general porters, because <strong>Sherpas</strong> often serve in a more guide-like role and command higher pay and respect from the community.</p>
+							</div> 
+							<div class="grid_4"> 
+								<h4>1/4 Column</h4> 
+								<p><strong>Sherpas</strong> are short in stature to accelerate the speed of circulation around the body and also breathe more quickly than the average person to extract more oxygen from the thin air.</p>
+							</div> 
+							<div class="grid_4"> 
+								<h4>1/4 Column</h4> 
+								<p><strong>Sherpas</strong> are renowned in the international climbing and mountaineering community for their hardiness, expertise, and experience at high altitudes.</p>
+							</div> 
+							<div class="grid_8"> 
+								<p>It has been speculated that a portion of the <strong>Sherpas</strong>' climbing ability is the result of a genetic adaptation to living in high altitudes. Some of these adaptations include unique hemoglobin-binding enzymes, doubled nitric oxide production, hearts that can utilize glucose, and lungs with an increased efficiency in low oxygen conditions.</p>
+							</div> 
+						</div> 
+					</li>					
 			</ul>
 		</div>
 			
