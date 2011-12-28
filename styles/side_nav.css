@@ -62,14 +62,14 @@
 }
 
 .side_nav.closed{
-	mabrgin-left: -34px;
+	margin-left: -34px;
 }
 
 .side_nav a.minimize{
 	position: absolute;
 	left:7px;
-	top:-18px;
-	}
+	top: 0px;
+}
 .side_nav a.minimize:hover{
 	background-position: left;
 }
