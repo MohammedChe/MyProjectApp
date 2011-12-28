@@ -120,7 +120,7 @@ if(isset($_POST['submit-login'])) {
 						</form>
 					</div>
 				</li>				
-				<li class="send_right"><a href="#">
+				<li id="login" class="send_right"><a href="#">
 					<img src="images/icons/grey/Key.png">
 					Login
 					<span class="icon">&nbsp;</span></a>
