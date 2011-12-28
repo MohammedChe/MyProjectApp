@@ -31,10 +31,11 @@
 	background-color: #000;
 	height: 20px;
 	width:26px;
-	float: right;
-	margin-right: 7px;
+	float: left;
 	background: black url('../images/open_close.png') no-repeat left;
 }
+
+
 .side_nav a.minimize:hover{
 	background-position: left top;
 }
@@ -48,8 +49,7 @@
 }
 
 .side_nav.closed{
-	width: 34px;
-	width: 4.25%;
+	left: -34px;
 }
 
 
