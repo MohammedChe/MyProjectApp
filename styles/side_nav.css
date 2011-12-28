@@ -29,7 +29,7 @@
 
 .side_nav a.minimize{
 	background-color: #000;
-	display:none;
+	background: black url('../images/open_close.png') no-repeat left;
 }
 .side_nav a.minimize:hover{
 	background-position: left top;
