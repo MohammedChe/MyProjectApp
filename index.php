@@ -43,13 +43,26 @@ if(isset($_POST['submit-login'])) {
 	if($userTools->login($email, $password)){ 
 		//successful login, redirect them to a page
 		header("Location: home.php");
-	}else{
 		
-		echo "<script>$('#login').children('.drop_box').show();</script>";
+		?>
+        
+        <script>
+		
+		</script>
+        <?php
+	}else{
+		?>
+		<script>
+		$('#login').children('.drop_box').show();
+		</script>
+		
+        <?php
 		$error = "Incorrect email or password. Please try again.";
 	}
 }
 ?>
+
+
 </head>
 
 <body>
