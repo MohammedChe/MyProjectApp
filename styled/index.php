@@ -115,22 +115,37 @@
 					Mega Menu
 					<span class="icon">&nbsp;</span></a>
 					<div class="mega_menu container_16"> 
-						<div class="grid_8"> 
-							<h2>Welcome to Sherpa Nav System</h2> 
-							<p><img class="float_left" src="images/sherpa_crest.jpg" width="132" height="132"><strong>Sherpas</strong> were immeasurably valuable to early explorers of the Himalayan region, serving as guides and porters at the extreme altitudes of the peaks and passes in the region. Today, the term is used casually to refer to almost any guide or porter hired for mountaineering expeditions in the Himalayas.</p>
-							<p>In Nepal, however, <strong>Sherpas</strong> insist on making the distinction between themselves and general porters, because <strong>Sherpas</strong> often serve in a more guide-like role and command higher pay and respect from the community.</p>
+						<div class="grid_12"> 
+							<h2>Colour your experience</h2>
+                            
+                            <div id="colour_switcher" class="grid_16 alpha omega switcher">
+					<h3>Colour Themes</h3>
+					<a id="blue" href="#"><span>Blue</span></a>
+					<a id="red" href="#"><span>Red</span></a>
+					<a id="green" href="#"><span>Green</span></a>
+					<a id="cyan" href="#"><span>Cyan</span></a>
+					<a id="orange" href="#"><span>Orange</span></a>
+					<a id="pink" href="#"><span>Pink</span></a>
+					<a id="purple" href="#"><span>Purple</span></a>
+					<a id="navy" href="#"><span>Navy</span></a>
+					<a id="brown" href="#"><span>Brown</span></a>
+				</div>
+				<div id="bg_switcher" class="grid_16 alpha omega switcher">
+					<h3>Background Images</h3>
+					<a id="hatch" href="images/bg_hatch_grey_dark.jpg"><span>Hatch</span></a>
+					<a id="ash" href="images/bg_ash.jpg"><span>Ash</span></a>
+					<a id="brown_noise" href="images/bg_diag_wood.jpg"><span>Brown Noise</span></a>
+					<a id="dark_wood" href="images/bg_dark_wood.jpg"><span>Dark Wood</span></a>
+					<a id="holes" href="images/bg_holes.png"><span>Holes</span></a>
+					<a id="honeycomb" href="images/bg_honeycomb.png"><span>Honeycomb</span></a>
+					<a id="noise" href="images/bg_noise.png"><span>Noise</span></a>
+					<a id="punched" href="images/bg_punched.png"><span>Punched</span></a>
+					<a id="silver_noise" href="images/bg_silver_noise_grey.jpg"><span>Silver</span></a>
+					<a id="squares" href="images/bg_squares.png"><span>Squares</span></a>
+					<a id="wood" href="images/bg_wood.jpg"><span>Wood</span></a>
+				</div>
+                             
 						</div> 
-						<div class="grid_4"> 
-							<h4>1/4 Column</h4> 
-							<p><strong>Sherpas</strong> are short in stature to accelerate the speed of circulation around the body and also breathe more quickly than the average person to extract more oxygen from the thin air.</p>
-						</div> 
-						<div class="grid_4"> 
-							<h4>1/4 Column</h4> 
-							<p><strong>Sherpas</strong> are renowned in the international climbing and mountaineering community for their hardiness, expertise, and experience at high altitudes.</p>
-						</div> 
-						<div class="grid_8"> 
-							<p>It has been speculated that a portion of the <strong>Sherpas</strong>' climbing ability is the result of a genetic adaptation to living in high altitudes. Some of these adaptations include unique hemoglobin-binding enzymes, doubled nitric oxide production, hearts that can utilize glucose, and lungs with an increased efficiency in low oxygen conditions.</p>
-						</div>
 					</div> 
 				</li>				
 				<li><a href="#">
