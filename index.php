@@ -18,6 +18,8 @@ if(isset($_POST['submit-login'])) {
 		//successful login, redirect them to a page
 		header("Location: home.php");
 	}else{
+		
+		echo "<script>$('#login').children('.drop_box').show();</script>";
 		$error = "Incorrect email or password. Please try again.";
 	}
 }
@@ -124,14 +126,13 @@ if(isset($_POST['submit-login'])) {
 					<span class="icon">&nbsp;</span></a>
 					<div class="drop_box right round_all">
                     
-                    
+ 
                     <?php
 						if($error != "")
 						{
    							 echo $error."<br/>";
 						}
 					?>
-                    
 						<form  method="post" style="width:160px">
 							<fieldset>
 								<label>Email</label><input type="text" class="round_all" name="email" value="<?php echo $email; ?>">
@@ -391,6 +392,7 @@ if(isset($_POST['submit-login'])) {
 
 					<li class="send_right"><a href="#">
 						<img src="images/icons/grey/Key.png">
+                        
 						Login
 						<span class="icon">&nbsp;</span></a>
 						<div class="drop_box right round_all">
