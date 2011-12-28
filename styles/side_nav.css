@@ -23,7 +23,11 @@
 .side_nav{
 	z-index: 15;
 }
-.side_nav a.minimize{
+
+
+
+
+/*.side_nav a.minimize{
 	background-color: #000;
 	display: block;
 	height: 20px;
@@ -47,7 +51,34 @@
 .side_nav.closed{
 	width: 34px;
 	width: 4.25%;
+}*/
+
+
+
+.side_nav a.minimize span,
+.side_nav a.minimize_closed span
+{
+	display: none;
 }
+
+.side_nav.closed{
+	margin-top: -34px;
+	}
+
+.side_nav a.minimize{
+	position: absolute;
+	left:7px;
+	top:-18px;
+	}
+.side_nav a.minimize:hover{
+	background-position: left;
+}
+.side_nav a.minimize_closed:hover{
+	background-position: right;
+}
+
+
+
 
 #main.min_side_nav{
 	width: 886px;
