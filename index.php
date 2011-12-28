@@ -53,7 +53,7 @@ if(isset($_POST['submit-login'])) {
 	}else{
 		?>
 		<script>
-		$('#login').children('.drop_box').show();
+		('.login').show();
 		</script>
 		
         <?php
@@ -137,7 +137,7 @@ if(isset($_POST['submit-login'])) {
 					<img src="images/icons/grey/Key.png">
 					Login
 					<span class="icon">&nbsp;</span></a>
-					<div class="drop_box right round_all">
+					<div class="drop_box right round_all login">
                     
  
                     <?php

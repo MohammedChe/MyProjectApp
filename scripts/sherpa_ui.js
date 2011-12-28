@@ -100,9 +100,6 @@ $(document).ready(function(){
 	    $(this).children(".drop_box").hide();
 	});
 	
-	
-	$("li #login .drop_box").show();
-	
 	// Accordion 
 	
 	$('li .accordion').parent().addClass('openable');
