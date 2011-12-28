@@ -137,7 +137,7 @@ if(isset($_POST['submit-login'])) {
 					<img src="images/icons/grey/Key.png">
 					Login
 					<span class="icon">&nbsp;</span></a>
-					<div class=" right round_all login">
+					<div class="login right round_all">
                     
  
                     <?php
