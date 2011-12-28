@@ -62,8 +62,8 @@
 }
 
 .side_nav.closed{
-	margin-top: -34px;
-	}
+	margin-left: -34px;
+}
 
 .side_nav a.minimize{
 	position: absolute;

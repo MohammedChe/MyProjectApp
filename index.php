@@ -258,7 +258,7 @@ if(isset($_POST['submit-login'])) {
 		<div class="clear"></div>
 		<div id="footer_wrapper" class="container_16">
 			<div id="footer" class="grid_16 nav_up bar_nav round_all clearfix">
-			<a href="#" class="minimize round_top"><span>minimize</span></a>
+			<a href="#" class="minimize round_right"><span>minimize</span></a>
 				<ul class="round_all clearfix">
 
 					<li><a class="round_left" href="#">
