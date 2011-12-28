@@ -2,7 +2,7 @@
 .side_nav{
 	position: fixed;
 	left:0;
-	top:0;
+	top:50px;
 }
 
 
@@ -31,10 +31,10 @@
 	background-color: #000;
 	height: 20px;
 	width:26px;
-	float: left;
+	float: right;
+	margin-right: 7px;
 	background: black url('../images/open_close.png') no-repeat left;
 }
-
 
 .side_nav a.minimize:hover{
 	background-position: left top;
@@ -49,7 +49,8 @@
 }
 
 .side_nav.closed{
-	left: -34px;
+	width: 34px;
+	width: 4.25%;
 }
 
 
