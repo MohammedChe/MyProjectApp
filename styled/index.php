@@ -115,9 +115,9 @@
 					Mega Menu
 					<span class="icon">&nbsp;</span></a>
 					<div class="mega_menu container_16"> 
-						<div class="grid_12"> 
+						<div class="grid_16"> 
 							<h2>Colour your experience</h2>
-                            
+                        </div>  
                             <div id="colour_switcher" class="grid_16 alpha omega switcher">
 					<h3>Colour Themes</h3>
 					<a id="blue" href="#"><span>Blue</span></a>
@@ -145,7 +145,7 @@
 					<a id="wood" href="images/bg_wood.jpg"><span>Wood</span></a>
 				</div>
                              
-						</div> 
+						 
 					</div> 
 				</li>				
 				<li><a href="#">
