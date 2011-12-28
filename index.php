@@ -172,6 +172,29 @@ if(isset($_POST['submit-login'])) {
 		
 		<div id="main" class="grid_13 omega">
 			<div class="content round_all clearfix">
+            
+         		   <?php
+				   
+						if($error != "")
+						{
+   							 echo $error."<br/>";
+					?>
+						
+					
+						<form  method="post" style="width:160px">
+							<fieldset>
+								<label>Email</label><input type="text" class="round_all" name="email" value="<?php echo $email; ?>">
+							</fieldset>
+							<fieldset>
+								<label>Password</label><input class="round_all" name="password" type="password" value="<?php echo $password; ?>">
+							</fieldset>
+							<button  type="submit" class="send_right" name="submit-login">Login</button>
+						</form>
+                        <?php
+                        }
+						?>
+                        
+            
 				<div class=""><img src="images/sherpa_logo.png"></div>
 				
 				<div class="grid_16 alpha omega switcher">
