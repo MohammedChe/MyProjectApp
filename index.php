@@ -174,7 +174,7 @@ if(isset($_POST['submit-login'])) {
         
         <div id="side_nav" class="side_nav">
             
-            <div id="colour_switcher" class="grid_16 alpha omega switcher">
+            <div id="colour_switcher" class="switcher">
 					<a id="blue" href="#"><span>Blue</span></a>
 					<a id="red" href="#"><span>Red</span></a>
 					<a id="green" href="#"><span>Green</span></a>
