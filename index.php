@@ -1,4 +1,27 @@
+<?php
+//login.php
 
+require_once 'includes/global.inc.php';
+
+$error = "";
+$email = "";
+$password = "";
+
+//check to see if they've submitted the login form
+if(isset($_POST['submit-login'])) { 
+
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+
+	$userTools = new UserTools();
+	if($userTools->login($email, $password)){ 
+		//successful login, redirect them to a page
+		header("Location: home.php");
+	}else{
+		$error = "Incorrect email or password. Please try again.";
+	}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,44 +47,6 @@
 <script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
 
 <script type="text/javascript" src="scripts/sherpa_ui.js"></script>
-<?php
-//login.php
-
-require_once 'includes/global.inc.php';
-
-$error = "";
-$email = "";
-$password = "";
-
-//check to see if they've submitted the login form
-if(isset($_POST['submit-login'])) { 
-
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-
-	$userTools = new UserTools();
-	if($userTools->login($email, $password)){ 
-		//successful login, redirect them to a page
-		header("Location: home.php");
-		
-		?>
-        
-        <script>
-		
-		</script>
-        <?php
-	}else{
-		?>
-		<script>
-		('.login').show();
-		</script>
-		
-        <?php
-		$error = "Incorrect email or password. Please try again.";
-	}
-}
-?>
-
 
 </head>
 
@@ -133,11 +118,11 @@ if(isset($_POST['submit-login'])) {
 						</form>
 					</div>
 				</li>				
-				<li id="login" class="send_right"><a href="#">
+				<li class="send_right"><a href="#">
 					<img src="images/icons/grey/Key.png">
 					Login
 					<span class="icon">&nbsp;</span></a>
-					<div class="login right round_all">
+					<div class="drop_box right round_all">
                     
  
                     <?php
@@ -405,7 +390,6 @@ if(isset($_POST['submit-login'])) {
 
 					<li class="send_right"><a href="#">
 						<img src="images/icons/grey/Key.png">
-                        
 						Login
 						<span class="icon">&nbsp;</span></a>
 						<div class="drop_box right round_all">
