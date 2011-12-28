@@ -167,6 +167,32 @@ if(isset($_POST['submit-login'])) {
 					</li>					
 			</ul>
 		</div>
+        
+        
+        
+        
+        
+        <div id="footer_wrapper" class="container_16">
+			<div id="footer" class="grid_16 nav_up bar_nav round_all clearfix">
+			<a href="#" class="minimize round_top"><span>minimize</span></a>
+            
+            <div id="colour_switcher" class="grid_16 alpha omega switcher">
+					<h3>Colour Themes</h3>
+					<a id="blue" href="#"><span>Blue</span></a>
+					<a id="red" href="#"><span>Red</span></a>
+					<a id="green" href="#"><span>Green</span></a>
+					<a id="cyan" href="#"><span>Cyan</span></a>
+					<a id="orange" href="#"><span>Orange</span></a>
+					<a id="pink" href="#"><span>Pink</span></a>
+					<a id="purple" href="#"><span>Purple</span></a>
+					<a id="navy" href="#"><span>Navy</span></a>
+					<a id="brown" href="#"><span>Brown</span></a>
+				</div>
+            
+            </div>
+         </div>
+        
+        
 			
 
 		
