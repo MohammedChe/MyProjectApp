@@ -3,7 +3,7 @@
 	position: fixed;
 	left:0;
 	top:50px;
-	width: 34px;
+	width: 70px;
 	width: 4.25%;
 }
 
@@ -26,14 +26,23 @@
 	z-index: 15;
 }
 
-
+.rightSide{
+	position: absolute;
+	left:56px;
+}
+	
+	
 .side_nav a.minimize{
+	position: absolute;
 	background-color: #000;
 	height: 20px;
 	width: 26px;
-	float: right;
+	left:107px;
+	bottom:110px;
 	background: black url('../images/open_close.png') no-repeat left;
+	
 }
+
 
 .side_nav a.minimize:hover{
 	background-position: left top;
@@ -50,7 +59,7 @@
 .side_nav.closed{
 	width: 34px;
 	width: 4.25%;
-	left: -53px;
+	left: -108px;
 }
 
 .side_nav.small{

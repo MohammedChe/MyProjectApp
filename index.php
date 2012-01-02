@@ -1,7 +1,7 @@
 <?php
 //login.php
 
-//require_once 'includes/global.inc.php';
+require_once 'includes/global.inc.php';
 
 $error = "";
 $email = "";
@@ -53,7 +53,6 @@ if(isset($_POST['submit-login'])) {
 <body>
 	<div id="wrapper" class="container_16">
 		<div id="top_nav" class="nav_down bar_nav grid_16 round_all">
-		<a href="#" class="minimize round_bottom"><span>minimize</span></a>
 			<ul class="round_all clearfix">
 				<li><a class="round_left" href="#">
 					<img src="images/icons/grey/admin_user.png">
@@ -174,7 +173,7 @@ if(isset($_POST['submit-login'])) {
         
         <div id="side_nav" class="side_nav small">
             
-            <div id="colour_switcher" class="switcher">
+            <div id="colour_switcher" class="rightSide switcher">
 					<a id="blue" href="#"><span>Blue</span></a>
 					<a id="red" href="#"><span>Red</span></a>
 					<a id="green" href="#"><span>Green</span></a>
@@ -185,6 +184,19 @@ if(isset($_POST['submit-login'])) {
 					<a id="navy" href="#"><span>Navy</span></a>
 					<a id="brown" href="#"><span>Brown</span></a>
 			</div>
+            <div id="bg_switcher" class="switcher">
+					<a id="hatch" href="images/bg_hatch_grey_dark.jpg"><span>Hatch</span></a>
+					<a id="ash" href="images/bg_ash.jpg"><span>Ash</span></a>
+					<a id="brown_noise" href="images/bg_diag_wood.jpg"><span>Brown Noise</span></a>
+					<a id="dark_wood" href="images/bg_dark_wood.jpg"><span>Dark Wood</span></a>
+					<a id="holes" href="images/bg_holes.png"><span>Holes</span></a>
+					<a id="honeycomb" href="images/bg_honeycomb.png"><span>Honeycomb</span></a>
+					<a id="noise" href="images/bg_noise.png"><span>Noise</span></a>
+					<a id="punched" href="images/bg_punched.png"><span>Punched</span></a>
+					<a id="silver_noise" href="images/bg_silver_noise_grey.jpg"><span>Silver</span></a>
+					<a id="squares" href="images/bg_squares.png"><span>Squares</span></a>
+					<a id="wood" href="images/bg_wood.jpg"><span>Wood</span></a>
+				</div>
             <a href="#" class="minimize round_right"><span>minimize</span></a>
          </div>
         
@@ -256,7 +268,7 @@ if(isset($_POST['submit-login'])) {
 			</div>
 		</div>
 		<div class="clear"></div>
-		<div id="footer_wrapper" class="container_16">
+		<div id="footer_wrapper" class=" closed container_16">
 			<div id="footer" class="grid_16 nav_up bar_nav round_all clearfix">
 			<a href="#" class="minimize round_bottom"><span>minimize</span></a>
 				<ul class="round_all clearfix">

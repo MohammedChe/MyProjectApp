@@ -43,10 +43,10 @@ a.minimize{
 	top:-18px;
 	}
 #footer a.minimize:hover{
-	background-position: left;
+	background-position: right;
 }
 #footer a.minimize_closed:hover{
-	background-position: right;
+	background-position: left;
 }
 	
 .bar_nav{
