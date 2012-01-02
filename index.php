@@ -171,7 +171,7 @@ if(isset($_POST['submit-login'])) {
         
         
         
-        <div id="side_nav" class="side_nav small">
+        <!--<div id="side_nav" class="side_nav small">
             
             <div id="colour_switcher" class="rightSide switcher">
 					<a id="blue" href="#"><span>Blue</span></a>
@@ -198,7 +198,7 @@ if(isset($_POST['submit-login'])) {
 					<a id="wood" href="images/bg_wood.jpg"><span>Wood</span></a>
 				</div>
             <a href="#" class="minimize round_right"><span>minimize</span></a>
-         </div>
+         </div>-->
         
         
 			
