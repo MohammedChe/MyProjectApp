@@ -24,17 +24,18 @@ body{
 }
 
 #main .content{
-	background-color: #fff;
-	padding:10px;
-	min-height: 100px;
-	height: 100%;
+	background-color: #CCC;
+	padding:5px;
 	border: 1px solid #000;
-	margin-bottom: 20px;
 }
 
 #main .content img{
+}
+
+/*#main .content img{
 	display: block;
-	margin: 0 auto 20px;}
+	margin: 0 auto 20px;
+	}*/
 
 #footer_wrapper{
 	position: fixed;
