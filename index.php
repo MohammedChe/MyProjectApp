@@ -1,7 +1,7 @@
 <?php
 //login.php
 
-require_once 'includes/global.inc.php';
+//require_once 'includes/global.inc.php';
 
 $error = "";
 $email = "";
@@ -172,7 +172,7 @@ if(isset($_POST['submit-login'])) {
         
         
         
-        <div id="side_nav" class="side_nav">
+        <div id="side_nav" class="side_nav small">
             
             <div id="colour_switcher" class="switcher">
 					<a id="blue" href="#"><span>Blue</span></a>
@@ -185,7 +185,7 @@ if(isset($_POST['submit-login'])) {
 					<a id="navy" href="#"><span>Navy</span></a>
 					<a id="brown" href="#"><span>Brown</span></a>
 			</div>
-            <a href="#" class="minimize round_bottom"><span>minimize</span></a>
+            <a href="#" class="minimize round_right"><span>minimize</span></a>
          </div>
         
         

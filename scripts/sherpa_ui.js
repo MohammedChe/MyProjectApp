@@ -4,7 +4,6 @@ $(document).ready(function(){
 			$("#side_nav").toggleClass('closed', 800);
 			$("#side_nav > ul li a > span").fadeToggle();
 			$("#side_nav > ul li > span.icon").fadeToggle();
-			$("#main").toggleClass('grid_15',800);
 			$(this).toggleClass('minimize_closed');
 			
 			if ($(this).hasClass('minimize_closed')) {

@@ -3,6 +3,8 @@
 	position: fixed;
 	left:0;
 	top:50px;
+	width: 34px;
+	width: 4.25%;
 }
 
 
@@ -25,12 +27,10 @@
 }
 
 
-
-
 .side_nav a.minimize{
 	background-color: #000;
 	height: 20px;
-	width:26px;
+	width: 26px;
 	float: right;
 	background: black url('../images/open_close.png') no-repeat left;
 }
@@ -50,9 +50,13 @@
 .side_nav.closed{
 	width: 34px;
 	width: 4.25%;
+	left: -53px;
 }
 
-
+.side_nav.small{
+	width: 34px;
+	width: 4.25%;
+}
 
 
 #main.min_side_nav{
