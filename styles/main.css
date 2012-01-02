@@ -25,11 +25,11 @@ body{
 
 #main .content{
 	background-color: #fff;
-	padding:20px;
-	min-height: 300px;
+	padding:10px;
+	min-height: 100px;
 	height: 100%;
 	border: 1px solid #000;
-	margin-bottom: 55px;
+	margin-bottom: 20px;
 }
 
 #main .content img{

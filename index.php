@@ -1,7 +1,7 @@
 <?php
 //login.php
 
-require_once 'includes/global.inc.php';
+//require_once 'includes/global.inc.php';
 
 $error = "";
 $email = "";
@@ -204,7 +204,7 @@ if(isset($_POST['submit-login'])) {
 			
 
 		
-		<div id="main" class="grid_13 omega">
+		<div id="main" class="grid_4 omega">
 			<div class="content round_all clearfix">
             
          		   <?php
@@ -228,7 +228,10 @@ if(isset($_POST['submit-login'])) {
                         }
 						?>
                         
-          
+                        
+                        wrefwfwefhvj
+                        
+      
 			</div>
 		</div>
 		<div class="clear"></div>
