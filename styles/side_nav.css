@@ -2,7 +2,7 @@
 .side_nav{
 	position: fixed;
 	left:0;
-	top:50px;
+	top: 200px;
 	width: 70px;
 	width: 4.25%;
 }
@@ -30,15 +30,14 @@
 	position: absolute;
 	left:56px;
 }
-	
-	
+
 .side_nav a.minimize{
 	position: absolute;
 	background-color: #000;
 	height: 20px;
 	width: 26px;
 	left:107px;
-	bottom:110px;
+	bottom:300px;
 	background: black url('../images/open_close.png') no-repeat left;
 	
 }

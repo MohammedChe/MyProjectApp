@@ -1,101 +1,3 @@
-/* General
-----------------------------------------------------------------------------------------------------*/
-
-html{}
-body{
-	background: url(../images/bg_diag_wood.jpg) center top repeat-x;
-	background-color: #421b0b;
-	behavior:url("csshover3.htc");
-}
-
-#wrapper{
-	margin:0 auto;
-}
-
-.item {
-  width: 220px;
-  margin: 10px;
-  float: left;
-}
-
-#container{
-	margin-left:90px;
-}
-
-
-
-#backg{
-	background-color:#333;
-}
-
-
-#main{
-	z-index: 10;
-	margin:10px;
-}
-
-
-
-#main.omega{
-	margin-right: -10px !important;}
-
-#main.alpha{
-}
-
-#main .content{	
-	float:left;
-	background-color: #fff;
-	padding:5px;
-	border: 1px solid #000;
-	width: 256px;
-}
-
-#main .content img{
-}
-
-/*#main .content img{
-	display: block;
-	margin: 0 auto 20px;
-	}*/
-
-#footer_wrapper{
-	position: fixed;
-	bottom:10px;
-	z-index: 19;
-}
-
-#top_wrapper{
-	position: fixed;
-}
-
-#footer{
-	width: 98%;
-	margin:0 1%;
-	display: block;
-	float: none;
-	position: relative;	
-}
-
-.send_right{
-	float: right !important;
-	}
-	
-.send_left{
-	float: left !important;
-	}
-	
-.display_none{display: none;}
-
-.float_left{float: left;}
-.float_right{float: right;}
-	
-img.float_left{
-	margin-right:10px;
-}	
-img.float_right{
-	margin-left:10px;
-}
-	
 	
 /* Base Theme
 ----------------------------------------------------------------------------------------------------*/
@@ -371,62 +273,6 @@ li.has_mega_menu a span.icon{
 	}
 
 
-/* Switcher
-----------------------------------------------------------------------------------------------------*/
-
-.switcher,
-.switcher h3{
-	display: block;
-	margin-bottom: 10px;
-}
-
-.switcher a
-{
-	display: inline-block;
-	float: left;
-	width: 50px;
-	height: 50px;
-	padding: 0;
-	margin: 0 5px 0 0;
-	border: 1px solid #333;
-}
-#colour_switcher a span,
-#bg_switcher a span{
-	display: none;
-}
-
-#colour_switcher a#blue{background-color: #1C5EA0;}
-#colour_switcher a#red{background-color: #a01c30;}
-#colour_switcher a#green{background-color: #378548;}
-#colour_switcher a#cyan{background-color: #3c958a;}
-#colour_switcher a#pink{background-color: #b7055b;}
-#colour_switcher a#purple{background-color: #613587;}
-#colour_switcher a#brown{background-color: #785f46;}
-#colour_switcher a#navy{background-color: #466078;}
-#colour_switcher a#orange{background-color: #e98316;}
-#colour_switcher a#default{background-color: #F0F0F0;}
-
-
-#bg_switcher a{
-	width: 50px;
-	height: 50px;
-}
-
-#bg_switcher a#ash{background-image: url(../images/bg_ash.jpg);}
-#bg_switcher a#hatch{background-image: url(../images/bg_hatch_grey_dark.jpg);}
-#bg_switcher a#brown_noise{background-image: url(../images/bg_brown_noise.png);}
-#bg_switcher a#dark_wood{background-image: url(../images/bg_dark_wood.jpg);}
-#bg_switcher a#holes{background-image: url(../images/bg_holes.png);}
-#bg_switcher a#honeycomb{background-image: url(../images/bg_honeycomb.png);}
-#bg_switcher a#noise{background-image: url(../images/bg_noise.png);}
-#bg_switcher a#punched{background-image: url(../images/bg_punched.png);}
-#bg_switcher a#silver_noise{background-image: url(../images/bg_silver_noise_grey.jpg);}
-#bg_switcher a#squares{background-image: url(../images/bg_squares.png);}
-#bg_switcher a#wood{background-image: url(../images/bg_wood.jpg);}
-
-.ui-slider .ui-slider-handle{
-	cursor: move !important;
-}
 
 /* Icons
 ----------------------------------------------------------------------------------------------------*/
@@ -560,82 +406,57 @@ ul li.openable.active > a{
 
 
 
-
-.round_left2{	
-}
-.round_right2{	
-}
+li.openable div.accordion a{
+	background: url(../../images/nav_bullet.png) 15px no-repeat;
+	}
 
 
-
-@media screen and (max-width: 480px) 	{
-#container{
-	margin-left:7px;
+a.minimize,
+.side_nav a.minimize{
+	background-color: #000;
 }
 
-#home{
-	display:none;
+#side_nav ul li.openable div.accordion a{
+	background: url(../../images/nav_bullet.png) 20px no-repeat;
+	padding-left: 37px;
+	}
+
+#side_nav ul li ul li.openable div.accordion a{
+	background: url(../../images/nav_bullet.png) 6px no-repeat;
+	padding-left: 23px;
+	}
+
+li span.icon,
+li a span.icon{
+	background: url(../../images/nav_right.png) no-repeat;
+	position: absolute;
+	right:5px;
+	width: 12px;
+	top:11px;
+	display: block;
+	cursor: pointer;
 }
 
-#latest{
-	display:none;
+li span.left.icon{
+	background: url(../../images/nav_left.png) no-repeat;
+}
+li.openable span.icon,
+#side_nav ul li.toggle span.icon{
+	background: url(../../images/nav_plus.png) no-repeat;
+}
+li.openable.active span.icon,
+li.openable.active span.icon{
+	background: url(../../images/nav_minus.png) no-repeat;
+}
+.nav_down > ul > li > a > span.icon,
+.nav_down li.has_mega_menu span.icon{
+	background: url(../../images/nav_down.png) no-repeat;
+}
+.nav_up > ul > li > a > span.icon,
+.nav_up li.has_mega_menu span.icon{
+	background: url(../../images/nav_up.png) no-repeat;
 }
 
-#search{
-	display:none;
-}
 
 
-.round_left2{	
-	-webkit-border-top-left-radius: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-moz-border-radius-topleft: 3px;
-	-moz-border-radius-bottomleft: 3px;
-	border-radius: 3px 0 0 3px;
-}
 
-.round_right2{	
-	-webkit-border-top-right-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-	-moz-border-radius-topright: 3px;
-	-moz-border-radius-bottomright: 3px;
-	border-radius:0 3px 3px 0;
-}
-	
-	
-}
-
-@media screen and (max-width: 740px) 	{
-#container{
-	margin-left:30px;
-}
-
-#home{
-	display:none;
-}
-
-#latest{
-	display:none;
-}
-
-#search{
-	display:none;
-}
-
-.round_left2{	
-	-webkit-border-top-left-radius: 3px;
-	-webkit-border-bottom-left-radius: 3px;
-	-moz-border-radius-topleft: 3px;
-	-moz-border-radius-bottomleft: 3px;
-	border-radius: 3px 0 0 3px;
-}
-
-.round_right2{	
-	-webkit-border-top-right-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
-	-moz-border-radius-topright: 3px;
-	-moz-border-radius-bottomright: 3px;
-	border-radius:0 3px 3px 0;
-}
-	
-}

@@ -153,9 +153,20 @@ $(document).ready(function(){
 				
 		$("head").append( link );
 		
-        $("img").each(function(){
-              $(this).attr("src", $(this).attr("src").replace("grey", "white"));  
-        });
+        
+		
+		if (colour.toLowerCase() == "default"){
+			 $("img").each(function(){
+        	      $(this).attr("src", $(this).attr("src").replace("white", "grey"));  
+       		 });
+		}
+		else{
+			$("img").each(function(){
+           	   $(this).attr("src", $(this).attr("src").replace("grey", "white"));  
+       		 });
+		}
+		
+		
 	});
 	
 	$('#bg_switcher a').click(function(){

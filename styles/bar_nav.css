@@ -32,6 +32,10 @@ a.minimize{
 #top_nav.closed{
 	margin-top: -34px;
 	}
+	
+#top_nav{
+	margin: 10px 10px 22px 10px;
+}
 
 #footer_wrapper.closed{
 	bottom: -34px;
