@@ -51,6 +51,8 @@ body{
 }
 
 #main .content img{
+	width: 256px;
+	height: 192px;
 }
 
 /*#main .content img{
