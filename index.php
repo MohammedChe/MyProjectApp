@@ -279,8 +279,7 @@ if(isset($_POST['submit-login'])) {
 			<div class="content round_all clearfix">
            
                    <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
-                   <img src="http://immediatenet.com/t/l?Size=1024x768&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
-
+                   <img src="http://immediatenet.com/t/t_a?Size=1024x768&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> 
 			</div>
 		</div>
         
