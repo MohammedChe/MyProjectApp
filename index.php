@@ -363,7 +363,7 @@ function hideFirst()
 						<span class="icon">&nbsp;</span></a>
 						<div class="mega_menu container_16"> 
 							<div class="grid_8"> 
-							
+							xvxvvx
 							</div> 
 							<div class="grid_4"> 
 								<h4>Add Category</h4> 
@@ -372,7 +372,7 @@ function hideFirst()
                                   Title:
                                   <input type="text" value="<?php echo $title; ?>" name="title" />
                                   <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
-                                  <br/>
+                                  
                                   <input type="submit" value="Add" name="submit-form3" />
                                 </form>
 							</div> 
@@ -392,7 +392,7 @@ function hideFirst()
                                 ?>      
                                 </select>
                                 <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
-                                <br/>
+                                
                                 <input type="submit" value="Save" name="submit-form2" />
                                 </form>
                                 
