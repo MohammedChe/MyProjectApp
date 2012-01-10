@@ -360,6 +360,10 @@ function hideFirst()
 
                 if(isset($_SESSION['logged_in'])) {
 					?>
+                     <li id="home"><a class="round_right" href="logout.php">
+					<img src="images/icons/grey/Clipboard.png">
+					Logout</a>
+				</li>
                 <li class="send_right has_mega_menu"><a href="#">
 						<img src="images/icons/grey/Chrome.png">
 						Add
@@ -400,16 +404,10 @@ function hideFirst()
                                 </form>
                                 
 							</div> 
-							<div class="grid_8"> 
-								<p>It has been speculated that a portion of the <strong>Sherpas</strong>' climbing ability is the result of a genetic adaptation to living in high altitudes. Some of these adaptations include unique hemoglobin-binding enzymes, doubled nitric oxide production, hearts that can utilize glucose, and lungs with an increased efficiency in low oxygen conditions.</p>
-							</div> 
 						</div> 
 					</li>	
                     
-                    <li id="home"><a class="round_right" href="logout.php">
-					<img src="images/icons/grey/Clipboard.png">
-					Logout</a>
-				</li>
+                   
                           <?php
 				}	
 
@@ -560,7 +558,40 @@ function hideFirst()
         </div>
 		<div class="clear"></div>
         
-        
+        <?php 
+if(isAssoc($marks)){
+	echo "ONLY HAS 1";
+}
+else{
+	foreach ($marks as $key => $value) 
+	{
+		echo htmlentities($value["url"]);
+	}
+	
+	}
+	
+	echo "<br/>";
+	echo "<br/>";
+	echo "<br/>";
+if(isset($marks[0]) && isset($marks[1])) {
+
+foreach ($marks as $key => $value) 
+	{
+		echo htmlentities($value["url"]);
+	}
+}
+else{
+	
+	if(isset($marks["url"])){
+		echo $marks["url"];
+	}
+	
+	else{
+		echo "NONE";
+	}
+}
+//echo ""; print_r($marks); echo "";
+?>   
         
 
 
