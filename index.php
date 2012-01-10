@@ -65,7 +65,7 @@ if(isset($_POST['submit-login'])) {
 					Home</a>
 				</li> 
                 <?php
-                if(!isset($_SESSION['logged_in'])) {
+                if(isset($_SESSION['logged_in'])) {
 					?>
                 <li id="latest"><a href="#">
 					<img src="images/icons/grey/chart_6.png">
@@ -79,7 +79,7 @@ if(isset($_POST['submit-login'])) {
                 <?php
 				}
 				
-                if(!isset($_SESSION['logged_in'])) {
+                if(isset($_SESSION['logged_in'])) {
 					?>
              
 				<li><a class="round_left2" href="#">
