@@ -64,6 +64,9 @@ if(isset($_POST['submit-login'])) {
 					<img src="images/icons/grey/admin_user.png">
 					Home</a>
 				</li> 
+                <?php
+                if(!isset($_SESSION['logged_in'])) {
+					?>
                 <li id="latest"><a href="#">
 					<img src="images/icons/grey/chart_6.png">
 					Latest
@@ -72,7 +75,13 @@ if(isset($_POST['submit-login'])) {
 						<li><a href="#">North America</a></li>
 						<li><a href="#">Asia</a></li>
 					</ul>
-				</li>	
+				</li>
+                <?php
+				}
+				
+                if(!isset($_SESSION['logged_in'])) {
+					?>
+             
 				<li><a class="round_left2" href="#">
 <!--					<img src="images/icons/grey/settings_2.png">
 -->	
@@ -110,6 +119,9 @@ if(isset($_POST['submit-login'])) {
 						</li>
 					</ul>
 				</li>
+                       <?php
+				}	
+				?>
 				<li id="search" class="send_right"><a class="round_right" href="#">
 					<img src="images/icons/grey/magnifying_glass.png">
 					Search
@@ -122,7 +134,10 @@ if(isset($_POST['submit-login'])) {
 							</fieldset>
 						</form>
 					</div>
-				</li>				
+				</li>
+                <?php
+                if(!isset($_SESSION['logged_in'])) {
+					?>
 				<li class="send_right"><a class="round_right2" href="#">
 					<img src="images/icons/grey/Key.png">
 					Login
@@ -147,6 +162,9 @@ if(isset($_POST['submit-login'])) {
 						</form>
 					</div>
 				</li>
+                       <?php
+				}	
+				?>
                 <li class="send_right has_mega_menu"><a href="#">
 						<img src="images/icons/grey/Chrome.png">
 						Add
