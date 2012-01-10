@@ -7,6 +7,8 @@ $error = "";
 $errorReg = "";
 $email = "";
 $password = "";
+$password_confirm = "";
+
 
 //check to see if they've submitted the login form
 if(isset($_POST['submit-login'])) { 
