@@ -11,7 +11,7 @@ a.minimize{
 	position: absolute;
 	left:7px;
 	bottom:-20px;
-	z-index: 20;
+	z-index: 19;
 	}
 	
 #top_nav a.minimize:hover{
