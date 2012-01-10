@@ -360,7 +360,7 @@ function hideFirst()
 
                 if(isset($_SESSION['logged_in'])) {
 					?>
-                     <li id="home"><a class="round_right" href="logout.php">
+                     <li class="send_right" id="home"><a class="round_right" href="logout.php">
 					<img src="images/icons/grey/Clipboard.png">
 					Logout</a>
 				</li>
