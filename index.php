@@ -4,6 +4,7 @@
 require_once 'includes/global.inc.php';
 
 $error = "";
+$errorReg = "";
 $email = "";
 $password = "";
 
@@ -16,7 +17,7 @@ if(isset($_POST['submit-login'])) {
 	$userTools = new UserTools();
 	if($userTools->login($email, $password)){ 
 		//successful login, redirect them to a page
-		header("Location: home.php");
+		//header("Location: index.php");
 	}else{
 		$error = "Incorrect email or password. Please try again.";
 	}
@@ -40,25 +41,25 @@ if(isset($_POST['submit-form'])) {
 	//check to see if user name already exists
 	if($userTools->checkEmailExists($email))
 	{
-	    $error .= "This email is already registered.<br/> \n\r";
+	    $errorReg .= "This email is already registered.<br/> \n\r";
 	    $success = false;
 	}
 	
 
 	if(strlen($password) < 6)
 	{
-	    $error .= "Password must be 6 characters or over.<br/> \n\r";
+	    $errorReg .= "Password must be 6 characters or over.<br/> \n\r";
 	    $success = false;
 	}
 	//check to see if passwords match
 	if($password != $password_confirm) {
-	    $error .= "Passwords do not match.<br/> \n\r";
+	    $errorReg .= "Passwords do not match.<br/> \n\r";
 	    $success = false;
 	}
 	
 	if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE) 
 	{
-		$error .= "Email address not valid.<br/> \n\r";
+		$errorReg .= "Email address not valid.<br/> \n\r";
 		$success = false;
 	}
 
@@ -78,7 +79,7 @@ if(isset($_POST['submit-form'])) {
 	    $userTools->login($email, $password);
 	
 	    //redirect them to a welcome page
-	    header("Location: home.php");
+	   // header("Location: index.php");
 	    
 	}
 
@@ -196,7 +197,7 @@ if(isset($_POST['submit-form'])) {
 					Register
 					<span class="icon">&nbsp;</span></a>
 					<div class="drop_box right round_all">
-						<?php echo ($error != "") ? $error : ""; ?>
+						<?php echo ($errorReg != "") ? $errorReg : ""; ?>
                         <form action="register.php" method="post">
                         E-Mail:
                         <input type="text" value="<?php echo $email; ?>" name="email" />
@@ -340,7 +341,33 @@ if(isset($_POST['submit-form'])) {
 
                         <?php
                         }
-						?>
+				   
+						if($errorReg != "")
+						{
+   							 echo $errorReg."<br/>";
+					?>
+						<div id="main" class="box grid_16">
+                        <div class="content round_all clearfix">
+                                
+                                    <form action="register.php" method="post">
+              E-Mail:
+              <input type="text" value="<?php echo $email; ?>" name="email" />
+              <br/>
+              Password:
+              <input type="password" value="<?php echo $password; ?>" name="password" />
+              <br/>
+              Password (confirm):
+              <input type="password" value="<?php echo $password_confirm; ?>" name="password-confirm" />
+              <br/>
+              <input type="submit" value="Register" name="submit-form" />
+              </form>
+                                        </div>
+                    </div>
+                            <div class="clear"></div>
+              
+                                    <?php
+                                    }
+                                    ?>
                                                 
                         
       
