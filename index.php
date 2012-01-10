@@ -3,6 +3,11 @@
 
 require_once 'includes/global.inc.php';
 
+if(isset($_SESSION['logged_in'])) {
+	$user = unserialize($_SESSION['user']);
+}
+
+
 $error = "";
 $errorReg = "";
 $email = "";
@@ -87,7 +92,106 @@ if(isset($_POST['submit-form'])) {
 
 }
 ///////////////////////////////////////
+$title = "";
+$error2 = "";
+$url = "";
 
+//check to see that the form has been submitted
+if(isset($_POST['submit-form3'])) { 
+
+	//retrieve the $_POST variables
+	$title = $_POST['title'];
+	$owner = $_POST['owner'];
+	
+	//initialize variables for form validation
+	$success = true;
+	$userTools = new UserTools();
+	
+	if($success)
+	{
+	    //prep the data for saving in a new user object
+	    $data['title'] = $title;
+		$data['owner'] = $owner;
+	    //create the new user object
+	    $newCat = new Category($data);
+	
+	    //save the new user to the database
+	    $newCat->save(true);
+	
+	    //redirect them to a welcome page
+	    header("Location: home.php");
+	    
+	}
+
+}
+
+if(isset($_POST['submit-form2'])) { 
+
+	//retrieve the $_POST variables
+	$url = $_POST['url'];
+	$owner = $_POST['owner'];
+	$cat = $_POST['pickCat'];
+	
+	//initialize variables for form validation
+	$userTools = new UserTools();
+	$success = $userTools->checkURL($url);
+	
+	if($success)
+	{
+	    //prep the data for saving in a new user object
+	    $data['category'] = $cat;
+		$data['owner'] = $owner;
+		$data['url'] = $url;
+	    //create the new user object
+	    $newBookmark = new Bookmark($data);
+	
+	    //save the new user to the database
+	    $newBookmark->save(true);
+	
+	    //redirect them to a welcome page
+	    header("Location: home.php");
+	    
+	}
+	else
+	{
+		echo "URL doesnt exist";
+	}
+
+}
+
+$cat = $userTools->getCategories($user->id);
+
+
+if(isset($_POST['categoryList'])) { 
+
+$theCat = $userTools->getCategory($_POST['categoryList']);
+$selectedCat = $theCat->title;
+$selectedCatIndex = $theCat->id;
+
+}
+
+else{
+	if (isset($cat[0])){
+		$selectedCat = $cat[0]['title'];
+		$selectedCatIndex = $cat[0]['id'];
+	}
+	else{
+		$selectedCat = "NONE";
+		$selectedCatIndex = "NONE";
+	}
+}
+
+$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+
+//If the form wasn't submitted, or didn't validate
+//then we show the registration form again
+
+
+function isAssoc($arr)
+{
+    return array_keys($arr) !== range(0, count($arr) - 1);
+}
+//////////////////////////////////
 
 
 
@@ -123,6 +227,12 @@ if(isset($_POST['submit-form'])) {
 
 <script type="text/javascript" src="scripts/sherpa_ui.js"></script>
 
+<script>
+function hideFirst()
+{
+	first.style.display = "none";
+}
+</script>
 
 </head>
 
@@ -200,7 +310,7 @@ if(isset($_POST['submit-form'])) {
 					<span class="icon">&nbsp;</span></a>
 					<div class="drop_box right round_all">
 						<?php echo ($errorReg != "") ? $errorReg : ""; ?>
-                        <form action="register.php" method="post">
+                        <form method="post">
                         E-Mail:
                         <input type="text" value="<?php echo $email; ?>" name="email" />
                         <br/>
@@ -253,23 +363,50 @@ if(isset($_POST['submit-form'])) {
 						<span class="icon">&nbsp;</span></a>
 						<div class="mega_menu container_16"> 
 							<div class="grid_8"> 
-								<h2>Welcome to Sherpa Nav System</h2> 
-								<p><img class="float_left" src="images/sherpa_crest.jpg" width="132" height="132"><strong>Sherpas</strong> were immeasurably valuable to early explorers of the Himalayan region, serving as guides and porters at the extreme altitudes of the peaks and passes in the region. Today, the term is used casually to refer to almost any guide or porter hired for mountaineering expeditions in the Himalayas.</p>
-								<p>In Nepal, however, <strong>Sherpas</strong> insist on making the distinction between themselves and general porters, because <strong>Sherpas</strong> often serve in a more guide-like role and command higher pay and respect from the community.</p>
+							
 							</div> 
 							<div class="grid_4"> 
-								<h4>1/4 Column</h4> 
-								<p><strong>Sherpas</strong> are short in stature to accelerate the speed of circulation around the body and also breathe more quickly than the average person to extract more oxygen from the thin air.</p>
+								<h4>Add Category</h4> 
+                                <?php echo ($error2 != "") ? $error2 : ""; ?>
+                                <form action="home.php" method="post">
+                                  Title:
+                                  <input type="text" value="<?php echo $title; ?>" name="title" />
+                                  <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
+                                  <br/>
+                                  <input type="submit" value="Add" name="submit-form3" />
+                                </form>
 							</div> 
 							<div class="grid_4"> 
-								<h4>1/4 Column</h4> 
-								<p><strong>Sherpas</strong> are renowned in the international climbing and mountaineering community for their hardiness, expertise, and experience at high altitudes.</p>
+								<h4>Add Bookmark</h4> 
+                                <form name="addBookmarkForm" action="home.php" method="post">
+                                Save URL:
+                                <input type="text" value="<?php echo $url; ?>" name="url" />
+                                In:
+                                <select name="pickCat" id="pickCat" onClick="hideFirst()" >
+                                <?php 
+                                foreach ($cat as $key => $value) 
+                                {
+                                    echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                                }
+                                
+                                ?>      
+                                </select>
+                                <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
+                                <br/>
+                                <input type="submit" value="Save" name="submit-form2" />
+                                </form>
+                                
 							</div> 
 							<div class="grid_8"> 
 								<p>It has been speculated that a portion of the <strong>Sherpas</strong>' climbing ability is the result of a genetic adaptation to living in high altitudes. Some of these adaptations include unique hemoglobin-binding enzymes, doubled nitric oxide production, hearts that can utilize glucose, and lungs with an increased efficiency in low oxygen conditions.</p>
 							</div> 
 						</div> 
 					</li>	
+                    
+                    <li id="home"><a class="round_right" href="logout.php">
+					<img src="images/icons/grey/Clipboard.png">
+					Logout</a>
+				</li>
                           <?php
 				}	
 
@@ -351,7 +488,7 @@ if(isset($_POST['submit-form'])) {
 						<div id="main" class="box grid_16">
                         <div class="content round_all clearfix">
                                 
-                                    <form action="register.php" method="post">
+                                    <form method="post">
               E-Mail:
               <input type="text" value="<?php echo $email; ?>" name="email" />
               <br/>

@@ -10,7 +10,7 @@ $password_confirm = "";
 $error = "";
 
 //check to see that the form has been submitted
-if(isset($_POST['submit-form'])) { 
+if(isset($_POST['submit-form3'])) { 
 
 	//retrieve the $_POST variables
 	$email = $_POST['email'];

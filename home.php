@@ -11,11 +11,11 @@ $user = unserialize($_SESSION['user']);
 
 //initialize php variables used in the form
 $title = "";
-$error = "";
+$error2 = "";
 $url = "";
 
 //check to see that the form has been submitted
-if(isset($_POST['submit-form'])) { 
+if(isset($_POST['submit-form3'])) { 
 
 	//retrieve the $_POST variables
 	$title = $_POST['title'];
@@ -153,13 +153,13 @@ echo "<br /> <br /> $selectedCat <br />";
 echo "$selectedCatIndex <br /> <br />";
 
 ?>
-<?php echo ($error != "") ? $error : ""; ?>
+<?php echo ($error2 != "") ? $error2 : ""; ?>
 <form action="home.php" method="post">
   Title:
   <input type="text" value="<?php echo $title; ?>" name="title" />
   <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
   <br/>
-  <input type="submit" value="Add" name="submit-form" />
+  <input type="submit" value="Add" name="submit-form3" />
 </form>
 <?php 
 //echo ""; print_r($cat); echo "";
