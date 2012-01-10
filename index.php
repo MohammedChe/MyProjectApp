@@ -164,7 +164,9 @@ if(isset($_POST['submit-login'])) {
 				</li>
                        <?php
 				}	
-				?>
+
+                if(isset($_SESSION['logged_in'])) {
+					?>
                 <li class="send_right has_mega_menu"><a href="#">
 						<img src="images/icons/grey/Chrome.png">
 						Add
@@ -187,7 +189,11 @@ if(isset($_POST['submit-login'])) {
 								<p>It has been speculated that a portion of the <strong>Sherpas</strong>' climbing ability is the result of a genetic adaptation to living in high altitudes. Some of these adaptations include unique hemoglobin-binding enzymes, doubled nitric oxide production, hearts that can utilize glucose, and lungs with an increased efficiency in low oxygen conditions.</p>
 							</div> 
 						</div> 
-					</li>					
+					</li>	
+                          <?php
+				}	
+
+					?>				
 			</ul>
 		</div>
         
