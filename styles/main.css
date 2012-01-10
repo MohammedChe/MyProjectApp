@@ -63,7 +63,7 @@ body{
 #footer_wrapper{
 	position: fixed;
 	bottom:10px;
-	z-index: 19;
+	z-index: 2;
 }
 
 #top_wrapper{
