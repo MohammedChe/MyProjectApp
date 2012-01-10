@@ -92,6 +92,8 @@ if(isset($_POST['submit-form'])) {
 
 }
 ///////////////////////////////////////
+if(isset($_SESSION['logged_in'])) {
+
 $title = "";
 $error2 = "";
 $url = "";
@@ -190,6 +192,7 @@ $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
 function isAssoc($arr)
 {
     return array_keys($arr) !== range(0, count($arr) - 1);
+}
 }
 //////////////////////////////////
 
