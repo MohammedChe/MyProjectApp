@@ -603,6 +603,10 @@ ul li.openable.active > a{
 	-moz-border-radius-bottomright: 3px;
 	border-radius:0 3px 3px 0;
 }
+
+#side_nav{
+	display:none;
+}
 	
 	
 }
@@ -638,6 +642,10 @@ ul li.openable.active > a{
 	-moz-border-radius-topright: 3px;
 	-moz-border-radius-bottomright: 3px;
 	border-radius:0 3px 3px 0;
+}
+
+#side_nav{
+	display:none;
 }
 	
 }
