@@ -2,14 +2,14 @@
 .side_nav{
 	position: fixed;
 	left:0;
-	top: 20px;
+	top: 140px;
 	width: 70px;
 	width: 4.25%;
 }
 
 @media screen and (max-width: 740px) 	{
 	.side_nav{
-	top: 20px;
+	top: 140px;
 }
 }
 
