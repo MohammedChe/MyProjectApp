@@ -7,7 +7,11 @@
 	width: 4.25%;
 }
 
-
+@media screen and (max-width: 740px) 	{
+	.side_nav{
+	top: 100px;
+}
+}
 
 .push_down{
 	margin-top: 17px;
@@ -37,7 +41,7 @@
 	height: 20px;
 	width: 26px;
 	left:107px;
-	top:300px;
+	bottom:300px;
 	background: black url('../images/open_close.png') no-repeat left;
 	
 }
