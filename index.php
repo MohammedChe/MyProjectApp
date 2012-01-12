@@ -380,7 +380,7 @@ function hideFirst()
                                 </form>
 							</div> 
 							<div class="grid_4"> <?php 
-								if ($cat == "NONE"){
+								if (isset($cat[0])){
 								 ?> 
 								<h4>Add Bookmark</h4> 
                                 <form name="addBookmarkForm"  method="post">
