@@ -261,7 +261,7 @@ else{
 						</li>
 					</ul>
 				</li>
-                <li class="send_right" id="home"><a class="round_right" href="logout.php">
+                <li class="send_right" id=""><a class="round_right" href="logout.php">
 					<img src="images/icons/grey/Clipboard.png">
 					Logout</a>
 				</li>
