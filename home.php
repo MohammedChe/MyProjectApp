@@ -103,13 +103,14 @@ $marks = $userTools->getRecentBookmarks($user->id);
 }
 
 if (isset($selectedCatIndex)){
-	$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+	//$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+	$marks = $userTools->getRecentBookmarks($user->id);
 }
 
-function isAssoc($arr)
-{
-    return array_keys($arr) !== range(0, count($arr) - 1);
-}
+//function isAssoc($arr)
+//{
+//    return array_keys($arr) !== range(0, count($arr) - 1);
+//}
 }
 //////////////////////////////////
 
