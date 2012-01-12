@@ -379,11 +379,14 @@ function hideFirst()
                                   <input type="submit" value="Add" name="submit-form3" />
                                 </form>
 							</div> 
-							<div class="grid_4"> 
+							<div class="grid_4"> <?php 
+								if (isset($cat)){
+								 ?> 
 								<h4>Add Bookmark</h4> 
                                 <form name="addBookmarkForm"  method="post">
                                 Save URL:
                                 <input type="text" value="<?php echo $url; ?>" name="url" />
+                                
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php 
@@ -398,7 +401,16 @@ function hideFirst()
                                 
                                 <input type="submit" value="Save" name="submit-form2" />
                                 </form>
-                                
+                                <?php 
+								}
+								else{
+								?>
+                                 <p>
+                                  You Dont Have Any Categories Yet!
+                                 </p>
+                                 <?php 
+								}
+								?>
 							</div> 
 						</div> 
 					</li>	
