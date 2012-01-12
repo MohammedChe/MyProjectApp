@@ -88,112 +88,7 @@ if(isset($_POST['submit-form'])) {
 ///////////////////////////////////////
 if(isset($_SESSION['logged_in'])) {
 	
-$user = unserialize($_SESSION['user']);
 
-$title = "";
-$error2 = "";
-$url = "";
-
-//check to see that the form has been submitted
-if(isset($_POST['submit-form3'])) { 
-
-	//retrieve the $_POST variables
-	$title = $_POST['title'];
-	$owner = $_POST['owner'];
-	
-	//initialize variables for form validation
-	$success = true;
-	$userTools = new UserTools();
-	
-	if($success)
-	{
-	    //prep the data for saving in a new user object
-	    $data['title'] = $title;
-		$data['owner'] = $owner;
-	    //create the new user object
-	    $newCat = new Category($data);
-	
-	    //save the new user to the database
-	    $newCat->save(true);
-	
-	    //redirect them to a welcome page
-	    //header("Location: index.php");
-	    
-	}
-
-}
-
-if(isset($_POST['submit-form2'])) { 
-
-	//retrieve the $_POST variables
-	$url = $_POST['url'];
-	$owner = $_POST['owner'];
-	$cat = $_POST['pickCat'];
-	
-	//initialize variables for form validation
-	$userTools = new UserTools();
-	$success = $userTools->checkURL($url);
-	
-	if($success)
-	{
-	    //prep the data for saving in a new user object
-	    $data['category'] = $cat;
-		$data['owner'] = $owner;
-		$data['url'] = $url;
-	    //create the new user object
-	    $newBookmark = new Bookmark($data);
-	
-	    //save the new user to the database
-	    $newBookmark->save(true);
-	
-	    //redirect them to a welcome page
-	    //header("Location: home.php");
-	    
-	}
-	else
-	{
-		echo "URL doesnt exist";
-	}
-
-}
-
-$cat = $userTools->getCategories($user->id);
-
-
-if(isset($_POST['categoryList'])) { 
-
-$theCat = $userTools->getCategory($_POST['categoryList']);
-$selectedCat = $theCat->title;
-$selectedCatIndex = $theCat->id;
-
-}
-
-else{
-//	if (isset($cat["title"])){
-//		$selectedCat = $cat["title"];
-//		$selectedCatIndex = $cat["id"];
-//	}
-//	else{
-//		$selectedCat = "NONE";
-//		$selectedCatIndex = "NONE";
-//	}
-
-$marks = $userTools->getRecentBookmarks($user->id);
-
-}
-
-if (isset($selectedCatIndex)){
-	$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-}
-
-//If the form wasn't submitted, or didn't validate
-//then we show the registration form again
-
-
-function isAssoc($arr)
-{
-    return array_keys($arr) !== range(0, count($arr) - 1);
-}
 }
 //////////////////////////////////
 
@@ -249,65 +144,8 @@ function hideFirst()
 					<img src="images/icons/grey/admin_user.png">
 					Home</a>
 				</li> 
-                <?php
-                if(isset($_SESSION['logged_in'])) {
-					?>
-                <li id="latest"><a href="#">
-					<img src="images/icons/grey/chart_6.png">
-					Latest
-					<span class="icon">&nbsp;</span></a>
-					<ul>
-						<li><a href="#">North America</a></li>
-						<li><a href="#">Asia</a></li>
-					</ul>
-				</li>
-                <?php
-				}
-				
-                if(isset($_SESSION['logged_in'])) {
-					?>
-             
-				<li><a class="round_left2" href="#">
-<!--					<img src="images/icons/grey/settings_2.png">
--->	
-					<img src="images/icons/grey/Book.png">
 
-					Bookmarks
-					<span class="icon">&nbsp;</span></a>
-                    <ul>
-						<li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
-						<li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
-                        <li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
-					</ul>
-				</li>
-                       <?php
-				}	
-				   if(!isset($_SESSION['logged_in'])) {
-				?>
+             
 				<li id="search" class="send_right"><a class="round_right" href="#">
 					<img src="images/icons/grey/cash_register.png">
 					Register
@@ -328,10 +166,7 @@ function hideFirst()
                       </form>
 					</div>
 				</li>
-                <?php
-				   }
-                if(!isset($_SESSION['logged_in'])) {
-					?>
+                
 				<li class="send_right"><a class="round_right2" href="#">
 					<img src="images/icons/grey/Key.png">
 					Login
@@ -356,98 +191,8 @@ function hideFirst()
 						</form>
 					</div>
 				</li>
-                       <?php
-				}	
-
-                if(isset($_SESSION['logged_in'])) {
-					?>
-                     <li class="send_right" id="home"><a class="round_right" href="logout.php">
-					<img src="images/icons/grey/Clipboard.png">
-					Logout</a>
-				</li>
-                <li class="send_right has_mega_menu"><a href="#">
-						<img src="images/icons/grey/Paperclip.png">
-						Add
-						<span class="icon">&nbsp;</span></a>
-						<div class="mega_menu container_16"> 
-							<div class="grid_8"> 
-							xvxvvx
-							</div> 
-							<div class="grid_4"> 
-								<h4>Add Category</h4> 
-                                <?php echo ($error2 != "") ? $error2 : ""; ?>
-                                <form method="post">
-                                  Title:
-                                  <input type="text" value="<?php echo $title; ?>" name="title" />
-                                  <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
-                                  
-                                  <input type="submit" value="Add" name="submit-form3" />
-                                </form>
-</div>
-                            <div class="grid_4">
-                            <?php 
-							
-							
-							
-							
-							if(isset($cat[0]) && isset($cat[1])) {
- ?>
-                            <h4>Add Bookmark</h4>
-                            <form name="addBookmarkForm"  method="post">
-                                Save URL:
-                                <input type="text" value="<?php echo $url; ?>" name="url" />
-                                In:
-                                <select name="pickCat" id="pickCat" onClick="hideFirst()" >
-                                <?php 
-                                foreach ($cat as $key => $value) 
-                                {
-                                    echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
-                                }
-                                
-                                ?>
-                              </select>
-                                <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
-                                <input type="submit" value="Save" name="submit-form2" />
-                              </form>
-                            <?php 
-								}
-							
-
-else{
-	
-	if(isset($cat["title"])){
-		?>
-                            <h4>Add Bookmark</h4>
-                            <form name="addBookmarkForm"  method="post">
-                                Save URL:
-                                <input type="text" value="<?php echo $url; ?>" name="url" />
-                                In:
-                                <select name="pickCat" id="pickCat" onClick="hideFirst()" >
-                                <?php   
-                                    echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
-                                ?>
-                              </select>
-                                <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
-                                <input type="submit" value="Save" name="submit-form2" />
-                              </form>
-                            <?php
-	}
-	
-	else{
-		?>
-                            <p>You Dont Have Any Categories Yet!</p>
-                            <?php
-	}
-}
-			
-							?>
-                          </div> 
-						</div> 
-					</li>	
-                          <?php
-				}	
-
-					?>				
+                     
+               
 			</ul>
 		</div>
         
@@ -455,43 +200,9 @@ else{
         
         		<div class="clear"></div>
 
-        
-        <div id="side_nav" class="side_nav small">
-            <div id="colour_switcher" class="rightSide switcher">
-					<a id="blue" href="#"><span>Blue</span></a>
-					<a id="red" href="#"><span>Red</span></a>
-					<a id="green" href="#"><span>Green</span></a>
-					<a id="cyan" href="#"><span>Cyan</span></a>
-					<a id="orange" href="#"><span>Orange</span></a>
-					<a id="pink" href="#"><span>Pink</span></a>
-					<a id="purple" href="#"><span>Purple</span></a>
-					<a id="navy" href="#"><span>Navy</span></a>
-					<a id="brown" href="#"><span>Brown</span></a>
-                    <a id="default" href="#"><span>Default</span></a>
-			</div>
-            <div id="bg_switcher" class="switcher">
-					<a id="hatch" href="images/bg_hatch_grey_dark.jpg"><span>Hatch</span></a>
-					<a id="ash" href="images/bg_ash.jpg"><span>Ash</span></a>
-					<a id="brown_noise" href="images/bg_diag_wood.jpg"><span>Brown Noise</span></a>
-					<a id="dark_wood" href="images/bg_dark_wood.jpg"><span>Dark Wood</span></a>
-					<a id="holes" href="images/bg_holes.png"><span>Holes</span></a>
-					<a id="honeycomb" href="images/bg_honeycomb.png"><span>Honeycomb</span></a>
-					<a id="noise" href="images/bg_noise.png"><span>Noise</span></a>
-					<a id="punched" href="images/bg_punched.png"><span>Punched</span></a>
-					<a id="silver_noise" href="images/bg_silver_noise_grey.jpg"><span>Silver</span></a>
-					<a id="squares" href="images/bg_squares.png"><span>Squares</span></a>
-					<a id="wood" href="images/bg_wood.jpg"><span>Wood</span></a>
-                </div>
-            <a href="#" class="minimize round_right"><span>minimize</span></a>
-         </div>
-        
-        
-			
-
-				<div class="clear"></div>
 
         
-        		        <div id="container" class="clearfix">
+        		 <div id="container" class="clearfix">
 
          		   <?php
 				   
@@ -544,97 +255,12 @@ else{
                                     <?php
                                     }
                                     ?>
-                                                
-                        
-      
-
-        
-        <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                        <img name="" src="http://immediatenet.com/artwork/top_50_usa.jpg" alt="njkj">
-			</div>
-		</div>
-        <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                        <img name="" src="http://immediatenet.com/artwork/top_50_usa.jpg" alt="njkj">
-			</div>
-		</div>
-        <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                        <img name="" src="http://immediatenet.com/artwork/top_50_usa.jpg" alt="njkj">
-			</div>
-		</div>
-        <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                        <img name="" src="http://immediatenet.com/artwork/top_50_usa.jpg" alt="njkj">
-			</div>
-		</div>
-        <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                        <img name="" src="http://immediatenet.com/artwork/top_50_usa.jpg" alt="njkj">
-			</div>
-		</div>
-        <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                   <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
-
-			</div>
-		</div>
         
     </div>
     
     
         </div>
 		<div class="clear"></div>
-        
-        <?php 
-		if(isset($_SESSION['logged_in'])) {
-				
-  //if(isAssoc($marks)){
-//	  echo "ONLY HAS 1";
-//  }
-//  else{
-//	  foreach ($marks as $key => $value) 
-//	  {
-//		  echo htmlentities($value["url"]);
-//	  }
-//	  
-//	  }
-//	  
-//	  echo "<br/>";
-//	  echo "<br/>";
-//	  echo "<br/>";
-
-if(isset($marks[0]) && isset($marks[1])) {
-
-foreach ($marks as $key => $value) 
-	{
-		echo htmlentities($value["url"]);
-	}
-}
-else{
-	
-	if(isset($marks["url"])){
-		echo $marks["url"];
-	}
-	
-	else{
-		echo "NONE";
-	}
-}
-}
-
-//echo ""; print_r($marks); echo "";
-?>   
-        
-
 
 <script>
   $(function(){
