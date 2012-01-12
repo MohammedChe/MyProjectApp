@@ -1,5 +1,4 @@
 <?php
-//login.php
 
 require_once 'includes/global.inc.php';
 
@@ -559,6 +558,8 @@ function hideFirst()
 		<div class="clear"></div>
         
         <?php 
+		if(isset($_SESSION['logged_in'])) {
+				
 if(isAssoc($marks)){
 	echo "ONLY HAS 1";
 }
@@ -589,6 +590,7 @@ else{
 	else{
 		echo "NONE";
 	}
+}
 }
 //echo ""; print_r($marks); echo "";
 ?>   
