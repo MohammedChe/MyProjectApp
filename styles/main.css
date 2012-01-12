@@ -614,6 +614,7 @@ ul li.openable.active > a{
 @media screen and (max-width: 740px) 	{
 #container{
 	margin-left:30px;
+	margin-right:30px;
 }
 
 #home{
