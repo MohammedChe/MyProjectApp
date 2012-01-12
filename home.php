@@ -98,13 +98,13 @@ else{
 //		$selectedCatIndex = "NONE";
 //	}
 
-$marks = $userTools->getRecentBookmarks($user->id);
+$marks = $userTools->getRecentBookmarks(10, $user->id);
 
 }
 
 if (isset($selectedCatIndex)){
 	//$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-	$marks = $userTools->getRecentBookmarks($user->id);
+	$marks = $userTools->getRecentBookmarks(10, $user->id);
 }
 
 //function isAssoc($arr)
