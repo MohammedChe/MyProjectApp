@@ -179,7 +179,9 @@ else{
 	}
 }
 
-$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+if (isset($selectedCatIndex)){
+	$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+}
 
 //If the form wasn't submitted, or didn't validate
 //then we show the registration form again
