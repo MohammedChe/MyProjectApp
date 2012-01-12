@@ -2,11 +2,6 @@
 
 require_once 'includes/global.inc.php';
 
-if(isset($_SESSION['logged_in'])) {
-	$user = unserialize($_SESSION['user']);
-}
-
-
 $error = "";
 $errorReg = "";
 $email = "";
@@ -92,6 +87,8 @@ if(isset($_POST['submit-form'])) {
 }
 ///////////////////////////////////////
 if(isset($_SESSION['logged_in'])) {
+	
+$user = unserialize($_SESSION['user']);
 
 $title = "";
 $error2 = "";
