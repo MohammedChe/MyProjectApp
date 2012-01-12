@@ -46,7 +46,7 @@ class DB {
     } 
 	
 	public function selectTOP($num, $table, $where) {  
-        $sql = "SELECT TOP $num * FROM $table WHERE $where";  
+        $sql = "SELECT * FROM $table WHERE $where LIMIT $num";  
         $result = mysql_query($sql);  
         if(mysql_num_rows($result) == 1)  
             return $this->processRowSet($result, true);  
