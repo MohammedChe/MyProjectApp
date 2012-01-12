@@ -80,6 +80,14 @@ class UserTools {
 		return $result;
 	}
 	
+	public function getRecentBookmarks($owner)
+	{
+		$db = new DB();
+		$result = $db->selectTOP('10', 'bookmark', "owner = $owner");
+		
+		return $result;
+	}
+	
 	public function getBookmark($id)
 	{
 		$db = new DB();

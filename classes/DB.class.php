@@ -45,6 +45,15 @@ class DB {
         return $this->processRowSet($result);  
     } 
 	
+	public function selectTOP($num, $table, $where) {  
+        $sql = "SELECT TOP $num * FROM $table WHERE $where";  
+        $result = mysql_query($sql);  
+        if(mysql_num_rows($result) == 1)  
+            return $this->processRowSet($result, true);  
+  
+        return $this->processRowSet($result);  
+    } 
+	
 	//Updates a current row in the database.
 	//takes an array of data, where the keys in the array are the column names
 	//and the values are the data that will be inserted into those columns.
