@@ -361,7 +361,7 @@ function hideFirst()
 					Logout</a>
 				</li>
                 <li class="send_right has_mega_menu"><a href="#">
-						<img src="images/icons/grey/Chrome.png">
+						<img src="images/icons/grey/Paperclip.png">
 						Add
 						<span class="icon">&nbsp;</span></a>
 						<div class="mega_menu container_16"> 
@@ -603,6 +603,7 @@ else{
 }
 }
 echo $cat;
+echo $cat[0];
 //echo ""; print_r($marks); echo "";
 ?>   
         
