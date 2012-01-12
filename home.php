@@ -339,62 +339,6 @@ else{
         
         		        <div id="container" class="clearfix">
 
-         		   <?php
-				   
-						if($error != "")
-						{
-   							 echo $error."<br/>";
-					?>
-						<div id="main" class="box grid_16">
-			<div class="content round_all clearfix">
-					
-						<form  method="post" style="width:160px">
-							<fieldset>
-								<label>Email</label><input type="text" class="round_all" name="email" value="<?php echo $email; ?>">
-							</fieldset>
-							<fieldset>
-								<label>Password</label><input class="round_all" name="password" type="password" value="<?php echo $password; ?>">
-							</fieldset>
-							<button  type="submit" class="send_right" name="submit-login">Login</button>
-						</form>
-                        	</div>
-		</div>
-        		<div class="clear"></div>
-
-                        <?php
-                        }
-				   
-						if($errorReg != "")
-						{
-   							 echo $errorReg."<br/>";
-					?>
-						<div id="main" class="box grid_16">
-                        <div class="content round_all clearfix">
-                                
-                                    <form method="post">
-              E-Mail:
-              <input type="text" value="<?php echo $email; ?>" name="email" />
-              <br/>
-              Password:
-              <input type="password" value="<?php echo $password; ?>" name="password" />
-              <br/>
-              Password (confirm):
-              <input type="password" value="<?php echo $password_confirm; ?>" name="password-confirm" />
-              <br/>
-              <input type="submit" value="Register" name="submit-form" />
-              </form>
-                                        </div>
-                    </div>
-                            <div class="clear"></div>
-              
-                                    <?php
-                                    }
-                                    ?>
-                                                
-                        
-      
-
-        
        <!-- <div id="main" class="box grid_4">
 			<div class="content round_all clearfix">
            

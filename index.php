@@ -122,7 +122,6 @@ if(isset($_SESSION['logged_in'])) {
 
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 -->
-<script src="scripts/jquery.masonry.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 
 <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
@@ -204,10 +203,6 @@ function hideFirst()
         
         		<div class="clear"></div>
 
-
-        
-        		 <div id="container" class="clearfix">
-
          		   <?php
 				   
 						if($error != "")
@@ -265,17 +260,6 @@ function hideFirst()
     
         </div>
 		<div class="clear"></div>
-
-<script>
-  $(function(){
-    
-    $('#container').masonry({
-      itemSelector: '.box',
-      isAnimated: true
-    });
-    
-  });
-</script>
 		
 <script type="text/javascript">
   var _gaq = _gaq || [];
