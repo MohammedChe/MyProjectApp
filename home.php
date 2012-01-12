@@ -166,15 +166,64 @@ function hideFirst()
 					<img src="images/icons/grey/admin_user.png">
 					Home</a>
 				</li> 
-                <li id="latest"><a href="#">
+                
+                
+                
+                
+                
+                <?php 				
+if(isset($marks[0])) {
+	
+	?>
+    <li id="latest"><a href="#">
 					<img src="images/icons/grey/chart_6.png">
 					Latest
 					<span class="icon">&nbsp;</span></a>
 					<ul>
-						<li><a href="#">North America</a></li>
-						<li><a href="#">Asia</a></li>
+                    <?php
+					foreach ($marks as $key => $value) 
+					{
+					?>
+                    <li><a href="#"><?php echo htmlentities($value["url"]);?></a></li>
+                    <?php
+					}
+					?>
 					</ul>
 				</li>
+    <?php
+
+
+}
+else{
+	
+	if(isset($marks["url"])){
+		
+		?>
+        
+		<li id="latest"><a href="#">
+					<img src="images/icons/grey/chart_6.png">
+					Latest
+					<span class="icon">&nbsp;</span></a>
+					<ul>
+                    <li><a href="#"><?php echo $marks["url"];?></a></li>
+					</ul>
+				</li>
+		
+		<?php
+		
+	}
+	
+	else{
+		
+	}
+}
+
+
+?> 
+
+                
+                
+                
 				<li><a class="round_left2" href="#">
 <!--					<img src="images/icons/grey/settings_2.png">
 -->	
@@ -342,16 +391,36 @@ else{
                         
                                <?php 				
 if(isset($marks[0])) {
+	
 
 foreach ($marks as $key => $value) 
 	{
-		echo htmlentities($value["url"]);
+		?>
+          <div id="main" class="box grid_4">
+			<div class="content round_all clearfix">
+           
+                   <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
+                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo htmlentities($value["url"]);?>" /> </a> 
+
+			</div>
+		</div>
+        <?php
 	}
 }
 else{
 	
 	if(isset($marks["url"])){
-		echo $marks["url"];
+		?>
+          <div id="main" class="box grid_4">
+			<div class="content round_all clearfix">
+           
+                   <a target="_blank" href="<?php echo $marks["url"];?>">
+                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $marks["url"];?>" /> </a> 
+
+			</div>
+		</div>
+        <?php
+		
 	}
 	
 	else{
