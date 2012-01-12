@@ -602,6 +602,7 @@ else{
 	}
 }
 }
+echo $cat;
 //echo ""; print_r($marks); echo "";
 ?>   
         
