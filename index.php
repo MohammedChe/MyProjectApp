@@ -2,6 +2,10 @@
 
 require_once 'includes/global.inc.php';
 
+if(isset($_SESSION['logged_in'])) {
+	header("Location: home.php");
+}
+
 $error = "";
 $errorReg = "";
 $email = "";
