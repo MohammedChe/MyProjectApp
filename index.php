@@ -604,6 +604,7 @@ else{
 }
 echo $cat;
 echo $cat[0];
+echo $cat['title'];
 //echo ""; print_r($marks); echo "";
 ?>   
         
