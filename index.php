@@ -418,12 +418,8 @@ else{
                                 <input type="text" value="<?php echo $url; ?>" name="url" />
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
-                                <?php 
-                                foreach ($cat as $key => $value) 
-                                {
-                                    echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
-                                }
-                                
+                                <?php   
+                                    echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
                                 ?>
                               </select>
                                 <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
@@ -438,17 +434,11 @@ else{
                             <?php
 	}
 }
-							
-							
-							
-							
-								
+			
 							?>
                           </div> 
 						</div> 
 					</li>	
-                    
-                   
                           <?php
 				}	
 
