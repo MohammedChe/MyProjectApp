@@ -169,13 +169,13 @@ $selectedCatIndex = $theCat->id;
 }
 
 else{
-	if (isset($cat[0])){
-		$selectedCat = $cat[0]['title'];
-		$selectedCatIndex = $cat[0]['id'];
+	if (isset($cat["title"])){
+		$selectedCat = $cat["title"];
+		$selectedCatIndex = $cat["id"];
 	}
 	else{
-		$selectedCat = "NONE";
-		$selectedCatIndex = "NONE";
+//		$selectedCat = "NONE";
+//		$selectedCatIndex = "NONE";
 	}
 }
 
