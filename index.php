@@ -557,20 +557,21 @@ function hideFirst()
         <?php 
 		if(isset($_SESSION['logged_in'])) {
 				
-if(isAssoc($marks)){
-	echo "ONLY HAS 1";
-}
-else{
-	foreach ($marks as $key => $value) 
-	{
-		echo htmlentities($value["url"]);
-	}
-	
-	}
-	
-	echo "<br/>";
-	echo "<br/>";
-	echo "<br/>";
+  //if(isAssoc($marks)){
+//	  echo "ONLY HAS 1";
+//  }
+//  else{
+//	  foreach ($marks as $key => $value) 
+//	  {
+//		  echo htmlentities($value["url"]);
+//	  }
+//	  
+//	  }
+//	  
+//	  echo "<br/>";
+//	  echo "<br/>";
+//	  echo "<br/>";
+
 if(isset($marks[0]) && isset($marks[1])) {
 
 foreach ($marks as $key => $value) 
