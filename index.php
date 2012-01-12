@@ -169,21 +169,21 @@ $selectedCatIndex = $theCat->id;
 }
 
 else{
-	if (isset($cat["title"])){
-		$selectedCat = $cat["title"];
-		$selectedCatIndex = $cat["id"];
-	}
-	else{
+//	if (isset($cat["title"])){
+//		$selectedCat = $cat["title"];
+//		$selectedCatIndex = $cat["id"];
+//	}
+//	else{
 //		$selectedCat = "NONE";
 //		$selectedCatIndex = "NONE";
-	}
+//	}
+
+$marks = $userTools->getRecentBookmarks($user->id);
+
 }
 
 if (isset($selectedCatIndex)){
 	$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-}
-else{
-	$marks = $userTools->getRecentBookmarks($user->id);
 }
 
 //If the form wasn't submitted, or didn't validate
