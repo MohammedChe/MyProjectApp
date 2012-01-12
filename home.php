@@ -338,38 +338,8 @@ else{
 
         
         		        <div id="container" class="clearfix">
-
-       <!-- <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
-                   <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
-
-			</div>
-		</div>-->
-        
-    </div>
-    
-    
-        </div>
-		<div class="clear"></div>
-        
-        <?php 				
-  //if(isAssoc($marks)){
-//	  echo "ONLY HAS 1";
-//  }
-//  else{
-//	  foreach ($marks as $key => $value) 
-//	  {
-//		  echo htmlentities($value["url"]);
-//	  }
-//	  
-//	  }
-//	  
-//	  echo "<br/>";
-//	  echo "<br/>";
-//	  echo "<br/>";
-
+                        
+                               <?php 				
 if(isset($marks[0])) {
 
 foreach ($marks as $key => $value) 
@@ -384,13 +354,31 @@ else{
 	}
 	
 	else{
-		echo "NONE";
+		?>
+          <div id="main" class="box grid_4">
+			<div class="content round_all clearfix">
+           
+                   <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
+                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
+
+			</div>
+		</div>
+        <?php
 	}
 }
 
 
-//echo ""; print_r($marks); echo "";
-?>   
+?> 
+
+      
+        
+    </div>
+    
+    
+        </div>
+		<div class="clear"></div>
+        
+   
         
 
 
