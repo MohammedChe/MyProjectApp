@@ -378,15 +378,19 @@ function hideFirst()
                                   
                                   <input type="submit" value="Add" name="submit-form3" />
                                 </form>
-							</div> 
-							<div class="grid_4"> <?php 
-								if (isset($cat[0]['title'])){
-								 ?> 
-								<h4>Add Bookmark</h4> 
-                                <form name="addBookmarkForm"  method="post">
+</div>
+                            <div class="grid_4">
+                            <?php 
+							
+							
+							
+							
+							if(isset($cat[0]) && isset($cat[1])) {
+ ?>
+                            <h4>Add Bookmark</h4>
+                            <form name="addBookmarkForm"  method="post">
                                 Save URL:
                                 <input type="text" value="<?php echo $url; ?>" name="url" />
-                                
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php 
@@ -395,23 +399,52 @@ function hideFirst()
                                     echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
                                 }
                                 
-                                ?>      
-                                </select>
+                                ?>
+                              </select>
                                 <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
-                                
                                 <input type="submit" value="Save" name="submit-form2" />
-                                </form>
+                              </form>
+                            <?php 
+								}
+							
+
+else{
+	
+	if(isset($cat["title"])){
+		?>
+                            <h4>Add Bookmark</h4>
+                            <form name="addBookmarkForm"  method="post">
+                                Save URL:
+                                <input type="text" value="<?php echo $url; ?>" name="url" />
+                                In:
+                                <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php 
-								}
-								else{
-								?>
-                                 <p>
-                                  You Dont Have Any Categories Yet!
-                                 </p>
-                                 <?php 
-								}
-								?>
-							</div> 
+                                foreach ($cat as $key => $value) 
+                                {
+                                    echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                                }
+                                
+                                ?>
+                              </select>
+                                <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
+                                <input type="submit" value="Save" name="submit-form2" />
+                              </form>
+                            <?php
+	}
+	
+	else{
+		?>
+                            <p>You Dont Have Any Categories Yet!</p>
+                            <?php
+	}
+}
+							
+							
+							
+							
+								
+							?>
+                          </div> 
 						</div> 
 					</li>	
                     
