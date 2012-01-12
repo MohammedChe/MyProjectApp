@@ -117,7 +117,7 @@ if(isset($_POST['submit-form3'])) {
 	    $newCat->save(true);
 	
 	    //redirect them to a welcome page
-	    header("Location: home.php");
+	    //header("Location: index.php");
 	    
 	}
 
@@ -147,7 +147,7 @@ if(isset($_POST['submit-form2'])) {
 	    $newBookmark->save(true);
 	
 	    //redirect them to a welcome page
-	    header("Location: home.php");
+	    //header("Location: home.php");
 	    
 	}
 	else
@@ -371,7 +371,7 @@ function hideFirst()
 							<div class="grid_4"> 
 								<h4>Add Category</h4> 
                                 <?php echo ($error2 != "") ? $error2 : ""; ?>
-                                <form action="home.php" method="post">
+                                <form method="post">
                                   Title:
                                   <input type="text" value="<?php echo $title; ?>" name="title" />
                                   <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
@@ -381,7 +381,7 @@ function hideFirst()
 							</div> 
 							<div class="grid_4"> 
 								<h4>Add Bookmark</h4> 
-                                <form name="addBookmarkForm" action="home.php" method="post">
+                                <form name="addBookmarkForm"  method="post">
                                 Save URL:
                                 <input type="text" value="<?php echo $url; ?>" name="url" />
                                 In:
