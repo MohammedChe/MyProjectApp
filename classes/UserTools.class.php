@@ -116,9 +116,14 @@ class UserTools {
       public function checkURL($url)
        {
 		  
-		   if (0 !== strpos($url, 'http://')) {
-			   $url .= 'http://' . $url;
-		   }
+		  if (strstr($url, "http://") == $url || strstr($url, "ftp://") == $url) { 
+		  	$domain = $url;
+		  }
+		  else {
+			  $url = "http://" . $url;
+			  $domain = $url;
+		  }
+
 		   
        		  $domain = $this->correctURL($url);
 			  
