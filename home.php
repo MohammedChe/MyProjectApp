@@ -209,8 +209,11 @@ else{
 					<img src="images/icons/grey/chart_6.png">
 					Latest
 					<span class="icon">&nbsp;</span></a>
-					<ul>
-                    <li><a href="<?php $marks["url"];?>"><?php echo parse_url($marks["url"], PHP_URL_HOST);?></a></li>
+					<ul id="recentList">
+                   <?php
+						$url = parse_url($marks["url"], PHP_URL_HOST);
+					?>
+                    <li><a href="<img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><?php $marks["url"];?>"><span id="recentURL"><?php echo $url;?></span></a></li>
 					</ul>
 				</li>
 		
@@ -453,7 +456,33 @@ else{
         </div>
 		<div class="clear"></div>
         
-   
+                  <?php 				
+if(isset($cat[0])) {
+	
+
+	foreach ($cat as $key => $value) 
+	{
+		echo $value["title"];
+	}
+
+
+
+}
+else{
+	
+	if(isset($marks["title"])){
+		
+		echo $marks["title"];
+		
+	}
+	
+	else{
+		
+	}
+}
+
+
+?>
         
 
 
