@@ -74,9 +74,6 @@ if(isset($_POST['submit-form2'])) {
 	{
 		echo "URL doesnt exist";
 	}
-	
-	echo $success;
-
 }
 
 $cat = $userTools->getCategories($user->id);
@@ -100,19 +97,22 @@ else{
 //		$selectedCatIndex = "NONE";
 //	}
 
-$marks = $userTools->getRecentBookmarks(10, $user->id);
+$marks = $userTools->getRecentBookmarks(18, $user->id);
+$marks2 = $userTools->getRecentBookmarks(25, $user->id);
 
 }
 
 if (isset($selectedCatIndex)){
 	//$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-	$marks = $userTools->getRecentBookmarks(10, $user->id);
+	$marks = $userTools->getRecentBookmarks(18, $user->id);
+	$marks2 = $userTools->getRecentBookmarks(25, $user->id);
 }
 
 //function isAssoc($arr)
 //{
 //    return array_keys($arr) !== range(0, count($arr) - 1);
 //}
+
 }
 //////////////////////////////////
 
@@ -183,7 +183,7 @@ if(isset($marks[0])) {
 					<span class="icon">&nbsp;</span></a>
 					<ul>
                     <?php
-					foreach ($marks as $key => $value) 
+					foreach ($marks2 as $key => $value) 
 					{
 					?>
                     <li><a href="#"><?php echo parse_url(htmlentities($value["url"]), PHP_URL_HOST) ;?></a></li>
@@ -207,7 +207,7 @@ else{
 					Latest
 					<span class="icon">&nbsp;</span></a>
 					<ul>
-                    <li><a href="#"><?php echo parse_url($marks["url"], PHP_URL_HOST);?></a></li>
+                    <li><a href="<?php $marks["url"];?>"><?php echo parse_url($marks["url"], PHP_URL_HOST);?></a></li>
 					</ul>
 				</li>
 		
