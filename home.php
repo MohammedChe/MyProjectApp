@@ -188,7 +188,7 @@ if(isset($marks[0])) {
 					?>
                     
 					
-                    <li><a href="<?php htmlentities($value["url"]);?>"><?php $userTools->getSiteFavicon($value["url"]);?><!--<img src="">--><span><?php echo parse_url(htmlentities($value["url"]), PHP_URL_HOST) ;?></span><span class="icon">&nbsp;</span></a></li>
+                    <li><a href="<?php htmlentities($value["url"]);?>"><img src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $value["url"]; ?>"><span><?php echo parse_url(htmlentities($value["url"]), PHP_URL_HOST) ;?></span><span class="icon">&nbsp;</span></a></li>
                     <?php
 					}
 					?>
