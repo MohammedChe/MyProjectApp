@@ -186,7 +186,9 @@ if(isset($marks[0])) {
 					foreach ($marks2 as $key => $value) 
 					{
 					?>
-                    <li><a href="#"><?php echo parse_url(htmlentities($value["url"]), PHP_URL_HOST) ;?></a></li>
+                    
+					
+                    <li><a href="<?php htmlentities($value["url"]);?>"><?php getSiteFavicon($value["url"]);?><!--<img src="">--><span><?php echo parse_url(htmlentities($value["url"]), PHP_URL_HOST) ;?></span><span class="icon">&nbsp;</span></a></li>
                     <?php
 					}
 					?>
