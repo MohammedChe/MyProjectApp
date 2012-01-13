@@ -18,6 +18,10 @@ body{
   float: left;
 }
 
+.favi{
+	margin-top:10px;
+}
+
 #container{
 	margin-left:90px;
 }
