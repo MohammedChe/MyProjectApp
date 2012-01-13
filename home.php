@@ -74,6 +74,8 @@ if(isset($_POST['submit-form2'])) {
 	{
 		echo "URL doesnt exist";
 	}
+	
+	echo $success;
 
 }
 
