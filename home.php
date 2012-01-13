@@ -186,7 +186,7 @@ if(isset($marks[0])) {
 					foreach ($marks as $key => $value) 
 					{
 					?>
-                    <li><a href="#"><?php echo parse_url(htmlentities($value["url"]), PHP_URL_PATH) ;?></a></li>
+                    <li><a href="#"><?php echo parse_url(htmlentities($value["url"]), PHP_URL_HOST) ;?></a></li>
                     <?php
 					}
 					?>
@@ -207,7 +207,7 @@ else{
 					Latest
 					<span class="icon">&nbsp;</span></a>
 					<ul>
-                    <li><a href="#"><?php echo parse_url($marks["url"], PHP_URL_PATH);?></a></li>
+                    <li><a href="#"><?php echo parse_url($marks["url"], PHP_URL_HOST);?></a></li>
 					</ul>
 				</li>
 		
