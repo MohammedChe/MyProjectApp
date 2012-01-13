@@ -189,7 +189,7 @@ if(isset($marks[0])) {
 					?>
                     
 					
-                    <li><a href="<?php htmlentities($value["url"]);?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span><?php echo $url ;?></span></a></li>
+                    <li><a href="<?php htmlentities($value["url"]);?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url ;?></span></a></li>
                     <?php
 					}
 					?>
