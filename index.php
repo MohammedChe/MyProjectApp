@@ -22,7 +22,7 @@ if(isset($_POST['submit-login'])) {
 	$userTools = new UserTools();
 	if($userTools->login($email, $password)){ 
 		//successful login, redirect them to a page
-		//header("Location: index.php");
+		header("Location: home.php");
 	}else{
 		$error = "Incorrect email or password. Please try again.";
 	}
@@ -84,7 +84,7 @@ if(isset($_POST['submit-form'])) {
 	    $userTools->login($email, $password);
 	
 	    //redirect them to a welcome page
-	   // header("Location: index.php");
+	    header("Location: home.php");
 	    
 	}
 
@@ -256,16 +256,7 @@ function hideFirst()
                                     ?>
         
     </div>
-    
-    <?php
-
-$myDomain = parse_url("http://www.google.ie/#sclient=psy-ab&hl=en&source=hp&q=php+fix+user+submitted+url&pbx=1&oq=php+fix+user+submitted+url&aq=f&aqi=&aql=&gs_sm=e&gs_upl=67568828l67577608l3l67577949l23l21l1l0l0l0l221l2910l4.15.2l22l0&bav=on.2,or.r_gc.r_pw.r_cp.,cf.osb&fp=a28f50725e2c54b8&biw=1920&bih=977");
-
-echo "Domain: " . $myDomain["host"] . "<br>";
-echo "Query String: " . $myDomain["query"] . "<br>";
-echo "Anchor: " . $myDomain["fragment"] . "<br>";
-
-?> 
+   
     
     
         </div>

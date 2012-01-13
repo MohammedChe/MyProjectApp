@@ -115,6 +115,11 @@ class UserTools {
 	 //returns true, if domain is availible, false if not
       public function checkURL($url)
        {
+		  
+		   if (0 !== strpos($url, 'http://')) {
+			   $url .= 'http://' . $url;
+		   }
+		   
        		  $domain = $this->correctURL($url);
 			  
 			  if($domain != FALSE){
