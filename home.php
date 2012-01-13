@@ -181,7 +181,7 @@ if(isset($marks[0])) {
 					<img src="images/icons/grey/chart_6.png">
 					Latest
 					<span class="icon">&nbsp;</span></a>
-					<ul>
+					<ul id="recentList">
                     <?php
 					foreach ($marks2 as $key => $value) 
 					{

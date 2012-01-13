@@ -22,6 +22,10 @@ body{
 	margin-top:10px;
 }
 
+#recentList{
+	width:auto;
+}
+
 #recentURL{
 	margin-left:25px;
 }
