@@ -263,8 +263,6 @@ if(isset($marks[0])) {
                     <?php
 					}
 					?>
-					</ul>
-				</li>
     <?php
 
 
