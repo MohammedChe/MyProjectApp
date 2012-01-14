@@ -251,7 +251,46 @@ if(isset($cat[0])) {
        	 <span class="icon">&nbsp;</span>
        	 <div class="accordion">
          
-       	 <a href="http://www.google.ie">Paris</a>
+         
+         <?php 				
+if(isset($marks[0])) {
+	
+					foreach ($marks2 as $key => $value) 
+					{
+					?>
+                     <a href="<?php $value["url"]?>"><?php $value["url"]?></a>
+					
+                    <?php
+					}
+					?>
+					</ul>
+				</li>
+    <?php
+
+
+}
+else{
+	
+	if(isset($marks["url"])){
+		
+		?>
+        <a href="<?php $marks["url"]?>"><?php $marks["url"]?></a>
+		
+		
+		<?php
+		
+	}
+	
+	else{
+		
+	}
+}
+
+?>
+         
+         
+         
+       	 
          
    		 </div>
 		</li>
@@ -276,7 +315,6 @@ else{
    		 </div>
 		</li>
         <?php
-		echo $cat["title"];
 		
 	}
 	
