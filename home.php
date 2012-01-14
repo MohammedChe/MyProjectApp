@@ -263,6 +263,8 @@ if(isset($marks[0])) {
                     <?php
 					}
 					?>
+                    </div>
+		</li>
     <?php
 
 
@@ -274,7 +276,8 @@ else{
 		?>
         <a href="<?php $marks["url"]?>"><?php $marks["url"]?></a>
 		
-		
+		</div>
+		</li>
 		<?php
 		
 	}
@@ -285,13 +288,9 @@ else{
 }
 
 ?>
+
          
-         
-         
-       	 
-         
-   		 </div>
-		</li>
+   		 
         <?php
 		
 	}
