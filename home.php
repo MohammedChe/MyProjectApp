@@ -270,6 +270,8 @@ else{
 		$str = "testing";
 		?>
         <a href="<?php $str ?>"><?php $str ?></a>
+        <a href="#">test</a>
+        <a href="<?php $str ?>">test2</a>
 	
 		<?php
 		
