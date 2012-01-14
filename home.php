@@ -251,47 +251,7 @@ if(isset($cat[0])) {
        	 <span class="icon">&nbsp;</span>
        	 <div class="accordion">
          
-         
-         <?php 				
-if(isset($marks[0])) {
-	
-
-					foreach ($marks2 as $key => $value) 
-					{
-						?>
-                     <a href="<?php htmlentities($value["url"]);?>"><?php htmlentities($value["url"]);?></a>
-					
-                    
-                    
-                   
-    <?php
-					}
-
-}
-else{
-	
-	if(isset($marks["url"])){
-		
-		?>
-         <a href="<?php $marks["url"];?>"><?php $marks["url"];?></a>
-		
-		
-		<?php
-		
-	}
-	
-	else{
-		?>
-		<a href="#">HELLO</a>
-        <?php
-	}
-}
-
-
-?> 
-         
-         
-       
+       	 <a href="http://www.google.ie">Paris</a>
          
    		 </div>
 		</li>
@@ -311,51 +271,13 @@ else{
        	 <span class="icon">&nbsp;</span>
        	 <div class="accordion">
          
-         
-         
-         
-         <?php 				
-if(isset($marks[0])) {
-	
-
-					foreach ($marks2 as $key => $value) 
-					{
-						?>
-                     <a href="<?php htmlentities($value["url"]);?>"><?php htmlentities($value["url"]);?></a>
-					
-                    
-                    
-                   
-    <?php
-					}
-
-}
-else{
-	
-	if(isset($marks["url"])){
-		
-		?>
-         <a href="<?php $marks["url"];?>"><?php $marks["url"];?></a>
-		
-		
-		<?php
-		
-	}
-	
-	else{
-		?>
-		<a href="#">HELLO</a>
-        <?php
-	}
-}
-
-
-?> 
-
+       	 <a href="http://www.google.ie"></a>
          
    		 </div>
 		</li>
-        <?php		
+        <?php
+		echo $cat["title"];
+		
 	}
 	
 	else{
