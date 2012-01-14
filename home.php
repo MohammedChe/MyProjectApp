@@ -265,7 +265,7 @@ else{
 	
 	if(isset($marks["url"])){
 		?>
-        <a href="#">test</a>
+        <a href="#"><?php $marks["url"]?> </a>
 	
 		<?php
 		
