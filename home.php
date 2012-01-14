@@ -258,8 +258,8 @@ if(isset($marks[0])) {
 					foreach ($marks2 as $key => $value) 
 					{
 					?>
-                     <a href="<?php $value["url"]?>"><?php $value["url"]?></a>
-					
+                    <a href="#">test</a>				
+
                     <?php
 					}
 					?>
