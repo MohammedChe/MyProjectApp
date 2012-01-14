@@ -251,7 +251,45 @@ if(isset($cat[0])) {
        	 <span class="icon">&nbsp;</span>
        	 <div class="accordion">
          
-       	 <a href="http://www.google.ie">Paris</a>
+         
+         <?php 				
+if(isset($marks[0])) {
+	
+
+					foreach ($marks2 as $key => $value) 
+					{
+						?>
+                     <a href="<?php htmlentities($value["url"]);?>"><?php htmlentities($value["url"]);?></a>
+					
+                    
+                    
+                   
+    <?php
+					}
+
+}
+else{
+	
+	if(isset($marks["url"])){
+		
+		?>
+         <a href="<?php $marks["url"];?>"><?php $marks["url"];?></a>
+		
+		
+		<?php
+		
+	}
+	
+	else{
+		
+	}
+}
+
+
+?> 
+         
+         
+       
          
    		 </div>
 		</li>
@@ -264,9 +302,41 @@ if(isset($cat[0])) {
 }
 else{
 	
-	if(isset($marks["title"])){
+	if(isset($cat["title"])){
 		
-		echo $marks["title"];
+		?>
+        <li><a href="#"><?php echo $cat["title"];?></a>
+       	 <span class="icon">&nbsp;</span>
+       	 <div class="accordion">
+         
+         
+         
+         
+         <?php 				
+if(isset($marks[0])) {
+	
+
+					foreach ($marks2 as $key => $value) 
+					{
+						?>
+                     <a href="<?php htmlentities($value["url"]);?>"><?php htmlentities($value["url"]);?></a>
+					
+                    
+                    
+                   
+    <?php
+					}
+
+}
+else{
+	
+	if(isset($marks["url"])){
+		
+		?>
+         <a href="<?php $marks["url"];?>"><?php $marks["url"];?></a>
+		
+		
+		<?php
 		
 	}
 	
@@ -276,34 +346,21 @@ else{
 }
 
 
+?> 
+
+         
+   		 </div>
+		</li>
+        <?php		
+	}
+	
+	else{
+		
+	}
+}
+
+
 ?>
-						<li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
-						<li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
-                        <li><a href="#">North America</a>
-							<span class="icon">&nbsp;</span>
-							<div class="accordion">
-								<a href="http://www.google.ie">Paris</a>
-								<a href="#">Lyon</a>
-								<a href="#">Marseille</a>
-								<a href="#">Toulouse</a>
-							</div>
-						</li>
 					</ul>
 				</li>
                 <li class="send_right" id=""><a class="round_right" href="logout.php">
@@ -492,34 +549,7 @@ else{
     
         </div>
 		<div class="clear"></div>
-        
-                  <?php 				
-if(isset($cat[0])) {
-	
-
-	foreach ($cat as $key => $value) 
-	{
-		echo $value["title"];
-	}
-
-
-
-}
-else{
-	
-	if(isset($marks["title"])){
-		
-		echo $marks["title"];
-		
-	}
-	
-	else{
-		
-	}
-}
-
-
-?>
+       
         
 
 
