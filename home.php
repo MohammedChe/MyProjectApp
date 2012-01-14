@@ -257,7 +257,7 @@ if(isset($marks[0])) {
 					foreach ($marks2 as $key => $value) :
 					
 					?>
-                    <a href="<?php htmlentities($value["url"])?>"><?php htmlentities($value["url"])?></a>				
+        <a href="#">test</a>
 
                     <?php endforeach; ?>
     <?php
@@ -267,11 +267,8 @@ if(isset($marks[0])) {
 else{
 	
 	if(isset($marks["url"])){
-		$str = "testing";
 		?>
-        <a href="<?php $str ?>"><?php $str ?></a>
         <a href="#">test</a>
-        <a href="<?php $str ?>">test2</a>
 	
 		<?php
 		
