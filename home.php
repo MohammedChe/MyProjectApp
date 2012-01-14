@@ -240,6 +240,43 @@ else{
 					Bookmarks
 					<span class="icon">&nbsp;</span></a>
                     <ul>
+                                      <?php 				
+if(isset($cat[0])) {
+	
+
+	foreach ($cat as $key => $value) 
+	{
+		?>
+        <li><a href="#"><?php echo $value["title"];?></a>
+       	 <span class="icon">&nbsp;</span>
+       	 <div class="accordion">
+         
+       	 <a href="http://www.google.ie">Paris</a>
+         
+   		 </div>
+		</li>
+        <?php
+		
+	}
+
+
+
+}
+else{
+	
+	if(isset($marks["title"])){
+		
+		echo $marks["title"];
+		
+	}
+	
+	else{
+		
+	}
+}
+
+
+?>
 						<li><a href="#">North America</a>
 							<span class="icon">&nbsp;</span>
 							<div class="accordion">
