@@ -254,15 +254,12 @@ if(isset($cat[0])) {
          
          <?php 				
 if(isset($marks[0])) {
-	
-					foreach ($marks2 as $key => $value) 
-					{
+					foreach ($marks2 as $key => $value) :
+					
 					?>
                     <a href="<?php htmlentities($value["url"])?>"><?php htmlentities($value["url"])?></a>				
 
-                    <?php
-					}
-					?>
+                    <?php endforeach; ?>
                     </div>
 		</li>
     <?php
