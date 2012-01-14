@@ -244,8 +244,8 @@ else{
 if(isset($cat[0])) {
 	
 
-	foreach ($cat as $key => $value) 
-	{
+	foreach ($cat as $key => $value) :
+	
 		?>
         <li><a href="#"><?php echo $value["title"];?></a>
        	 <span class="icon">&nbsp;</span>
@@ -283,16 +283,7 @@ else{
 		
 	}
 }
-
-?>
-
-         
-   		 
-        <?php
-		
-	}
-
-
+endforeach; 
 
 }
 else{
