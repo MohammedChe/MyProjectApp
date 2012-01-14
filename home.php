@@ -253,7 +253,7 @@ if(isset($cat[0])) {
          
          
          <?php 				
-if(isset($marks[0])) {
+if(isset($marks[0]) && isset($marks[1])) {
 					foreach ($marks2 as $key => $value) :
 					
 					?>
