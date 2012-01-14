@@ -260,8 +260,6 @@ if(isset($marks[0])) {
                     <a href="<?php htmlentities($value["url"])?>"><?php htmlentities($value["url"])?></a>				
 
                     <?php endforeach; ?>
-                    </div>
-		</li>
     <?php
 
 
@@ -272,9 +270,7 @@ else{
 		
 		?>
         <a href="<?php $marks["url"]?>"><?php $marks["url"]?></a>
-		
-		</div>
-		</li>
+	
 		<?php
 		
 	}
@@ -283,6 +279,11 @@ else{
 		
 	}
 }
+		
+		?>
+        </div>
+		</li>
+        <?php
 endforeach; 
 
 }
