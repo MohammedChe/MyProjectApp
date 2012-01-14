@@ -253,7 +253,7 @@ if(isset($cat[0])) {
          
          
          <?php 				
-if(isset($marks[0]) && isset($marks[1])) {
+if(isset($marks[0])) {
 					foreach ($marks2 as $key => $value) :
 					
 					?>
@@ -267,9 +267,9 @@ if(isset($marks[0]) && isset($marks[1])) {
 else{
 	
 	if(isset($marks["url"])){
-		
+		$str = "testing";
 		?>
-        <a href="<?php $marks["url"]?>"><?php $marks["url"]?></a>
+        <a href="<?php $str ?>"><?php $str ?></a>
 	
 		<?php
 		
