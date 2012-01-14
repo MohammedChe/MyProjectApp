@@ -281,7 +281,9 @@ else{
 	}
 	
 	else{
-		
+		?>
+		<a href="#">HELLO</a>
+        <?php
 	}
 }
 
@@ -341,7 +343,9 @@ else{
 	}
 	
 	else{
-		
+		?>
+		<a href="#">HELLO</a>
+        <?php
 	}
 }
 
