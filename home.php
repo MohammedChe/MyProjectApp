@@ -88,14 +88,14 @@ $selectedCatIndex = $theCat->id;
 }
 
 else{
-//	if (isset($cat["title"])){
-//		$selectedCat = $cat["title"];
-//		$selectedCatIndex = $cat["id"];
-//	}
-//	else{
-//		$selectedCat = "NONE";
-//		$selectedCatIndex = "NONE";
-//	}
+	if (isset($cat["title"])){
+		$selectedCat = $cat["title"];
+		$selectedCatIndex = $cat["id"];
+	}
+	else{
+		$selectedCat = "NONE";
+		$selectedCatIndex = "NONE";
+	}
 
 $marks = $userTools->getRecentBookmarks(18, $user->id);
 $marks2 = $userTools->getRecentBookmarks(25, $user->id);
@@ -397,10 +397,35 @@ else{
 					<img src="images/icons/grey/Archive.png">
 					Categories
 					<span class="icon">&nbsp;</span></a>
-					<ul>
-                    <li><a href="#">Test</a></li>
-                    <li><a href="#">Test</a></li>
-					</ul>
+                    
+                    <?php 
+					  if (!isset($cat[0])){
+					  ?> 
+					  
+					  hdbcjshacjhsdcjsc
+					  <?php 
+					  }
+					  else
+					  {
+					  ?>
+					  <form name="categoryForm" id="categoryForm" method="post">
+						<select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
+						<option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
+					  <?php 
+					  foreach ($cat as $key => $value) 
+					  {
+						  echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+					  }
+					  
+					  ?>
+							 
+						</select>
+					  </form>
+					  <?php 
+					  }
+					?>
+
+                   
 				</li>			
 			</ul>
 		</div>
