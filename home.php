@@ -400,10 +400,22 @@ else{
 					<span class="icon">&nbsp;</span></a>
                     
                     <?php 
-					  if (!isset($cat[0])){
+					  if (isset($cat[0])){
 					  ?> 
 					  
-					  hdbcjshacjhsdcjsc
+					  <form name="categoryForm" id="categoryForm" method="post">
+                      <select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
+                      <option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
+                    <?php 
+                    foreach ($cat as $key => $value) 
+                    {
+                        echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                    }
+                    
+                    ?>
+                           
+                      </select>
+                    </form>
 					  <?php 
 					  }
 					  else
@@ -415,7 +427,6 @@ else{
                       
           <form name="categoryForm" id="categoryForm" method="post">
 						<select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
-						<option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
 					  <?php 
 					 
 						  echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
@@ -428,11 +439,8 @@ else{
 	}
 	else{
 	?>
-					  <form name="categoryForm" id="categoryForm" method="post">
-						<select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
-						<option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>							 
-						</select>
-					  </form>
+    No Categories
+
 					  <?php 
 	}
 					  }
