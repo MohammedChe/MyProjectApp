@@ -395,6 +395,7 @@ else{
                     <li class="send_right" id=""><a href="#">
 					<img src="images/icons/grey/Archive.png">
 					Categories</a>
+                    <span class="icon">&nbsp;</span></a>
                     <ul>
                     <li>
                     test
