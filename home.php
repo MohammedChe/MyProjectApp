@@ -392,19 +392,16 @@ else{
                           </div> 
 						</div> 
 					</li>	
-                    <li class="send_right" id=""><a href="#">
+                                  	
+                <li class="send_right"><a href="#">
 					<img src="images/icons/grey/Archive.png">
-					Categories</a>
-                    <span class="icon">&nbsp;</span></a>
-                    <ul>
-                    <li>
-                    test
-                    </li>
-                    <li>
-                    test
-                    </li>
-                    </ul>
-				</li>				
+					Categories
+					<span class="icon">&nbsp;</span></a>
+					<ul>
+                    <li>Test</li>
+                    <li>Test</li>
+					</ul>
+				</li>			
 			</ul>
 		</div>
         
