@@ -406,14 +406,17 @@ else{
 					  <form name="categoryForm" id="categoryForm" method="post">
                       <select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
                       <option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
+                      <ul>
+                      
                     <?php 
                     foreach ($cat as $key => $value) 
                     {
-                        echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+						
+                        echo "<li><option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option></li>";
                     }
                     
                     ?>
-                           
+                           </ul>
                       </select>
                     </form>
 					  <?php 
