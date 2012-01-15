@@ -402,17 +402,13 @@ else{
                     <?php 
 					  if (isset($cat[0])){
 					  ?> 
-					  
-					  <form name="categoryForm" id="categoryForm" method="post">
-                      <select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
-                      <option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
                       <ul>
                       
                     <?php 
                     foreach ($cat as $key => $value) 
                     {
 						
-                        echo "<li><option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option></li>";
+                        echo "<li><a href=home/php?c=" . htmlentities($value["id"]) .">" . htmlentities($value["title"]) . "</a></li>";
                     }
                     
                     ?>
