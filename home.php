@@ -79,7 +79,7 @@ if(isset($_POST['submit-form2'])) {
 $cat = $userTools->getCategories($user->id);
 
 
-if(isset($_GET['c'])) { 
+if(isset($_GET['c']) || $_GET['c'] != "") { 
 
 $theCat = $userTools->getCategory($_GET['c']);
 $selectedCat = $theCat->title;
