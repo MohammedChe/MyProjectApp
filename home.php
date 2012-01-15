@@ -391,7 +391,11 @@ else{
 							?>
                           </div> 
 						</div> 
-					</li>					
+					</li>	
+                    <li class="send_right" id=""><a href="#">
+					<img src="images/icons/grey/Archive.png">
+					Categories</a>
+				</li>				
 			</ul>
 		</div>
         
