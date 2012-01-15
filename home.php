@@ -398,8 +398,8 @@ else{
 					Categories
 					<span class="icon">&nbsp;</span></a>
 					<ul>
-                    <li>Test</li>
-                    <li>Test</li>
+                    <li><a href="#">Test</a></li>
+                    <li><a href="#">Test</a></li>
 					</ul>
 				</li>			
 			</ul>
