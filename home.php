@@ -408,7 +408,7 @@ else{
                     foreach ($cat as $key => $value) 
                     {
 						
-                        echo "<li><a href='?c='" . htmlentities($value["id"]) .">" . htmlentities($value["title"]) . "</a></li>";
+                        echo "<li><a href='?c=" . htmlentities($value["id"]) ."'>" . htmlentities($value["title"]) . "</a></li>";
                     }
                     
                     ?>
