@@ -79,7 +79,7 @@ if(isset($_POST['submit-form2'])) {
 $cat = $userTools->getCategories($user->id);
 
 
-if(isset($_GET['c']) || $_GET['c'] != "") { 
+if(isset($_GET['c'])) { 
 
 $theCat = $userTools->getCategory($_GET['c']);
 $selectedCat = $theCat->title;
@@ -96,18 +96,16 @@ else{
 		$theCat = $userTools->getLastCategory($user->id);
 		$selectedCat = $theCat->title;
 		$selectedCatIndex = $theCat->id;
+		
+		$marks = $userTools->getRecentBookmarks(18, $user->id);
 	}
-
-$marks = $userTools->getRecentBookmarks(18, $user->id);
-$marks2 = $userTools->getRecentBookmarks(25, $user->id);
-
 }
 
 if (isset($selectedCatIndex)){
-	//$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
 	$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-	$marks2 = $userTools->getRecentBookmarks(25, $user->id);
 }
+
+$marks2 = $userTools->getRecentBookmarks(25, $user->id);
 
 //function isAssoc($arr)
 //{
