@@ -81,7 +81,7 @@ $cat = $userTools->getCategories($user->id);
 
 if(isset($_POST['categoryList'])) { 
 
-$theCat = $userTools->getCategory($_POST['categoryList']);
+$theCat = $userTools->getCategory($_GET['c']);
 $selectedCat = $theCat->title;
 $selectedCatIndex = $theCat->id;
 
