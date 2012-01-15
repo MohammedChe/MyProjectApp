@@ -72,6 +72,14 @@ class UserTools {
 		return new Category($result);
 	}
 	
+	public function getLastCategory($owner)
+	{
+		$db = new DB();
+		$result = $db->selectLast('category', "owner = $owner");
+		
+		return new Category($result);
+	}
+	
 	public function getBookmarks($category, $owner)
 	{
 		$db = new DB();

@@ -93,6 +93,7 @@ else{
 		$selectedCatIndex = $cat["id"];
 	}
 	else{
+		$theCat = $userTools->getLastCategory($user->id);
 		$selectedCat = "NONE";
 		$selectedCatIndex = "NONE";
 	}
