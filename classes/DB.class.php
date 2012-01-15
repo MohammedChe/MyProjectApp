@@ -45,7 +45,7 @@ class DB {
         return $this->processRowSet($result);  
     } 
 	
-	public function selectLast($table, $id, $where) {  
+	public function selectLast($table, $where) {  
         $sql = "SELECT * FROM $table WHERE $where ORDER BY id DESC LIMIT 1"; 
         $result = mysql_query($sql);  
         if(mysql_num_rows($result) == 1)  
