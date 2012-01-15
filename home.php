@@ -407,21 +407,33 @@ else{
 					  }
 					  else
 					  {
+						  
+						  
+						  if(isset($cat["id"])){
 					  ?>
-					  <form name="categoryForm" id="categoryForm" method="post">
+                      
+          <form name="categoryForm" id="categoryForm" method="post">
 						<select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
 						<option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>
 					  <?php 
-					  foreach ($cat as $key => $value) 
-					  {
-						  echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
-					  }
-					  
+					 
+						  echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
+					 					  
 					  ?>
 							 
 						</select>
 					  </form>
+        <?php
+	}
+	else{
+	?>
+					  <form name="categoryForm" id="categoryForm" method="post">
+						<select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
+						<option id="first" value="$selectedCatIndex"><?php echo $selectedCat ?></option>							 
+						</select>
+					  </form>
 					  <?php 
+	}
 					  }
 					?>
 
