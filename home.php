@@ -93,9 +93,9 @@ else{
 		$selectedCatIndex = $cat["id"];
 	}
 	else{
-		$theCat = $userTools->getLastCategory($user->id);
-		$selectedCat = $theCat->title;
-		$selectedCatIndex = $theCat->id;
+//		$theCat = $userTools->getLastCategory($user->id);
+//		$selectedCat = $theCat->title;
+//		$selectedCatIndex = $theCat->id;
 		
 		$marks = $userTools->getRecentBookmarks(18, $user->id);
 	}
