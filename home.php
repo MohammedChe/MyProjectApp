@@ -173,7 +173,7 @@ function hideFirst()
                 
                 
                 <?php 				
-if(isset($marks[0])) {
+if(isset($marks2[0])) {
 	
 	?>
     <li id="latest"><a href="#">
@@ -200,7 +200,7 @@ if(isset($marks[0])) {
 }
 else{
 	
-	if(isset($marks["url"])){
+	if(isset($marks2["url"])){
 		
 		?>
         
@@ -245,6 +245,8 @@ if(isset($cat[0])) {
 
 	foreach ($cat as $key => $value) :
 	
+	$marks3 = $userTools->getBookmarks($value["id"], $user->id);
+	
 		?>
         <li><a href="#"><?php echo $value["title"];?></a>
        	 <span class="icon">&nbsp;</span>
@@ -252,8 +254,8 @@ if(isset($cat[0])) {
          
          
          <?php 				
-if(isset($marks[0])) {
-					foreach ($marks2 as $key => $value) :
+if(isset($marks3[0])) {
+					foreach ($marks3 as $key => $value) :
 					
 					?>
         <a href="#"> <?php $value["url"]; ?></a>
@@ -262,7 +264,7 @@ if(isset($marks[0])) {
 }
 else{
 	
-	if(isset($marks["url"])){
+	if(isset($marks3["url"])){
 		?>
         <a href="#"><?php $marks["url"]?> </a>
 	
@@ -291,7 +293,7 @@ else{
        	 <span class="icon">&nbsp;</span>
        	 <div class="accordion">
          
-       	 <a href="http://www.google.ie"></a>
+       	 <a href="http://www.google.ie">google</a>
          
    		 </div>
 		</li>
