@@ -576,9 +576,6 @@ else{
   $('#catTitle').css({
     left: ($(window).width() - $('#catTitle').outerWidth())/2
   });
-  $('#container').css({
-    left: ($(window).width() - $('#container').outerWidth())/2
-  });
 });
  
 // To initially run the function:
