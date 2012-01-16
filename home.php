@@ -576,7 +576,11 @@ else{
   
   $(window).resize(function(){
   $('#catTitle').css({
-    left: ($(window).width() - $('#catTitle').outerWidth())/2,
+    left: ($(window).width() - $('#catTitle').outerWidth())/2
+  });
+  $('#container').css({
+	top: ($(window).height() - $('#container').outerHeight())/2,
+    left: ($(window).width() - $('#container').outerWidth())/2
   });
 });
  
