@@ -124,15 +124,15 @@ class UserTools {
       public function checkURL($url)
        {
 		  
-		  $domain = $this->correctURL($url);
+		  $checkedURL = $this->correctURL($url);
 			  
-			  if (strstr($domain, "http://") == $domain || strstr($domain, "ftp://") == $domain) { 
-		  			$checkedURL = $domain;
-		  		}
-		 	 else {
-				  $domain = "http://" . $domain;
-				  $checkedURL = $domain;
-		 	 }
+			  //if (strstr($domain, "http://") == $domain || strstr($domain, "ftp://") == $domain) { 
+//		  			$checkedURL = $domain;
+//		  		}
+//		 	 else {
+//				  $domain = "http://" . $domain;
+//				  $checkedURL = $domain;
+//		 	 }
 			  
 			  if($checkedURL != FALSE){
 			     
