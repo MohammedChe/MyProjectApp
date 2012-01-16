@@ -18,19 +18,18 @@ body{
   float: left;
 }
 
-#catT{
+/*#catT{
 	margin-right:auto;
 	margin-left:auto;
 	position: relative;
 	top: 34px;
 	z-index: 20;
-}
+}*/
 
 #catTitle{
 	text-align:center;
 	background-color: #000;
 	height: 20px;
-	position: absolute;
 	bottom:-20px;
 	z-index: 19;
 	color:#CCC;
