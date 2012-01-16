@@ -369,7 +369,6 @@ ul.accordion > li.openable:last-child div.accordion {
 /* 	display: none; */
 	color: #666;
 	margin:0px -1px;
-	margin-bottom:20px;
 	padding-top:10px;
 	z-index: 200;
 	width: 100%;

@@ -327,7 +327,7 @@ else{
 						<span class="icon">&nbsp;</span></a>
 						<div class="mega_menu container_16"> 
 							<div class="grid_8"> 
-							Add new categories and bookmarks.
+							Add new categories and bookmarks. testing
 							</div> 
 							<div class="grid_4"> 
 								<h4>Add Category</h4> 
@@ -397,6 +397,8 @@ else{
 }
 			
 							?>
+                            <br/>
+                            <br/>
                           </div> 
 						</div> 
 					</li>	
