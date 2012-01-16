@@ -104,6 +104,14 @@ class UserTools {
 		return new Bookmark($result);
 	}
 	
+	public function removeBookmark($id)
+	{
+		$db = new DB();
+		$result = $db->delete('bookmark', "id = $id");
+		
+		return $result;
+	}
+	
 	
 //	public function checkURL($site)
 //	{

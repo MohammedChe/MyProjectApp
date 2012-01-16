@@ -46,7 +46,7 @@ class DB {
     } 
 	
 	public function selectLast($table, $where) {  
-        $sql = "SELECT * FROM $table WHERE $where ORDER BY id DESC LIMIT 1"; 
+        $sql = "SELECT * FROM $table WHERE $where ORDER BY id LIMIT 1"; 
         $result = mysql_query($sql);  
         if(mysql_num_rows($result) == 1)  
             return $this->processRowSet($result, true);  
@@ -73,6 +73,12 @@ class DB {
 			mysql_query($sql) or die(mysql_error());
 		}
 		return true;
+	}
+	
+	public function delete($table, $where) {
+			$sql = "DELETE FROM $table WHERE $where";
+			mysql_query($sql) or die(mysql_error());
+			return true;
 	}
 	
 	//Inserts a new row into the database.
