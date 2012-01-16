@@ -502,12 +502,15 @@ if(isset($marks[0])) {
 
 foreach ($marks as $key => $value) 
 	{
+		$scheme = parse_url($value["url"], PHP_URL_SCHEME);
+		$host = parse_url($value["url"], PHP_URL_HOST);
+		$theURL2 = $scheme . "://" . $host;
 		?>
           <div id="main" class="box grid_4">
 			<div class="content round_all clearfix">
            
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo htmlentities($value["url"]);?>" /> </a> 
+                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
 			</div>
 		</div>
@@ -515,14 +518,18 @@ foreach ($marks as $key => $value)
 	}
 }
 else{
-	
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	if(isset($marks["url"])){
+		$scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+		$host = parse_url($marks["url"], PHP_URL_HOST);
+		$theURL2 = $scheme . "://" . $host;
 		?>
           <div id="main" class="box grid_4">
 			<div class="content round_all clearfix">
            
                    <a target="_blank" href="<?php echo $marks["url"];?>">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $marks["url"];?>" /> </a> 
+                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
 			</div>
 		</div>
