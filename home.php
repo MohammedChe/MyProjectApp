@@ -84,6 +84,7 @@ if(isset($_GET['c'])) {
 $theCat = $userTools->getCategory($_GET['c']);
 $selectedCat = $theCat->title;
 $selectedCatIndex = $theCat->id;
+$title = $theCat->title;
 
 }
 
@@ -91,12 +92,13 @@ else{
 	if (isset($cat["title"])){
 		$selectedCat = $cat["title"];
 		$selectedCatIndex = $cat["id"];
+		$title = $cat["title"];
 	}
 	else{
 //		$theCat = $userTools->getLastCategory($user->id);
 //		$selectedCat = $theCat->title;
 //		$selectedCatIndex = $theCat->id;
-		
+		$title = "Recent";
 		$marks = $userTools->getRecentBookmarks(18, $user->id);
 	}
 }
@@ -163,7 +165,7 @@ function hideFirst()
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
           <div id="catT">
-         <span id="catTitle" class="round_bottom">testing</span>
+         <span id="catTitle" class="round_bottom"><?php $title ?></span>
          </div>
 			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
