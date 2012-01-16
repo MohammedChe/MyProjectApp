@@ -325,11 +325,11 @@ else{
 						<img src="images/icons/grey/Paperclip.png">
 						Add
 						<span class="icon">&nbsp;</span></a>
-						<div class="mega_menu container_16"> 
-							<div id="addInfo" class="grid_8"> 
+						<div class=" drop_box round_all"> 
+							<div id="addInfo" > 
 							Add new categories and bookmarks. testing
 							</div> 
-							<div id="addCat" class="grid_4"> 
+							<div id="addCat"> 
 								<h4>Add Category</h4> 
                                 <?php echo ($error2 != "") ? $error2 : ""; ?>
                                 <form method="post">
@@ -340,7 +340,7 @@ else{
                                   <input type="submit" value="Add" name="submit-form3" />
                                 </form>
 </div>
-                            <div id="addMark" class="grid_4">
+                            <div id="addMark" >
                             <?php 
 							
 							
