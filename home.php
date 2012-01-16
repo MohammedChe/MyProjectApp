@@ -78,8 +78,6 @@ if(isset($_POST['submit-form2'])) {
 
 $cat = $userTools->getCategories($user->id);
 
-$title = "NONE";
-
 if(isset($_GET['c'])) { 
 
 $theCat = $userTools->getCategory($_GET['c']);
@@ -166,7 +164,7 @@ function hideFirst()
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
           <div id="catT">
-         <span id="catTitle" class="round_bottom"><?php $title ?></span>
+         <span id="catTitle" class="round_bottom"><?php echo $title ?></span>
          </div>
 			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
