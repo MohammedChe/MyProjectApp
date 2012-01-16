@@ -19,6 +19,7 @@ body{
 }
 
 #catT{
+	margin-right: 90px;
 	position: relative;
 	top: 34px;
 	z-index: 20;
@@ -26,7 +27,6 @@ body{
 }
 
 #catTitle{
-	margin-right: 90px;
 	background-color: #000;
 	height: 20px;
 	position: absolute;

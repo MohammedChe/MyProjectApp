@@ -163,7 +163,7 @@ function hideFirst()
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
           <div id="catT">
-         <span id="catTitle" class="round_bottom">testing</span>
+         <span id="catTitle" class="round_bottom">testing1</span>
          </div>
 			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
