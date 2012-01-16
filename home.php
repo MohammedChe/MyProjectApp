@@ -91,13 +91,13 @@ else{
 	if (isset($cat["title"])){
 		$selectedCat = $cat["title"];
 		$selectedCatIndex = $cat["id"];
-		$title = $cat["title"];
+		$cTitle = $cat["title"];
 	}
 	else{
 //		$theCat = $userTools->getLastCategory($user->id);
 //		$selectedCat = $theCat->title;
 //		$selectedCatIndex = $theCat->id;
-		$title = "Recent";
+		$cTitle = "Recent";
 		$marks = $userTools->getRecentBookmarks(18, $user->id);
 	}
 }
@@ -165,7 +165,7 @@ function hideFirst()
 	<div id="wrapper" class="">
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
-         <div id="catTitle" class="round_bottom"><?php echo $title ?></div>
+         <div id="catTitle" class="round_bottom"><?php echo $cTitle ?></div>
 			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
 					<img src="images/icons/grey/admin_user.png">
