@@ -417,28 +417,16 @@ else{
                     
                     ?>
                            </ul>
-                      </select>
-                    </form>
+<!--                      </select>
+                    </form>-->
 					  <?php 
 					  }
 					  else
-					  {
-						  
-						  
+					  {						  
 						  if(isset($cat["id"])){
-					  ?>
-                      
-          <form name="categoryForm" id="categoryForm" method="post">
-						<select name="categoryList" id="categoryList" onChange="this.form.submit()" onClick="hideFirst()">
-					  <?php 
 					 
-						  echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
-					 					  
-					  ?>
-							 
-						</select>
-					  </form>
-        <?php
+						 echo "<li><a href='?c=" . htmlentities($cat["id"]) ."'>" . htmlentities($cat["title"]) . "</a></li>";
+
 	}
 	else{
 	?>
