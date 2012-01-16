@@ -22,17 +22,17 @@ body{
 	margin-right:auto;
 	margin-left:auto;
 	position: relative;
-	top: 34px;
-	z-index: 20;
+	
+	
 	text-align:center;
 }
 
 #catTitle{
+	top: 34px;
+	z-index: 20;
 	text-align:center;
 	background-color: #000;
 	height: 20px;
-	position: absolute;
-	bottom:-20px;
 	z-index: 19;
 	color:#CCC;
 	padding-left:10px;

@@ -155,6 +155,19 @@ function hideFirst()
 {
 	first.style.display = "none";
 }
+
+
+
+jQuery.fn.center = function () {
+    this.css("position","absolute");
+    this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
+    this.css("left", (($(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+    return this;
+}
+
+$("#catTitle").center();
+
+
 </script>
 
 </head>
@@ -163,9 +176,9 @@ function hideFirst()
 	<div id="wrapper" class="">
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
-          <div id="catT">
-         <span id="catTitle" class="round_bottom"><?php echo $title ?></span>
-         </div>
+          
+         <div id="catTitle" class="round_bottom"><?php echo $title ?></div>
+         
 			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
 					<img src="images/icons/grey/admin_user.png">
