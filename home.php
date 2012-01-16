@@ -78,6 +78,7 @@ if(isset($_POST['submit-form2'])) {
 
 $cat = $userTools->getCategories($user->id);
 
+$title = "NONE";
 
 if(isset($_GET['c'])) { 
 
