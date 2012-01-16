@@ -27,6 +27,9 @@ body{
 	left:7px;
 	bottom:-20px;
 	z-index: 19;
+	color:#CCC;
+	padding-left:10px;
+	padding-right:10px;
 }
 
 #favi{
