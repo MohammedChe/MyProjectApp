@@ -54,7 +54,8 @@ body{
 }
 
 #container{
-	margin-left:90px;
+	position: absolute;
+	left:50%;
 }
 
 
