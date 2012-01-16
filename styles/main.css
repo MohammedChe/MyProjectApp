@@ -20,8 +20,7 @@ body{
 
 #catT{
 	position: relative;
-	top: 44px;
-	margin-bottom: 10px;
+	top: 34px;
 	z-index: 20;
 	text-align:center;
 }
