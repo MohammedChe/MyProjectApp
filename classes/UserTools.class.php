@@ -104,10 +104,10 @@ class UserTools {
 		return new Bookmark($result);
 	}
 	
-	public function removeBookmark($id)
+	public function removeBookmark($id, $owner)
 	{
 		$db = new DB();
-		$result = $db->delete('bookmark', "id = $id");
+		$result = $db->delete('bookmark', "id = $id AND owner - $owner");
 		
 		return $result;
 	}
