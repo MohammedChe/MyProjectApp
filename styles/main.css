@@ -25,7 +25,8 @@ body{
 	text-align:center;
 }
 
-#catTitle{		
+#catTitle{
+	margin-right: 90px;
 	background-color: #000;
 	height: 20px;
 	position: absolute;
