@@ -124,27 +124,26 @@ class UserTools {
       public function checkURL($url)
        {
 		  
-		  if (strstr($url, "http://") == $url || strstr($url, "ftp://") == $url) { 
-		  	$checkedURL = $url;
-		  }
-		  else {
-			  $url = "http://" . $url;
-			  $checkedURL = $url;
-		  }
-
-		   
-       		  $domain = $this->correctURL($checkedURL);
+		  $domain = correctURL($url);
 			  
-			  if($domain != FALSE){
+			  if (strstr($domain, "http://") == $domain || strstr($domain, "ftp://") == $domain) { 
+		  			$checkedURL = $domain;
+		  		}
+		 	 else {
+				  $domain = "http://" . $domain;
+				  $checkedURL = $domain;
+		 	 }
+			  
+			  if($checkedURL != FALSE){
 			     
                //check, if a valid url is provided
-               if(!filter_var($domain, FILTER_VALIDATE_URL))
+               if(!filter_var($checkedURL, FILTER_VALIDATE_URL))
                {
                        return false;
                }
 
                //initialize curl
-               $curlInit = curl_init($domain);
+               $curlInit = curl_init($checkedURL);
                curl_setopt($curlInit,CURLOPT_CONNECTTIMEOUT,10);
                curl_setopt($curlInit,CURLOPT_HEADER,true);
                curl_setopt($curlInit,CURLOPT_NOBODY,true);
