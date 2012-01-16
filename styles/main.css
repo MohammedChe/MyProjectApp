@@ -19,7 +19,8 @@ body{
 }
 
 #catT{
-	margin-right: 75px;
+	margin-right:auto;
+	margin-left:auto;
 	position: relative;
 	top: 34px;
 	z-index: 20;
