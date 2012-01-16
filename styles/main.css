@@ -17,6 +17,9 @@ body{
   margin: 10px;
   float: left;
 }
+#catTitle2{
+	text-align:center;
+}
 
 #catTitle{	
 	margin-left:auto;
