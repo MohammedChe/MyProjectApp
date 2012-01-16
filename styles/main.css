@@ -18,11 +18,7 @@ body{
   float: left;
 }
 
-#catTitle{	
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	
+#catTitle{		
 	background-color: #000;
 	height: 20px;
 	position: absolute;
