@@ -21,6 +21,8 @@ body{
 #catTitle{	
 	margin-left:auto;
 	margin-right:auto;
+	text-align:center;
+	
 	background-color: #000;
 	height: 20px;
 	position: absolute;
