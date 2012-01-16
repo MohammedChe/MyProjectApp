@@ -79,7 +79,7 @@ body{
 }
 
 #main .content{	
-	float:left;
+
 	background-color: #fff;
 	padding:5px;
 	border: 1px solid #000;
@@ -648,10 +648,10 @@ ul li.openable.active > a{
 }
 
 @media screen and (max-width: 740px) 	{
-#container{
+/*#container{
 	margin-left:30px;
 	margin-right:30px;
-}
+}*/
 
 #home{
 	display:none;
