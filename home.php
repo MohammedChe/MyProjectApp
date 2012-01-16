@@ -396,9 +396,13 @@ else{
 	}
 }
 							?>
+                            
+                          </div>
+                          <div id="addInfo" class="grid_8"> 
+							Add new categories and bookmarks. testing
+							</div> 
+                          <br/>
                             <br/>
-                            <br/>
-                          </div> 
 						</div> 
 					</li>	
                                   	
