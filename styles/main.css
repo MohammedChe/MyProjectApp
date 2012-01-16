@@ -25,7 +25,8 @@ body{
 	
 	background-color: #000;
 	height: 20px;
-	margin-top:-20px;
+	position: absolute;
+	bottom:-20px;
 	z-index: 19;
 	color:#CCC;
 	padding-left:10px;
