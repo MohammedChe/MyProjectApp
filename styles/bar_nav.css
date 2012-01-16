@@ -58,8 +58,12 @@ a.minimize{
 	margin-top: 10px;
 	margin-bottom: 10px;
 	z-index: 20;
+}
+.bar_nav span{
 	text-align:center;
 }
+
+
 .bar_nav > ul{
 	color:#fff;
 	}
