@@ -18,14 +18,8 @@ body{
   float: left;
 }
 
-#catP{
-	display: block;
-	text-align: center;
-}
-
 #catTitle{
 	background-color: #000;
-	display: block;
 	height: 20px;
 	position: absolute;
 	left:7px;
