@@ -321,7 +321,7 @@ else{
 					<img src="images/icons/grey/Clipboard.png">
 					Logout</a>
 				</li>
-                <li class="send_right has_mega_menu"><a href="#">
+                <li class="send_right"><a href="#">
 						<img src="images/icons/grey/Paperclip.png">
 						Add
 						<span class="icon">&nbsp;</span></a>
@@ -398,9 +398,6 @@ else{
 							?>
                             
                           </div>
-                          <div id="addInfo" class="grid_8"> 
-							Add new categories and bookmarks. testing
-							</div> 
                           <br/>
                             <br/>
 						</div> 
