@@ -30,6 +30,8 @@ body{
 	text-align:center;
 	background-color: #000;
 	height: 20px;
+	position: absolute;
+	left:50%;
 	bottom:-20px;
 	z-index: 19;
 	color:#CCC;

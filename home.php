@@ -576,9 +576,7 @@ else{
   
   $(window).resize(function(){
   $('#catTitle').css({
-    position:'absolute',
     left: ($(window).width() - $('#catTitle').outerWidth())/2,
-    top: ($(window).height() - $('#catTitle').outerHeight())/2
   });
 });
  
