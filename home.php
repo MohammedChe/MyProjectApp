@@ -326,9 +326,6 @@ else{
 						Add
 						<span class="icon">&nbsp;</span></a>
 						<div class=" drop_box round_all"> 
-							<div id="addInfo" > 
-							Add new categories and bookmarks. testing
-							</div> 
 							<div id="addCat"> 
 								<h4>Add Category</h4> 
                                 <?php echo ($error2 != "") ? $error2 : ""; ?>
@@ -391,15 +388,13 @@ else{
 	
 	else{
 		?>
-                            <p>You Dont Have Any Categories Yet!</p>
+                            <p>You need to add a category first</p>
                             <?php
 	}
 }
 							?>
                             
                           </div>
-                          <br/>
-                            <br/>
 						</div> 
 					</li>	
                                   	
