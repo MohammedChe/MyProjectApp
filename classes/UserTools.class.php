@@ -124,7 +124,7 @@ class UserTools {
       public function checkURL($url)
        {
 		  
-		  $domain = correctURL($url);
+		  $domain = $this->correctURL($url);
 			  
 			  if (strstr($domain, "http://") == $domain || strstr($domain, "ftp://") == $domain) { 
 		  			$checkedURL = $domain;
