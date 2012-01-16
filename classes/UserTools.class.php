@@ -154,7 +154,7 @@ class UserTools {
 
                curl_close($curlInit);
 
-               if ($response) return true;
+               if ($response) return $checkedURL;
 
                return false;
 			  }

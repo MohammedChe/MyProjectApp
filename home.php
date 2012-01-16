@@ -52,14 +52,14 @@ if(isset($_POST['submit-form2'])) {
 	
 	//initialize variables for form validation
 	$userTools = new UserTools();
-	$success = $userTools->checkURL($url);
+	$checkedURL = $userTools->checkURL($url);
 	
-	if($success)
+	if(isset($checkedURL) && $checkedURL != false)
 	{
 	    //prep the data for saving in a new user object
 	    $data['category'] = $cat;
 		$data['owner'] = $owner;
-		$data['url'] = $url;
+		$data['url'] = $checkedURL;
 	    //create the new user object
 	    $newBookmark = new Bookmark($data);
 	
