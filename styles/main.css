@@ -40,6 +40,18 @@ body{
 
 }
 
+#addInfo{
+	
+}
+
+#addCat{
+	background:#999;
+}
+
+#addMark{
+	background:#666;
+}
+
 #favi{
 	margin-top:10px;
 }

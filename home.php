@@ -326,10 +326,10 @@ else{
 						Add
 						<span class="icon">&nbsp;</span></a>
 						<div class="mega_menu container_16"> 
-							<div class="grid_8"> 
+							<div id="addInfo" class="grid_8"> 
 							Add new categories and bookmarks. testing
 							</div> 
-							<div class="grid_4"> 
+							<div id="addCat" class="grid_4"> 
 								<h4>Add Category</h4> 
                                 <?php echo ($error2 != "") ? $error2 : ""; ?>
                                 <form method="post">
@@ -340,7 +340,7 @@ else{
                                   <input type="submit" value="Add" name="submit-form3" />
                                 </form>
 </div>
-                            <div class="grid_4">
+                            <div id="addMark" class="grid_4">
                             <?php 
 							
 							
@@ -395,7 +395,6 @@ else{
                             <?php
 	}
 }
-			
 							?>
                             <br/>
                             <br/>
