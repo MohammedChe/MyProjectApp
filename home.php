@@ -83,7 +83,7 @@ if(isset($_GET['c'])) {
 $theCat = $userTools->getCategory($_GET['c']);
 $selectedCat = $theCat->title;
 $selectedCatIndex = $theCat->id;
-$title = $theCat->title;
+$cTitle = $theCat->title;
 
 }
 
