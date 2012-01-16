@@ -165,10 +165,8 @@ function hideFirst()
 	<div id="wrapper" class="">
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
-<!--          <div id="catT">
--->         <div id="catTitle" class="round_bottom"><?php echo $title ?></div>
-<!--         </div>
--->			<ul class="round_all clearfix">
+         <div id="catTitle" class="round_bottom"><?php echo $title ?></div>
+			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
 					<img src="images/icons/grey/admin_user.png">
 					Home</a>
