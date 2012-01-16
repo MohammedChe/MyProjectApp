@@ -125,15 +125,15 @@ class UserTools {
        {
 		  
 		  if (strstr($url, "http://") == $url || strstr($url, "ftp://") == $url) { 
-		  	$domain = $url;
+		  	$checkedURL = $url;
 		  }
 		  else {
 			  $url = "http://" . $url;
-			  $domain = $url;
+			  $checkedURL = $url;
 		  }
 
 		   
-       		  $domain = $this->correctURL($url);
+       		  $domain = $this->correctURL($checkedURL);
 			  
 			  if($domain != FALSE){
 			     
