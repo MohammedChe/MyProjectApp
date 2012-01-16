@@ -162,7 +162,7 @@ function hideFirst()
 	<div id="wrapper" class="">
 		<div id="top_nav" class="nav_down bar_nav round_all">
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
-          <span id="catTitle" class="round_bottom">testing</span>
+         <span id="catP"> <span id="catTitle" class="round_bottom">testing</span></span>
 			<ul class="round_all clearfix">
 				<li id="home"><a class="round_left" href="#">
 					<img src="images/icons/grey/admin_user.png">
