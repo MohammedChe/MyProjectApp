@@ -469,12 +469,13 @@ else{
   
   $(window).load(function() {
 	  getMarks("recent", "Recent");
+	  $(window).resize();
 	  
 	  window.setTimeout(function() {
  		$(window).resize();
 		  buildWall();
 		  addClose();
-		  alert('test');
+		  alert('test2');
 	}, 1000);
 		  
   });
@@ -517,7 +518,9 @@ function removeMark(mark) {
 		$(this).empty().remove();
 		});*/
 		
-		$("." + mark).empty().remove();
+		//$("." + mark).empty().remove();
+		
+		$(this).parent().get(0).parent().get(0).empty().remove();
 		
 		alert('remove ' + mark);
 		
