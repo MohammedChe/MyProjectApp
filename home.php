@@ -467,8 +467,7 @@ else{
 
 <script type="text/javascript">
   $(function(){
-	  getMarks("recent");
-	  addTitle("Recent");
+	  getMarks("recent", "Recent");
   });
   
   
@@ -504,16 +503,14 @@ function buildWall(){
     });
 }
 
-function addTitle(title){
-	$('#catTitle').html(title);
-}
 
-
-function getMarks(cat){
+function getMarks(cat, title){
 	$.post('showMarks.php', {c: cat},
 	function(output){
 		$('#container').html(output).show();
 	});
+	
+	$('#catTitle').html(title);
 }
 
 
