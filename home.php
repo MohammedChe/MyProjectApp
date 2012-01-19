@@ -501,7 +501,7 @@ foreach ($marks as $key => $value)
 		?>
           <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a href="removeMark.php?m=<?php echo htmlentities($value["id"]); ?>"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
+           <div class="hover"><a href="removeMark.php?m=<?php echo htmlentities($value["id"]) . '&c=' . $_GET['c']; ?>"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
                    <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
@@ -520,7 +520,7 @@ else{
 		?>
           <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a href="removeMark.php?m=<?php echo $marks["id"]; ?>"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
+           <div class="hover"><a href="removeMark.php?m=<?php echo $marks["id"] . '&c=' . $_GET['c']; ?>"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo $marks["url"];?>">
                    <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
