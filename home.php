@@ -599,12 +599,6 @@ function BuildWall(){
     });
 }
 
-function reloadStylesheets() {
-    var queryString = '?reload=' + new Date().getTime();
-    $('link[rel="stylesheet"]').each(function () {
-        this.href = this.href.replace(/\?.*|$/, queryString);
-    });
-}
 
 
 function removeMark(mark) {
@@ -613,7 +607,6 @@ function removeMark(mark) {
 	$("." + mark).fadeOut(function(){
 		$(this).empty().remove();
 		BuildWall();
-		reloadStylesheets();
 		});
 }
 
