@@ -696,6 +696,10 @@ ul li.openable.active > a{
 	z-index:50;
 }
 
+#space{
+	display:none;
+}
+
 .round_left2{	
 	-webkit-border-top-left-radius: 3px;
 	-webkit-border-bottom-left-radius: 3px;
