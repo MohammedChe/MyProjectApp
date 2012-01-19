@@ -512,10 +512,10 @@ function timer(){
 
 
 
-function removeMark(mark) {
+function removeMark(mark, catId, catTitle) {
 	$.post('removeMark.php', {m: mark});
 	
-	getMarks("recent", "Recent");
+	getMarks(catId, catTitle);
 	
 /*	$("." + mark).fadeOut(function(){
 		$(this).empty().remove();

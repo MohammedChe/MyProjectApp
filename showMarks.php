@@ -11,12 +11,17 @@ else{
 $user = unserialize($_SESSION['user']);
 $cat = $userTools->getCategories($user->id);
 
-if(isset($_POST['c']) && $_POST['c'] != "recent") { 
+if(isset($_POST['c'])) {
+	$redCat = mysql_real_escape_string($_POST['c']);
+}
+
+if($redCat != NULL && $redCat != "recent") { 
 
 $redCat = mysql_real_escape_string($_POST['c']);
 
 $theCat = $userTools->getCategory($redCat);
 $selectedCatIndex = $theCat->id;
+$selectedCat = $theCat->title;
 
 }
 
@@ -24,9 +29,11 @@ else{
 	
 	if (isset($cat["title"])){
 		$selectedCatIndex = $cat["id"];
+		$selectedCat = $cat["id"];
 	}
 	else{
 		$marks = $userTools->getRecentBookmarks(18, $user->id);
+		$selectedCat = "Recent";
 	}
 }
 
@@ -49,7 +56,7 @@ foreach ($marks as $key => $value)
 		?>
           <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a onClick="removeMark(<?php echo htmlentities($value["id"]) ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
+           <div class="hover"><a onClick="removeMark(<?php echo htmlentities($value["id"]) . "," . $redCat . "," . $selectedCat ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
                    <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
@@ -68,7 +75,7 @@ else{
 		?>
           <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a onClick="removeMark(<?php echo $marks["id"] ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
+           <div class="hover"><a onClick="removeMark(<?php echo $marks["id"] . "," . $redCat . "," . $selectedCat?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo $marks["url"];?>">
                    <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
