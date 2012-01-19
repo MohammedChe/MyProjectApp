@@ -469,11 +469,14 @@ else{
   
   $(window).load(function() {
 	  getMarks("recent", "Recent", function(){
-		  $(window).resize();
+		  
+		  window.setTimeout(function() {
+ 		$(window).resize();
 		  buildWall();
 		  addClose();
+	}, 1000);
 	});
-	  
+		  
   });
   
   
