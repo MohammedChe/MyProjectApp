@@ -567,13 +567,9 @@ else{
 
 <script type="text/javascript">
   $(function(){
-    
-    $('#container').masonry({
-      itemSelector: '.box',
-      isAnimated: true
-    });
-    
+    BuildWall();
   });
+  
   
   $(function() {
     $(".imgHover").hover(
@@ -596,10 +592,22 @@ else{
 $(window).resize();
 
 
+function BuildWall(){
+  $('#container').masonry({
+      itemSelector: '.box',
+      isAnimated: true
+    });
+}
+
+
+
 function removeMark(mark) {
 	$.post('removeMark.php', {m: mark});
-	$("." + mark).remove();
-	$(window).resize();
+	
+	$("." + mark).fadeOut(function(){
+		$(this).empty().remove();
+		BuildWall();
+		});
 }
 
 
