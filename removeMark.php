@@ -16,7 +16,7 @@ else{
   $userTools = new UserTools();
   $success = $userTools->removeBookmark($_GET['m'], $user->id);
   
-  header("Location: home.php");
+  //header("Location: home.php");
   
   }
 }
