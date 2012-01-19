@@ -379,20 +379,18 @@ else{
                     foreach ($cat as $key => $value) 
                     {
 						
-                        echo "<li><a onClick='getMarks(" . htmlentities($value["id"]) .",". htmlentities($value["title"]) .");' href='#'>" . htmlentities($value["title"]) . "</a></li>";
+                        echo "<li onClick='getMarks(" . htmlentities($value["id"]) .",". htmlentities($value["title"]) .");'><a href='#'>" . htmlentities($value["title"]) . "</a></li>";
                     }
                     
                     ?>
                            </ul>
-<!--                      </select>
-                    </form>-->
 					  <?php 
 					  }
 					  else
 					  {						  
 						  if(isset($cat["id"])){
 					 
-						 echo "<li><a onClick='getMarks(" . htmlentities($cat["id"]) .",". htmlentities($cat["title"]) .");' href='#'>" . htmlentities($cat["title"]) . "</a></li>";
+						 echo "<li onClick='getMarks(" . htmlentities($cat["id"]) .",". htmlentities($cat["title"]) .");'><a href='#'>" . htmlentities($cat["title"]) . "</a></li>";
 
 	}
 	else{
