@@ -336,7 +336,7 @@ else{
                                 <?php echo ($error2 != "") ? $error2 : ""; ?>
                                 <form method="post">
                                   Title:
-                                  <input type="text" value="<?php echo $title; ?>" name="title" />
+                                  <input type="text" value="" name="title" />
                                   <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
                                   
                                   <input type="submit" value="Add" name="submit-form3" />
@@ -353,7 +353,7 @@ else{
                             <h4>Add Bookmark</h4>
                             <form name="addBookmarkForm"  method="post">
                                 Save URL:
-                                <input type="text" value="<?php echo $url; ?>" name="url" />
+                                <input type="text" value="" name="url" />
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php 
@@ -378,7 +378,7 @@ else{
                             <h4>Add Bookmark</h4>
                             <form name="addBookmarkForm"  method="post">
                                 Save URL:
-                                <input type="text" value="<?php echo $url; ?>" name="url" />
+                                <input type="text" value="" name="url" />
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php   
