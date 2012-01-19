@@ -468,15 +468,14 @@ else{
 <script type="text/javascript">  
   
   $(window).load(function() {
-	  getMarks("recent", "Recent", function(){
-		  
-		  window.setTimeout(function() {
+	  getMarks("recent", "Recent");
+	  
+	  window.setTimeout(function() {
  		$(window).resize();
 		  buildWall();
 		  addClose();
 		  alert('test');
 	}, 1000);
-	});
 		  
   });
   
