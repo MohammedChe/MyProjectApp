@@ -495,7 +495,7 @@ function getMarks(catId, catTitle){
 	$('#container').hide();
 	$.post('showMarks.php', {c: catId},
 	function(output){
-		$('#container').html(output).fadeIn(1000);
+		$('#container').html(output).fadeIn(800);
 	});
 	
 	$('#catTitle').html(catTitle);
@@ -507,7 +507,7 @@ function timer(){
  		$(window).resize();
 		  buildWall();
 		  addClose();
-	}, 800);
+	}, 1000);
 }
 
 
