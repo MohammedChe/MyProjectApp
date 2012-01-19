@@ -507,8 +507,7 @@ function timer(){
  		$(window).resize();
 		  buildWall();
 		  addClose();
-		  alert('test');
-	}, 1000);
+	}, 800);
 }
 
 
