@@ -474,15 +474,7 @@ else{
  		$(window).resize();
 		  buildWall();
 		  addClose();
-		  function removeMark(mark) {
-	$.post('removeMark.php', {m: mark});
-	
-	$("." + mark).fadeOut(function(){
-		$(this).empty().remove();
-		});
-}
 		  alert('test');
-		  
 	}, 1000);
 		  
   });
@@ -512,6 +504,21 @@ function getMarks(catId, catTitle){
 	});
 	
 	$('#catTitle').html(catTitle);
+}
+
+
+
+function removeMark(mark) {
+	$.post('removeMark.php', {m: mark});
+	
+	
+	
+	$("." + mark).fadeOut(function(){
+		$(this).empty().remove();
+		});
+		
+		alert('remove');
+		
 }
 
 
