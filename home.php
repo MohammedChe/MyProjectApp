@@ -465,16 +465,10 @@ else{
         
 
 
-<script type="text/javascript">
-  $(function(){
-	  getMarks("recent", "Recent");
-	  
-  });
-  
-  
-  
+<script type="text/javascript">  
   
   $(window).load(function() {
+	  getMarks("recent", "Recent");
 	  buildWall();
 	  addClose();
   });
@@ -501,7 +495,7 @@ function buildWall(){
 function getMarks(catId, catTitle){
 	$.post('showMarks.php', {c: catId},
 	function(output){
-		$('#container').html(output).fadeIn(500);
+		$('#container').html(output).fadeIn(1000);
 	});
 	
 	$('#catTitle').html(catTitle);
