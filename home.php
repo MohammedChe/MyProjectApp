@@ -469,9 +469,9 @@ else{
   
   $(window).load(function() {
 	  getMarks("recent", "Recent");
+	  $(window).resize();
 	  buildWall();
 	  addClose();
-	  $(window).resize();
   });
   
   
