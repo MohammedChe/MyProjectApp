@@ -470,7 +470,6 @@ else{
   $(window).load(function() {
 	  getMarks("recent", "Recent");
 	  $(window).resize();
-	  timer();
 		  
   });
   
@@ -508,7 +507,7 @@ function timer(){
  		$(window).resize();
 		  buildWall();
 		  addClose();
-		  alert('testing');
+		  alert('test');
 	}, 1000);
 }
 
