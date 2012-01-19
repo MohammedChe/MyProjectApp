@@ -504,13 +504,13 @@ function buildWall(){
 }
 
 
-function getMarks(cat, title){
-	$.post('showMarks.php', {c: cat},
+function getMarks(catId, catTitle){
+	$.post('showMarks.php', {c: catId},
 	function(output){
 		$('#container').html(output).show();
 	});
 	
-	$('#catTitle').html(title);
+	$('#catTitle').html(catTitle);
 }
 
 
