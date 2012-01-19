@@ -475,7 +475,7 @@ else{
  		$(window).resize();
 		  buildWall();
 		  addClose();
-		  alert('test2');
+		  alert('testeeeeeeeeeeeeeeeeeeeeeeeeeee');
 	}, 1000);
 		  
   });
@@ -518,10 +518,8 @@ function removeMark(mark) {
 		$(this).empty().remove();
 		});*/
 		
-		//$("." + mark).empty().remove();
-		
-		$(this).parent().get(0).parent().get(0).empty().remove();
-		
+		$("." + mark).remove();
+				
 		alert('remove ' + mark);
 		
 }
