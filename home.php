@@ -471,7 +471,13 @@ else{
 	  getMarks("recent", "Recent", function(){
 		  $(window).resize();
 		  buildWall();
-		  addClose();
+		  $(".imgHover").hover(
+        function() {
+            $(this).children("img").fadeTo(200, 0.85).end().children(".hover").show();
+        },
+        function() {
+            $(this).children("img").fadeTo(200, 1).end().children(".hover").hide();
+        });
 	});
 	  
   });
