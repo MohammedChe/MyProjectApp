@@ -81,6 +81,23 @@ body{
 	margin:10px 10px 10px 10px;
 }
 
+.imgHover {
+	display: inline;
+    position: relative;
+}
+
+.imgHover .hover {
+	display: none;
+	position: absolute;
+	right: -17px;
+	top: -17px;
+	z-index: 20;
+}
+
+.imgHover .hover img {
+	width: 35px;
+	height: 35px;
+}
 
 
 #main.omega{
@@ -97,7 +114,7 @@ body{
 	width: 256px;
 }
 
-#main .content img{
+#main .content .screenshot{
 	width: 256px;
 	height: 192px;
 }

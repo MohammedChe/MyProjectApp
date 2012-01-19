@@ -21,8 +21,6 @@
 <file name="nav_up.png" server="C:/wamp/www/MyProjectApp" local="129545248780000000" remote="129545248780000000" />
 <file name="open_close_vertical.png" server="C:/wamp/www/MyProjectApp" local="129545248780000000" remote="129545248780000000" />
 <file name="open_close.png" server="C:/wamp/www/MyProjectApp" local="129545248780000000" remote="129545248780000000" />
-<file name="sherpa_crest.jpg" server="C:/wamp/www/MyProjectApp" local="129545248780000000" remote="129545248780000000" />
-<file name="sherpa_logo.png" server="C:/wamp/www/MyProjectApp" local="129545248780000000" remote="129545248780000000" />
 <file name="bg_diag_wood.jpg" server="C:/wamp/www/MyProjectApp/" local="129545247460000000" remote="129545247460000000" />
 <file name="nav_bullet.png" server="C:/wamp/www/MyProjectApp/" local="129545248760000000" remote="129545248760000000" />
 <file name="bg_ash.jpg" server="C:/wamp/www/MyProjectApp/" local="129545247420000000" remote="129545247420000000" />
@@ -44,5 +42,5 @@
 <file name="nav_up.png" server="C:/wamp/www/MyProjectApp/" local="129545248780000000" remote="129545248780000000" />
 <file name="open_close_vertical.png" server="C:/wamp/www/MyProjectApp/" local="129545248780000000" remote="129545248780000000" />
 <file name="open_close.png" server="C:/wamp/www/MyProjectApp/" local="129545248780000000" remote="129545248780000000" />
-<file name="sherpa_crest.jpg" server="C:/wamp/www/MyProjectApp/" local="129545248780000000" remote="129545248780000000" />
+<file name="close.png" server="C:/wamp/www/MyProjectApp/" local="129714571323421709" remote="129714571320000000" />
 </dwsync>

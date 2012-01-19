@@ -500,10 +500,10 @@ foreach ($marks as $key => $value)
 		$theURL2 = $scheme . "://" . $host;
 		?>
           <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
+			<div class="imgHover content round_all clearfix">
+           <div class="hover"><a href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
+                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
 			</div>
 		</div>
@@ -519,10 +519,10 @@ else{
 		$theURL2 = $scheme . "://" . $host;
 		?>
           <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
+			<div class="imgHover content round_all clearfix">
+           <div class="hover"><a href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo $marks["url"];?>">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
+                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
 			</div>
 		</div>
@@ -533,10 +533,10 @@ else{
 	else{
 		?>
           <div id="main" class="box grid_4">
-			<div class="content round_all clearfix">
-           
+			<div class="imgHover content round_all clearfix">
+           <div class="hover"><a href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
-                   <img src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
+                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
 
 			</div>
 		</div>
@@ -567,6 +567,16 @@ else{
     });
     
   });
+  
+  $(function() {
+    $(".imgHover").hover(
+        function() {
+            $(this).children("img").fadeTo(200, 0.85).end().children(".hover").show();
+        },
+        function() {
+            $(this).children("img").fadeTo(200, 1).end().children(".hover").hide();
+        });
+});
   
   
   $(window).resize(function(){
