@@ -9,12 +9,11 @@ if(!isset($_SESSION['logged_in'])) {
 else{
 	
 $user = unserialize($_SESSION['user']);
+$cat = $userTools->getCategories($user->id);
 
-
-if(isset($_POST['c'])) { 
+if(isset($_POST['c']) && $_POST['c'] != "recent") { 
 
 $redCat = mysql_real_escape_string($_POST['c']);
-
 
 $theCat = $userTools->getCategory($redCat);
 $selectedCatIndex = $theCat->id;

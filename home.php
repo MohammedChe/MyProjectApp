@@ -78,45 +78,7 @@ if(isset($_POST['submit-form2'])) {
 
 $cat = $userTools->getCategories($user->id);
 
-if(isset($_GET['c'])) { 
-
-$redCat = $_GET['c'];
-
-
-$theCat = $userTools->getCategory($_GET['c']);
-$selectedCat = $theCat->title;
-$selectedCatIndex = $theCat->id;
-$cTitle = $theCat->title;
-
-}
-
-else{
-	$redCat = "recent";
-	
-	if (isset($cat["title"])){
-		$selectedCat = $cat["title"];
-		$selectedCatIndex = $cat["id"];
-		$cTitle = $cat["title"];
-	}
-	else{
-//		$theCat = $userTools->getLastCategory($user->id);
-//		$selectedCat = $theCat->title;
-//		$selectedCatIndex = $theCat->id;
-		$cTitle = "Recent";
-		$marks = $userTools->getRecentBookmarks(18, $user->id);
-	}
-}
-
-if (isset($selectedCatIndex)){
-	$marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-}
-
 $marks2 = $userTools->getRecentBookmarks(25, $user->id);
-
-//function isAssoc($arr)
-//{
-//    return array_keys($arr) !== range(0, count($arr) - 1);
-//}
 
 }
 //////////////////////////////////
@@ -506,6 +468,7 @@ else{
 <script type="text/javascript">
   $(function(){
     BuildWall();
+	getMarks("recent");
   });
   
   
@@ -535,6 +498,14 @@ function BuildWall(){
       itemSelector: '.box',
       isAnimated: true
     });
+}
+
+
+function getMarks(cat){
+	$.post('showMarks.php', {c: cat},
+	function(output){
+		$('#container').html(output).show();
+	});
 }
 
 
