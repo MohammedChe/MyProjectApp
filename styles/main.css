@@ -666,6 +666,10 @@ ul li.openable.active > a{
 .send_right2{
 	float: left !important;
 }
+
+#space br{
+	display:none;
+}
 	
 	
 }
@@ -696,7 +700,7 @@ ul li.openable.active > a{
 	z-index:50;
 }
 
-#space{
+#space br{
 	display:none;
 }
 
