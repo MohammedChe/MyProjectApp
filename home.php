@@ -506,7 +506,7 @@ foreach ($marks as $key => $value)
 		?>
           <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a href="removeMark.php?m=<?php echo htmlentities($value["id"]) . '&c=' . $redCat; ?>"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
+           <div class="hover"><a onClick="removeMark(<?php echo htmlentities($value["id"]) ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
                    <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
@@ -525,7 +525,7 @@ else{
 		?>
           <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a href="removeMark.php?m=<?php echo $marks["id"] . '&c=' . $redCat; ?>"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
+           <div class="hover"><a onClick="removeMark(<?php echo $marks["id"] ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo $marks["url"];?>">
                    <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
 
@@ -565,7 +565,7 @@ else{
         
 
 
-<script>
+<script type="text/javascript">
   $(function(){
     
     $('#container').masonry({
@@ -594,6 +594,13 @@ else{
  
 // To initially run the function:
 $(window).resize();
+
+
+function removeMark(mark) {
+	$.post('removeMark.php', {m: mark});
+}
+
+
 </script>
 		
 <script type="text/javascript">

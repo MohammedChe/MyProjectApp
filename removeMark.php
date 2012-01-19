@@ -11,19 +11,19 @@ else{
 	
   $user = unserialize($_SESSION['user']);
   
-  if(isset($_GET['m'])) { 
+  if(isset($_POST['m'])) { 
   
   $userTools = new UserTools();
-  $success = $userTools->removeBookmark($_GET['m'], $user->id);
+  $success = $userTools->removeBookmark($_POST['m'], $user->id);
   
-  if($_GET['c'] == "recent"){
-	  $link = "Location: home.php";
-  }
-  else{
-	  $link = "Location: home.php?c=" . $_GET['c'];
-  }
+//  if($_GET['c'] == "recent"){
+//	  $link = "Location: home.php";
+//  }
+//  else{
+	 // $link = "Location: home.php?c=" . $_GET['c'];
+//  }
 
-  header($link);
+ // header($link);
   
   }
 }
