@@ -336,7 +336,7 @@ else{
                                 <?php echo ($error2 != "") ? $error2 : ""; ?>
                                 <form method="post">
                                   Title:
-                                  <input type="text" value="<?php echo $title; ?>" name="title" />
+                                  <input type="text" value="" name="title" />
                                   <input type="hidden" value="<?php echo $user->id; ?>" name="owner" />
                                   
                                   <input type="submit" value="Add" name="submit-form3" />
@@ -353,7 +353,7 @@ else{
                             <h4>Add Bookmark</h4>
                             <form name="addBookmarkForm"  method="post">
                                 Save URL:
-                                <input type="text" value="<?php echo $url; ?>" name="url" />
+                                <input type="text" value="" name="url" />
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php 
@@ -378,7 +378,7 @@ else{
                             <h4>Add Bookmark</h4>
                             <form name="addBookmarkForm"  method="post">
                                 Save URL:
-                                <input type="text" value="<?php echo $url; ?>" name="url" />
+                                <input type="text" value="" name="url" />
                                 In:
                                 <select name="pickCat" id="pickCat" onClick="hideFirst()" >
                                 <?php   
@@ -504,7 +504,7 @@ foreach ($marks as $key => $value)
 		$host = parse_url($value["url"], PHP_URL_HOST);
 		$theURL2 = $scheme . "://" . $host;
 		?>
-          <div id="main" class="box grid_4">
+          <div id="main" class="box grid_4 <?php echo htmlentities($value["id"]) ?>">
 			<div class="imgHover content round_all clearfix">
            <div class="hover"><a onClick="removeMark(<?php echo htmlentities($value["id"]) ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
@@ -523,7 +523,7 @@ else{
 		$host = parse_url($marks["url"], PHP_URL_HOST);
 		$theURL2 = $scheme . "://" . $host;
 		?>
-          <div id="main" class="box grid_4">
+          <div id="main" class="box grid_4 <?php echo $marks["id"] ?>">
 			<div class="imgHover content round_all clearfix">
            <div class="hover"><a onClick="removeMark(<?php echo $marks["id"] ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo $marks["url"];?>">
@@ -567,13 +567,9 @@ else{
 
 <script type="text/javascript">
   $(function(){
-    
-    $('#container').masonry({
-      itemSelector: '.box',
-      isAnimated: true
-    });
-    
+    BuildWall();
   });
+  
   
   $(function() {
     $(".imgHover").hover(
@@ -596,8 +592,21 @@ else{
 $(window).resize();
 
 
+function BuildWall(){
+  $('#container').masonry({
+      itemSelector: '.box',
+      isAnimated: true
+    });
+}
+
+
+
 function removeMark(mark) {
 	$.post('removeMark.php', {m: mark});
+	
+	$("." + mark).fadeOut(function(){
+		$(this).empty().remove();
+		});
 }
 
 

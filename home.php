@@ -492,70 +492,8 @@ else{
 				<div class="clear"></div>
 
         
-        		        <div id="container" class="clearfix">
-                        
-                               <?php 				
-if(isset($marks[0])) {
-	
-
-foreach ($marks as $key => $value) 
-	{
-		$scheme = parse_url($value["url"], PHP_URL_SCHEME);
-		$host = parse_url($value["url"], PHP_URL_HOST);
-		$theURL2 = $scheme . "://" . $host;
-		?>
-          <div id="main" class="box grid_4 <?php echo htmlentities($value["id"]) ?>">
-			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a onClick="removeMark(<?php echo htmlentities($value["id"]) ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
-                   <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
-                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
-
-			</div>
-		</div>
-        <?php
-	}
-}
-else{
-
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	if(isset($marks["url"])){
-		$scheme = parse_url($marks["url"], PHP_URL_SCHEME);
-		$host = parse_url($marks["url"], PHP_URL_HOST);
-		$theURL2 = $scheme . "://" . $host;
-		?>
-          <div id="main" class="box grid_4 <?php echo $marks["id"] ?>">
-			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a onClick="removeMark(<?php echo $marks["id"] ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
-                   <a target="_blank" href="<?php echo $marks["url"];?>">
-                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" /> </a> 
-
-			</div>
-		</div>
-        <?php
-		
-	}
-	
-	else{
-		?>
-          <div id="main" class="box grid_4">
-			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
-                   <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
-                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
-
-			</div>
-		</div>
-        
-        
-        <?php
-	}
-}
-
-
-?> 
-
-      
-        
+    <div id="container" class="clearfix">
+         
     </div>
     
     
@@ -606,7 +544,6 @@ function removeMark(mark) {
 	
 	$("." + mark).fadeOut(function(){
 		$(this).empty().remove();
-		location.reload();
 		});
 }
 
