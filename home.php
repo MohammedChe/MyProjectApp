@@ -471,6 +471,7 @@ else{
 	  getMarks("recent", "Recent");
 	  buildWall();
 	  addClose();
+	  $(window).resize();
   });
   
   
@@ -480,8 +481,7 @@ else{
   });
 });
  
-// To initially run the function:
-$(window).resize();
+
 
 
 function buildWall(){
