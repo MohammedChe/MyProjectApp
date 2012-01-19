@@ -107,7 +107,7 @@ class UserTools {
 	public function removeBookmark($id, $owner)
 	{
 		$db = new DB();
-		$result = $db->delete('bookmark', "id = $id AND owner - $owner");
+		$result = $db->delete('bookmark', "id = $id AND owner = $owner");
 		
 		return $result;
 	}
