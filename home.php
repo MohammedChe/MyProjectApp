@@ -474,6 +474,7 @@ else{
  		$(window).resize();
 		  buildWall();
 		  addClose();
+		  alert('test');
 	}, 1000);
 	});
 		  
