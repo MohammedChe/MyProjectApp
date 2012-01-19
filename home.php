@@ -468,10 +468,12 @@ else{
 <script type="text/javascript">  
   
   $(window).load(function() {
-	  getMarks("recent", "Recent");
-	  $(window).resize();
-	  buildWall();
-	  addClose();
+	  getMarks("recent", "Recent", function(){
+		  $(window).resize();
+		  buildWall();
+		  addClose();
+	});
+	  
   });
   
   
