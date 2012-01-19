@@ -467,8 +467,8 @@ else{
 
 <script type="text/javascript">
   $(function(){
-    BuildWall();
-	getMarks("recent");
+	  getMarks("recent");
+	  buildWall();
   });
   
   
@@ -493,7 +493,7 @@ else{
 $(window).resize();
 
 
-function BuildWall(){
+function buildWall(){
   $('#container').masonry({
       itemSelector: '.box',
       isAnimated: true
