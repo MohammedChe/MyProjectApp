@@ -599,6 +599,14 @@ function BuildWall(){
     });
 }
 
+function reloadStyle() {
+
+$('<link>').attr('rel','stylesheet')
+  .attr('type','text/css')
+  .attr('href','main.css')
+  .appendTo('head');
+
+}
 
 
 function removeMark(mark) {
@@ -607,6 +615,7 @@ function removeMark(mark) {
 	$("." + mark).fadeOut(function(){
 		$(this).empty().remove();
 		BuildWall();
+		reloadStyle();
 		});
 }
 
