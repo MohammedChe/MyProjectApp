@@ -13,8 +13,10 @@ else{
   
   if(isset($_POST['m'])) { 
   
+  $m = mysql_real_escape_string($_POST['m']);
+  
   $userTools = new UserTools();
-  $success = $userTools->removeBookmark($_POST['m'], $user->id);
+  $success = $userTools->removeBookmark($m, $user->id);
   
 //  if($_GET['c'] == "recent"){
 //	  $link = "Location: home.php";

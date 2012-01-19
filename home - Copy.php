@@ -504,7 +504,7 @@ foreach ($marks as $key => $value)
 		$host = parse_url($value["url"], PHP_URL_HOST);
 		$theURL2 = $scheme . "://" . $host;
 		?>
-          <div id="main" class="box grid_4 <?php echo htmlentities($value["id"]) ?>">
+          <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
            <div class="hover"><a onClick="removeMark(<?php echo htmlentities($value["id"]) ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo htmlentities($value["url"]);?>">
@@ -523,7 +523,7 @@ else{
 		$host = parse_url($marks["url"], PHP_URL_HOST);
 		$theURL2 = $scheme . "://" . $host;
 		?>
-          <div id="main" class="box grid_4 <?php echo $marks["id"] ?>">
+          <div id="main" class="box grid_4">
 			<div class="imgHover content round_all clearfix">
            <div class="hover"><a onClick="removeMark(<?php echo $marks["id"] ?>);" href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
                    <a target="_blank" href="<?php echo $marks["url"];?>">
@@ -598,7 +598,6 @@ $(window).resize();
 
 function removeMark(mark) {
 	$.post('removeMark.php', {m: mark});
-	$(mark).remove();
 }
 
 
