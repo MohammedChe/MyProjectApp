@@ -468,9 +468,9 @@ else{
 <script type="text/javascript">
   $(function(){
 	  getMarks("recent");
-	  buildWall();
   });
   
+  $(window).load(function() { buildWall(); });
   
   $(function() {
     $(".imgHover").hover(
