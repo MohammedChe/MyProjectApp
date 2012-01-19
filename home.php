@@ -398,7 +398,7 @@ else{
 						</div> 
 					</li>	
                                   	
-                <li class="send_right"><a href="#">
+                <li class="send_right2"><a href="#">
 					<img src="images/icons/grey/Archive.png">
 					Categories
 					<span class="icon">&nbsp;</span></a>

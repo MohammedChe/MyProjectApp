@@ -78,7 +78,7 @@ body{
 
 #main{
 	z-index: 10;
-	margin:10px;
+	margin:10px 10px 10px 10px;
 }
 
 
@@ -128,6 +128,10 @@ body{
 .send_right{
 	float: right !important;
 	}
+	
+.send_right2{
+	float: right !important;
+}
 	
 .send_left{
 	float: left !important;
@@ -634,6 +638,10 @@ ul li.openable.active > a{
 	display:none;
 }
 
+#bookmarks{
+	display:none;
+}
+
 
 .round_left2{	
 	-webkit-border-top-left-radius: 3px;
@@ -653,6 +661,10 @@ ul li.openable.active > a{
 
 #side_nav{
 	display:none;
+}
+
+.send_right2{
+	float: left !important;
 }
 	
 	
@@ -686,6 +698,10 @@ ul li.openable.active > a{
 	-moz-border-radius-topleft: 3px;
 	-moz-border-radius-bottomleft: 3px;
 	border-radius: 3px 0 0 3px;
+}
+
+.send_right2{
+	float: left !important;
 }
 
 .round_right2{	
