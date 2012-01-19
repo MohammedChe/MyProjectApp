@@ -470,13 +470,7 @@ else{
   $(window).load(function() {
 	  getMarks("recent", "Recent");
 	  $(window).resize();
-	  
-	  window.setTimeout(function() {
- 		$(window).resize();
-		  buildWall();
-		  addClose();
-		  alert('test');
-	}, 1000);
+	  timer();
 		  
   });
   
@@ -506,6 +500,16 @@ function getMarks(catId, catTitle){
 	});
 	
 	$('#catTitle').html(catTitle);
+	timer();
+}
+
+function timer(){
+	window.setTimeout(function() {
+ 		$(window).resize();
+		  buildWall();
+		  addClose();
+		  alert('testing');
+	}, 1000);
 }
 
 
@@ -518,8 +522,6 @@ function removeMark(mark) {
 /*	$("." + mark).fadeOut(function(){
 		$(this).empty().remove();
 		});*/
-		
-		
 		
 }
 
