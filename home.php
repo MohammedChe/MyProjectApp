@@ -475,7 +475,7 @@ else{
  		$(window).resize();
 		  buildWall();
 		  addClose();
-		  alert('test');
+		  alert('testing');
 	}, 1000);
 		  
   });
@@ -499,6 +499,7 @@ function buildWall(){
 
 
 function getMarks(catId, catTitle){
+	$('#container').hide();
 	$.post('showMarks.php', {c: catId},
 	function(output){
 		$('#container').html(output).fadeIn(1000);
@@ -512,12 +513,12 @@ function getMarks(catId, catTitle){
 function removeMark(mark) {
 	$.post('removeMark.php', {m: mark});
 	
-	getMarks("recent", "Recent");
 	
-/*	$("." + mark).fadeOut(function(){
-		$(this).empty().remove();
-		});*/
-		
+	
+//	$("." + mark).fadeOut(function(){
+//		$(this).empty().remove();
+//		});
+		$("." + mark).hide();
 		
 		
 }
