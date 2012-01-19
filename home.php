@@ -469,19 +469,15 @@ else{
   $(function(){
 	  getMarks("recent", "Recent");
 	  
-	  $(".imgHover").hover(
-        function() {
-            $(this).children("img").fadeTo(200, 0.85).end().children(".hover").show();
-        },
-        function() {
-            $(this).children("img").fadeTo(200, 1).end().children(".hover").hide();
-        });
   });
   
   
   
   
-  $(window).load(function() { buildWall(); });
+  $(window).load(function() {
+	  buildWall();
+	  addClose();
+  });
   
   
   $(window).resize(function(){
@@ -505,7 +501,7 @@ function buildWall(){
 function getMarks(catId, catTitle){
 	$.post('showMarks.php', {c: catId},
 	function(output){
-		$('#container').html(output).show();
+		$('#container').html(output).fadeIn(500);
 	});
 	
 	$('#catTitle').html(catTitle);
@@ -522,6 +518,16 @@ function removeMark(mark) {
 }
 
 
+
+function addClose(){
+	$(".imgHover").hover(
+        function() {
+            $(this).children("img").fadeTo(200, 0.85).end().children(".hover").show();
+        },
+        function() {
+            $(this).children("img").fadeTo(200, 1).end().children(".hover").hide();
+        });
+}
 
 </script>
 		
