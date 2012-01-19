@@ -606,7 +606,7 @@ function removeMark(mark) {
 	
 	$("." + mark).fadeOut(function(){
 		$(this).empty().remove();
-		BuildWall();
+		location.reload();
 		});
 }
 
