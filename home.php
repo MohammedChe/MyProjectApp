@@ -235,7 +235,7 @@ else{
                 
                 
                 
-				<li><a class="round_left2" href="#">
+				<li id="bookmarks"><a class="round_left2" href="#">
 <!--					<img src="images/icons/grey/settings_2.png">
 -->	
 					<img src="images/icons/grey/Book.png">
