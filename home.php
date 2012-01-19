@@ -599,6 +599,7 @@ $(window).resize();
 function removeMark(mark) {
 	$.post('removeMark.php', {m: mark});
 	$("." + mark).remove();
+	$(window).resize();
 }
 
 

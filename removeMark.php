@@ -17,16 +17,7 @@ else{
   
   $userTools = new UserTools();
   $success = $userTools->removeBookmark($m, $user->id);
-  
-//  if($_GET['c'] == "recent"){
-//	  $link = "Location: home.php";
-//  }
-//  else{
-	 // $link = "Location: home.php?c=" . $_GET['c'];
-//  }
-
- // header($link);
-  
+   
   }
 }
 ?>
