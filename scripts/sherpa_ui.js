@@ -49,6 +49,11 @@ $(document).ready(function(){
 	});
 
 	$("ul li ul").hide();
+	$('html').click(function() {
+		 $("ul li ul").hide();
+		 $(this).find('li.openable').removeClass('active').find('div.accordion').hide();
+	 });
+	 
 	$("li").mouseenter(function(){
 	    $(this).children("ul").fadeIn('slow');
 	});
@@ -89,6 +94,11 @@ $(document).ready(function(){
 	
 	
 	$(".drop_box").hide();
+	$('html').click(function() {
+		 $(".drop_box").hide();
+		 $(this).children(".drop_box").hide();
+	 });
+	 
 	$("li").mouseenter(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
