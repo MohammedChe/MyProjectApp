@@ -15,9 +15,7 @@ if(isset($_POST['c'])) {
 	$redCat = mysql_real_escape_string($_POST['c']);
 }
 
-if($redCat != NULL && $redCat != "recent") { 
-
-$redCat = mysql_real_escape_string($_POST['c']);
+if($redCat != "recent") { 
 
 $theCat = $userTools->getCategory($redCat);
 $selectedCatIndex = $theCat->id;
