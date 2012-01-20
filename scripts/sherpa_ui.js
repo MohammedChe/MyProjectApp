@@ -59,6 +59,10 @@ $(document).ready(function(){
 	    $(this).children("ul").fadeIn('slow');
 	});
 	
+	$("li").mouseenter(function(){
+	    $(this).children("ul").fadeIn('slow');
+	});
+	
 	
 /*
 	$("li.has_mega_menu").mouseenter(function(){
@@ -100,6 +104,10 @@ $(document).ready(function(){
 	
 	$("li").click(function(){
 		event.stopPropagation();
+		$(this).children('.drop_box').fadeIn();
+	});
+	
+	$("li").mouseenter(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
 	
