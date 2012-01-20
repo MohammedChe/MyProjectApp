@@ -134,7 +134,7 @@ function hideFirst()
           <a href="#" class="minimize round_bottom"><span>minimize</span></a>
          <div id="catTitle" class="round_bottom"></div>
 			<ul class="round_all clearfix">
-				<li id="home"><a class="round_left" href="#">
+				<li id="home"><a class="round_left" onClick="getMarks('recent','Recent')" href="#">
 					<img src="images/icons/grey/admin_user.png">
 					Home</a>
 				</li> 
