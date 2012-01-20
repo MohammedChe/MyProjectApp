@@ -1,6 +1,7 @@
 $(document).ready(function(){
 		
-	$("#side_nav a.minimize").click(function(){
+	$("#side_nav a.minimize").click(function(event){
+		event.stopPropagation();
 			$("#side_nav").toggleClass('closed', 800);
 			$("#side_nav > ul li a > span").fadeToggle();
 			$("#side_nav > ul li > span.icon").fadeToggle();
@@ -20,7 +21,8 @@ $(document).ready(function(){
 			
 	});
 
-	$("#top_nav a.minimize").click(function(){
+	$("#top_nav a.minimize").click(function(event){
+		event.stopPropagation();
 			$("#top_nav").toggleClass('closed', 800);
 			$(this).toggleClass('minimize_closed');
 			
@@ -34,7 +36,8 @@ $(document).ready(function(){
 			return false;
 	});
 	
-	$("#footer a.minimize").click(function(){
+	$("#footer a.minimize").click(function(event){
+		event.stopPropagation();
 			$("#footer_wrapper").toggleClass('closed', 800);
 			$(this).toggleClass('minimize_closed');
 			
@@ -57,14 +60,6 @@ $(document).ready(function(){
 	$("li").click(function(event){
 		event.stopPropagation();
 	    $(this).children("ul").fadeIn('slow');
-	});
-	
-	$("li").mouseenter(function(){
-	    $(this).children("ul").fadeIn('slow');
-	});
-	
-	$("li").mouseleave(function(){
-		$(this).children("ul").show();
 	});
 	
 	
@@ -111,14 +106,6 @@ $(document).ready(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
 	
-	$("li").mouseenter(function(){
-		$(this).children('.drop_box').fadeIn();
-	});
-	
-	$("li").mouseleave(function(){
-		$(this).children('.drop_box').show();
-	});
-	
 	
 	// Accordion 
 	
@@ -127,8 +114,8 @@ $(document).ready(function(){
 	$('li .accordion').hide(); //Hide/close all containers
 	
 	//On Click
-	$('li.openable').click(function(){
-		
+	$('li.openable').click(function(event){
+		event.stopPropagation();
 		if( $(this).children('div.accordion').is(':hidden') ) {
 			 //If immediate next container is closed...	
 			$(this).siblings().removeClass('active').children('div.accordion').slideUp(); //Remove all "active" state and slide up the immediate next container
@@ -147,7 +134,8 @@ $(document).ready(function(){
 	
 	
 	$('ul.slide_left').siblings('span').addClass('left');
-	$('.accordion > a').click(function(){
+	$('.accordion > a').click(function(event){
+		event.stopPropagation();
 		var url = $(this).attr('href');
 			window.location = url;
 	});
@@ -161,7 +149,8 @@ $(document).ready(function(){
 		$(this).removeClass('minimize_closed');
 		}
 		
-	$('#colour_switcher a').click(function(){
+	$('#colour_switcher a').click(function(event){
+		event.stopPropagation();
 		var colour = $(this).attr('id');
 		var cssUrl = ('theme_'+colour+'.css');
 		
@@ -190,7 +179,8 @@ $(document).ready(function(){
 		
 	});
 	
-	$('#bg_switcher a').click(function(){
+	$('#bg_switcher a').click(function(event){
+		event.stopPropagation();
 		var link = $(this).attr('href');
 		var cssLink = ('url('+link+')');
 		$('body').css('background',cssLink);
