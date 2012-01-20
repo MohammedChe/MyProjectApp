@@ -179,9 +179,9 @@ else{
 					<span class="icon">&nbsp;</span></a>
 					<ul id="recentList">
                    <?php
-						$url = parse_url($marks["url"], PHP_URL_HOST);
+						$url = parse_url($marks2["url"], PHP_URL_HOST);
 					?>
-                    <li><a target="_blank" href="<?php echo $marks["url"];?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
+                    <li><a target="_blank" href="<?php echo $marks2["url"];?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
 					</ul>
 				</li>
 		
