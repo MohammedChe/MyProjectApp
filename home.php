@@ -379,7 +379,7 @@ else{
                     foreach ($cat as $key => $value) 
                     {
 						
-                        echo "<li onClick='getMarks(" . htmlentities($value["id"]) .",". htmlentities($value["title"]) .");'><a href='#'>" . htmlentities($value["title"]) . "</a></li>";
+                        echo "<li onClick='getMarks(" . htmlentities($value["id"]) .",'". htmlentities($value["title"]) ."');'><a href='#'>" . htmlentities($value["title"]) . "</a></li>";
                     }
                     
                     ?>
@@ -390,7 +390,7 @@ else{
 					  {						  
 						  if(isset($cat["id"])){
 					 
-						 echo "<li onClick='getMarks(" . htmlentities($cat["id"]) .",". htmlentities($cat["title"]) .");'><a href='#'>" . htmlentities($cat["title"]) . "</a></li>";
+						 echo "<li onClick='getMarks(" . htmlentities($cat["id"]) .",'". htmlentities($cat["title"]) ."');'><a href='#'>" . htmlentities($cat["title"]) . "</a></li>";
 
 	}
 	else{
