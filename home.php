@@ -157,7 +157,7 @@ if(isset($marks2[0])) {
 					{
 						$url = parse_url(htmlentities($value["url"]), PHP_URL_HOST);
 					?>
-                    <li><a href="<?php echo htmlentities($value["url"]);?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
+                    <li><a target="_blank" href="<?php echo htmlentities($value["url"]);?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
                     <?php
 					}
 					?>
@@ -181,7 +181,7 @@ else{
                    <?php
 						$url = parse_url($marks["url"], PHP_URL_HOST);
 					?>
-                    <li><a href="<?php echo $marks["url"];?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
+                    <li><a target="_blank" href="<?php echo $marks["url"];?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
 					</ul>
 				</li>
 		
@@ -231,7 +231,7 @@ if(isset($marks3[0])) {
 
 						
 					?>
-        <a href="<?php echo $value["url"]?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $urlink; ?>"> <?php echo $url2; ?></a>
+        <a target="_blank" href="<?php echo $value["url"]?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $urlink; ?>"> <?php echo $url2; ?></a>
 
               <?php endforeach;
 }
@@ -242,7 +242,7 @@ else{
 		$urlink = parse_url($marks3["url"], PHP_URL_HOST);
 
 		?>
-        <a href="<?php echo $marks3["url"]?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $urlink; ?>"><?php echo $url2; ?> </a>
+        <a target="_blank" href="<?php echo $marks3["url"]?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $urlink; ?>"><?php echo $url2; ?> </a>
 	
 		<?php
 		
