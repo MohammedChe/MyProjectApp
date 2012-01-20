@@ -30,9 +30,11 @@ else{
 	if (isset($cat["title"])){
 		$selectedCatIndex = $cat["id"];
 		$selectedCat = $cat["id"];
+		$redCat = $selectedCatIndex;
 	}
 	else{
 		$marks = $userTools->getRecentBookmarks(18, $user->id);
+		$redCat = "recent";
 		$selectedCat = "Recent";
 	}
 }
