@@ -214,10 +214,10 @@ $(document).ready(function(){
 		
 	//Cookies for layout
 	
-
 	if($.cookie('bg_Link') != null) {
-		$('body').css('background',bg_Link);
+		$('body').css('background',$.cookie("bg_Link"));
 	}
+		
 	
 	if($.cookie('sideNav') === "closed") {
 		$("#side_nav").addClass('closed');
