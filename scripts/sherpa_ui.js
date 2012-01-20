@@ -59,7 +59,7 @@ $(document).ready(function(){
 	    $(this).children("ul").fadeIn('slow');
 	});
 	
-	$("li").mouseenter(function(){
+	$("li").mouseover(function(){
 	    $(this).children("ul").fadeIn('slow');
 	});
 	
@@ -107,7 +107,7 @@ $(document).ready(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
 	
-	$("li").mouseenter(function(){
+	$("li").mouseover(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
 	
