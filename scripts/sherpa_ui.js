@@ -54,8 +54,6 @@ $(document).ready(function(){
 	});
 
 	$("li").mouseleave(function(){
-	    $(this).children("ul").hide();
-		$(this).find('li.openable').removeClass('active').find('div.accordion').hide();
 	});
 	
 	
@@ -96,7 +94,6 @@ $(document).ready(function(){
 	});
 	
 	$("li").mouseleave(function(){
-	    $(this).children(".drop_box").hide();
 	});
 	
 	// Accordion 
