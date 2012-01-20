@@ -168,9 +168,7 @@ $(document).ready(function(){
 		        href: 'styles/skins/'+cssUrl
 				});
 				
-		$.cookie("col_Link",link);		
 		$("head").append( link );
-		
         		
 		if (colour.toLowerCase() == "default"){
 			 $("img").each(function(){
@@ -216,10 +214,6 @@ $(document).ready(function(){
 			
 		
 	//Cookies for layout
-	alert( $.cookie("col_Link") );
-	if($.cookie('col_Link') != null) {
-		$("head").append( $.cookie("col_Link") );
-	}
 	
 	if($.cookie('bg_Link') != null) {
 		$('body').css('background',$.cookie("bg_Link"));
