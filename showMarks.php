@@ -10,6 +10,7 @@ else{
 	
 $user = unserialize($_SESSION['user']);
 $cat = $userTools->getCategories($user->id);
+$redCat = "recent";
 
 if(isset($_POST['c'])) {
 	$redCat = mysql_real_escape_string($_POST['c']);
