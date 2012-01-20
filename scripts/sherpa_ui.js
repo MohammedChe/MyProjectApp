@@ -61,6 +61,11 @@ $(document).ready(function(){
 	$("li").mouseleave(function(){
 	});
 	
+	 $("li").click(function(event){
+    		 event.stopPropagation();
+    		 $(this).children("ul").fadeIn('slow');
+	 });
+	
 	
 /*
 	$("li.has_mega_menu").mouseenter(function(){
@@ -105,6 +110,11 @@ $(document).ready(function(){
 	
 	$("li").mouseleave(function(){
 	});
+	
+	$("li").click(function(event){
+    		 event.stopPropagation();
+    		 $(this).children('.drop_box').fadeIn();
+	 });
 	
 	// Accordion 
 	
