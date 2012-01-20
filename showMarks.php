@@ -89,11 +89,8 @@ else{
 	else{
 		?>
           <div id="main" class="box grid_4">
-			<div class="imgHover content round_all clearfix">
-           <div class="hover"><a href="#"><img src="images/close.png" title="Remove Bookmark" alt="Remove" /></a></div>
-                   <a target="_blank" href="http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html">
-                   <img class="screenshot" src="http://immediatenet.com/t/fs?Size=800x600&URL=http://strictlybeats.blogspot.com/2006/11/9th-wonder-instrumental-drop.html" /> </a> 
-
+			<div class="content round_all clearfix">
+                   <a href="#"><img class="screenshot" src="images/default.png" /></a> 
 			</div>
 		</div>
         
