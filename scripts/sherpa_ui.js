@@ -1,7 +1,6 @@
 $(document).ready(function(){
 		
-	$("#side_nav a.minimize").click(function(event){
-		event.stopPropagation();
+	$("#side_nav a.minimize").click(function(){
 			$("#side_nav").toggleClass('closed', 800);
 			$("#side_nav > ul li a > span").fadeToggle();
 			$("#side_nav > ul li > span.icon").fadeToggle();
@@ -21,8 +20,7 @@ $(document).ready(function(){
 			
 	});
 
-	$("#top_nav a.minimize").click(function(event){
-		event.stopPropagation();
+	$("#top_nav a.minimize").click(function(){
 			$("#top_nav").toggleClass('closed', 800);
 			$(this).toggleClass('minimize_closed');
 			
@@ -36,8 +34,7 @@ $(document).ready(function(){
 			return false;
 	});
 	
-	$("#footer a.minimize").click(function(event){
-		event.stopPropagation();
+	$("#footer a.minimize").click(function(){
 			$("#footer_wrapper").toggleClass('closed', 800);
 			$(this).toggleClass('minimize_closed');
 			
@@ -50,21 +47,15 @@ $(document).ready(function(){
 			
 			return false;
 	});
-	
-	$("ul li ul").hide();
-	 $('html').click(function() {
-		 $("ul li ul").hide();
-		 $(this).find('li.openable').removeClass('active').find('div.accordion').hide();
-	 });
 
-	$("li").click(function(event){
-		event.stopPropagation();
+	$("ul li ul").hide();
+	$("li").mouseenter(function(){
 	    $(this).children("ul").fadeIn('slow');
 	});
-	
+
 	$("li").mouseleave(function(){
-	    $(this).children("ul").show();
-		$(this).find('li.openable').addClass('active').find('div.accordion').show();
+	    $(this).children("ul").hide();
+		$(this).find('li.openable').removeClass('active').find('div.accordion').hide();
 	});
 	
 	
@@ -100,21 +91,13 @@ $(document).ready(function(){
 	
 	
 	$(".drop_box").hide();
-	 $('html').click(function() {
-		 $(".drop_box").hide();
-		 $(this).children(".drop_box").hide();
-	 });
-	
-	
-	$("li").click(function(event){
-		event.stopPropagation();
+	$("li").mouseenter(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
 	
 	$("li").mouseleave(function(){
-	    $(this).children(".drop_box").show();
+	    $(this).children(".drop_box").hide();
 	});
-	
 	
 	// Accordion 
 	
@@ -123,8 +106,8 @@ $(document).ready(function(){
 	$('li .accordion').hide(); //Hide/close all containers
 	
 	//On Click
-	$('li.openable').click(function(event){
-		event.stopPropagation();
+	$('li.openable').click(function(){
+		
 		if( $(this).children('div.accordion').is(':hidden') ) {
 			 //If immediate next container is closed...	
 			$(this).siblings().removeClass('active').children('div.accordion').slideUp(); //Remove all "active" state and slide up the immediate next container
@@ -143,8 +126,7 @@ $(document).ready(function(){
 	
 	
 	$('ul.slide_left').siblings('span').addClass('left');
-	$('.accordion > a').click(function(event){
-		event.stopPropagation();
+	$('.accordion > a').click(function(){
 		var url = $(this).attr('href');
 			window.location = url;
 	});
@@ -158,8 +140,7 @@ $(document).ready(function(){
 		$(this).removeClass('minimize_closed');
 		}
 		
-	$('#colour_switcher a').click(function(event){
-		event.stopPropagation();
+	$('#colour_switcher a').click(function(){
 		var colour = $(this).attr('id');
 		var cssUrl = ('theme_'+colour+'.css');
 		
@@ -188,8 +169,7 @@ $(document).ready(function(){
 		
 	});
 	
-	$('#bg_switcher a').click(function(event){
-		event.stopPropagation();
+	$('#bg_switcher a').click(function(){
 		var link = $(this).attr('href');
 		var cssLink = ('url('+link+')');
 		$('body').css('background',cssLink);
