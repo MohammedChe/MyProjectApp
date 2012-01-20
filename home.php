@@ -228,16 +228,19 @@ if(isset($cat[0])) {
 if(isset($marks3[0])) {
 					foreach ($marks3 as $key => $value) :
 					
+						$url2 = parse_url($value["url"], PHP_URL_HOST);
+						
 					?>
-        <a href="#"> <?php echo $value["url"]; ?></a>
+        <a href="#"> <?php echo $url2; ?></a>
 
               <?php endforeach;
 }
 else{
 	
 	if(isset($marks3["url"])){
+		$url2 = parse_url($marks3["url"], PHP_URL_HOST);
 		?>
-        <a href="#"><?php echo $marks3["url"]?> </a>
+        <a href="#"><?php echo $url2; ?> </a>
 	
 		<?php
 		
