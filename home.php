@@ -215,7 +215,7 @@ if(isset($cat[0])) {
 	foreach ($cat as $key => $value) :
 	
 	$marks3 = $userTools->getBookmarks($value["id"], $user->id);
-	
+		
 		?>
         <li><a href="#"><?php echo $value["title"];?></a>
        	 <span class="icon">&nbsp;</span>
@@ -227,9 +227,11 @@ if(isset($marks3[0])) {
 					foreach ($marks3 as $key => $value) :
 					
 						$url2 = parse_url($value["url"], PHP_URL_HOST);
+						$urlink = parse_url($value["url"], PHP_URL_HOST);
+
 						
 					?>
-        <a href="<?php echo $value["url"]?>"> <?php echo $url2; ?></a>
+        <a href="<?php echo $value["url"]?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $urlink; ?>"> <?php echo $url2; ?></a>
 
               <?php endforeach;
 }
@@ -237,8 +239,10 @@ else{
 	
 	if(isset($marks3["url"])){
 		$url2 = parse_url($marks3["url"], PHP_URL_HOST);
+		$urlink = parse_url($marks3["url"], PHP_URL_HOST);
+
 		?>
-        <a href="<?php echo $marks3["url"]?>"><?php echo $url2; ?> </a>
+        <a href="<?php echo $marks3["url"]?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $urlink; ?>"><?php echo $url2; ?> </a>
 	
 		<?php
 		
