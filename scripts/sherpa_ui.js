@@ -168,11 +168,10 @@ $(document).ready(function(){
 		        href: 'styles/skins/'+cssUrl
 				});
 				
+		$.cookie("col_Link",link);		
 		$("head").append( link );
-		$.cookie("col_Link",link);
-        
-		$.cookie("colour",colour);
 		
+        		
 		if (colour.toLowerCase() == "default"){
 			 $("img").each(function(){
         	      $(this).attr("src", $(this).attr("src").replace("white", "grey")); 
@@ -222,7 +221,7 @@ $(document).ready(function(){
 	}
 		
 		
-	
+	alert( $.cookie("bg_Link") );
 	if($.cookie('bg_Link') != null) {
 		$('body').css('background',$.cookie("bg_Link"));
 	}
