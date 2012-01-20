@@ -113,8 +113,8 @@ $marks2 = $userTools->getRecentBookmarks(25, $user->id);
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 
 <script type="text/javascript" src="scripts/jquery.cookie.js"></script>
-<!--<script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
--->
+<script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
+
 <script type="text/javascript" src="scripts/sherpa_ui.js"></script>
 
 <script>
