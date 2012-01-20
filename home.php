@@ -508,8 +508,6 @@ function timer(){
 	}, 1000);
 }
 
-
-
 function removeMark(mark, catId, catTitle) {
 	$.post('removeMark.php', {m: mark});
 	
