@@ -172,28 +172,23 @@ $(document).ready(function(){
 		$.cookie("col_Link",link);
         
 		$.cookie("colour",colour);
-		$.cookie("self",$(this));
 		
-		changeImgColour(colour, $(this));
+		if (colour.toLowerCase() == "default"){
+			 $("img").each(function(){
+        	      $(this).attr("src", $(this).attr("src").replace("white", "grey")); 
+        	      
+       		 });
+		}
+		else{
+			$("img").each(function(){
+           	   $(this).attr("src", $(this).attr("src").replace("grey", "white"));  
+       		 });
 		
 		}
 		
 		
 	});
 	
-	function changeImgColour(colour, self){
-		
-		if (colour.toLowerCase() == "default"){
-			 $("img").each(function(){
-        	      self.attr("src", self.attr("src").replace("white", "grey")); 
-        	      
-       		 });
-		}
-		else{
-			$("img").each(function(){
-           	   self.attr("src", self.attr("src").replace("grey", "white"));  
-       		 });
-	}
 	
 	$('#bg_switcher a').click(function(){
 		var link = $(this).attr('href');
@@ -224,7 +219,6 @@ $(document).ready(function(){
 	//Cookies for layout
 	if($.cookie('col_Link') != null) {
 		$("head").append( $.cookie("col_Link") );
-		changeImgColour($.cookie("colour"), $.cookie("self");
 	}
 		
 		
