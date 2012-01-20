@@ -47,15 +47,15 @@ $(document).ready(function(){
 			
 			return false;
 	});
-
+	
 	$("ul li ul").hide();
-	$("li").mouseenter(function(){
-	    $(this).children("ul").fadeIn('slow');
-	});
+	 $('html').click(function() {
+		 $("ul li ul").hide();
+		 $(this).find('li.openable').removeClass('active').find('div.accordion').hide();
+	 });
 
-	$("li").mouseleave(function(){
-	    $(this).children("ul").hide();
-		$(this).find('li.openable').removeClass('active').find('div.accordion').hide();
+	$("li").click(function(){
+	    $(this).children("ul").fadeIn('slow');
 	});
 	
 	
@@ -91,13 +91,16 @@ $(document).ready(function(){
 	
 	
 	$(".drop_box").hide();
-	$("li").mouseenter(function(){
+	 $('html').click(function() {
+		 $(".drop_box").hide();
+		 $(this).children(".drop_box").hide();
+	 });
+	
+	
+	$("li").click(function(){
 		$(this).children('.drop_box').fadeIn();
 	});
 	
-	$("li").mouseleave(function(){
-	    $(this).children(".drop_box").hide();
-	});
 	
 	// Accordion 
 	
