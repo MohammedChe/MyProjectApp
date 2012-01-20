@@ -157,9 +157,7 @@ if(isset($marks2[0])) {
 					{
 						$url = parse_url(htmlentities($value["url"]), PHP_URL_HOST);
 					?>
-                    
-					
-                    <li><a href="<?php htmlentities($value["url"]);?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url ;?></span></a></li>
+                    <li><a href="<?php echo htmlentities($value["url"]);?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
                     <?php
 					}
 					?>
@@ -183,7 +181,7 @@ else{
                    <?php
 						$url = parse_url($marks["url"], PHP_URL_HOST);
 					?>
-                    <li><a href="<img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><?php $marks["url"];?>"><span id="recentURL"><?php echo $url;?></span></a></li>
+                    <li><a href="<?php echo $marks["url"];?>"><img id="favi" src="<?php echo 'http://www.google.com/s2/favicons?domain=' . $url; ?>"><span id="recentURL"><?php echo $url;?></span></a></li>
 					</ul>
 				</li>
 		
