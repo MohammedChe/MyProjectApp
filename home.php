@@ -229,7 +229,7 @@ if(isset($marks3[0])) {
 						$url2 = parse_url($value["url"], PHP_URL_HOST);
 						
 					?>
-        <a href="#"> <?php echo $url2; ?></a>
+        <a href="<?php echo $value["url"]?>"> <?php echo $url2; ?></a>
 
               <?php endforeach;
 }
@@ -238,7 +238,7 @@ else{
 	if(isset($marks3["url"])){
 		$url2 = parse_url($marks3["url"], PHP_URL_HOST);
 		?>
-        <a href="#"><?php echo $url2; ?> </a>
+        <a href="<?php echo $marks3["url"]?>"><?php echo $url2; ?> </a>
 	
 		<?php
 		
