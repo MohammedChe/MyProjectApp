@@ -55,6 +55,7 @@ $(document).ready(function(){
 	 });
 
 	$("li").click(function(){
+		event.stopPropagation();
 	    $(this).children("ul").fadeIn('slow');
 	});
 	
@@ -98,6 +99,7 @@ $(document).ready(function(){
 	
 	
 	$("li").click(function(){
+		event.stopPropagation();
 		$(this).children('.drop_box').fadeIn();
 	});
 	
