@@ -229,7 +229,7 @@ if(isset($marks3[0])) {
 					foreach ($marks3 as $key => $value) :
 					
 					?>
-        <a href="#"> <?php $value["url"]; ?></a>
+        <a href="#"> <?php echo $value["url"]; ?></a>
 
               <?php endforeach;
 }
@@ -237,7 +237,7 @@ else{
 	
 	if(isset($marks3["url"])){
 		?>
-        <a href="#"><?php $marks3["url"]?> </a>
+        <a href="#"><?php echo $marks3["url"]?> </a>
 	
 		<?php
 		
