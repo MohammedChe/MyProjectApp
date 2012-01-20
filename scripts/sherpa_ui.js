@@ -62,6 +62,11 @@ $(document).ready(function(){
 	    $(this).children("ul").fadeIn('slow');
 	});
 	
+	$("li").mouseleave(function(){
+	    $(this).children("ul").show();
+		$(this).find('li.openable').addClass('active').find('div.accordion').show();
+	});
+	
 	
 /*
 	$("li.has_mega_menu").mouseenter(function(){
@@ -104,6 +109,10 @@ $(document).ready(function(){
 	$("li").click(function(event){
 		event.stopPropagation();
 		$(this).children('.drop_box').fadeIn();
+	});
+	
+	$("li").mouseleave(function(){
+	    $(this).children(".drop_box").show();
 	});
 	
 	
