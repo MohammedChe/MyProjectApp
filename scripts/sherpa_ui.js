@@ -216,12 +216,11 @@ $(document).ready(function(){
 			
 		
 	//Cookies for layout
+	alert( $.cookie("col_Link") );
 	if($.cookie('col_Link') != null) {
 		$("head").append( $.cookie("col_Link") );
 	}
-		
-		
-	alert( $.cookie("bg_Link") );
+	
 	if($.cookie('bg_Link') != null) {
 		$('body').css('background',$.cookie("bg_Link"));
 	}
