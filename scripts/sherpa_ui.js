@@ -54,7 +54,7 @@ $(document).ready(function(){
 		 $(this).find('li.openable').removeClass('active').find('div.accordion').hide();
 	 });
 
-	$("li").click(function(){
+	$("li").click(function(event){
 		event.stopPropagation();
 	    $(this).children("ul").fadeIn('slow');
 	});
@@ -64,7 +64,7 @@ $(document).ready(function(){
 	});
 	
 	$("li").mouseleave(function(){
-
+		$(this).children("ul").show();
 	});
 	
 	
@@ -106,7 +106,7 @@ $(document).ready(function(){
 	 });
 	
 	
-	$("li").click(function(){
+	$("li").click(function(event){
 		event.stopPropagation();
 		$(this).children('.drop_box').fadeIn();
 	});
@@ -116,7 +116,7 @@ $(document).ready(function(){
 	});
 	
 	$("li").mouseleave(function(){
-
+		$(this).children('.drop_box').show();
 	});
 	
 	
