@@ -190,6 +190,7 @@ $(document).ready(function(){
 		var link = $(this).attr('href');
 		var cssLink = ('url('+link+')');
 		$('body').css('background',cssLink);
+		$.cookie("bg_Link",cssLink);
 		return false;
 	});
 	
@@ -212,6 +213,11 @@ $(document).ready(function(){
 			
 		
 	//Cookies for layout
+	
+
+	if($.cookie('bg_Link') != null) {
+		$('body').css('background',bg_Link);
+	}
 	
 	if($.cookie('sideNav') === "closed") {
 		$("#side_nav").addClass('closed');
