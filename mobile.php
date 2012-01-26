@@ -8,6 +8,170 @@
  */
 
 
+require_once 'includes/global.inc.php';
+
+if (!isset($_SESSION['logged_in'])) {
+    $login = false;
+
+    $error = "";
+    $errorReg = "";
+    $email = "";
+    $password = "";
+    $password_confirm = "";
+
+
+    //check to see if they've submitted the login form
+    if(isset($_POST['submit-login'])) {
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $userTools = new UserTools();
+        if($userTools->login($email, $password)){
+            //successful login, redirect them to a page
+            header("Location: home.php");
+        }else{
+            $error = "Incorrect email or password. Please try again.";
+        }
+    }
+
+
+    //////////////////////////////////////////////////////////
+    //check to see that the form has been submitted
+    if(isset($_POST['submit-form'])) {
+
+        //retrieve the $_POST variables
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $password_confirm = $_POST['password-confirm'];
+
+        //initialize variables for form validation
+        $success = true;
+        $userTools = new UserTools();
+
+        //validate that the form was filled out correctly
+        //check to see if user name already exists
+        if($userTools->checkEmailExists($email))
+        {
+            $errorReg .= "This email is already registered.<br/> \n\r";
+            $success = false;
+        }
+
+
+        if(strlen($password) < 6)
+        {
+            $errorReg .= "Password must be 6 characters or over.<br/> \n\r";
+            $success = false;
+        }
+        //check to see if passwords match
+        if($password != $password_confirm) {
+            $errorReg .= "Passwords do not match.<br/> \n\r";
+            $success = false;
+        }
+
+        if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE)
+        {
+            $errorReg .= "Email address not valid.<br/> \n\r";
+            $success = false;
+        }
+
+        if($success)
+        {
+            //prep the data for saving in a new user object
+            $data['email'] = $email;
+            $data['password'] = md5($password); //encrypt the password for storage
+
+            //create the new user object
+            $newUser = new User($data);
+
+            //save the new user to the database
+            $newUser->save(true);
+
+            //log them in
+            $userTools->login($email, $password);
+
+            //redirect them to a welcome page
+            header("Location: home.php");
+
+        }
+
+    }
+}
+
+else {
+    $login = true;
+
+    $user = unserialize($_SESSION['user']);
+
+    $title = "";
+    $error2 = "";
+    $url = "";
+
+    //check to see that the form has been submitted
+    if (isset($_POST['submit-form3'])) {
+
+        //retrieve the $_POST variables
+        $title = $_POST['title'];
+        $owner = $_POST['owner'];
+
+        //initialize variables for form validation
+        $success = true;
+        $userTools = new UserTools();
+
+        if ($success) {
+            //prep the data for saving in a new user object
+            $data['title'] = $title;
+            $data['owner'] = $owner;
+            //create the new user object
+            $newCat = new Category($data);
+
+            //save the new user to the database
+            $newCat->save(true);
+
+            //redirect them to a welcome page
+            //header("Location: index.php");
+
+        }
+
+    }
+
+    if (isset($_POST['submit-form2'])) {
+
+        //retrieve the $_POST variables
+        $url = $_POST['url'];
+        $owner = $_POST['owner'];
+        $cat = $_POST['pickCat'];
+
+        //initialize variables for form validation
+        $userTools = new UserTools();
+        $checkedURL = $userTools->checkURL($url);
+
+        if (isset($checkedURL) && $checkedURL != false) {
+            //prep the data for saving in a new user object
+            $data['category'] = $cat;
+            $data['owner'] = $owner;
+            $data['url'] = $checkedURL;
+            //create the new user object
+            $newBookmark = new Bookmark($data);
+
+            //save the new user to the database
+            $newBookmark->save(true);
+
+            //redirect them to a welcome page
+            //header("Location: home.php");
+
+        }
+        else
+        {
+            echo "URL doesnt exist";
+        }
+    }
+
+    $cat = $userTools->getCategories($user->id);
+
+    $marks2 = $userTools->getRecentBookmarks(25, $user->id);
+
+}
 
 ?>
 
@@ -26,39 +190,77 @@
 </head>
 <body>
 
+
+<?php
+
+if (!$login){
+
+?>
+
 <!-- Start of first page -->
-<div data-role="page" id="foo">
+<div data-role="page" id="login">
 
     <div data-role="header">
-        <h1>Foo</h1>
+        <h1>Login</h1>
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>I'm first in the source order so I'm shown as the page.</p>
-        <p>View internal page called <a href="#bar">bar</a></p>
+        <p>This is the login page</p>
     </div><!-- /content -->
 
     <div data-role="footer">
-        <h4>Page Footer</h4>
+        <h4>MyProjectApp - Che</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<?php
+}
+
+else{
+
+?>
+<!-- Start of first page -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>Home</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <p>This is Home.</p>
+        <p>View internal page called <a href="#categories">Categories</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>MyProjectApp - Che</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
 
 <!-- Start of second page -->
-<div data-role="page" id="bar">
+<div data-role="page" id="categories">
 
     <div data-role="header">
-        <h1>Bar</h1>
+        <h1>Categories</h1>
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my ID is beeing clicked.</p>
-        <p><a href="#foo">Back to foo</a></p>
+        <p>This is the Categories page.</p>
+        <p><a href="#home">Back to Home</a></p>
     </div><!-- /content -->
 
     <div data-role="footer">
-        <h4>Page Footer</h4>
+        <h4>MyProjectApp - Che</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
+
+
+
+<?php
+}
+
+?>
+
+
 </body>
 </html>
