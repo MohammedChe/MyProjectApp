@@ -9,7 +9,7 @@
 
 
 
-
+echo "You are using a mobile device."
 
 
 ?>
