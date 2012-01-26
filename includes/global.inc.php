@@ -6,6 +6,7 @@ require_once 'classes/Category.class.php';
 require_once 'classes/Bookmark.class.php';
 require_once 'classes/UserTools.class.php';
 require_once 'classes/DB.class.php';
+require_once 'classes/detectMobile.class.php';
 
 //connect to the database
 $db = new DB();
