@@ -13,4 +13,3 @@ if(preg_match('/android.+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|f
     header('Location: mobile.php');
 ?>
 
-
