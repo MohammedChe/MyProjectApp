@@ -151,7 +151,7 @@ if(isset($marks2[0])) {
 					<img src="images/icons/grey/chart_6.png">
 					Latest
 					<span class="icon">&nbsp;</span></a>
-					<ul id="recentList">
+					<ul class="autoWidth">
                     <?php
 					foreach ($marks2 as $key => $value) 
 					{
@@ -177,7 +177,7 @@ else{
 					<img src="images/icons/grey/chart_6.png">
 					Latest
 					<span class="icon">&nbsp;</span></a>
-					<ul id="recentList">
+					<ul class="autoWidth">
                    <?php
 						$url = parse_url($marks2["url"], PHP_URL_HOST);
 					?>
@@ -207,7 +207,7 @@ else{
 
 					Bookmarks
 					<span class="icon">&nbsp;</span></a>
-                    <ul>
+                    <ul class="autoWidth">
                                       <?php 				
 if(isset($cat[0])) {
 	
