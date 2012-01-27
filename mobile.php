@@ -203,11 +203,10 @@ if (!$login){
 <div data-role="page" id="intro">
 
     <div data-role="header">
-        <h1>Login</h1>
+        <h1>Welcome to MyProjectApp</h1>
     </div><!-- /header -->
 
     <div data-role="content">
-        <h1>Welcome to MyProjectApp</h1>
         <p>Login or Register to Continue</p>
 
         <div data-role="controlgroup">
@@ -234,12 +233,10 @@ if (!$login){
     <div data-role="content">
         <p>This is the login page</p>
 
-        <div data-role="fieldcontain">
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
-        </div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
 
     </div><!-- /content -->
 
@@ -252,20 +249,19 @@ if (!$login){
 <div data-role="page" id="register">
 
     <div data-role="header">
+        <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
         <h1>Login</h1>
     </div><!-- /header -->
 
     <div data-role="content">
         <p>This is the login page</p>
 
-        <div data-role="fieldcontain">
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
-            <label for="password-confirm">Password:</label>
-            <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
-        </div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+        <label for="password-confirm">Password:</label>
+        <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
 
     </div><!-- /content -->
 
