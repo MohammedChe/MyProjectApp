@@ -307,17 +307,17 @@ else{
         <style>
             .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
             .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
-            #latest .ui-icon { background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat; background-size: 24px 22px; }
-            #logout .ui-icon { background:  url(tabbar-icons/63-runner.png)) 50% 50% no-repeat; background-size: 24px 16px;  }
-            #categories .ui-icon { background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+            #latestIco .ui-icon { background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat; background-size: 24px 22px; }
+            #logoutIco .ui-icon { background:  url(tabbar-icons/63-runner.png)) 50% 50% no-repeat; background-size: 24px 16px;  }
+            #categoriesIco .ui-icon { background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;  background-size: 12px 26px; }
         </style>
 
         <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                 <ul>
-                    <li><a href="#" id="latest" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
-                    <li><a href="#" id="categories" data-icon="custom">Categories</a></li>
-                    <li><a href="#" id="logout" data-icon="custom">Logout</a></li>
+                    <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
+                    <li><a href="#" id="categoriesIco" data-icon="custom">Categories</a></li>
+                    <li><a href="#" id="logoutIco" data-icon="custom">Logout</a></li>
                 </ul>
             </div>
         </div>
