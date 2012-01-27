@@ -301,6 +301,7 @@ else{
 </div><!-- /page -->
 
 
+
 <!-- Start of second page -->
 <div data-role="page" id="categories">
 
