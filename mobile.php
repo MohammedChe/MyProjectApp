@@ -7,9 +7,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-if(!$mobile)header('Location: index.php');
-
-
 
 require_once 'includes/global.inc.php';
 
