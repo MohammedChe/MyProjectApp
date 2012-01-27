@@ -312,7 +312,7 @@ else{
             #categoriesIco .ui-icon { background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;  background-size: 23px 26px; }
         </style>
 
-        <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+        <div data-role="footer" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
                     <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
