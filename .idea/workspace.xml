@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile.php" afterPath="$PROJECT_DIR$/mobile.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -47,7 +46,25 @@
       <file leaf-file-name="mobile.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="25" selection-start="6098" selection-end="6098" vertical-scroll-proportion="1.4954954">
+            <state line="8" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.18018018">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.inc.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="34" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detectMobile.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="171" selection-end="2220" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -259,23 +276,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/side_nav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="31" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -301,9 +304,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="34" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="171" selection-end="2220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="25" selection-start="6098" selection-end="6098" vertical-scroll-proportion="1.4954954">
+        <state line="8" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.18018018">
           <folding />
         </state>
       </provider>
