@@ -208,6 +208,68 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
+
+        <div data-role="controlgroup">
+            <a href="#login" data-role="button">Login</a>
+            <a href="#register" data-role="button">Register</a>
+        </div>
+
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>MyProjectApp - Che</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of login page -->
+<div data-role="page" id="login">
+
+    <div data-role="header">
+        <h1>Login</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <p>This is the login page</p>
+
+        <div data-role="fieldcontain">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+        </div>
+        <div data-role="fieldcontain">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+        </div>
+
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>MyProjectApp - Che</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of register page -->
+<div data-role="page" id="login">
+
+    <div data-role="header">
+        <h1>Login</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <p>This is the login page</p>
+
+        <div data-role="fieldcontain">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+        </div>
+        <div data-role="fieldcontain">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+        </div>
+        <div data-role="fieldcontain">
+            <label for="password-confirm">Password:</label>
+            <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
+        </div>
+
     </div><!-- /content -->
 
     <div data-role="footer">
