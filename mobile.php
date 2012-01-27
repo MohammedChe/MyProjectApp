@@ -190,6 +190,14 @@ else {
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 
+    <script>
+        $( document ).bind( "mobileinit", function() {
+            // Make your jQuery Mobile framework configuration changes here!
+
+            $.mobile.allowCrossDomainPages = true;
+        });
+    </script>
+
 </head>
 <body>
 
