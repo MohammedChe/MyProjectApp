@@ -234,10 +234,10 @@ if (!$login){
         <p>This is the login page</p>
         <form method="post">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value="" />
+            <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value=""  />
-            <a href="#" name="submit-login" data-role="button" data-inline="true" data-theme="b">Login</a>
+            <button data-inline="true" data-theme="b"  type="submit" name="submit-login">Login</button>
 
         </form>
     </div><!-- /content -->
@@ -264,7 +264,7 @@ if (!$login){
             <input type="password" name="password" id="password" value=""  />
             <label for="password-confirm">Password:</label>
             <input type="password" name="password-confirm" id="password-confirm" value=""  />
-            <a href="#" name="submit-form" data-role="button" data-inline="true" data-theme="b">Register</a>
+            <button data-inline="true" data-theme="b" type="submit" name="submit-form">Register</button>
         </form>
 
     </div><!-- /content -->
