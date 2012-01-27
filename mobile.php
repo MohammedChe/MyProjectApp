@@ -203,7 +203,7 @@ if (!$login){
 <div data-role="page" id="intro">
 
     <div data-role="header">
-        <h4>Welcome to MyProjectApp</h4>
+        <h1>MyProjectApp</h1>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -293,7 +293,34 @@ else{
     </div><!-- /content -->
 
     <div data-role="footer">
-        <h4>MyProjectApp - Che</h4>
+<!--        <div data-role="navbar">-->
+<!--            <ul>-->
+<!--                <li><a href="#">Latest</a></li>-->
+<!--                <li><a href="#">Categories</a></li>-->
+<!--                <li><a href="logout.php">Logout</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+        <style>
+            .nav-tabbar .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+            .nav-tabbar .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+            #latest .ui-icon { background:  url(tabbar-icons/09-chat2.png) 50% 50% no-repeat; background-size: 24px 22px; }
+            #categories .ui-icon { background:  url(tabbar-icons/18-envelope.png) 50% 50% no-repeat; background-size: 24px 16px;  }
+            #logout .ui-icon { background:  url(tabbar-icons/30-key.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+        </style>
+
+        <div data-role="footer" class="nav-tabbar">
+            <div data-role="navbar" class="nav-tabbar" data-grid="d">
+                <ul>
+                    <li><a href="#latest" id="latest" data-icon="custom">Latest</a></li>
+                    <li><a href="#categories" id="categories" data-icon="custom">Categories</a></li>
+                    <li><a href="logout.php" id="logout" data-icon="custom">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
     </div><!-- /footer -->
 </div><!-- /page -->
 
