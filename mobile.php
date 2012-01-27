@@ -268,7 +268,8 @@ else{
 
 <script type="text/javascript">
 
-    $(document).ready(){
+    $(document).ready()
+    {
         $.support.cors = true;
         $.mobile.allowCrossDomainPages = true;
     }
