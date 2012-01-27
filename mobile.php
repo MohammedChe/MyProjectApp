@@ -234,9 +234,9 @@ if (!$login){
         <p>This is the login page</p>
         <form method="post">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+            <input type="text" name="email" id="email" value="" />
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+            <input type="password" name="password" id="password" value=""  />
             <a href="#" name="submit-login" data-role="button" data-inline="true" data-theme="b">Login</a>
 
         </form>
@@ -259,11 +259,11 @@ if (!$login){
         <p>This is the login page</p>
         <form method="post">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+            <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+            <input type="password" name="password" id="password" value=""  />
             <label for="password-confirm">Password:</label>
-            <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
+            <input type="password" name="password-confirm" id="password-confirm" value=""  />
             <a href="#" name="submit-form" data-role="button" data-inline="true" data-theme="b">Register</a>
         </form>
 
