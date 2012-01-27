@@ -200,7 +200,7 @@ if (!$login){
 ?>
 
 <!-- Start of first page -->
-<div data-role="page" id="login">
+<div data-role="page" id="intro">
 
     <div data-role="header">
         <h1>Login</h1>
@@ -248,7 +248,7 @@ if (!$login){
 </div><!-- /page -->
 
 <!-- Start of register page -->
-<div data-role="page" id="login">
+<div data-role="page" id="register">
 
     <div data-role="header">
         <h1>Login</h1>
