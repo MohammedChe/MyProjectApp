@@ -186,7 +186,7 @@ else {
     <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-    <link href="styles/custom.css" rel="stylesheet" type="text/css" />
+
 
 
 </head>
@@ -308,7 +308,7 @@ else{
             .nav-glyphish-example .ui-btn .ui-btn-inner {
                 padding-top: 40px !important;
             }
-            .nav-glyphish-example .ui-btn .ui-icon-custom {
+            .nav-glyphish-example .ui-btn .ui-icon {
                 width: 30px !important;
                 height: 30px !important;
                 margin-left: -15px !important;
@@ -318,17 +318,16 @@ else{
                 -webkit-border-radius: 0 !important;
                 border-radius: 0 !important;
             }
-            .ui-icon-myapp-latestIco {
-                background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat;
+            #latestIco .ui-icon {
+                background:  url(tabbar-icons/83-calendar.png) no-repeat;
                 background-size: 20px 26px;
             }
-            .ui-icon-myapp-logoutIco {
-                background:  url(tabbar-icons/63-runner.png)) 50% 50% no-repeat;
+            #logoutIco .ui-icon {
+                background:  url(tabbar-icons/63-runner.png)) no-repeat;
                 background-size: 18px 25px;
             }
-
-            .ui-icon-myapp-categoriesIco {
-                background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;
+            #categoriesIco .ui-icon {
+                background:  url(tabbar-icons/33-cabinet.png) no-repeat;
                 background-size: 23px 26px;
             }
         </style>
@@ -336,9 +335,9 @@ else{
         <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
-                    <li><a href="#" id="latestIco" data-icon="myapp-latestIco" class="ui-btn-active ui-state-persist">Latest</a></li>
-                    <li><a href="#" id="categoriesIco" data-icon="myapp-categoriesIco">Categories</a></li>
-                    <li><a href="#" id="logoutIco" data-icon="myapp-logoutIco">Logout</a></li>
+                    <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
+                    <li><a href="#" id="categoriesIco" data-icon="custom">Categories</a></li>
+                    <li><a href="#" id="logoutIco" data-icon="custom">Logout</a></li>
                 </ul>
             </div>
         </div>
