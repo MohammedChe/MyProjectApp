@@ -7,7 +7,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-if(!$mobile)header('Location: index.php');
 
 
 
@@ -32,7 +31,7 @@ if (!isset($_SESSION['logged_in'])) {
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            //////////////////////////////////header("Location: home.php");
+            header("Location: home.php");
         }else{
             $error = "Incorrect email or password. Please try again.";
         }
@@ -94,7 +93,7 @@ if (!isset($_SESSION['logged_in'])) {
             $userTools->login($email, $password);
 
             //redirect them to a welcome page
-            //////////////////////////////////header("Location: home.php");
+            header("Location: home.php");
 
         }
 
@@ -265,5 +264,7 @@ else{
 }
 
 ?>
+
+
 </body>
 </html>
