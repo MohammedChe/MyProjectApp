@@ -237,7 +237,7 @@ if (!$login){
             <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
-            <button  type="submit" name="submit-form">Register</button>
+            <button  type="submit" name="submit-login">Login</button>
         </form>
     </div><!-- /content -->
 
@@ -263,7 +263,7 @@ if (!$login){
             <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
             <label for="password-confirm">Password:</label>
             <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
-            <button  type="submit" name="submit-login">Login</button>
+            <button  type="submit" name="submit-form">Register</button>
         </form>
 
     </div><!-- /content -->

@@ -37,7 +37,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="68" selection-start="7111" selection-end="7135" vertical-scroll-proportion="-24.25">
+            <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-11.125">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="mobile.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="0" selection-start="6568" selection-end="6568" vertical-scroll-proportion="0.6775701">
+            <state line="265" column="52" selection-start="7372" selection-end="7372" vertical-scroll-proportion="0.90654206">
               <folding />
             </state>
           </provider>
@@ -342,14 +342,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="68" selection-start="7111" selection-end="7135" vertical-scroll-proportion="-24.25">
+        <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-11.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="0" selection-start="6568" selection-end="6568" vertical-scroll-proportion="0.6775701">
+        <state line="265" column="52" selection-start="7372" selection-end="7372" vertical-scroll-proportion="0.90654206">
           <folding />
         </state>
       </provider>
