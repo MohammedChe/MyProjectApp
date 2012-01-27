@@ -324,8 +324,7 @@ else{
 
 
 
-
-<!--    </div><!-- /footer -->-->
+<!--    </div><!-- /footer -->
 </div><!-- /page -->
 
 
