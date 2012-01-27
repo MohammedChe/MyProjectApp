@@ -186,7 +186,7 @@ else {
     <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-
+    <link href="styles/custom.css" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -318,15 +318,16 @@ else{
                 -webkit-border-radius: 0 !important;
                 border-radius: 0 !important;
             }
-            #latestIco .ui-icon-custom {
+            .ui-icon-myapp-latestIco {
                 background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat;
                 background-size: 20px 26px;
             }
-            #logoutIco .ui-icon-custom {
+            .ui-icon-myapp-logoutIco {
                 background:  url(tabbar-icons/63-runner.png)) 50% 50% no-repeat;
                 background-size: 18px 25px;
             }
-            #categoriesIco .ui-icon-custom {
+
+            .ui-icon-myapp-categoriesIco {
                 background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;
                 background-size: 23px 26px;
             }
@@ -335,9 +336,9 @@ else{
         <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
-                    <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
-                    <li><a href="#" id="categoriesIco" data-icon="custom">Categories</a></li>
-                    <li><a href="#" id="logoutIco" data-icon="custom">Logout</a></li>
+                    <li><a href="#" id="latestIco" data-icon="myapp-latestIco" class="ui-btn-active ui-state-persist">Latest</a></li>
+                    <li><a href="#" id="categoriesIco" data-icon="myapp-categoriesIco">Categories</a></li>
+                    <li><a href="#" id="logoutIco" data-icon="myapp-logoutIco">Logout</a></li>
                 </ul>
             </div>
         </div>
