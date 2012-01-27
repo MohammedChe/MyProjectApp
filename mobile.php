@@ -268,6 +268,11 @@ else{
 
 <script type="text/javascript">
 
+    $(document).ready(){
+        $.support.cors = true;
+        $.mobile.allowCrossDomainPages = true;
+    }
+
     $( document ).bind( "mobileinit", function() {
         // Make your jQuery Mobile framework configuration changes here!
         $.support.cors = true;
