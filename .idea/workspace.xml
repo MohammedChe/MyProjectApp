@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/detectMobile.class.php" afterPath="$PROJECT_DIR$/classes/detectMobile.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile.php" afterPath="$PROJECT_DIR$/mobile.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -43,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobile.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="26" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.7297297">
+            <state line="9" column="44" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.1923075">
               <folding />
             </state>
           </provider>
@@ -61,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detectMobile.class.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="detectMobile.class.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="19" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.0">
+            <state line="13" column="19" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.29862174">
               <folding />
             </state>
           </provider>
@@ -298,13 +299,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="34" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="480" column="8" selection-start="13991" selection-end="14023" vertical-scroll-proportion="14.34">
@@ -312,16 +306,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
+    <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.0">
+        <state line="8" column="34" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="26" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.7297297">
+        <state line="9" column="44" selection-start="214" selection-end="214" vertical-scroll-proportion="-5.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.29862174">
           <folding />
         </state>
       </provider>
