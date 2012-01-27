@@ -304,9 +304,9 @@ else{
         <style>
             .nav-tabbar .ui-btn .ui-btn-inner { padding-top: 40px !important; }
             .nav-tabbar .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
-            #latest .ui-icon { background:  url(tabbar-icons/09-chat2.png) 50% 50% no-repeat; background-size: 24px 22px; }
-            #categories .ui-icon { background:  url(tabbar-icons/18-envelope.png) 50% 50% no-repeat; background-size: 24px 16px;  }
-            #logout .ui-icon { background:  url(tabbar-icons/30-key.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+            #latest .ui-icon { background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat; background-size: 24px 22px; }
+            #categories .ui-icon { background:  url(tabbar-icons/63-runner.png) 50% 50% no-repeat; background-size: 24px 16px;  }
+            #logout .ui-icon { background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat;  background-size: 12px 26px; }
         </style>
 
         <div data-role="footer" class="nav-tabbar">
