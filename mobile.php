@@ -7,6 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
+if(!$mobile)header('Location: index.php');
 
 
 
@@ -195,11 +196,6 @@ else {
 <body>
 
 
-<?php
-
-if (!$login){
-
-?>
 
 <!-- Start of first page -->
 <div data-role="page" id="login">
@@ -217,12 +213,7 @@ if (!$login){
     </div><!-- /footer -->
 </div><!-- /page -->
 
-<?php
-}
 
-else{
-
-?>
 <!-- Start of first page -->
 <div data-role="page" id="home">
 
@@ -258,12 +249,6 @@ else{
     </div><!-- /footer -->
 </div><!-- /page -->
 
-
-
-<?php
-}
-
-?>
 
 
 </body>

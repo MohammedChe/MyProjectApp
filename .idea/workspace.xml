@@ -46,7 +46,7 @@
       <file leaf-file-name="mobile.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="46" selection-start="781" selection-end="781" vertical-scroll-proportion="0.7657658">
+            <state line="248" column="26" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.7297297">
               <folding />
             </state>
           </provider>
@@ -305,13 +305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="480" column="8" selection-start="13991" selection-end="14023" vertical-scroll-proportion="14.34">
@@ -319,9 +312,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="2203" selection-end="2203" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="46" selection-start="781" selection-end="781" vertical-scroll-proportion="0.7657658">
+        <state line="248" column="26" selection-start="6245" selection-end="6245" vertical-scroll-proportion="0.7297297">
           <folding />
         </state>
       </provider>
