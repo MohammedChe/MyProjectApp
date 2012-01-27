@@ -308,7 +308,7 @@ else{
             .nav-glyphish-example .ui-btn .ui-btn-inner {
                 padding-top: 40px !important;
             }
-            .nav-glyphish-example .ui-btn .ui-icon {
+            .nav-glyphish-example .ui-btn .ui-icon-custom {
                 width: 30px !important;
                 height: 30px !important;
                 margin-left: -15px !important;
@@ -318,14 +318,15 @@ else{
                 -webkit-border-radius: 0 !important;
                 border-radius: 0 !important;
             }
-            #latestIco .ui-icon {
+            #latestIco .ui-icon-custom {
                 background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat;
                 background-size: 20px 26px;
             }
-            #logoutIco .ui-icon {
-                background:  url(tabbar-icons/63-runner.png));
+            #logoutIco .ui-icon-custom {
+                background:  url(tabbar-icons/63-runner.png)) 50% 50% no-repeat;
+                background-size: 18px 25px;
             }
-            #categoriesIco .ui-icon {
+            #categoriesIco .ui-icon-custom {
                 background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;
                 background-size: 23px 26px;
             }
