@@ -207,7 +207,8 @@ if (!$login){
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>This is the login page</p>
+        <h1>Welcome to MyProjectApp</h1>
+        <p>Login or Register to Continue</p>
 
         <div data-role="controlgroup">
             <a href="#login" data-role="button">Login</a>
@@ -225,6 +226,8 @@ if (!$login){
 <div data-role="page" id="login">
 
     <div data-role="header">
+
+        <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
         <h1>Login</h1>
     </div><!-- /header -->
 
@@ -234,8 +237,6 @@ if (!$login){
         <div data-role="fieldcontain">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
-        </div>
-        <div data-role="fieldcontain">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
         </div>
@@ -260,12 +261,8 @@ if (!$login){
         <div data-role="fieldcontain">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
-        </div>
-        <div data-role="fieldcontain">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
-        </div>
-        <div data-role="fieldcontain">
             <label for="password-confirm">Password:</label>
             <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
         </div>
