@@ -292,7 +292,7 @@ else{
         <p>View internal page called <a href="#categories">Categories</a></p>
     </div><!-- /content -->
 
-    <div data-role="footer">
+<!--    <div data-role="footer">-->
 <!--        <div data-role="navbar">-->
 <!--            <ul>-->
 <!--                <li><a href="#">Latest</a></li>-->
@@ -301,27 +301,30 @@ else{
 <!--            </ul>-->
 <!--        </div>-->
 
+
+
+
         <style>
-            .nav-tabbar .ui-btn .ui-btn-inner { padding-top: 40px !important; }
-            .nav-tabbar .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+            .nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+            .nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
             #latest .ui-icon { background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat; background-size: 24px 22px; }
-            #categories .ui-icon { background:  url(tabbar-icons/63-runner.png) 50% 50% no-repeat; background-size: 24px 16px;  }
-            #logout .ui-icon { background:  url(tabbar-icons/83-calendar.png) 50% 50% no-repeat;  background-size: 12px 26px; }
+            #logout .ui-icon { background:  url(tabbar-icons/63-runner.png)) 50% 50% no-repeat; background-size: 24px 16px;  }
+            #categories .ui-icon { background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;  background-size: 12px 26px; }
         </style>
 
-        <div data-role="footer" class="nav-tabbar">
-            <div data-role="navbar" class="nav-tabbar" data-grid="d">
+        <div data-role="footer" class="nav-glyphish-example">
+            <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                 <ul>
-                    <li><a href="#latest" id="latest" data-icon="custom">Latest</a></li>
-                    <li><a href="#categories" id="categories" data-icon="custom">Categories</a></li>
-                    <li><a href="logout.php" id="logout" data-icon="custom">Logout</a></li>
+                    <li><a href="#" id="latest" data-icon="custom">Latest</a></li>
+                    <li><a href="#" id="categories" data-icon="custom">Categories</a></li>
+                    <li><a href="#" id="logout" data-icon="custom">Logout</a></li>
                 </ul>
             </div>
         </div>
 
 
 
-    </div><!-- /footer -->
+<!--    </div><!-- /footer -->-->
 </div><!-- /page -->
 
 
