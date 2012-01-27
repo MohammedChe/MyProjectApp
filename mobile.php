@@ -202,7 +202,7 @@ if (!$login){
 <!-- Start of first page -->
 <div data-role="page" id="intro">
 
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
         <h1>Welcome to MyProjectApp</h1>
     </div><!-- /header -->
 
@@ -216,7 +216,7 @@ if (!$login){
 
     </div><!-- /content -->
 
-    <div data-role="footer">
+    <div data-role="footer" data-position="fixed">
         <h4>MyProjectApp - Che</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
@@ -224,7 +224,7 @@ if (!$login){
 <!-- Start of login page -->
 <div data-role="page" id="login">
 
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
 
         <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
         <h1>Login</h1>
@@ -242,7 +242,7 @@ if (!$login){
         </form>
     </div><!-- /content -->
 
-    <div data-role="footer">
+    <div data-role="footer" data-position="fixed">
         <h4>MyProjectApp - Che</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
@@ -250,7 +250,7 @@ if (!$login){
 <!-- Start of register page -->
 <div data-role="page" id="register">
 
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
         <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
         <h1>Login</h1>
     </div><!-- /header -->
@@ -269,7 +269,7 @@ if (!$login){
 
     </div><!-- /content -->
 
-    <div data-role="footer">
+    <div data-role="footer" data-position="fixed">
         <h4>MyProjectApp - Che</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
