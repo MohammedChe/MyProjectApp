@@ -232,12 +232,13 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
-
+        <form method="post">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+            <button  type="submit" name="submit-form">Register</button>
+        </form>
     </div><!-- /content -->
 
     <div data-role="footer">
@@ -255,13 +256,15 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
-        <label for="password-confirm">Password:</label>
-        <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
+        <form method="post">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="<?php echo $email; ?>"  />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="<?php echo $password; ?>"  />
+            <label for="password-confirm">Password:</label>
+            <input type="password" name="password-confirm" id="password-confirm" value="<?php echo $password-confirm; ?>"  />
+            <button  type="submit" name="submit-login">Login</button>
+        </form>
 
     </div><!-- /content -->
 
