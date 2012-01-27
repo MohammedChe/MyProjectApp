@@ -202,8 +202,8 @@ if (!$login){
 <!-- Start of first page -->
 <div data-role="page" id="intro">
 
-    <div data-role="header" data-position="fixed">
-        <h1>Welcome to MyProjectApp</h1>
+    <div data-role="header">
+        <h4>Welcome to MyProjectApp</h4>
     </div><!-- /header -->
 
     <div data-role="content">
