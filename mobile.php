@@ -312,15 +312,16 @@ else{
             #categories .ui-icon { background:  url(tabbar-icons/33-cabinet.png) 50% 50% no-repeat;  background-size: 12px 26px; }
         </style>
 
-        <div data-role="footer" class="nav-glyphish-example">
+        <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
                 <ul>
-                    <li><a href="#" id="latest" data-icon="custom">Latest</a></li>
+                    <li><a href="#" id="latest" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
                     <li><a href="#" id="categories" data-icon="custom">Categories</a></li>
                     <li><a href="#" id="logout" data-icon="custom">Logout</a></li>
                 </ul>
             </div>
         </div>
+
 
 
 
