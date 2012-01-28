@@ -347,7 +347,6 @@ else{
             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
             <p class="addLeftMargin"><?php echo $selectedCat ?></p>
-            <p class="addLeftMargin"><?php echo $redCat ?></p>
         </a></li>
 
 
@@ -367,7 +366,6 @@ else{
             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
             <p class="addLeftMargin"><?php echo $selectedCat ?></p>
-            <p class="addLeftMargin"><?php echo $redCat ?></p>
         </a></li>
         <?php
 
