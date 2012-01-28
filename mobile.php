@@ -348,6 +348,15 @@ else{
 <!--    </div><!-- /footer -->
 </div><!-- /page -->
 
+<div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+    <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+        <ul>
+            <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
+            <li><a href="#" id="categoriesIco" data-icon="custom">Categories</a></li>
+            <li><a href="#" id="logoutIco" data-icon="custom">Logout</a></li>
+        </ul>
+    </div>
+</div>
 
 
 <!-- Start of second page -->
