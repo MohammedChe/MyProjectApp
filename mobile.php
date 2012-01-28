@@ -319,15 +319,15 @@ else{
                 border-radius: 0 !important;
             }
             #latestIco .ui-icon {
-                background:  url(tabbar-icons/83-calenssdar.png) no-repeat;
+                background:  url(calendar.png) 50% 50% no-repeat;
                 background-size: 20px 26px;
             }
             #logoutIco .ui-icon {
-                background:  url(tabbar-icons/63-runnssser.png)) no-repeat;
+                background:  url(runner.png)) 50% 50% no-repeat;
                 background-size: 18px 25px;
             }
             #categoriesIco .ui-icon {
-                background:  url(tabbar-icons/33-cabinedddt.png) no-repeat;
+                background:  url(cabinet.png) 50% 50% no-repeat;
                 background-size: 23px 26px;
             }
         </style>
