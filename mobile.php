@@ -326,7 +326,7 @@ else{
 
 
         <div class="content-primary">
-            <ul data-role="listview">
+            <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
 
 
                 <?php
@@ -347,7 +347,9 @@ else{
             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
             <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+        </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
         </a></li>
+
 
 
     <?php
@@ -366,7 +368,10 @@ else{
             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
             <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+        </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
         </a></li>
+
+
         <?php
 
     }
@@ -375,7 +380,7 @@ else{
         ?>
 
         <li><a href="#">
-            <img class="addRightMargin" src="images/default.png" />
+            <img src="images/default.png" />
             <h3 class="addLeftMargin">None</h3>
             <p class="addLeftMargin">Add a New Bookmark</p>
         </a></li>
@@ -464,8 +469,56 @@ else{
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>This is the Categories page.</p>
-        <p><a href="#home">Back to Home</a></p>
+
+        <div class="content-primary">
+            <ul data-role="listview">
+
+
+
+
+
+        <?php
+        if (isset($cat[0])) {
+            ?>
+            <ul>
+
+                <?php
+                foreach ($cat as $key => $value)
+                {
+                    ?>
+
+                    <li><a onClick="getMarks(<?php echo htmlentities($value["id"])?>, '<?php echo htmlentities($value["title"])?>');" href=""><?php echo htmlentities($value["title"])?></a></li>
+
+                    <?php
+                }
+
+                ?>
+            </ul>
+            <?php
+        }
+        else
+        {
+            if (isset($cat["id"])) {
+                ?>
+
+                <li><a onClick="getMarks(<?php echo htmlentities($cat["id"])?>, '<?php echo htmlentities($cat["title"])?>');" href=""><?php echo htmlentities($cat["title"])?></a></li>
+
+                <?php
+
+
+            }
+            else {
+                ?>
+                No Categories
+
+                <?php
+            }
+        }
+        ?>
+
+        </ul>
+            </div>
+
     </div><!-- /content -->
 
     <div data-role="footer">
@@ -479,6 +532,7 @@ else{
 }
 
 ?>
+
 
 </body>
 </html>
