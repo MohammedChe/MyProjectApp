@@ -220,7 +220,7 @@ else {
     <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-
+    <link rel="stylesheet" href="styles/mobile.css" />
 
 
 </head>
@@ -318,7 +318,7 @@ else{
 <div data-role="page" id="home">
 
     <div data-role="header">
-        <h1>Home</h1>
+        <h1>Recent</h1>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -344,7 +344,7 @@ else{
 
 
         <li><a href="<?php echo htmlentities($value["url"]);?>">
-            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <img class="addRightMargin" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
             <h3><?php echo $theURL2;?></h3>
             <p><?php echo $selectedCat ?></p>
             <p><?php echo $redCat ?></p>
@@ -364,7 +364,7 @@ else{
         ?>
 
         <li><a href="<?php echo htmlentities($marks["url"]);?>">
-            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <img class="addRightMargin" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
             <h3><?php echo $theURL2;?></h3>
             <p><?php echo $selectedCat ?></p>
             <p><?php echo $redCat ?></p>
@@ -377,7 +377,7 @@ else{
         ?>
 
         <li><a href="#">
-            <img src="images/default.png" />
+            <img class="addRightMargin" src="images/default.png" />
             <h3>None</h3>
             <p>Add a New Bookmark</p>
         </a></li>
@@ -444,7 +444,7 @@ else{
         <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
-                    <li><a href="#home" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
+                    <li><a href="#home" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
                     <li><a href="#categories" id="categoriesIco" data-icon="custom">Categories</a></li>
                     <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
                 </ul>
