@@ -479,10 +479,7 @@ else{
 
         <?php
         if (isset($cat[0])) {
-            ?>
-            <ul>
 
-                <?php
                 foreach ($cat as $key => $value)
                 {
                     ?>
@@ -491,10 +488,6 @@ else{
 
                     <?php
                 }
-
-                ?>
-            </ul>
-            <?php
         }
         else
         {
@@ -521,9 +514,15 @@ else{
 
     </div><!-- /content -->
 
-    <div data-role="footer">
-        <h4>MyProjectApp - Che</h4>
-    </div><!-- /footer -->
+    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+        <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+            <ul>
+                <li><a href="#home" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
+                <li><a href="#categories" id="categoriesIco" data-icon="custom">Categories</a></li>
+                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+            </ul>
+        </div>
+    </div>
 </div><!-- /page -->
 
 
