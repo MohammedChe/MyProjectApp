@@ -28,7 +28,16 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="46" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.625">
+            <state line="2" column="46" selection-start="53" selection-end="53" vertical-scroll-proportion="278.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showMarks.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/showMarks.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="848" selection-end="2877" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
@@ -37,7 +46,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-85.5">
+            <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-20.5">
               <folding />
             </state>
           </provider>
@@ -46,7 +55,7 @@
       <file leaf-file-name="mobile.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="358" column="6" selection-start="10561" selection-end="10561" vertical-scroll-proportion="0.5794392">
+            <state line="328" column="14" selection-start="8670" selection-end="8670" vertical-scroll-proportion="0.14308426">
               <folding />
             </state>
           </provider>
@@ -307,13 +316,6 @@
         <state line="20" column="31" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="46" selection-start="53" selection-end="53" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" />
@@ -338,16 +340,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="46" selection-start="53" selection-end="53" vertical-scroll-proportion="278.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-85.5">
+        <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-20.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showMarks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="848" selection-end="2877" vertical-scroll-proportion="-5.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="358" column="6" selection-start="10561" selection-end="10561" vertical-scroll-proportion="0.5794392">
+        <state line="328" column="14" selection-start="8670" selection-end="8670" vertical-scroll-proportion="0.14308426">
           <folding />
         </state>
       </provider>

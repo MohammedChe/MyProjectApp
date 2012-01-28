@@ -167,9 +167,43 @@ else {
         }
     }
 
-    $cat = $userTools->getCategories($user->id);
 
-    $marks2 = $userTools->getRecentBookmarks(25, $user->id);
+
+
+    $cat = $userTools->getCategories($user->id);
+    $redCat = "recent";
+
+    if(isset($_POST['c'])) {
+        $redCat = mysql_real_escape_string($_POST['c']);
+    }
+
+    if($redCat != "recent") {
+
+        $theCat = $userTools->getCategory($redCat);
+        $selectedCatIndex = $theCat->id;
+        $selectedCat = $theCat->title;
+
+    }
+
+    else{
+
+        if (isset($cat["title"])){
+            $selectedCatIndex = $cat["id"];
+            $selectedCat = $cat["id"];
+            $redCat = $selectedCatIndex;
+        }
+        else{
+            $marks = $userTools->getRecentBookmarks(18, $user->id);
+            $redCat = "recent";
+            $selectedCat = "Recent";
+        }
+    }
+
+    if (isset($selectedCatIndex)){
+        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+    }
+
+
 
 }
 
@@ -288,8 +322,82 @@ else{
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>This is Home.</p>
-        <p>View internal page called <a href="#categories">Categories</a></p>
+
+
+
+        <div class="content-primary">
+            <ul data-role="listview">
+
+
+                <?php
+
+
+                if(isset($marks[0])) {
+
+
+    foreach ($marks as $key => $value)
+    {
+    $scheme = parse_url($value["url"], PHP_URL_SCHEME);
+    $host = parse_url($value["url"], PHP_URL_HOST);
+    $theURL2 = $scheme . "://" . $host;
+    ?>
+
+
+        <li><a href="<?php echo htmlentities($value["url"]);?>">
+            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <h3><?php echo $theURL2;?></h3>
+            <p><?php echo $selectedCat ?></p>
+            <p><?php echo $redCat ?></p>
+        </a></li>
+
+
+    <?php
+}
+}
+else{
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if(isset($marks["url"])){
+        $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+        $host = parse_url($marks["url"], PHP_URL_HOST);
+        $theURL2 = $scheme . "://" . $host;
+        ?>
+
+        <li><a href="<?php echo htmlentities($marks["url"]);?>">
+            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <h3><?php echo $theURL2;?></h3>
+            <p><?php echo $selectedCat ?></p>
+            <p><?php echo $redCat ?></p>
+        </a></li>
+        <?php
+
+    }
+
+    else{
+        ?>
+
+        <li><a href="#">
+            <img src="images/default.png" />
+            <h3>None</h3>
+            <p>Add a New Bookmark</p>
+        </a></li>
+
+
+
+        <?php
+    }
+}
+
+
+?>
+
+
+
+            </ul>
+        </div><!--/content-primary -->
+
+
+
     </div><!-- /content -->
 
 <!--    <div data-role="footer">-->
@@ -336,9 +444,9 @@ else{
         <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
-                    <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
-                    <li><a href="#" id="categoriesIco" data-icon="custom">Categories</a></li>
-                    <li><a href="#" id="logoutIco" data-icon="custom">Logout</a></li>
+                    <li><a href="#home" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
+                    <li><a href="#categories" id="categoriesIco" data-icon="custom">Categories</a></li>
+                    <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -348,15 +456,6 @@ else{
 <!--    </div><!-- /footer -->
 </div><!-- /page -->
 
-<div data-role="footer" class="nav-glyphish-example">
-    <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
-        <ul>
-            <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Latest</a></li>
-            <li><a href="#" id="categoriesIco" data-icon="custom">Categories</a></li>
-            <li><a href="#" id="logoutIco" data-icon="custom">Logout</a></li>
-        </ul>
-    </div>
-</div>
 
 
 <!-- Start of second page -->
