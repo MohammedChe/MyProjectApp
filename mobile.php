@@ -332,6 +332,7 @@ else{
             }
         </style>
 
+
         <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
