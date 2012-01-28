@@ -4,6 +4,7 @@
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile.php" afterPath="$PROJECT_DIR$/mobile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mobile.css" afterPath="$PROJECT_DIR$/styles/mobile.css" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +47,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-20.5">
+            <state line="114" column="34" selection-start="2712" selection-end="2761" vertical-scroll-proportion="-11.25">
               <folding />
             </state>
           </provider>
@@ -55,7 +56,16 @@
       <file leaf-file-name="mobile.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="328" column="14" selection-start="8670" selection-end="8670" vertical-scroll-proportion="0.14308426">
+            <state line="381" column="36" selection-start="10456" selection-end="10456" vertical-scroll-proportion="0.9062003">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobile.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,15 +98,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detectDesktop.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/detectDesktop.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="1" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -121,6 +122,7 @@
         <option value="$PROJECT_DIR$/classes/detectMobile.class.php" />
         <option value="$PROJECT_DIR$/styles/main.css" />
         <option value="$PROJECT_DIR$/styles/custom.css" />
+        <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/mobile.php" />
       </list>
     </option>
@@ -173,6 +175,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,23 +349,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="46" selection-start="53" selection-end="53" vertical-scroll-proportion="278.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="69" selection-start="7400" selection-end="7404" vertical-scroll-proportion="-20.5">
           <folding />
         </state>
       </provider>
@@ -361,9 +363,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="34" selection-start="2712" selection-end="2761" vertical-scroll-proportion="-11.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mobile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="14" selection-start="8670" selection-end="8670" vertical-scroll-proportion="0.14308426">
+        <state line="381" column="36" selection-start="10456" selection-end="10456" vertical-scroll-proportion="0.9062003">
           <folding />
         </state>
       </provider>

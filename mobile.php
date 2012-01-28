@@ -344,10 +344,10 @@ else{
 
 
         <li><a href="<?php echo htmlentities($value["url"]);?>">
-            <img class="addRightMargin" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
-            <h3><?php echo $theURL2;?></h3>
-            <p><?php echo $selectedCat ?></p>
-            <p><?php echo $redCat ?></p>
+            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
+            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+            <p class="addLeftMargin"><?php echo $redCat ?></p>
         </a></li>
 
 
@@ -364,10 +364,10 @@ else{
         ?>
 
         <li><a href="<?php echo htmlentities($marks["url"]);?>">
-            <img class="addRightMargin" src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
-            <h3><?php echo $theURL2;?></h3>
-            <p><?php echo $selectedCat ?></p>
-            <p><?php echo $redCat ?></p>
+            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
+            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+            <p class="addLeftMargin"><?php echo $redCat ?></p>
         </a></li>
         <?php
 
@@ -378,8 +378,8 @@ else{
 
         <li><a href="#">
             <img class="addRightMargin" src="images/default.png" />
-            <h3>None</h3>
-            <p>Add a New Bookmark</p>
+            <h3 class="addLeftMargin">None</h3>
+            <p class="addLeftMargin">Add a New Bookmark</p>
         </a></li>
 
 
