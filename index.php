@@ -448,7 +448,7 @@ else{
 
         <div class="content-primary">
 
-            <ul data-role="listview">
+            <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
 
                 <?php
                 if (isset($cat[0])) {
