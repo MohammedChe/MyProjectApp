@@ -171,37 +171,37 @@ else {
 
 
     $cat = $userTools->getCategories($user->id);
-//    $redCat = "recent";
-//
-//    if(isset($_POST['c'])) {
-//        $redCat = mysql_real_escape_string($_POST['c']);
-//    }
-//
-//    if($redCat != "recent") {
-//
-//        $theCat = $userTools->getCategory($redCat);
-//        $selectedCatIndex = $theCat->id;
-//        $selectedCat = $theCat->title;
-//
-//    }
-//
-//    else{
-//
-//        if (isset($cat["title"])){
-//            $selectedCatIndex = $cat["id"];
-//            $selectedCat = $cat["id"];
-//            $redCat = $selectedCatIndex;
-//        }
-//        else{
-//            $marks = $userTools->getRecentBookmarks(18, $user->id);
-//            $redCat = "recent";
-//            $selectedCat = "Recent";
-//        }
-//    }
-//
-//    if (isset($selectedCatIndex)){
-//        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-//    }
+    //    $redCat = "recent";
+    //
+    //    if(isset($_POST['c'])) {
+    //        $redCat = mysql_real_escape_string($_POST['c']);
+    //    }
+    //
+    //    if($redCat != "recent") {
+    //
+    //        $theCat = $userTools->getCategory($redCat);
+    //        $selectedCatIndex = $theCat->id;
+    //        $selectedCat = $theCat->title;
+    //
+    //    }
+    //
+    //    else{
+    //
+    //        if (isset($cat["title"])){
+    //            $selectedCatIndex = $cat["id"];
+    //            $selectedCat = $cat["id"];
+    //            $redCat = $selectedCatIndex;
+    //        }
+    //        else{
+    //            $marks = $userTools->getRecentBookmarks(18, $user->id);
+    //            $redCat = "recent";
+    //            $selectedCat = "Recent";
+    //        }
+    //    }
+    //
+    //    if (isset($selectedCatIndex)){
+    //        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+    //    }
 
 
 
@@ -448,78 +448,183 @@ else{
 
         <div class="content-primary">
 
-        <ul data-role="listview">
+            <ul data-role="listview">
 
-            <?php
-            if (isset($cat[0])) {
+                <?php
+                if (isset($cat[0])) {
 
-                foreach ($cat as $key => $value)
-                {
+                    foreach ($cat as $key => $value)
+                    {
 
-                    $catCount = $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);
+                        $catCount = $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);
+                        $marks = $userTools->getBookmarks($value["id"], $user->id);
 
-                    ?>
+                        ?>
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                         </span></li>
 
-                    <script> $(document).ready(function() {
-                        getMarks(<?php echo $value["id"]?>);
-                    });
-                    </script>
-                            <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-                    <div class="marks"></div>
-                    <?php
+                        <?php
 
+                        if(isset($marks[0])) {
+
+                            foreach ($marks as $key => $value2)
+                            {
+                                $scheme = parse_url($value["url"], PHP_URL_SCHEME);
+                                $host = parse_url($value["url"], PHP_URL_HOST);
+                                $theURL2 = $scheme . "://" . $host;
+
+                                $catTitle = $userTools->getCatTitle($value2["category"], $user->id);
+
+                                ?>
+
+                                <li><a href="<?php echo htmlentities($value2["url"]);?>">
+                                    <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
+                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
+                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($value2["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a></li>
+
+                                <?php
+                            }
+                        }
+                        else{
+
+                            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                            if(isset($marks["url"])){
+                                $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+                                $host = parse_url($marks["url"], PHP_URL_HOST);
+                                $theURL2 = $scheme . "://" . $host;
+
+                                $catTitle = $userTools->getCatTitle($marks["category"], $user->id);
+
+                                ?>
+
+                                <li><a href="<?php echo htmlentities($marks["url"]);?>">
+                                    <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
+                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
+                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a></li>
+                                <?php
+
+                            }
+
+                            else{
+                                ?>
+                                <div id="main" class="box grid_4">
+                                    <div class="content round_all clearfix">
+                                        <a href="#"><img class="screenshot" src="images/default.png" /></a>
+                                    </div>
+                                </div>
+
+
+                                <?php
+                            }
+                        }
+
+
+
+
+                    }
                 }
-            }
-            else
-            {
-                if (isset($cat["id"])) {
+                else
+                {
+                    if (isset($cat["id"])) {
 
-                    $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
+                        $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
+                        $marks = $userTools->getBookmarks($cat["id"], $user->id);
 
-                    ?>
+                        ?>
 
-                    <script> $(document).ready(function() {
-                        getMarks(<?php echo $cat["id"]?>);
-                    });
-                    </script>
-
-                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
+                        <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                     </span></li>
 
-                    <div class="marks"></div>
+                        <?php
 
-                    <?php
+                        if(isset($marks[0])) {
 
+                            foreach ($marks as $key => $value2)
+                            {
+                                $scheme = parse_url($value["url"], PHP_URL_SCHEME);
+                                $host = parse_url($value["url"], PHP_URL_HOST);
+                                $theURL2 = $scheme . "://" . $host;
+
+                                $catTitle = $userTools->getCatTitle($value2["category"], $user->id);
+
+                                ?>
+
+                                <li><a href="<?php echo htmlentities($value2["url"]);?>">
+                                    <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
+                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
+                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($value2["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a></li>
+
+                                <?php
+                            }
+                        }
+                        else{
+
+                            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                            if(isset($marks["url"])){
+                                $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+                                $host = parse_url($marks["url"], PHP_URL_HOST);
+                                $theURL2 = $scheme . "://" . $host;
+
+                                $catTitle = $userTools->getCatTitle($marks["category"], $user->id);
+
+                                ?>
+
+                                <li><a href="<?php echo htmlentities($marks["url"]);?>">
+                                    <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
+                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
+                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a></li>
+                                <?php
+
+                            }
+
+                            else{
+                                ?>
+                                <div id="main" class="box grid_4">
+                                    <div class="content round_all clearfix">
+                                        <a href="#"><img class="screenshot" src="images/default.png" /></a>
+                                    </div>
+                                </div>
+
+
+                                <?php
+                            }
+                        }
+                    }
+                    else {
+                        ?>
+                        <li>No Categories</li>
+                        <?php
+                    }
                 }
-                else {
-                    ?>
-                    <li>No Categories</li>
-                    <?php
-                }
-            }
-            ?>
+                ?>
 
-        </ul>
+            </ul>
 
         </div>
 
     </div><!-- /content -->
 
     <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-            <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
-                <ul>
+        <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+            <ul>
 
-                    <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
-                    <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                    <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
+                <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
 
-                </ul>
-            </div>
+            </ul>
+        </div>
 
     </div>
 </div><!-- /page -->
