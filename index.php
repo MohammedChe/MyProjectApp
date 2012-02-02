@@ -448,11 +448,7 @@ else{
 
     <div data-role="content">
 
-        <div class="content-primary">
-            <ul data-role="listview">
-
-
-
+        <div data-role="collapsible" data-collapsed="true" class="content-primary">
 
 
         <?php
@@ -461,8 +457,16 @@ else{
                 foreach ($cat as $key => $value)
                 {
                     ?>
+                    <h3><?php echo htmlentities($value["title"])?></h3>
+                    <p>
+                    <ul data-role="listview">
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
+<!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
+                    </ul>
+                    </p>
 
-                    <li><a onClick="getMarks(<?php echo htmlentities($value["id"])?>, '<?php echo htmlentities($value["title"])?>');" href=""><?php echo htmlentities($value["title"])?><span class="ui-li-count"><?php echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?></span></a></li>
 
                     <?php
                 }
@@ -472,7 +476,16 @@ else{
             if (isset($cat["id"])) {
                 ?>
 
-                <li><a onClick="getMarks(<?php echo htmlentities($cat["id"])?>, '<?php echo htmlentities($cat["title"])?>');" href=""><?php echo htmlentities($cat["title"])?><span class="ui-li-count"><?php echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?></span></a></li>
+                <h3><?php echo htmlentities($cat["title"])?></h3>
+                <p>
+                <ul data-role="listview">
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
+                    <!--                <li><a onClick="getMarks(--><?php //echo htmlentities($cat["id"])?><!--, '--><?php //echo htmlentities($cat["title"])?><!--');" href="">--><?php //echo htmlentities($cat["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?><!--</span></a></li>-->
+                </ul>
+                </p>
+
 
                 <?php
 
@@ -487,7 +500,6 @@ else{
         }
         ?>
 
-        </ul>
             </div>
 
     </div><!-- /content -->
