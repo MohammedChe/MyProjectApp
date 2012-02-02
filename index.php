@@ -460,11 +460,11 @@ else{
 
                     ?>
 
-                        <li class="marks" data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
+                        <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                         </span></li>
                             <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-                    <script> getMarks(<?php echo $value["id"]?>); </script>
+                    <div id="marks"><script> getMarks(<?php echo $value["id"]?>); </script></div>
                     <?php
 
                 }
@@ -476,11 +476,11 @@ else{
                     $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
 
                     ?>
-                    <li class="marks" data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
+                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                     </span></li>
 
-                    <script> getMarks(<?php echo $cat["id"]?>); </script>
+                    <div id="marks"><script> getMarks(<?php echo $cat["id"]?>); </script></div>
 
                     <?php
 
@@ -526,7 +526,7 @@ else{
     function getMarks(catId) {
         $.post('getMarks.php', {c:catId},
             function (output) {
-                $('li.marks').html(output);
+                $('div#marks').html(output);
             });
     }
 
