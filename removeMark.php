@@ -16,8 +16,10 @@ else{
   $m = mysql_real_escape_string($_POST['m']);
   
   $userTools = new UserTools();
-  $success = $userTools->removeBookmark($m, $user->id);
-   
+  $userTools->removeBookmark($m, $user->id);
+
   }
+
+  header("Location: index.php");
 }
 ?>
