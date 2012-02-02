@@ -639,12 +639,12 @@ else{
 
 <script type="text/javascript">
 
-    function getMarks(catId) {
-        $.post('getMarks.php', {c:catId},
-            function (output) {
-                $('div.marks').html(output);
-            });
-    }
+//    function getMarks(catId) {
+//        $.post('getMarks.php', {c:catId},
+//            function (output) {
+//                $('div.marks').html(output);
+//            });
+//    }
 
 
     function removeMark(mark, catId, catTitle) {
