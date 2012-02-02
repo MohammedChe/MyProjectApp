@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mobile.css" afterPath="$PROJECT_DIR$/styles/mobile.css" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="423" column="59" selection-start="12442" selection-end="12442" vertical-scroll-proportion="-7.0416665">
+            <state line="513" column="59" selection-start="15589" selection-end="15589" vertical-scroll-proportion="-68.916664">
               <folding />
             </state>
           </provider>
@@ -54,7 +55,7 @@
       <file leaf-file-name="mobile.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="28" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5412371">
+            <state line="28" column="23" selection-start="735" selection-end="735" vertical-scroll-proportion="0.5412371">
               <folding />
             </state>
           </provider>
@@ -354,16 +355,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/calendar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="423" column="59" selection-start="12442" selection-end="12442" vertical-scroll-proportion="-7.0416665">
+        <state line="513" column="59" selection-start="15589" selection-end="15589" vertical-scroll-proportion="-68.916664">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/mobile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5412371">
+        <state line="28" column="23" selection-start="735" selection-end="735" vertical-scroll-proportion="0.5412371">
           <folding />
         </state>
       </provider>
