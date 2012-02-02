@@ -509,9 +509,9 @@ else{
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
 
-                    <li><a href="#home" id="latestIco2" data-icon="custom">Recent</a></li>
-                    <li><a href="#" id="categoriesIco2" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                    <li><a href="logout.php" id="logoutIco2" data-icon="custom">Logout</a></li>
+                    <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
+                    <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
+                    <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
 
                 </ul>
             </div>
