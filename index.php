@@ -448,6 +448,7 @@ else{
 
         <div class="content-primary">
 
+        <ul data-role="listview">
 
             <?php
             if (isset($cat[0])) {
@@ -455,17 +456,12 @@ else{
                 foreach ($cat as $key => $value)
                 {
                     ?>
-                    <div data-role="collapsible" data-collapsed="true">
-                        <ul data-role="listview"><li><?php echo htmlentities($value["title"])?><span class="ui-li-count">12</span></></ul>
-                        <p>
-                        <ul data-role="listview">
+                        <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">12</span></li>
                             <li>first</li>
                             <li>second</li>
                             <li>third</li>
                             <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-                        </ul>
-                        </p>
-                    </div>
+
 
 
                     <?php
@@ -475,30 +471,23 @@ else{
             {
                 if (isset($cat["id"])) {
                     ?>
-                    <div data-role="collapsible" data-collapsed="true">
-                        <ul data-role="listview"><li><?php echo htmlentities($cat["title"])?><span class="ui-li-count">12</span></></ul>
-                        <p>
-                        <ul data-role="listview">
-                            <li>first</li>
-                            <li>second</li>
-                            <li>third</li>
-                            <!--                <li><a onClick="getMarks(--><?php //echo htmlentities($cat["id"])?><!--, '--><?php //echo htmlentities($cat["title"])?><!--');" href="">--><?php //echo htmlentities($cat["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?><!--</span></a></li>-->
-                        </ul>
-                        </p>
-                    </div>
-
+                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">12</span></li>
+                    <li>first</li>
+                    <li>second</li>
+                    <li>third</li>
 
                     <?php
 
                 }
                 else {
                     ?>
-                    No Categories
-
+                    <li>No Categories</li>
                     <?php
                 }
             }
             ?>
+
+        </ul>
 
         </div>
 
