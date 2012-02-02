@@ -372,7 +372,7 @@ else{
                         <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
-                            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+                            <p class="addLeftMargin"><?php echo $userTools->getCatTitle($value["category"], $user->id); ?></p>
                         </a><a href="#" onClick="removeMark(<?php echo htmlentities($recentMarks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
                         </a></li>
 
