@@ -359,7 +359,7 @@ else{
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                        </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                        </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup">Delete
                         </a></li>
 
                         <?php
@@ -379,7 +379,7 @@ else{
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                        </a><a href="#" onClick="removeMark(<?php echo htmlentities($recentMarks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                        </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup">Delete
                         </a></li>
 
 
@@ -483,7 +483,7 @@ else{
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                     <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($value2["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
 
                                 <?php
@@ -505,7 +505,7 @@ else{
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                     <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
                                 <?php
 
@@ -560,7 +560,7 @@ else{
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                     <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($value2["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
 
                                 <?php
@@ -582,7 +582,7 @@ else{
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                     <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                                </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
                                 <?php
 
@@ -635,24 +635,6 @@ else{
 }
 
 ?>
-
-
-<script type="text/javascript">
-
-//    function getMarks(catId) {
-//        $.post('getMarks.php', {c:catId},
-//            function (output) {
-//                $('div.marks').html(output);
-//            });
-//    }
-
-
-    function removeMark(mark, catId, catTitle) {
-        $.post('removeMark.php', {m:mark});
-    }
-
-
-</script>
 
 </body>
 </html>
