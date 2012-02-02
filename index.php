@@ -456,7 +456,10 @@ else{
                 foreach ($cat as $key => $value)
                 {
                     ?>
-                        <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">12</span></li>
+
+                        <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
+                        <?php echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?>
+                        </span></li>
                             <li>first</li>
                             <li>second</li>
                             <li>third</li>
@@ -471,7 +474,9 @@ else{
             {
                 if (isset($cat["id"])) {
                     ?>
-                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">12</span></li>
+                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
+                        <?php echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?>
+                    </span></li>
                     <li>first</li>
                     <li>second</li>
                     <li>third</li>
