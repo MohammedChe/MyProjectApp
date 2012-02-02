@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getMarks.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/showMarks.php" afterPath="$PROJECT_DIR$/showMarksOLD.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
@@ -27,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="365" column="21" selection-start="9626" selection-end="10654" vertical-scroll-proportion="-18.916666">
+            <state line="478" column="53" selection-start="14948" selection-end="14948" vertical-scroll-proportion="0.6346414">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getMarks.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="getMarks.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getMarks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="70" selection-start="2187" selection-end="2187" vertical-scroll-proportion="0.6955345">
+            <state line="20" column="9" selection-start="420" selection-end="420" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
@@ -100,8 +98,8 @@
         <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
         <option value="$PROJECT_DIR$/classes/DB.class.php" />
         <option value="$PROJECT_DIR$/showMarks.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/getMarks.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -383,16 +381,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/getMarks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="365" column="21" selection-start="9626" selection-end="10654" vertical-scroll-proportion="-18.916666">
+        <state line="20" column="9" selection-start="420" selection-end="420" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getMarks.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="70" selection-start="2187" selection-end="2187" vertical-scroll-proportion="0.6955345">
+        <state line="478" column="53" selection-start="14948" selection-end="14948" vertical-scroll-proportion="0.6346414">
           <folding />
         </state>
       </provider>
