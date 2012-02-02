@@ -463,8 +463,13 @@ else{
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                         </span></li>
+
+                    <script> $(document).ready(function() {
+                        getMarks(<?php echo $value["id"]?>);
+                    });
+                    </script>
                             <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-                    <div class="marks"><script> getMarks(<?php echo $value["id"]?>); </script></div>
+                    <div class="marks"></div>
                     <?php
 
                 }
@@ -476,11 +481,17 @@ else{
                     $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
 
                     ?>
+
+                    <script> $(document).ready(function() {
+                        getMarks(<?php echo $cat["id"]?>);
+                    });
+                    </script>
+
                     <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                     </span></li>
 
-                    <div class="marks"><script> getMarks(<?php echo $cat["id"]?>); </script></div>
+                    <div class="marks"></div>
 
                     <?php
 
@@ -494,11 +505,6 @@ else{
             ?>
 
         </ul>
-
-
-
-            <div class="marks"><script> getMarks(<?php echo $cat["id"]?>); </script></div>
-
 
         </div>
 
