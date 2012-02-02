@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/DB.class.php" afterPath="$PROJECT_DIR$/classes/DB.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/UserTools.class.php" afterPath="$PROJECT_DIR$/classes/UserTools.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -25,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="178" column="2" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.16830294">
+            <state line="353" column="87" selection-start="9836" selection-end="9847" vertical-scroll-proportion="-5.7">
               <folding />
             </state>
           </provider>
@@ -43,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTools.class.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UserTools.class.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="38" selection-start="2063" selection-end="2081" vertical-scroll-proportion="-7.5">
+            <state line="101" column="83" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.42">
               <folding />
             </state>
           </provider>
@@ -55,7 +57,7 @@
       <file leaf-file-name="DB.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="32" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
+            <state line="43" column="2" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,10 +96,10 @@
         <option value="$PROJECT_DIR$/styles/main.css" />
         <option value="$PROJECT_DIR$/styles/custom.css" />
         <option value="$PROJECT_DIR$/mobile.php" />
-        <option value="$PROJECT_DIR$/classes/DB.class.php" />
-        <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/classes/DB.class.php" />
+        <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
       </list>
     </option>
   </component>
@@ -336,13 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="32" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/iscroll/examples/use-transition/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="462" selection-end="462" vertical-scroll-proportion="0.19946809">
@@ -369,16 +364,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="38" selection-start="2063" selection-end="2081" vertical-scroll-proportion="-7.5">
+        <state line="353" column="87" selection-start="9836" selection-end="9847" vertical-scroll-proportion="-5.7">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="2" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.16830294">
+        <state line="43" column="2" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="83" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.42">
           <folding />
         </state>
       </provider>

@@ -96,6 +96,14 @@ class UserTools {
 		return $result;
 	}
 
+    public function getCatTitle($catID, $owner)
+    {
+        $db = new DB();
+        $result = $db->select('category', "id = $catID AND owner = $owner", 'title');
+
+        return $result;
+    }
+
     public function getCategoryCount($catId, $owner)
     {
         $db = new DB();
