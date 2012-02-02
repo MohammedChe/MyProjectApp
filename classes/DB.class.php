@@ -46,7 +46,7 @@ class DB {
     }
 
     public function selectCount($table, $where) {
-        $sql = "SELECT COUNT(id) FROM $table WHERE $where";
+        $sql = "SELECT COUNT(id) AS total FROM $table WHERE $where";
         $result = mysql_query($sql);
 
         if(mysql_num_rows($result) == 1)

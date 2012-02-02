@@ -461,7 +461,7 @@ else{
                     ?>
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
-                        <?php echo $catCount[0];?>
+                        <?php echo $catCount["total"];?>
                         </span></li>
                             <li>first</li>
                             <li>second</li>
@@ -481,7 +481,7 @@ else{
 
                     ?>
                     <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
-                        <?php echo $catCount[0];?>
+                        <?php echo $catCount["total"];?>
                     </span></li>
                     <li>first</li>
                     <li>second</li>
