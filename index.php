@@ -493,7 +493,6 @@ else{
 
                     <?php
 
-
                 }
                 else {
                     ?>
