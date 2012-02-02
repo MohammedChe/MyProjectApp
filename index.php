@@ -319,7 +319,7 @@ else{
 
     <div data-role="header">
         <h1>Recent</h1>
-        <div data-role="navbar" data-grid="b">
+        <div data-role="navbar" data-grid="b" >
             <ul>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories">Categories</a></li>
@@ -421,6 +421,10 @@ else{
 
 
 
+        <div data-role="footer" data-id="tabs" data-position="fixed">
+
+        </div>
+
 
 
 <!--    </div><!-- /footer -->
@@ -488,7 +492,9 @@ else{
 
     </div><!-- /content -->
 
+    <div data-role="footer" data-id="tabs" data-position="fixed">
 
+    </div>
 </div><!-- /page -->
 
 
