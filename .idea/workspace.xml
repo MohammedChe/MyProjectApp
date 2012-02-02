@@ -28,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="500" column="0" selection-start="15543" selection-end="15543" vertical-scroll-proportion="-5.316456">
+            <state line="467" column="50" selection-start="14294" selection-end="14294" vertical-scroll-proportion="8.620254">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="getMarks.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getMarks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="331" selection-end="331" vertical-scroll-proportion="0.18809202">
+            <state line="15" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.3044655">
               <folding />
             </state>
           </provider>
@@ -392,14 +392,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="500" column="0" selection-start="15543" selection-end="15543" vertical-scroll-proportion="-5.316456">
+        <state line="467" column="50" selection-start="14294" selection-end="14294" vertical-scroll-proportion="8.620254">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/getMarks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="331" selection-end="331" vertical-scroll-proportion="0.18809202">
+        <state line="15" column="0" selection-start="310" selection-end="310" vertical-scroll-proportion="0.3044655">
           <folding />
         </state>
       </provider>
