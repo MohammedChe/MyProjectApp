@@ -471,8 +471,8 @@ else{
 
                             foreach ($marks as $key => $value2)
                             {
-                                $scheme = parse_url($value["url"], PHP_URL_SCHEME);
-                                $host = parse_url($value["url"], PHP_URL_HOST);
+                                $scheme = parse_url($value2["url"], PHP_URL_SCHEME);
+                                $host = parse_url($value2["url"], PHP_URL_HOST);
                                 $theURL2 = $scheme . "://" . $host;
 
                                 $catTitle = $userTools->getCatTitle($value2["category"], $user->id);
@@ -548,8 +548,8 @@ else{
 
                             foreach ($marks as $key => $value2)
                             {
-                                $scheme = parse_url($value["url"], PHP_URL_SCHEME);
-                                $host = parse_url($value["url"], PHP_URL_HOST);
+                                $scheme = parse_url($value2["url"], PHP_URL_SCHEME);
+                                $host = parse_url($value2["url"], PHP_URL_HOST);
                                 $theURL2 = $scheme . "://" . $host;
 
                                 $catTitle = $userTools->getCatTitle($value2["category"], $user->id);
