@@ -95,6 +95,14 @@ class UserTools {
 		
 		return $result;
 	}
+
+    public function getCategoryCount($catId, $owner)
+    {
+        $db = new DB();
+        $result = $db->selectCount('bookmark', "owner = $owner AND category = $catId");
+
+        return $result;
+    }
 	
 	public function getBookmark($id)
 	{

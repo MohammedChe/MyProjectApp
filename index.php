@@ -454,7 +454,7 @@ else{
                 {
                     ?>
 
-                    <li><a onClick="getMarks(<?php echo htmlentities($value["id"])?>, '<?php echo htmlentities($value["title"])?>');" href=""><?php echo htmlentities($value["title"])?></a></li>
+                    <li><a onClick="getMarks(<?php echo htmlentities($value["id"])?>, '<?php echo htmlentities($value["title"])?>');" href=""><?php echo htmlentities($value["title"])?><span class="ui-li-count"><?php echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?></span></a></li>
 
                     <?php
                 }
@@ -464,7 +464,7 @@ else{
             if (isset($cat["id"])) {
                 ?>
 
-                <li><a onClick="getMarks(<?php echo htmlentities($cat["id"])?>, '<?php echo htmlentities($cat["title"])?>');" href=""><?php echo htmlentities($cat["title"])?></a></li>
+                <li><a onClick="getMarks(<?php echo htmlentities($cat["id"])?>, '<?php echo htmlentities($cat["title"])?>');" href=""><?php echo htmlentities($cat["title"])?><span class="ui-li-count"><?php echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?></span></a></li>
 
                 <?php
 
