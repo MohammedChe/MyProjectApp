@@ -357,7 +357,7 @@ else{
                         </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
                         </a></li>
 
-
+                        <?php print_r($catTitle["title"]); ?>
 
                         <?php
                     }
