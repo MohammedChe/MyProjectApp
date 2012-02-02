@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="" />
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+    </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,10 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="513" column="58" selection-start="15577" selection-end="15586" vertical-scroll-proportion="-16.416666">
+            <state line="178" column="2" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.16830294">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showMarks.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/showMarks.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="20" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-15.791667">
               <folding />
             </state>
           </provider>
@@ -34,7 +46,7 @@
       <file leaf-file-name="UserTools.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="36" selection-start="2228" selection-end="2244" vertical-scroll-proportion="0.0">
+            <state line="90" column="38" selection-start="2063" selection-end="2081" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
@@ -49,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobile.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="31" selection-start="806" selection-end="806" vertical-scroll-proportion="0.6033287">
+            <state line="27" column="10" selection-start="691" selection-end="700" vertical-scroll-proportion="-7.3636365">
               <folding />
             </state>
           </provider>
@@ -84,8 +96,8 @@
         <option value="$PROJECT_DIR$/mobile.php" />
         <option value="$PROJECT_DIR$/classes/DB.class.php" />
         <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -324,23 +336,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/showMarks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="26" selection-start="1086" selection-end="1086" vertical-scroll-proportion="-32.041668">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="32" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="36" selection-start="2228" selection-end="2244" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -357,16 +355,30 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="513" column="58" selection-start="15577" selection-end="15586" vertical-scroll-proportion="-16.416666">
+        <state line="27" column="10" selection-start="691" selection-end="700" vertical-scroll-proportion="-7.3636365">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+    <entry file="file://$PROJECT_DIR$/showMarks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="31" selection-start="806" selection-end="806" vertical-scroll-proportion="0.6033287">
+        <state line="70" column="20" selection-start="1671" selection-end="1671" vertical-scroll-proportion="-15.791667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="38" selection-start="2063" selection-end="2081" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="2" selection-start="4672" selection-end="4672" vertical-scroll-proportion="0.16830294">
           <folding />
         </state>
       </provider>

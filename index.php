@@ -171,38 +171,41 @@ else {
 
 
     $cat = $userTools->getCategories($user->id);
-    $redCat = "recent";
+//    $redCat = "recent";
+//
+//    if(isset($_POST['c'])) {
+//        $redCat = mysql_real_escape_string($_POST['c']);
+//    }
+//
+//    if($redCat != "recent") {
+//
+//        $theCat = $userTools->getCategory($redCat);
+//        $selectedCatIndex = $theCat->id;
+//        $selectedCat = $theCat->title;
+//
+//    }
+//
+//    else{
+//
+//        if (isset($cat["title"])){
+//            $selectedCatIndex = $cat["id"];
+//            $selectedCat = $cat["id"];
+//            $redCat = $selectedCatIndex;
+//        }
+//        else{
+//            $marks = $userTools->getRecentBookmarks(18, $user->id);
+//            $redCat = "recent";
+//            $selectedCat = "Recent";
+//        }
+//    }
+//
+//    if (isset($selectedCatIndex)){
+//        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+//    }
 
-    if(isset($_POST['c'])) {
-        $redCat = mysql_real_escape_string($_POST['c']);
-    }
 
-    if($redCat != "recent") {
 
-        $theCat = $userTools->getCategory($redCat);
-        $selectedCatIndex = $theCat->id;
-        $selectedCat = $theCat->title;
-
-    }
-
-    else{
-
-        if (isset($cat["title"])){
-            $selectedCatIndex = $cat["id"];
-            $selectedCat = $cat["id"];
-            $redCat = $selectedCatIndex;
-        }
-        else{
-            $marks = $userTools->getRecentBookmarks(18, $user->id);
-            $redCat = "recent";
-            $selectedCat = "Recent";
-        }
-    }
-
-    if (isset($selectedCatIndex)){
-        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-    }
-
+    $recentMarks = $userTools->getRecentBookmarks(12, $user->id);
 
 
 }
@@ -334,10 +337,10 @@ else{
                 <?php
 
 
-                if(isset($marks[0])) {
+                if(isset($recentMarks[0])) {
 
 
-                    foreach ($marks as $key => $value)
+                    foreach ($recentMarks as $key => $value)
                     {
                         $scheme = parse_url($value["url"], PHP_URL_SCHEME);
                         $host = parse_url($value["url"], PHP_URL_HOST);
@@ -360,17 +363,17 @@ else{
                 else{
 
                     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                    if(isset($marks["url"])){
-                        $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
-                        $host = parse_url($marks["url"], PHP_URL_HOST);
+                    if(isset($recentMarks["url"])){
+                        $scheme = parse_url($recentMarks["url"], PHP_URL_SCHEME);
+                        $host = parse_url($recentMarks["url"], PHP_URL_HOST);
                         $theURL2 = $scheme . "://" . $host;
                         ?>
 
-                        <li><a href="<?php echo htmlentities($marks["url"]);?>">
+                        <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
                             <p class="addLeftMargin"><?php echo $selectedCat ?></p>
-                        </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                        </a><a href="#" onClick="removeMark(<?php echo htmlentities($recentMarks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
                         </a></li>
 
 
