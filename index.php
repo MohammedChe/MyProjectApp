@@ -495,6 +495,11 @@ else{
 
         </ul>
 
+
+
+            <div class="marks"><script> getMarks(<?php echo $cat["id"]?>); </script></div>
+
+
         </div>
 
     </div><!-- /content -->
