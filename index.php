@@ -526,7 +526,7 @@ else{
     function getMarks(catId) {
         $.post('getMarks.php', {c:catId},
             function (output) {
-                html(output).show();
+                html(output);
             });
     }
 
