@@ -526,5 +526,22 @@ else{
 ?>
 
 
+<script type="text/javascript">
+
+    function getMarks(catId, catTitle) {
+        $.post('getMarks.php', {c:catId},
+            function (output) {
+                $('#container').html(output).fadeIn(800);
+            });
+    }
+
+
+    function removeMark(mark, catId, catTitle) {
+        $.post('removeMark.php', {m:mark});
+    }
+
+
+</script>
+
 </body>
 </html>
