@@ -1,276 +1,507 @@
 <?php
+/**
+ * Created by JetBrains PhpStorm.
+ * User: MohammedChe
+ * Date: 26/01/2012
+ * Time: 16:41
+ * To change this template use File | Settings | File Templates.
+ */
 
-require_once 'classes/detectMobile.class.php';
+//require_once 'classes/detectDesktop.class.php';
 require_once 'includes/global.inc.php';
 
+if (!isset($_SESSION['logged_in'])) {
+    $login = false;
 
-if(isset($_SESSION['logged_in'])) {
-	header("Location: home.php");
+    $error = "";
+    $errorReg = "";
+    $email = "";
+    $password = "";
+    $password_confirm = "";
+
+
+    //check to see if they've submitted the login form
+    if(isset($_POST['submit-login'])) {
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $userTools = new UserTools();
+        if($userTools->login($email, $password)){
+            //successful login, redirect them to a page
+            header("Location: mobile.php");
+        }else{
+            $error = "Incorrect email or password. Please try again.";
+        }
+    }
+
+
+    //////////////////////////////////////////////////////////
+    //check to see that the form has been submitted
+    if(isset($_POST['submit-form'])) {
+
+        //retrieve the $_POST variables
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $password_confirm = $_POST['password-confirm'];
+
+        //initialize variables for form validation
+        $success = true;
+        $userTools = new UserTools();
+
+        //validate that the form was filled out correctly
+        //check to see if user name already exists
+        if($userTools->checkEmailExists($email))
+        {
+            $errorReg .= "This email is already registered.<br/> \n\r";
+            $success = false;
+        }
+
+
+        if(strlen($password) < 6)
+        {
+            $errorReg .= "Password must be 6 characters or over.<br/> \n\r";
+            $success = false;
+        }
+        //check to see if passwords match
+        if($password != $password_confirm) {
+            $errorReg .= "Passwords do not match.<br/> \n\r";
+            $success = false;
+        }
+
+        if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE)
+        {
+            $errorReg .= "Email address not valid.<br/> \n\r";
+            $success = false;
+        }
+
+        if($success)
+        {
+            //prep the data for saving in a new user object
+            $data['email'] = $email;
+            $data['password'] = md5($password); //encrypt the password for storage
+
+            //create the new user object
+            $newUser = new User($data);
+
+            //save the new user to the database
+            $newUser->save(true);
+
+            //log them in
+            $userTools->login($email, $password);
+
+            //redirect them to a welcome page
+            header("Location: mobile.php");
+
+        }
+
+    }
 }
 
-$error = "";
-$errorReg = "";
-$email = "";
-$password = "";
-$password_confirm = "";
+else {
+    $login = true;
+
+    $user = unserialize($_SESSION['user']);
+
+    $title = "";
+    $error2 = "";
+    $url = "";
+
+    //check to see that the form has been submitted
+    if (isset($_POST['submit-form3'])) {
+
+        //retrieve the $_POST variables
+        $title = $_POST['title'];
+        $owner = $_POST['owner'];
+
+        //initialize variables for form validation
+        $success = true;
+        $userTools = new UserTools();
+
+        if ($success) {
+            //prep the data for saving in a new user object
+            $data['title'] = $title;
+            $data['owner'] = $owner;
+            //create the new user object
+            $newCat = new Category($data);
+
+            //save the new user to the database
+            $newCat->save(true);
+
+            //redirect them to a welcome page
+            //header("Location: index.php");
+
+        }
+
+    }
+
+    if (isset($_POST['submit-form2'])) {
+
+        //retrieve the $_POST variables
+        $url = $_POST['url'];
+        $owner = $_POST['owner'];
+        $cat = $_POST['pickCat'];
+
+        //initialize variables for form validation
+        $userTools = new UserTools();
+        $checkedURL = $userTools->checkURL($url);
+
+        if (isset($checkedURL) && $checkedURL != false) {
+            //prep the data for saving in a new user object
+            $data['category'] = $cat;
+            $data['owner'] = $owner;
+            $data['url'] = $checkedURL;
+            //create the new user object
+            $newBookmark = new Bookmark($data);
+
+            //save the new user to the database
+            $newBookmark->save(true);
+
+            //redirect them to a welcome page
+            //header("Location: home.php");
+
+        }
+        else
+        {
+            echo "URL doesnt exist";
+        }
+    }
 
 
-//check to see if they've submitted the login form
-if(isset($_POST['submit-login'])) { 
 
-	$email = $_POST['email'];
-	$password = $_POST['password'];
 
-	$userTools = new UserTools();
-	if($userTools->login($email, $password)){ 
-		//successful login, redirect them to a page
-		header("Location: home.php");
-	}else{
-		$error = "Incorrect email or password. Please try again.";
-	}
+    $cat = $userTools->getCategories($user->id);
+    $redCat = "recent";
+
+    if(isset($_POST['c'])) {
+        $redCat = mysql_real_escape_string($_POST['c']);
+    }
+
+    if($redCat != "recent") {
+
+        $theCat = $userTools->getCategory($redCat);
+        $selectedCatIndex = $theCat->id;
+        $selectedCat = $theCat->title;
+
+    }
+
+    else{
+
+        if (isset($cat["title"])){
+            $selectedCatIndex = $cat["id"];
+            $selectedCat = $cat["id"];
+            $redCat = $selectedCatIndex;
+        }
+        else{
+            $marks = $userTools->getRecentBookmarks(18, $user->id);
+            $redCat = "recent";
+            $selectedCat = "Recent";
+        }
+    }
+
+    if (isset($selectedCatIndex)){
+        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
+    }
+
+
+
 }
 
+?>
 
-//////////////////////////////////////////////////////////
-//check to see that the form has been submitted
-if(isset($_POST['submit-form'])) { 
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	//retrieve the $_POST variables
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$password_confirm = $_POST['password-confirm'];
+    <title>MyProjectApp</title>
 
-	//initialize variables for form validation
-	$success = true;
-	$userTools = new UserTools();
-	
-	//validate that the form was filled out correctly
-	//check to see if user name already exists
-	if($userTools->checkEmailExists($email))
-	{
-	    $errorReg .= "This email is already registered.<br/> \n\r";
-	    $success = false;
-	}
-	
+    <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+    <link rel="stylesheet" href="styles/mobile.css" />
 
-	if(strlen($password) < 6)
-	{
-	    $errorReg .= "Password must be 6 characters or over.<br/> \n\r";
-	    $success = false;
-	}
-	//check to see if passwords match
-	if($password != $password_confirm) {
-	    $errorReg .= "Passwords do not match.<br/> \n\r";
-	    $success = false;
-	}
-	
-	if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE) 
-	{
-		$errorReg .= "Email address not valid.<br/> \n\r";
-		$success = false;
-	}
 
-	if($success)
-	{
-	    //prep the data for saving in a new user object
-	    $data['email'] = $email;
-	    $data['password'] = md5($password); //encrypt the password for storage
-	
-	    //create the new user object
-	    $newUser = new User($data);
-	
-	    //save the new user to the database
-	    $newUser->save(true);
-	
-	    //log them in
-	    $userTools->login($email, $password);
-	
-	    //redirect them to a welcome page
-	    header("Location: home.php");
-	    
-	}
+</head>
+<body>
 
+
+<?php
+
+if (!$login){
+
+?>
+
+<!-- Start of first page -->
+<div data-role="page" id="intro">
+
+    <div data-role="header">
+        <h1>MyProjectApp</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <p>Login or Register to Continue</p>
+
+        <div data-role="controlgroup">
+            <a href="#login" data-role="button">Login</a>
+            <a href="#register" data-role="button">Register</a>
+        </div>
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>MyProjectApp - Che</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of login page -->
+<div data-role="page" id="login">
+
+    <div data-role="header" data-position="fixed">
+
+        <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Login</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <p>This is the login page</p>
+        <form method="post">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value=""  />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value=""  />
+            <button data-inline="true" data-theme="b"  type="submit" name="submit-login">Login</button>
+
+        </form>
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>MyProjectApp - Che</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of register page -->
+<div data-role="page" id="register">
+
+    <div data-role="header" data-position="fixed">
+        <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        <h1>Login</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+        <p>This is the login page</p>
+        <form method="post">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value=""  />
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value=""  />
+            <label for="password-confirm">Password:</label>
+            <input type="password" name="password-confirm" id="password-confirm" value=""  />
+            <button data-inline="true" data-theme="b" type="submit" name="submit-form">Register</button>
+        </form>
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h4>MyProjectApp - Che</h4>
+    </div><!-- /footer -->
+</div><!-- /page -->
+
+<?php
 }
-///////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+else{
 
-//////////////////////////////////
+?>
+<!-- Start of first page -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>Recent</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
 
 
+
+        <div class="content-primary">
+            <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
+
+
+                <?php
+
+
+                if(isset($marks[0])) {
+
+
+    foreach ($marks as $key => $value)
+    {
+    $scheme = parse_url($value["url"], PHP_URL_SCHEME);
+    $host = parse_url($value["url"], PHP_URL_HOST);
+    $theURL2 = $scheme . "://" . $host;
+    ?>
+
+
+        <li><a href="<?php echo htmlentities($value["url"]);?>">
+            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
+            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+        </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+        </a></li>
+
+
+
+    <?php
+}
+}
+else{
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if(isset($marks["url"])){
+        $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+        $host = parse_url($marks["url"], PHP_URL_HOST);
+        $theURL2 = $scheme . "://" . $host;
+        ?>
+
+        <li><a href="<?php echo htmlentities($marks["url"]);?>">
+            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
+            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+        </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+        </a></li>
+
+
+        <?php
+
+    }
+
+    else{
+        ?>
+
+        <li><a href="#">
+            <img src="images/default.png" />
+            <h3 class="addLeftMargin">None</h3>
+            <p class="addLeftMargin">Add a New Bookmark</p>
+        </a></li>
+
+
+
+        <?php
+    }
+}
 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width; initial-scale=1.0;">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
 
-<title>MyProjectApp</title>
 
-<link rel="stylesheet" href="styles/reset.css" />
-<link rel="stylesheet" href="styles/text.css" />
-<link rel="stylesheet" href="styles/960_fluid.css" />
-<link rel="stylesheet" href="styles/main.css" />
-<link rel="stylesheet" href="styles/bar_nav.css" />
-<link rel="stylesheet" href="styles/side_nav.css" />
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" />
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+            </ul>
+        </div><!--/content-primary -->
 
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
--->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 
-<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
-<script type="text/javascript" src="scripts/jquery.hoverIntent.minified.js"></script>
 
-<script type="text/javascript" src="scripts/sherpa_ui.js"></script>
+    </div><!-- /content -->
 
-<script>
-function hideFirst()
-{
-	first.style.display = "none";
-}
-</script>
+<!--    <div data-role="footer">-->
+<!--        <div data-role="navbar">-->
+<!--            <ul>-->
+<!--                <li><a href="#">Latest</a></li>-->
+<!--                <li><a href="#">Categories</a></li>-->
+<!--                <li><a href="logout.php">Logout</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
 
-</head>
 
-<body>
-	<div id="wrapper" class="">
-		<div id="top_nav" class="nav_down bar_nav round_all">
-          <a href="#" class="minimize round_bottom"><span>minimize</span></a>
-			<ul class="round_all clearfix">
-				<li id="home"><a class="round_left" href="#">
-					<img src="images/icons/grey/admin_user.png">
-					Home</a>
-				</li> 
 
-             
-				<li id="search" class="send_right"><a class="round_right" href="#">
-					<img src="images/icons/grey/cash_register.png">
-					Register
-					<span class="icon">&nbsp;</span></a>
-					<div class="drop_box right round_all">
-						<?php echo ($errorReg != "") ? $errorReg : ""; ?>
-                        <form method="post">
-                        E-Mail:
-                        <input type="text" value="<?php echo $email; ?>" name="email" />
-                        <br/>
-                        Password:
-                        <input type="password" value="<?php echo $password; ?>" name="password" />
-                        <br/>
-                        Password (confirm):
-                        <input type="password" value="<?php echo $password_confirm; ?>" name="password-confirm" />
-                        <br/>
-                        <input type="submit" value="Register" name="submit-form" />
-                      </form>
-					</div>
-				</li>
-                
-				<li class="send_right"><a class="round_right2" href="#">
-					<img src="images/icons/grey/Key.png">
-					Login
-					<span class="icon">&nbsp;</span></a>
-					<div class="drop_box right round_all">
-                    
- 
-                    <?php
-						if($error != "")
-						{
-   							 echo $error."<br/>";
-						}
-					?>
-						<form  method="post" style="width:160px">
-							<fieldset>
-								<label>Email</label><input type="text" class="round_all" name="email" value="<?php echo $email; ?>">
-							</fieldset>
-							<fieldset>
-								<label>Password</label><input class="round_all" name="password" type="password" value="<?php echo $password; ?>">
-							</fieldset>
-							<button  type="submit" class="send_right" name="submit-login">Login</button>
-						</form>
-					</div>
-				</li>
-                     
-               
-			</ul>
-		</div>
-        
-        
-        
-        		<div class="clear"></div>
-
-         		   <?php
-				   
-						if($error != "")
-						{
-   							 echo $error."<br/>";
-					?>
-						<div id="main" class="box grid_16">
-			<div class="content round_all clearfix">
-					
-						<form  method="post" style="width:160px">
-							<fieldset>
-								<label>Email</label><input type="text" class="round_all" name="email" value="<?php echo $email; ?>">
-							</fieldset>
-							<fieldset>
-								<label>Password</label><input class="round_all" name="password" type="password" value="<?php echo $password; ?>">
-							</fieldset>
-							<button  type="submit" class="send_right" name="submit-login">Login</button>
-						</form>
-                        	</div>
-		</div>
-        		<div class="clear"></div>
-
-                        <?php
-                        }
-				   
-						if($errorReg != "")
-						{
-   							 echo $errorReg."<br/>";
-					?>
-						<div id="main" class="box grid_16">
-                        <div class="content round_all clearfix">
-                                
-                                    <form method="post">
-              E-Mail:
-              <input type="text" value="<?php echo $email; ?>" name="email" />
-              <br/>
-              Password:
-              <input type="password" value="<?php echo $password; ?>" name="password" />
-              <br/>
-              Password (confirm):
-              <input type="password" value="<?php echo $password_confirm; ?>" name="password-confirm" />
-              <br/>
-              <input type="submit" value="Register" name="submit-form" />
-              </form>
-                                        </div>
-                    </div>
-                            <div class="clear"></div>
-              
-                                    <?php
-                                    }
-                                    ?>
-        
-    </div>
-   
-    
-    
+        <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+            <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+                <ul>
+                    <li><a href="#home" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
+                    <li><a href="#categories" id="categoriesIco" data-icon="custom">Categories</a></li>
+                    <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+                </ul>
+            </div>
         </div>
-		<div class="clear"></div>
-		
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4548504-3']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+
+
+<!--    </div><!-- /footer -->
+</div><!-- /page -->
+
+
+
+<!-- Start of second page -->
+<div data-role="page" id="categories">
+
+    <div data-role="header">
+        <h1>Categories</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+
+        <div class="content-primary">
+            <ul data-role="listview">
+
+
+
+
+
+        <?php
+        if (isset($cat[0])) {
+
+                foreach ($cat as $key => $value)
+                {
+                    ?>
+
+                    <li><a onClick="getMarks(<?php echo htmlentities($value["id"])?>, '<?php echo htmlentities($value["title"])?>');" href=""><?php echo htmlentities($value["title"])?></a></li>
+
+                    <?php
+                }
+        }
+        else
+        {
+            if (isset($cat["id"])) {
+                ?>
+
+                <li><a onClick="getMarks(<?php echo htmlentities($cat["id"])?>, '<?php echo htmlentities($cat["title"])?>');" href=""><?php echo htmlentities($cat["title"])?></a></li>
+
+                <?php
+
+
+            }
+            else {
+                ?>
+                No Categories
+
+                <?php
+            }
+        }
+        ?>
+
+        </ul>
+            </div>
+
+    </div><!-- /content -->
+
+    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+        <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+            <ul>
+                <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
+                <li><a href="#categories" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div><!-- /page -->
+
+
+
+<?php
+}
+
+?>
+
+
 </body>
 </html>
