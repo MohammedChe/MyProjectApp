@@ -463,14 +463,10 @@ else{
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                         </span></li>
-                            <li>first</li>
-                            <li>second</li>
-                            <li>third</li>
                             <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-
-
-
+                    getMarks(<?php echo $value["id"]?>);
                     <?php
+
                 }
             }
             else
@@ -483,9 +479,8 @@ else{
                     <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                     </span></li>
-                    <li>first</li>
-                    <li>second</li>
-                    <li>third</li>
+
+                    getMarks(<?php echo $cat["id"]?>);
 
                     <?php
 
@@ -528,7 +523,7 @@ else{
 
 <script type="text/javascript">
 
-    function getMarks(catId, catTitle) {
+    function getMarks(catId) {
         $.post('getMarks.php', {c:catId},
             function (output) {
                 $('#container').html(output).fadeIn(800);
