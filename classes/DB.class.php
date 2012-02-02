@@ -49,7 +49,10 @@ class DB {
         $sql = "SELECT COUNT(id) FROM $table WHERE $where";
         $result = mysql_query($sql);
 
-        return $result;
+        if(mysql_num_rows($result) == 1)
+            return $this->processRowSet($result, true);
+
+        return $this->processRowSet($result);
     }
 
     public function selectLast($table, $where) {

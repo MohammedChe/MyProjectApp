@@ -4,6 +4,7 @@
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/DB.class.php" afterPath="$PROJECT_DIR$/classes/DB.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="460" column="63" selection-start="14032" selection-end="14048" vertical-scroll-proportion="-7.6666665">
+            <state line="463" column="46" selection-start="14135" selection-end="14135" vertical-scroll-proportion="0.26928282">
               <folding />
             </state>
           </provider>
@@ -46,16 +47,16 @@
       <file leaf-file-name="UserTools.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="32" selection-start="2240" selection-end="2240" vertical-scroll-proportion="-1.1538461">
+            <state line="109" column="15" selection-start="2495" selection-end="2502" vertical-scroll-proportion="-7.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.class.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DB.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="37" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.5219072">
+            <state line="50" column="0" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,8 +97,8 @@
         <option value="$PROJECT_DIR$/mobile.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/classes/DB.class.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -362,23 +363,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="460" column="63" selection-start="14032" selection-end="14048" vertical-scroll-proportion="-7.6666665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="32" selection-start="2240" selection-end="2240" vertical-scroll-proportion="-1.1538461">
+        <state line="109" column="15" selection-start="2495" selection-end="2502" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="37" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.5219072">
+        <state line="50" column="0" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="463" column="46" selection-start="14135" selection-end="14135" vertical-scroll-proportion="0.26928282">
           <folding />
         </state>
       </provider>

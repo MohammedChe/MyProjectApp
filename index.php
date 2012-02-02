@@ -455,10 +455,13 @@ else{
 
                 foreach ($cat as $key => $value)
                 {
+
+                    $catCount = $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);
+
                     ?>
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
-                        <?php echo mysql_num_rows($userTools->getCategoryCount( htmlentities($value["id"]), $user->id));?>
+                        <?php echo $catCount[0];?>
                         </span></li>
                             <li>first</li>
                             <li>second</li>
@@ -473,9 +476,12 @@ else{
             else
             {
                 if (isset($cat["id"])) {
+
+                    $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
+
                     ?>
                     <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
-                        <?php echo mysql_num_rows($userTools->getCategoryCount( htmlentities($cat["id"]), $user->id));?>
+                        <?php echo $catCount[0];?>
                     </span></li>
                     <li>first</li>
                     <li>second</li>
