@@ -319,7 +319,7 @@ else{
 
     <div data-role="header">
         <h1>Recent</h1>
-        <div data-role="navbar" data-grid="b" data-position="fixed">
+        <div data-role="navbar" data-grid="b">
             <ul>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories">Categories</a></li>
@@ -433,7 +433,7 @@ else{
 
     <div data-role="header">
         <h1>Categories</h1>
-        <div data-role="navbar" data-grid="b" data-position="fixed">
+        <div data-role="navbar" data-grid="b">
             <ul>
                 <li><a href="#home" >Recent</a></li>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
