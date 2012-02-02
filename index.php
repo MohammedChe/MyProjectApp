@@ -353,7 +353,7 @@ else{
                         <li><a href="<?php echo htmlentities($value["url"]);?>">
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
-                            <p class="addLeftMargin"><?php echo $catTitle[0]; ?></p>
+                            <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
                         </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
                         </a></li>
 
@@ -376,7 +376,7 @@ else{
                         <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                             <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
-                            <p class="addLeftMargin"><?php echo $catTitle[0]; ?></p>
+                            <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
                         </a><a href="#" onClick="removeMark(<?php echo htmlentities($recentMarks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
                         </a></li>
 
