@@ -25,28 +25,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="526" column="22" selection-start="15007" selection-end="15007" vertical-scroll-proportion="-10.791667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showMarks.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/showMarks.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="26" selection-start="1086" selection-end="1086" vertical-scroll-proportion="-32.041668">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="419" column="34" selection-start="11428" selection-end="11428" vertical-scroll-proportion="0.26928282">
+            <state line="419" column="35" selection-start="11371" selection-end="11371" vertical-scroll-proportion="0.5683356">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTools.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="36" selection-start="2228" selection-end="2244" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DB.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="32" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -56,33 +56,6 @@
         <entry file="file://$PROJECT_DIR$/styles/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="30" column="1" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.inc.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detectMobile.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/detectMobile.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="3" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -113,6 +86,8 @@
         <option value="$PROJECT_DIR$/styles/custom.css" />
         <option value="$PROJECT_DIR$/mobile.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
+        <option value="$PROJECT_DIR$/classes/DB.class.php" />
+        <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -164,6 +139,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,13 +327,6 @@
         <state line="11" column="3" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="1" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="526" column="22" selection-start="15007" selection-end="15007" vertical-scroll-proportion="-10.791667">
@@ -359,9 +341,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="32" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="1" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="36" selection-start="2228" selection-end="2244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="419" column="34" selection-start="11428" selection-end="11428" vertical-scroll-proportion="0.26928282">
+        <state line="419" column="35" selection-start="11371" selection-end="11371" vertical-scroll-proportion="0.5683356">
           <folding />
         </state>
       </provider>

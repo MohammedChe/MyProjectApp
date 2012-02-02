@@ -414,12 +414,12 @@ else{
 
 
 
-        <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-            <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+        <div data-role="footer" data-id="tabs" data-position="fixed">
+            <div data-role="navbar" data-grid="b">
                 <ul>
-                    <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
-                    <li><a href="#categories" id="categoriesIco" data-icon="custom">Categories</a></li>
-                    <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+                    <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -484,12 +484,12 @@ else{
 
     </div><!-- /content -->
 
-    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+    <div data-role="footer" data-id="tabs" data-position="fixed">
+        <div data-role="navbar" data-grid="b">
             <ul>
-                <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
-                <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="#home" >Recent</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>
     </div>
