@@ -319,13 +319,6 @@ else{
 
     <div data-role="header" data-position="fixed">
         <h1>Recent</h1>
-        <div data-role="navbar" data-grid="b" >
-            <ul>
-                <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -421,7 +414,16 @@ else{
 
 
 
-    <div data-role="footer" data-id="tabs" data-position="fixed">
+    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+        <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+            <ul>
+
+                <li><a href="#" id="homeIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
+                <li><a href="#categories" id="catIco" data-icon="custom" >Categories</a></li>
+                <li><a href="logout.php" id="outIco" data-icon="custom">Logout</a></li>
+
+            </ul>
+        </div>
 
     </div>
 
@@ -437,13 +439,7 @@ else{
 
     <div data-role="header" data-position="fixed">
         <h1>Categories</h1>
-        <div data-role="navbar" data-grid="b" >
-            <ul>
-                <li><a href="#home" >Recent</a></li>
-                <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
+
     </div><!-- /header -->
 
     <div data-role="content">
@@ -507,7 +503,16 @@ else{
 
     </div><!-- /content -->
 
-    <div data-role="footer" data-id="tabs" data-position="fixed">
+    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
+            <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+                <ul>
+
+                    <li><a href="#home" id="homeIco" data-icon="custom">Recent</a></li>
+                    <li><a href="#" id="catIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
+                    <li><a href="logout.php" id="outIco" data-icon="custom">Logout</a></li>
+
+                </ul>
+            </div>
 
     </div>
 </div><!-- /page -->
