@@ -420,9 +420,9 @@ else{
         <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
             <ul>
 
-                <li><a href="#" id="homeIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories" id="catIco" data-icon="custom" >Categories</a></li>
-                <li><a href="logout.php" id="outIco" data-icon="custom">Logout</a></li>
+                <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
+                <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
+                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
         </div>
@@ -509,9 +509,9 @@ else{
             <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
                 <ul>
 
-                    <li><a href="#home" id="homeIco" data-icon="custom">Recent</a></li>
-                    <li><a href="#" id="catIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                    <li><a href="logout.php" id="outIco" data-icon="custom">Logout</a></li>
+                    <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
+                    <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
+                    <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
 
                 </ul>
             </div>
