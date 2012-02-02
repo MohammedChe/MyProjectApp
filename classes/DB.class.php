@@ -48,10 +48,8 @@ class DB {
     public function selectCount($table, $where) {
         $sql = "SELECT COUNT(id) FROM $table WHERE $where";
         $result = mysql_query($sql);
-        if(mysql_num_rows($result) == 1)
-            return $this->processRowSet($result, true);
 
-        return $this->processRowSet($result);
+        return $result;
     }
 
     public function selectLast($table, $where) {
