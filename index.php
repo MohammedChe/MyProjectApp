@@ -214,6 +214,8 @@ else {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <title>MyProjectApp</title>
 
@@ -221,6 +223,20 @@ else {
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
+
+    <script type="text/javascript" src="js/iscroll.js"></script>
+
+    <script type="text/javascript">
+
+        var scroll1, scroll2;
+        function loaded() {
+            scroll1 = new iScroll('standard');
+        }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        document.addEventListener('DOMContentLoaded', loaded, false);
+
+    </script>
 
 
 </head>
@@ -241,12 +257,14 @@ if (!$login){
     </div><!-- /header -->
 
     <div data-role="content">
+        <div id="standard">
         <p>Login or Register to Continue</p>
 
         <div data-role="controlgroup">
             <a href="#login" data-role="button">Login</a>
             <a href="#register" data-role="button">Register</a>
         </div>
+            </div>
 
     </div><!-- /content -->
 
@@ -322,8 +340,7 @@ else{
     </div><!-- /header -->
 
     <div data-role="content">
-
-
+        <div id="standard">
 
         <div class="content-primary">
             <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
@@ -399,8 +416,7 @@ else{
             </ul>
         </div><!--/content-primary -->
 
-
-
+</div>
     </div><!-- /content -->
 
     <!--    <div data-role="footer">-->
