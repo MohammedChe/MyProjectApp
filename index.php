@@ -458,7 +458,7 @@ else{
                     ?>
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
-                        <?php echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?>
+                        <?php echo mysql_num_rows($userTools->getCategoryCount( htmlentities($value["id"]), $user->id));?>
                         </span></li>
                             <li>first</li>
                             <li>second</li>
@@ -475,7 +475,7 @@ else{
                 if (isset($cat["id"])) {
                     ?>
                     <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
-                        <?php echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?>
+                        <?php echo mysql_num_rows($userTools->getCategoryCount( htmlentities($cat["id"]), $user->id));?>
                     </span></li>
                     <li>first</li>
                     <li>second</li>
