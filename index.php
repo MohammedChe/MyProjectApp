@@ -456,7 +456,7 @@ else{
                 {
                     ?>
                     <div data-role="collapsible" data-collapsed="true">
-                        <h3><?php echo htmlentities($value["title"])?><span class="ui-li-count">12</span></h3>
+                        <ul data-role="listview"><li><?php echo htmlentities($value["title"])?><span class="ui-li-count">12</span></></ul>
                         <p>
                         <ul data-role="listview">
                             <li>first</li>
@@ -476,8 +476,7 @@ else{
                 if (isset($cat["id"])) {
                     ?>
                     <div data-role="collapsible" data-collapsed="true">
-
-                        <h3><?php echo htmlentities($cat["title"])?><span class="ui-li-count">12</span></h3>
+                        <ul data-role="listview"><li><?php echo htmlentities($cat["title"])?><span class="ui-li-count">12</span></></ul>
                         <p>
                         <ul data-role="listview">
                             <li>first</li>
