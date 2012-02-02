@@ -433,6 +433,13 @@ else{
 
     <div data-role="header">
         <h1>Categories</h1>
+        <div data-role="navbar" data-grid="b" data-position="fixed">
+            <ul>
+                <li><a href="#home" >Recent</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -481,15 +488,7 @@ else{
 
     </div><!-- /content -->
 
-    <div data-role="footer" data-id="tabs" data-position="fixed">
-        <div data-role="navbar" data-grid="b">
-            <ul>
-                <li><a href="#home" >Recent</a></li>
-                <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="logout.php">Logout</a></li>
-            </ul>
-        </div>
-    </div>
+
 </div><!-- /page -->
 
 
