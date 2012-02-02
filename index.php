@@ -464,7 +464,7 @@ else{
                         <?php echo $catCount["total"];?>
                         </span></li>
                             <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-                    <div id="marks"><script> getMarks(<?php echo $value["id"]?>); </script></div>
+                    <div class="marks"><script> getMarks(<?php echo $value["id"]?>); </script></div>
                     <?php
 
                 }
@@ -480,7 +480,7 @@ else{
                         <?php echo $catCount["total"];?>
                     </span></li>
 
-                    <div id="marks"><script> getMarks(<?php echo $cat["id"]?>); </script></div>
+                    <div class="marks"><script> getMarks(<?php echo $cat["id"]?>); </script></div>
 
                     <?php
 
@@ -526,7 +526,7 @@ else{
     function getMarks(catId) {
         $.post('getMarks.php', {c:catId},
             function (output) {
-                $('div#marks').html(output);
+                $('div.marks').html(output);
             });
     }
 
