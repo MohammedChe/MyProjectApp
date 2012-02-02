@@ -13,6 +13,7 @@ else{
 
     if(isset($_POST['c'])) {
         $redCat = mysql_real_escape_string($_POST['c']);
+        alert($redCat);
     }
 
     if (isset($redCat)){
