@@ -231,7 +231,7 @@ else {
 
 if (!$login){
 
-?>
+    ?>
 
 <!-- Start of first page -->
 <div data-role="page" id="intro">
@@ -308,12 +308,12 @@ if (!$login){
     </div><!-- /footer -->
 </div><!-- /page -->
 
-<?php
+    <?php
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 else{
 
-?>
+    ?>
 <!-- Start of first page -->
 <div data-role="page" id="home">
 
@@ -342,64 +342,64 @@ else{
                 if(isset($marks[0])) {
 
 
-    foreach ($marks as $key => $value)
-    {
-    $scheme = parse_url($value["url"], PHP_URL_SCHEME);
-    $host = parse_url($value["url"], PHP_URL_HOST);
-    $theURL2 = $scheme . "://" . $host;
-    ?>
+                    foreach ($marks as $key => $value)
+                    {
+                        $scheme = parse_url($value["url"], PHP_URL_SCHEME);
+                        $host = parse_url($value["url"], PHP_URL_HOST);
+                        $theURL2 = $scheme . "://" . $host;
+                        ?>
 
 
-        <li><a href="<?php echo htmlentities($value["url"]);?>">
-            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
-            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
-            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
-        </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
-        </a></li>
-
-
-
-    <?php
-}
-}
-else{
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    if(isset($marks["url"])){
-        $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
-        $host = parse_url($marks["url"], PHP_URL_HOST);
-        $theURL2 = $scheme . "://" . $host;
-        ?>
-
-        <li><a href="<?php echo htmlentities($marks["url"]);?>">
-            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
-            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
-            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
-        </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
-        </a></li>
-
-
-        <?php
-
-    }
-
-    else{
-        ?>
-
-        <li><a href="#">
-            <img src="images/default.png" />
-            <h3 class="addLeftMargin">None</h3>
-            <p class="addLeftMargin">Add a New Bookmark</p>
-        </a></li>
+                        <li><a href="<?php echo htmlentities($value["url"]);?>">
+                            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+                            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
+                            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+                        </a><a href="#" onClick="removeMark(<?php echo htmlentities($value["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                        </a></li>
 
 
 
-        <?php
-    }
-}
+                        <?php
+                    }
+                }
+                else{
+
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    if(isset($marks["url"])){
+                        $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+                        $host = parse_url($marks["url"], PHP_URL_HOST);
+                        $theURL2 = $scheme . "://" . $host;
+                        ?>
+
+                        <li><a href="<?php echo htmlentities($marks["url"]);?>">
+                            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
+                            <h3 class="addLeftMargin"><?php echo $theURL2;?></h3>
+                            <p class="addLeftMargin"><?php echo $selectedCat ?></p>
+                        </a><a href="#" onClick="removeMark(<?php echo htmlentities($marks["id"])?>,'<?php echo $redCat?>','<?php echo $selectedCat ?>');"  data-transition="slideup">Delete
+                        </a></li>
 
 
-?>
+                        <?php
+
+                    }
+
+                    else{
+                        ?>
+
+                        <li><a href="#">
+                            <img src="images/default.png" />
+                            <h3 class="addLeftMargin">None</h3>
+                            <p class="addLeftMargin">Add a New Bookmark</p>
+                        </a></li>
+
+
+
+                        <?php
+                    }
+                }
+
+
+                ?>
 
 
 
@@ -410,24 +410,24 @@ else{
 
     </div><!-- /content -->
 
-<!--    <div data-role="footer">-->
-<!--        <div data-role="navbar">-->
-<!--            <ul>-->
-<!--                <li><a href="#">Latest</a></li>-->
-<!--                <li><a href="#">Categories</a></li>-->
-<!--                <li><a href="logout.php">Logout</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
+    <!--    <div data-role="footer">-->
+    <!--        <div data-role="navbar">-->
+    <!--            <ul>-->
+    <!--                <li><a href="#">Latest</a></li>-->
+    <!--                <li><a href="#">Categories</a></li>-->
+    <!--                <li><a href="logout.php">Logout</a></li>-->
+    <!--            </ul>-->
+    <!--        </div>-->
 
 
 
-        <div data-role="footer" data-id="tabs" data-position="fixed">
+    <div data-role="footer" data-id="tabs" data-position="fixed">
 
-        </div>
+    </div>
 
 
 
-<!--    </div><!-- /footer -->
+    <!--    </div><!-- /footer -->
 </div><!-- /page -->
 
 
@@ -448,59 +448,63 @@ else{
 
     <div data-role="content">
 
-        <div data-role="collapsible" data-collapsed="true" class="content-primary">
+        <div class="content-primary">
 
 
-        <?php
-        if (isset($cat[0])) {
+            <?php
+            if (isset($cat[0])) {
 
                 foreach ($cat as $key => $value)
                 {
                     ?>
-                    <h3><?php echo htmlentities($value["title"])?></h3>
-                    <p>
-                    <ul data-role="listview">
-                    <li>first</li>
-                    <li>second</li>
-                    <li>third</li>
-<!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
-                    </ul>
-                    </p>
+                    <div data-role="collapsible" data-collapsed="true">
+                        <h3><?php echo htmlentities($value["title"])?></h3>
+                        <p>
+                        <ul data-role="listview">
+                            <li>first</li>
+                            <li>second</li>
+                            <li>third</li>
+                            <!--                    <li><a onClick="getMarks(--><?php //echo htmlentities($value["id"])?><!--, '--><?php //echo htmlentities($value["title"])?><!--');" href="">--><?php //echo htmlentities($value["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);?><!--</span></a></li>-->
+                        </ul>
+                        </p>
+                    </div>
 
 
                     <?php
                 }
-        }
-        else
-        {
-            if (isset($cat["id"])) {
-                ?>
-
-                <h3><?php echo htmlentities($cat["title"])?></h3>
-                <p>
-                <ul data-role="listview">
-                    <li>first</li>
-                    <li>second</li>
-                    <li>third</li>
-                    <!--                <li><a onClick="getMarks(--><?php //echo htmlentities($cat["id"])?><!--, '--><?php //echo htmlentities($cat["title"])?><!--');" href="">--><?php //echo htmlentities($cat["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?><!--</span></a></li>-->
-                </ul>
-                </p>
-
-
-                <?php
-
-
             }
-            else {
-                ?>
-                No Categories
+            else
+            {
+                if (isset($cat["id"])) {
+                    ?>
+                    <div data-role="collapsible" data-collapsed="true">
 
-                <?php
+                        <h3><?php echo htmlentities($cat["title"])?></h3>
+                        <p>
+                        <ul data-role="listview">
+                            <li>first</li>
+                            <li>second</li>
+                            <li>third</li>
+                            <!--                <li><a onClick="getMarks(--><?php //echo htmlentities($cat["id"])?><!--, '--><?php //echo htmlentities($cat["title"])?><!--');" href="">--><?php //echo htmlentities($cat["title"])?><!--<span class="ui-li-count">--><?php //echo $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);?><!--</span></a></li>-->
+                        </ul>
+                        </p>
+                    </div>
+
+
+                    <?php
+
+
+                }
+                else {
+                    ?>
+                    No Categories
+
+                    <?php
+                }
             }
-        }
-        ?>
+            ?>
 
-            </div>
+        </div>
 
     </div><!-- /content -->
 
@@ -511,7 +515,7 @@ else{
 
 
 
-<?php
+    <?php
 }
 
 ?>
