@@ -5,6 +5,6 @@ require_once 'includes/global.inc.php';
 $userTools = new UserTools();
 $userTools->logout();
 
-header("Location: index.php");
+header("Location: http://myprojectapp.orchestra.io/");
 exit;
 ?>
