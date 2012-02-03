@@ -639,6 +639,22 @@ else{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -->
 <div data-role="page" id="add">
+    <script type="text/javascript">
+
+        function PasteFromClipboard()
+
+        {
+
+            document.addBookmarkForm.url.focus();
+
+            PastedText = document.addBookmarkForm.url.createTextRange();
+
+            PastedText.execCommand("Paste");
+
+        }
+
+    </script>
+
 
     <div data-role="header" data-position="fixed">
         <h1>Add</h1>
@@ -672,6 +688,7 @@ else{
             <div data-role="fieldcontain">
                 <label for="url">Save URL:</label>
                 <input type="text" name="url" id="url" value=""  />
+                <button type="button" onClick="PasteFromClipboard()">Paste</button>
             </div>
             <div data-role="fieldcontain">
                 <label for="select-choice-a" class="select">In:</label>

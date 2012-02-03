@@ -28,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="648" column="8" selection-start="22747" selection-end="22747" vertical-scroll-proportion="0.3301759">
+            <state line="690" column="83" selection-start="23955" selection-end="23955" vertical-scroll-proportion="0.4925575">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="507" column="31" selection-start="14553" selection-end="14553" vertical-scroll-proportion="7.5">
+            <state line="549" column="31" selection-start="15539" selection-end="15539" vertical-scroll-proportion="-46.416668">
               <folding />
             </state>
           </provider>
@@ -97,7 +97,6 @@
         <option value="$PROJECT_DIR$/detectMobile.php" />
         <option value="$PROJECT_DIR$/styles/side_nav.css" />
         <option value="$PROJECT_DIR$/includes/global.inc.php" />
-        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/classes/detectDesktop.class.php" />
         <option value="$PROJECT_DIR$/classes/detectMobile.class.php" />
         <option value="$PROJECT_DIR$/styles/main.css" />
@@ -109,6 +108,7 @@
         <option value="$PROJECT_DIR$/showMarks.php" />
         <option value="$PROJECT_DIR$/getMarks.php" />
         <option value="$PROJECT_DIR$/removeMark.php" />
+        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -372,13 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="507" column="31" selection-start="14553" selection-end="14553" vertical-scroll-proportion="7.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getMarks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="0" selection-start="506" selection-end="2552" vertical-scroll-proportion="-7.5">
@@ -400,9 +393,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="549" column="31" selection-start="15539" selection-end="15539" vertical-scroll-proportion="-46.416668">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="648" column="8" selection-start="22747" selection-end="22747" vertical-scroll-proportion="0.3301759">
+        <state line="690" column="83" selection-start="23955" selection-end="23955" vertical-scroll-proportion="0.4925575">
           <folding />
         </state>
       </provider>
