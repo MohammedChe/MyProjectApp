@@ -680,10 +680,10 @@ else{
 
         <form name="addBookmarkForm" method="post">
 
-            <h2>Add Category</h2>
+            <h2>Add Bookmark</h2>
 
-            <p>Enter a title for your new category.</p>
-            <p>Or skip this and add a bookmark to an existing category.</p>
+            <p>Enter the URL and choose a category.</p>
+            <p>You can add a note to the URL to remind you why you saved it.</p>
 
             <div data-role="fieldcontain">
                 <label for="url">Save URL:</label>
