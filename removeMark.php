@@ -19,8 +19,6 @@ else{
   $userTools->removeBookmark($m, $user->id);
 
   }
-
-    echo $m;
-    echo $_GET['m'];
+    header("Location: index.php");
 }
 ?>

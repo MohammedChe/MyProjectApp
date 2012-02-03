@@ -28,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="361" column="71" selection-start="10574" selection-end="10574" vertical-scroll-proportion="-19.541666">
+            <state line="361" column="71" selection-start="10574" selection-end="10574" vertical-scroll-proportion="146.70833">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="removeMark.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/removeMark.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="21" selection-start="371" selection-end="371" vertical-scroll-proportion="0.44458762">
+            <state line="21" column="34" selection-start="367" selection-end="367" vertical-scroll-proportion="0.40592784">
               <folding />
             </state>
           </provider>
@@ -395,13 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="71" selection-start="10574" selection-end="10574" vertical-scroll-proportion="-19.541666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="15" selection-start="2495" selection-end="2502" vertical-scroll-proportion="-4.0384617">
@@ -409,9 +402,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="361" column="71" selection-start="10574" selection-end="10574" vertical-scroll-proportion="146.70833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/removeMark.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="21" selection-start="371" selection-end="371" vertical-scroll-proportion="0.44458762">
+        <state line="21" column="34" selection-start="367" selection-end="367" vertical-scroll-proportion="0.40592784">
           <folding />
         </state>
       </provider>
