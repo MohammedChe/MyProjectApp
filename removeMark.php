@@ -21,6 +21,5 @@ else{
   }
 
     echo $m;
-  header("Location: index.php");
 }
 ?>
