@@ -662,6 +662,7 @@ else{
 
     <div data-role="content">
 
+        <div class="content-secondary">
         <form method="post">
 
             <h2>Add Category</h2>
@@ -676,8 +677,8 @@ else{
             <button type="submit" name="submit-form3" >Add</button>
 
         </form>
-
-
+        </div>
+        <div class="content-primary">
         <form name="addBookmarkForm" method="post">
 
             <h2>Add Bookmark</h2>
@@ -712,6 +713,7 @@ else{
             <button type="submit" name="submit-form2" >Save</button>
 
         </form>
+            </div>
 
     </div><!-- /content -->
 
