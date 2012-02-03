@@ -8,6 +8,10 @@
     font-weight: bold;
 }
 
+.rightSide{
+    float: right;
+}
+
 .smallText{
     font-size: 60%;
 }
