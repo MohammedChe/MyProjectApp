@@ -420,7 +420,7 @@ else{
 
                 <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
-                <li><a href="#add" id="addIco" data-icon="custom" >Add</a></li>
+                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="pop">Add</a></li>
                 <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
@@ -717,18 +717,8 @@ else{
 
     </div><!-- /content -->
 
-    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div data-role="navbar" class="nav-glyphish-example" data-grid="c">
-            <ul>
-
-                <li><a href="#home" id="latestIco" data-icon="custom" >Recent</a></li>
-                <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
-                <li><a href="#" id="addIco" data-icon="custom" class="ui-btn-active ui-state-persist">Add</a></li>
-                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
-
-            </ul>
-        </div>
-
+    <div data-role="footer" data-position="fixed">
+        <h4>MyProjectApp - Che</h4>
     </div>
 
 </div><!-- /page -->
