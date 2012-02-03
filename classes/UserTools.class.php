@@ -131,9 +131,11 @@ class UserTools {
     public function removeCategory($id, $owner)
     {
         $db = new DB();
-        $db->delete('bookmark', "category = $id AND owner = $owner");
+        $result = $db->delete('bookmark', "category = $id AND owner = $owner");
 
-        $result2 = $db->delete('category', "id = $id AND owner = $owner");
+        if($result){
+            $result2 = $db->delete('category', "id = $id AND owner = $owner");
+        }
 
         return $result2;
     }
