@@ -622,7 +622,7 @@ else{
 
                 <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
                 <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="#add" id="addIco" data-icon="custom" >Add</a></li>
+                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="pop">Add</a></li>
                 <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
