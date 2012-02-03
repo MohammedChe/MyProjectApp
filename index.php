@@ -668,7 +668,7 @@ else{
             <h2>Add Category</h2>
 
             <p>Enter a title for your new category.</p>
-            <p>Or skip this and add a bookmark to an existing category.</p>
+            <p class="smallText">Or skip this and add a bookmark to an existing category.</p>
 
             <div data-role="fieldcontain">
                 <label for="name">Title:</label>
@@ -684,7 +684,7 @@ else{
             <h2>Add Bookmark</h2>
 
             <p>Enter the URL and choose a category.</p>
-            <p>You can add a note with your bookmark to remind you why you saved it.</p>
+            <p class="smallText">You can add a note with your bookmark to remind you why you saved it.</p>
 
             <div data-role="fieldcontain">
                 <label for="url">Save URL:</label>
