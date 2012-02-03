@@ -28,7 +28,7 @@ if (!isset($_SESSION['logged_in'])) {
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            header("Location: mobile.php");
+            header("Location: index.php");
         }else{
             $error = "Incorrect email or password. Please try again.";
         }
@@ -90,7 +90,7 @@ if (!isset($_SESSION['logged_in'])) {
             $userTools->login($email, $password);
 
             //redirect them to a welcome page
-            header("Location: mobile.php");
+            header("Location: index.php");
 
         }
 
