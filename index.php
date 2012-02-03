@@ -673,9 +673,8 @@ else{
             <div data-role="fieldcontain">
                 <label for="name">Title:</label>
                 <input type="text" name="name" id="name" value=""  />
+                <button type="submit" name="submit-form3" >Add</button>
             </div>
-            <button type="submit" name="submit-form3" >Add</button>
-
         </form>
         </div>
         <div class="content-primary">
@@ -689,10 +688,10 @@ else{
             <div data-role="fieldcontain">
                 <label for="url">Save URL:</label>
                 <input type="text" name="url" id="url" value=""  />
-            </div>
+
 <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
-            <div data-role="fieldcontain">
+
                 <label for="select-choice-a" class="select">In:</label>
                 <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
                     <option>Categories</option>
@@ -704,13 +703,10 @@ else{
 
                     ?>
                 </select>
-
-            </div>
-            <div data-role="fieldcontain">
                 <label for="note">Note:</label>
                 <input type="text" name="note" id="note" value=""  />
+                <button type="submit" name="submit-form2" >Save</button>
             </div>
-            <button type="submit" name="submit-form2" >Save</button>
 
         </form>
             </div>

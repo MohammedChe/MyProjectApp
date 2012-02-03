@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="719" column="27" selection-start="25064" selection-end="25064" vertical-scroll-proportion="0.5737483">
+            <state line="707" column="72" selection-start="24871" selection-end="24871" vertical-scroll-proportion="0.4519621">
               <folding />
             </state>
           </provider>
@@ -72,7 +73,7 @@
       <file leaf-file-name="mobile.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="10" selection-start="691" selection-end="700" vertical-scroll-proportion="-7.3636365">
+            <state line="7" column="19" selection-start="75" selection-end="75" vertical-scroll-proportion="-1.9090909">
               <folding />
             </state>
           </provider>
@@ -101,13 +102,13 @@
         <option value="$PROJECT_DIR$/styles/main.css" />
         <option value="$PROJECT_DIR$/styles/custom.css" />
         <option value="$PROJECT_DIR$/mobile.php" />
-        <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
         <option value="$PROJECT_DIR$/classes/DB.class.php" />
         <option value="$PROJECT_DIR$/showMarks.php" />
         <option value="$PROJECT_DIR$/getMarks.php" />
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -343,13 +344,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="691" selection-end="700" vertical-scroll-proportion="-7.3636365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.0">
@@ -399,9 +393,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="19" selection-start="75" selection-end="75" vertical-scroll-proportion="-1.9090909">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="719" column="27" selection-start="25064" selection-end="25064" vertical-scroll-proportion="0.5737483">
+        <state line="707" column="72" selection-start="24871" selection-end="24871" vertical-scroll-proportion="0.4519621">
           <folding />
         </state>
       </provider>
