@@ -683,7 +683,7 @@ else{
             <h2>Add Bookmark</h2>
 
             <p>Enter the URL and choose a category.</p>
-            <p>You can add a note to the URL to remind you why you saved it.</p>
+            <p>You can add a note with your bookmark to remind you why you saved it.</p>
 
             <div data-role="fieldcontain">
                 <label for="url">Save URL:</label>
