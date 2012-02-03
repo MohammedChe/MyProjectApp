@@ -7,7 +7,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-//require_once 'classes/detectDesktop.class.php';
 require_once 'includes/global.inc.php';
 
 if (!isset($_SESSION['logged_in'])) {
