@@ -141,6 +141,7 @@ else {
         $url = $_POST['url'];
         $owner = $_POST['owner'];
         $cat = $_POST['select-choice-a'];
+        $note = $_POST['note'];
 
         //initialize variables for form validation
         $userTools = new UserTools();
@@ -151,6 +152,7 @@ else {
             $data['category'] = $cat;
             $data['owner'] = $owner;
             $data['url'] = $checkedURL;
+            $data['note'] = $note;
             //create the new user object
             $newBookmark = new Bookmark($data);
 

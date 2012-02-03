@@ -9,6 +9,7 @@ class Bookmark {
 	public $category;
 	public $owner;
 	public $url;
+    public $note;
 
 	//Constructor is called whenever a new object is created.
 	//Takes an associative array with the DB row as an argument.
@@ -17,6 +18,7 @@ class Bookmark {
 		$this->category = (isset($data['category'])) ? $data['category'] : "";
 		$this->owner = (isset($data['owner'])) ? $data['owner'] : "";
 		$this->url = (isset($data['url'])) ? $data['url'] : "";
+        $this->note = (isset($data['note'])) ? $data['note'] : "";
 	}
 
 	public function save($isNewMark = false) {
@@ -38,7 +40,8 @@ class Bookmark {
 			$data = array(
 				"category" => "'$this->category'",
 				"owner" => "'$this->owner'",
-				"url" => "'$this->url'"
+				"url" => "'$this->url'",
+                "note" => "'$this->note'"
 			);
 			
 			$this->id = $db->insert($data, 'bookmark');
