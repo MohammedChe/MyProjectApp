@@ -21,5 +21,6 @@ else{
   }
 
     echo $m;
+    echo $_POST['m'];
 }
 ?>
