@@ -11,9 +11,9 @@ else{
 	
   $user = unserialize($_SESSION['user']);
   
-  if(isset($_POST['m'])) { 
+  if(isset($_GET['m'])) {
   
-  $m = mysql_real_escape_string($_POST['m']);
+  $m = mysql_real_escape_string($_GET['m']);
   
   $userTools = new UserTools();
   $userTools->removeBookmark($m, $user->id);
@@ -21,6 +21,6 @@ else{
   }
 
     echo $m;
-    echo $_POST['m'];
+    echo $_GET['m'];
 }
 ?>
