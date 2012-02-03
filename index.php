@@ -515,8 +515,8 @@ else{
                             else{
                                 ?>
                                 <li><a href="#add">
-                                    <h3 class="addLeftMargin">Add A Bookmark</h3>
-                                    <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
+                                    <h3 class="addLeftMargin">Empty Category</h3>
+                                    <p class="addLeftMargin note">Add A Bookmark</p>
                                 </a></li>
                                 <?php
                             }
