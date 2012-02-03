@@ -689,7 +689,7 @@ else{
                 <label for="url">Save URL:</label>
                 <input type="text" name="url" id="url" value=""  />
             </div>
-            <input type="button" onClick="PasteFromClipboard()" value="Paste" />
+<!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
             <div data-role="fieldcontain">
                 <label for="select-choice-a" class="select">In:</label>
