@@ -673,6 +673,7 @@ else{
             <div data-role="fieldcontain">
                 <label for="name">Title:</label>
                 <input type="text" name="name" id="name" value=""  />
+                <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
                 <button type="submit" name="submit-form3" >Add</button>
             </div>
         </form>
@@ -705,6 +706,7 @@ else{
                 </select>
                 <label for="note">Note:</label>
                 <input type="text" name="note" id="note" value=""  />
+                <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
                 <button type="submit" name="submit-form2" >Save</button>
             </div>
 
