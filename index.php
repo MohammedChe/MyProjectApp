@@ -140,7 +140,7 @@ else {
         //retrieve the $_POST variables
         $url = $_POST['url'];
         $owner = $_POST['owner'];
-        $cat = $_POST['pickCat'];
+        $cat = $_POST['select-choice-a'];
 
         //initialize variables for form validation
         $userTools = new UserTools();
@@ -671,8 +671,8 @@ else{
             <p class="smallText">Or skip this and add a bookmark to an existing category.</p>
 
             <div data-role="fieldcontain">
-                <label for="name">Title:</label>
-                <input type="text" name="name" id="name" value=""  />
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value=""  />
                 <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
                 <button type="submit" name="submit-form3" >Add</button>
             </div>
