@@ -37,7 +37,7 @@
       <file leaf-file-name="logout.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="51" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1590909">
+            <state line="7" column="60" selection-start="161" selection-end="161" vertical-scroll-proportion="0.1590909">
               <folding />
             </state>
           </provider>
@@ -372,7 +372,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="51" selection-start="152" selection-end="152" vertical-scroll-proportion="0.1590909">
+        <state line="7" column="60" selection-start="161" selection-end="161" vertical-scroll-proportion="0.1590909">
           <folding />
         </state>
       </provider>
