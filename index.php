@@ -656,7 +656,7 @@ else{
     </script>
 
 
-    <div data-role="header" data-position="fixed">
+    <div data-role="header">
         <h1>Add</h1>
     </div><!-- /header -->
 
@@ -717,7 +717,7 @@ else{
 
     </div><!-- /content -->
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer">
         <h4>MyProjectApp - Che</h4>
     </div>
 
