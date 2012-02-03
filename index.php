@@ -704,6 +704,10 @@ else{
                 </select>
 
             </div>
+            <div data-role="fieldcontain">
+                <label for="note">Note:</label>
+                <input type="text" name="note" id="note" value=""  />
+            </div>
             <button type="submit" name="submit-form2" >Save</button>
 
         </form>
