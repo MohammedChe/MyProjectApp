@@ -435,7 +435,7 @@ else{
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                        </span><span class="ui-li-count"><a href="removeCat.php?c=<?php echo $value["id"];?>">Remove</a></span></li>
+                        </span><a href="removeCat.php?c=<?php echo $value["id"];?>"><span class="ui-li-count">Remove</span></a></li>
 
                         <?php
 
@@ -505,7 +505,7 @@ else{
 
                         <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                    </span><span class="ui-li-count"><a href="removeCat.php?c=<?php echo $cat["id"];?>">Remove</a></span></li>
+                    </span><a href="removeCat.php?c=<?php echo $cat["id"];?>"><span class="ui-li-count">Remove</span></a></li>
 
                         <?php
 
