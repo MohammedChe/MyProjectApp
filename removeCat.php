@@ -13,7 +13,7 @@ else{
   
   if(isset($_GET['c'])) {
   
-  $m = mysql_real_escape_string($_GET['c']);
+  $c = mysql_real_escape_string($_GET['c']);
   
   $userTools = new UserTools();
   $userTools->removeCategory($c, $user->id);
