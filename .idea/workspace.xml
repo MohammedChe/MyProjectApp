@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/Bookmark.class.php" afterPath="$PROJECT_DIR$/classes/Bookmark.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="33" selection-start="4209" selection-end="4209" vertical-scroll-proportion="-12.041667">
+            <state line="574" column="0" selection-start="19781" selection-end="19781" vertical-scroll-proportion="-2.0649526">
               <folding />
             </state>
           </provider>
@@ -71,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.class.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DB.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-0.3724227">
+            <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,8 +117,8 @@
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/classes/Bookmark.class.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -412,13 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="33" selection-start="4209" selection-end="4209" vertical-scroll-proportion="-12.041667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/Bookmark.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="39" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.0">
@@ -428,7 +420,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-0.3724227">
+        <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="574" column="0" selection-start="19781" selection-end="19781" vertical-scroll-proportion="-2.0649526">
           <folding />
         </state>
       </provider>

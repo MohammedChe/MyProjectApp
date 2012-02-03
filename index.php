@@ -361,7 +361,7 @@ else{
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                            <p class="addLeftMargin"><?php echo $value["note"]; ?></p>
+                            <h4 class="addLeftMargin"><?php echo $value["note"]; ?></h4>
                         </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup">Delete
                         </a></li>
 
@@ -382,7 +382,7 @@ else{
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                            <p class="addLeftMargin"><?php echo $recentMarks["note"]; ?></p>
+                            <h4 class="addLeftMargin"><?php echo $recentMarks["note"]; ?></h4>
                         </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup">Delete
                         </a></li>
 
@@ -480,15 +480,12 @@ else{
                                 $host = parse_url($value2["url"], PHP_URL_HOST);
                                 $theURL2 = $scheme . "://" . $host;
 
-                                $catTitle = $userTools->getCatTitle($value2["category"], $user->id);
-
                                 ?>
 
                                 <li><a href="<?php echo htmlentities($value2["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                    <p class="addLeftMargin"><?php echo $value2["note"]; ?></p>
+                                    <h4 class="addLeftMargin"><?php echo $value2["note"]; ?></h4>
                                 </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
 
@@ -503,15 +500,12 @@ else{
                                 $host = parse_url($marks["url"], PHP_URL_HOST);
                                 $theURL2 = $scheme . "://" . $host;
 
-                                $catTitle = $userTools->getCatTitle($marks["category"], $user->id);
-
                                 ?>
 
                                 <li><a href="<?php echo htmlentities($marks["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                    <p class="addLeftMargin"><?php echo $marks["note"]; ?></p>
+                                    <h4 class="addLeftMargin"><?php echo $marks["note"]; ?></h4>
                                 </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
                                 <?php
@@ -559,15 +553,12 @@ else{
                                 $host = parse_url($value2["url"], PHP_URL_HOST);
                                 $theURL2 = $scheme . "://" . $host;
 
-                                $catTitle = $userTools->getCatTitle($value2["category"], $user->id);
-
                                 ?>
 
                                 <li><a href="<?php echo htmlentities($value2["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                    <p class="addLeftMargin"><?php echo $value2["note"]; ?></p>
+                                    <h4 class="addLeftMargin"><?php echo $value2["note"]; ?></h4>
                                 </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
 
@@ -582,15 +573,12 @@ else{
                                 $host = parse_url($marks["url"], PHP_URL_HOST);
                                 $theURL2 = $scheme . "://" . $host;
 
-                                $catTitle = $userTools->getCatTitle($marks["category"], $user->id);
-
                                 ?>
 
                                 <li><a href="<?php echo htmlentities($marks["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                                    <p class="addLeftMargin"><?php echo $marks["note"]; ?></p>
+                                    <h4 class="addLeftMargin"><?php echo $marks["note"]; ?></h4>
                                 </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
                                 <?php
