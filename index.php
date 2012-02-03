@@ -169,45 +169,9 @@ else {
     }
 
 
-
-
     $cat = $userTools->getCategories($user->id);
-    //    $redCat = "recent";
-    //
-    //    if(isset($_POST['c'])) {
-    //        $redCat = mysql_real_escape_string($_POST['c']);
-    //    }
-    //
-    //    if($redCat != "recent") {
-    //
-    //        $theCat = $userTools->getCategory($redCat);
-    //        $selectedCatIndex = $theCat->id;
-    //        $selectedCat = $theCat->title;
-    //
-    //    }
-    //
-    //    else{
-    //
-    //        if (isset($cat["title"])){
-    //            $selectedCatIndex = $cat["id"];
-    //            $selectedCat = $cat["id"];
-    //            $redCat = $selectedCatIndex;
-    //        }
-    //        else{
-    //            $marks = $userTools->getRecentBookmarks(18, $user->id);
-    //            $redCat = "recent";
-    //            $selectedCat = "Recent";
-    //        }
-    //    }
-    //
-    //    if (isset($selectedCatIndex)){
-    //        $marks = $userTools->getBookmarks($selectedCatIndex, $user->id);
-    //    }
-
-
 
     $recentMarks = $userTools->getRecentBookmarks(12, $user->id);
-
 
 }
 
@@ -247,12 +211,17 @@ if (!$login){
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>Login or Register to Continue</p>
 
-        <div data-role="controlgroup">
-            <a href="#login" data-role="button">Login</a>
-            <a href="#register" data-role="button">Register</a>
-        </div>
+        <div class="content-secondary">
+            <div data-role="controlgroup">
+                <a href="#login" data-role="button">Login</a>
+                <a href="#register" data-role="button">Register</a>
+            </div>
+        </div><!-- end content-secondary -->
+
+        <div class="content-primary">
+            <p>Login/Register to Continue</p>
+        </div><!-- end content-primary -->
 
     </div><!-- /content -->
 
