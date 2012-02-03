@@ -4,6 +4,10 @@
     margin-left: 30px;
 }
 
+.note{
+    font-weight: bold;
+}
+
 .smallText{
     font-size: 60%;
 }

@@ -361,7 +361,7 @@ else{
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                            <h6 class="addLeftMargin"><?php echo $value["note"]; ?></h6>
+                            <p class="addLeftMargin note"><?php echo $value["note"]; ?></p>
                         </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup">Delete
                         </a></li>
 
@@ -382,7 +382,7 @@ else{
                             <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin"><?php echo $catTitle["title"]; ?></p>
-                            <h6 class="addLeftMargin"><?php echo $recentMarks["note"]; ?></h6>
+                            <p class="addLeftMargin note"><?php echo $recentMarks["note"]; ?></p>
                         </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup">Delete
                         </a></li>
 
@@ -485,7 +485,7 @@ else{
                                 <li><a href="<?php echo htmlentities($value2["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <h6 class="addLeftMargin"><?php echo $value2["note"]; ?></h6>
+                                    <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
                                 </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
 
@@ -505,7 +505,7 @@ else{
                                 <li><a href="<?php echo htmlentities($marks["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <h6 class="addLeftMargin"><?php echo $marks["note"]; ?></h6>
+                                    <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
                                 </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
                                 <?php
@@ -558,7 +558,7 @@ else{
                                 <li><a href="<?php echo htmlentities($value2["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <h6 class="addLeftMargin"><?php echo $value2["note"]; ?></h6>
+                                    <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
                                 </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
 
@@ -578,7 +578,7 @@ else{
                                 <li><a href="<?php echo htmlentities($marks["url"]);?>">
                                     <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL2;?>" />
                                     <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <h6 class="addLeftMargin"><?php echo $marks["note"]; ?></h6>
+                                    <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
                                 </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup">Delete
                                 </a></li>
                                 <?php
