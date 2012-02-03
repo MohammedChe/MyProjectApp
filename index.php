@@ -514,7 +514,7 @@ else{
 
                             else{
                                 ?>
-                                <li><a href="#add">
+                                <li><a href="#add" data-rel="dialog" data-transition="pop">
                                     <h3 class="addLeftMargin">Empty Category</h3>
                                     <p class="addLeftMargin note">Add A Bookmark</p>
                                 </a></li>
