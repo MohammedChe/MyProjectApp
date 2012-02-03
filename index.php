@@ -514,13 +514,10 @@ else{
 
                             else{
                                 ?>
-                                <div id="main" class="box grid_4">
-                                    <div class="content round_all clearfix">
-                                        <a href="#"><img class="screenshot" src="images/default.png" /></a>
-                                    </div>
-                                </div>
-
-
+                                <li><a href="#add">
+                                    <h3 class="addLeftMargin">Add A Bookmark</h3>
+                                    <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
+                                </a></li>
                                 <?php
                             }
                         }
