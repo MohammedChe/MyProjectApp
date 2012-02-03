@@ -6,5 +6,5 @@ $userTools = new UserTools();
 $userTools->logout();
 
 header("Location: index.php");
-
+exit;
 ?>
