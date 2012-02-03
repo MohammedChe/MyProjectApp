@@ -158,7 +158,7 @@ else {
             $newBookmark->save(true);
 
             //redirect them to a welcome page
-            header("Location: home.php");
+            header("Location: index.php");
 
         }
         else
