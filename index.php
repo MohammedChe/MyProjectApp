@@ -646,7 +646,50 @@ else{
 
     <div data-role="content">
 
+        <form method="post">
 
+            <h2>Add Category</h2>
+
+            <p>Enter a title for your new category.</p>
+            <p>Or skip this and add a bookmark to an existing category.</p>
+
+            <div data-role="fieldcontain">
+                <label for="name">Title:</label>
+                <input type="text" name="name" id="name" value=""  />
+            </div>
+            <button type="submit" name="submit-form3" >Add</button>
+
+        </form>
+
+
+        <form name="addBookmarkForm" method="post">
+
+            <h2>Add Category</h2>
+
+            <p>Enter a title for your new category.</p>
+            <p>Or skip this and add a bookmark to an existing category.</p>
+
+            <div data-role="fieldcontain">
+                <label for="url">Save URL:</label>
+                <input type="text" name="url" id="url" value=""  />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="select-choice-a" class="select">In:</label>
+                <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+                    <option>Categories</option>
+                    <?php
+                    foreach ($cat as $key => $value)
+                    {
+                        echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                    }
+
+                    ?>
+                </select>
+
+            </div>
+            <button type="submit" name="submit-form2" >Save</button>
+
+        </form>
 
     </div><!-- /content -->
 
