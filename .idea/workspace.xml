@@ -4,9 +4,6 @@
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logout.php" afterPath="$PROJECT_DIR$/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeCat.php" afterPath="$PROJECT_DIR$/removeCat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeMark.php" afterPath="$PROJECT_DIR$/removeMark.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2401" selection-end="2401" vertical-scroll-proportion="-1.58">
+            <state line="99" column="39" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.4522613">
               <folding />
             </state>
           </provider>
@@ -49,16 +46,16 @@
       <file leaf-file-name="removeCat.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/removeCat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="9" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+            <state line="14" column="4" selection-start="184" selection-end="210" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="removeMark.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="removeMark.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/removeMark.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="9" selection-start="387" selection-end="387" vertical-scroll-proportion="0.52272725">
+            <state line="23" column="9" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,10 +88,10 @@
         <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/removeCat.php" />
         <option value="$PROJECT_DIR$/removeMark.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -343,13 +340,6 @@
         <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2401" selection-end="2401" vertical-scroll-proportion="-1.58">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="5" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
@@ -357,16 +347,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/removeCat.php">
+    <entry file="file://$PROJECT_DIR$/removeMark.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+        <state line="23" column="9" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/removeMark.php">
+    <entry file="file://$PROJECT_DIR$/removeCat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="387" selection-end="387" vertical-scroll-proportion="0.52272725">
+        <state line="14" column="4" selection-start="184" selection-end="210" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="39" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.4522613">
           <folding />
         </state>
       </provider>
