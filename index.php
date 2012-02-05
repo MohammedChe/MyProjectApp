@@ -10,7 +10,7 @@
 require_once 'includes/global.inc.php';
 
 
-if($_SESSION['refreshed'] == 1){
+if(isset($_SESSION['refreshed']) && $_SESSION['refreshed'] == 1){
     unset($_SESSION["refreshed"]);
     echo "hello from index page";
     header('Location: '.$_SERVER['REQUEST_URI']);
