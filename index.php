@@ -19,22 +19,6 @@ if (!isset($_SESSION['logged_in'])) {
     $password_confirm = "";
 
 
-    //check to see if they've submitted the login form
-    if(isset($_POST['submit-login'])) {
-
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $userTools = new UserTools();
-        if($userTools->login($email, $password)){
-            //successful login, redirect them to a page
-            header("Location: index.php");
-        }else{
-            $error = "Incorrect email or password. Please try again.";
-        }
-    }
-
-
     //////////////////////////////////////////////////////////
     //check to see that the form has been submitted
     if(isset($_POST['submit-form'])) {
@@ -240,12 +224,12 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form method="post">
+        <form method="post" action="login.php">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value=""  />
-            <button data-inline="true" data-theme="b"  type="submit" name="submit-login">Login</button>
+            <button data-inline="true" data-theme="b"  type="submit" >Login</button>
 
         </form>
     </div><!-- /content -->
