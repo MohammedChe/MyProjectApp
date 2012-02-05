@@ -8,25 +8,29 @@
  */
 require_once 'includes/global.inc.php';
 
-$error = "";
-$email = "";
-$password = "";
+if (isset($_SESSION['logged_in'])) {
+    header("Location: index.php");
+}
+else{
+    $error = "";
+    $email = "";
+    $password = "";
 
 
-//check to see if they've submitted the login form
-if(isset($_POST['submit-login'])) {
+    //check to see if they've submitted the login form
+    if(isset($_POST['submit-login'])) {
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-    $userTools = new UserTools();
-    if($userTools->login($email, $password)){
-        //successful login, redirect them to a page
-        header("Location: index.php");
-        exit;
-    }else{
-        $error = "Incorrect email or password. Please try again.";
+        $userTools = new UserTools();
+        if($userTools->login($email, $password)){
+            //successful login, redirect them to a page
+            header("Location: index.php");
+            exit;
+        }else{
+            $error = "Incorrect email or password. Please try again.";
+        }
     }
 }
-
 ?>
