@@ -6,10 +6,8 @@
  * Time: 16:41
  * To change this template use File | Settings | File Templates.
  */
-
 require_once 'includes/global.inc.php';
-
-
+echo "hello from index page";
 
 
 if (!isset($_SESSION['logged_in'])) {

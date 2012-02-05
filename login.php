@@ -7,7 +7,7 @@
  * To change this template use File | Settings | File Templates.
  */
 require_once 'includes/global.inc.php';
-
+echo "hello from login page";
 
 if(isset($_SESSION['refreshed'])){
     unset($_SESSION["refreshed"]);
