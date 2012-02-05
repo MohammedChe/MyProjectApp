@@ -28,7 +28,7 @@ else{
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            $_SESSION["refreshed"] = 1;
+            $_SESSION['refreshed'] = 1;
             header('Location: http://myprojectapp.orchestra.io/index.php');
             exit;
         }else{
