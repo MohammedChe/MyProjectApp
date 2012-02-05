@@ -697,5 +697,24 @@ else{
 
 ?>
 
+<script>
+    $(document).ready(function() {
+        var r = getUrlVars()["r"];
+
+        if(r == 1){
+            location.reload();
+        }
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+    });
+</script>
+
 </body>
 </html>
