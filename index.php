@@ -12,8 +12,6 @@ require_once 'includes/global.inc.php';
 if (isset($_SESSION['logged_in'])) {
     header('Location: home.php');
 }
-
-
 ?>
 
 <!DOCTYPE HTML>
@@ -31,19 +29,6 @@ if (isset($_SESSION['logged_in'])) {
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
-<?php
- if (isset($_SESSION['logged_in'])) {
-?>
-    <script>
-
-        function redirect(){
-            window.location = "myprojectapp.orchestra.io/"
-        }
-
-    </script>
-    <?php
-}
-    ?>
 </head>
 <body>
 
@@ -90,7 +75,7 @@ if (isset($_SESSION['logged_in'])) {
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value=""  />
-            <button data-inline="true" data-theme="b" onclick="redirect()"  type="submit" name="submit-login">Login</button>
+            <button data-inline="true" data-theme="b" type="submit" name="submit-login">Login</button>
 
         </form>
     </div><!-- /content -->
