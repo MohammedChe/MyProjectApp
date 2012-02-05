@@ -24,7 +24,7 @@ if (isset($_SESSION['logged_in'])) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <meta http-equiv="refresh" content="5;url=http://myprojectapp.orchestra.io/">
+    <meta http-equiv="refresh" content="10;url=http://myprojectapp.orchestra.io/">
 
     <title>MyProjectApp</title>
 
