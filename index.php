@@ -6,8 +6,15 @@
  * Time: 16:41
  * To change this template use File | Settings | File Templates.
  */
+
 require_once 'includes/global.inc.php';
-echo "hello from index page";
+
+
+if(isset($_SESSION['refreshed'])){
+    unset($_SESSION["refreshed"]);
+    echo "hello from index page";
+    header('Location: '.$_SERVER['REQUEST_URI']);
+}
 
 
 if (!isset($_SESSION['logged_in'])) {
@@ -110,18 +117,6 @@ else {
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
-    <?php
-    if(isset($_SESSION['refreshed'])){
-        unset($_SESSION["refreshed"]);
-//        header('Location: '.$_SERVER['REQUEST_URI']);
-        ?>
-        <script type="text/javascript">
-            alert("Hello");
-            window.location.reload(true);
-        </script>
-        <?php
-    }
-?>
 
 </head>
 <body>
