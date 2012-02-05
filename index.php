@@ -9,10 +9,10 @@
 
 require_once 'includes/global.inc.php';
 
-if(isset($_GET['r'])) {
-    header("Location: index.php");
-    exit;
-}
+//if(isset($_GET['r'])) {
+//    header("Location: index.php");
+//    exit;
+//}
 
 
 if (!isset($_SESSION['logged_in'])) {
@@ -62,7 +62,6 @@ if (!isset($_SESSION['logged_in'])) {
             $errorReg .= "This email is already registered.<br/> \n\r";
             $success = false;
         }
-
 
         if(strlen($password) < 6)
         {
