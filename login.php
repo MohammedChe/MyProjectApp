@@ -9,17 +9,9 @@
 require_once 'includes/global.inc.php';
 echo "hello from login page";
 
-if(isset($_SESSION['refreshed'])){
-    unset($_SESSION["refreshed"]);
-    header('Location: '.$_SERVER['REQUEST_URI']);
-}
-
 
 if (isset($_SESSION['logged_in'])) {
     header('Location: index.php');
-
-
-
 }
 else{
     $error = "";
