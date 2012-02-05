@@ -23,7 +23,7 @@ if(isset($_POST['submit-login'])) {
     $userTools = new UserTools();
     if($userTools->login($email, $password)){
         //successful login, redirect them to a page
-        header('Location: redirect.php');
+        header('Location: home.php');
         exit;
     }else{
         $error = "Incorrect email or password. Please try again.";
