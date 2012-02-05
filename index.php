@@ -118,6 +118,7 @@ else {
 //        header('Location: '.$_SERVER['REQUEST_URI']);
         ?>
         <script type="text/javascript">
+            alert("Hello");
             window.location.reload(true);
         </script>
         <?php
