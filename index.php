@@ -698,7 +698,25 @@ else{
 ?>
 
 <script>
-    $(document).ready(function() {
+
+
+    // Set up name space
+    if (typeof MyProjectApp == 'undefined') MyProjectApp = {};
+    if (typeof MyProjectApp.Pages == 'undefined') MyProjectApp.Pages = {};
+
+    // Map pageshow event to dispatcher
+    jQuery("div[data-role*='page']").live('pageshow', function(event, ui) {
+        var thisId=$(this).attr("data-url")
+        thisId = thisId.replace(/\.html$/gi,"");
+        if (typeof MyProjectApp.Pages[thisId] == 'function')  {
+            MyProjectApp.Pages[thisId].call(this);
+        }
+    });
+
+    // Create one of these per PAGEID
+    MyProjectApp.Pages.home = function() {
+        var pageContext = this;
+
         var r = getUrlVars()["r"];
 
         if(r == 1){
@@ -714,8 +732,8 @@ else{
             });
             return vars;
         }
+    };
 
-    });
 </script>
 
 </body>
