@@ -28,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="305" selection-end="305" vertical-scroll-proportion="-5.1">
+            <state line="638" column="73" selection-start="23015" selection-end="23076" vertical-scroll-proportion="-6.54">
               <folding />
             </state>
           </provider>
@@ -46,7 +46,7 @@
       <file leaf-file-name="login.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="42" selection-start="746" selection-end="746" vertical-scroll-proportion="0.65909094">
+            <state line="29" column="37" selection-start="713" selection-end="713" vertical-scroll-proportion="0.6363636">
               <folding />
             </state>
           </provider>
@@ -388,14 +388,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="305" selection-end="305" vertical-scroll-proportion="-5.1">
+        <state line="638" column="73" selection-start="23015" selection-end="23076" vertical-scroll-proportion="-6.54">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="746" selection-end="746" vertical-scroll-proportion="0.65909094">
+        <state line="29" column="37" selection-start="713" selection-end="713" vertical-scroll-proportion="0.6363636">
           <folding />
         </state>
       </provider>

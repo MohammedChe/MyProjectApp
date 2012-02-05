@@ -28,7 +28,7 @@ else{
             //successful login, redirect them to a page
             ?>
             <script type="text/javascript">
-                window.location.replace("http://myprojectapp.orchestra.io/");
+                window.location.href("http://myprojectapp.orchestra.io/");
             </script>
             <?php
             exit;
