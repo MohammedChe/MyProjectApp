@@ -6,7 +6,6 @@
  * Time: 18:18
  * To change this template use File | Settings | File Templates.
  */
-ob_start();
 require_once 'includes/global.inc.php';
 
 if (isset($_SESSION['logged_in'])) {
@@ -27,9 +26,8 @@ else{
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            header("Location: http://myprojectapp.orchestra.io/index.php");
-            ob_end_flush();
-            exit();
+            header('Location: http://myprojectapp.orchestra.io/index.php');
+]            exit;
         }else{
             $error = "Incorrect email or password. Please try again.";
         }
