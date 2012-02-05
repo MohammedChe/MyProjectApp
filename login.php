@@ -26,8 +26,11 @@ else{
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            header("Location: index.php");
-            header("Location: index.php");
+            ?>
+            <script type="text/javascript">
+                window.location.replace("http://myprojectapp.orchestra.io/");
+            </script>
+            <?php
             exit;
         }else{
             $error = "Incorrect email or password. Please try again.";
