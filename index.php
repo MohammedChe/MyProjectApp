@@ -156,7 +156,7 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form method="post" action="login.php">
+        <form action="login.php" method="post">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
@@ -181,7 +181,7 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form method="post" action="register.php">
+        <form action="register.php" method="post">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
