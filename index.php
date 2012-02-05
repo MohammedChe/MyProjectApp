@@ -34,7 +34,7 @@ if (!isset($_SESSION['logged_in'])) {
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            header("Location: index.php?r=1");
+            header("Location: http://myprojectapp.orchestra.io/index.php?r=1");
             exit;
         }else{
             $error = "Incorrect email or password. Please try again.";
