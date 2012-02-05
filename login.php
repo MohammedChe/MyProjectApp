@@ -7,8 +7,6 @@
  * To change this template use File | Settings | File Templates.
  */
 require_once 'includes/global.inc.php';
-echo "hello from login page";
-
 
 if (isset($_SESSION['logged_in'])) {
     header('Location: index.php');
@@ -28,8 +26,7 @@ else{
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            $_SESSION['refreshed'] = 1;
-            header('Location: http://myprojectapp.orchestra.io/index.php');
+            header('Location: redirect.php');
             exit;
         }else{
             $error = "Incorrect email or password. Please try again.";
