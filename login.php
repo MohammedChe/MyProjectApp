@@ -26,7 +26,6 @@ else{
         $userTools = new UserTools();
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
-            header("Location: index.php");
             header('Location: http://myprojectapp.orchestra.io/index.php',TRUE,301);
 
             exit;
