@@ -29,6 +29,7 @@ if (!isset($_SESSION['logged_in'])) {
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
             header("Location: index.php");
+            exit;
         }else{
             $error = "Incorrect email or password. Please try again.";
         }
@@ -91,7 +92,7 @@ if (!isset($_SESSION['logged_in'])) {
 
             //redirect them to a welcome page
             header("Location: index.php");
-
+            exit;
         }
 
     }
@@ -129,6 +130,7 @@ else {
 
             //redirect them to a welcome page
             header("Location: index.php");
+            exit;
         }
 
     }
@@ -159,6 +161,7 @@ else {
 
             //redirect them to a welcome page
             header("Location: index.php");
+            exit;
 
         }
         else
