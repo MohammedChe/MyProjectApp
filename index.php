@@ -9,10 +9,7 @@
 
 require_once 'includes/global.inc.php';
 
-if(isset($_SESSION['refreshed'])){
-    unset($_SESSION["refreshed"]);
-    header('Location: '.$_SERVER['REQUEST_URI']);
-}
+
 
 
 if (!isset($_SESSION['logged_in'])) {
@@ -115,6 +112,15 @@ else {
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
+    <?php
+    if(isset($_SESSION['refreshed'])){
+        unset($_SESSION["refreshed"]);
+//        header('Location: '.$_SERVER['REQUEST_URI']);
+        ?>
+        window.location.reload();
+        <?php
+    }
+?>
 
 </head>
 <body>
