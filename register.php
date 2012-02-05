@@ -9,7 +9,7 @@
 require_once 'includes/global.inc.php';
 
 if (isset($_SESSION['logged_in'])) {
-    header("Location: index.php");
+    header('Location: index.php');
 }
 else{
 
@@ -73,7 +73,7 @@ else{
             $userTools->login($email, $password);
 
             //redirect them to a welcome page
-            header("Location: index.php");
+            header('Location: index.php');
             exit;
         }
 

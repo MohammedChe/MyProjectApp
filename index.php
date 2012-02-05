@@ -50,7 +50,7 @@ else {
             $newCat->save(true);
 
             //redirect them to a welcome page
-            header("Location: index.php");
+            header('Location: index.php');
             exit;
         }
 
@@ -81,7 +81,7 @@ else {
             $newBookmark->save(true);
 
             //redirect them to a welcome page
-            header("Location: index.php");
+            header('Location: index.php');
             exit;
 
         }

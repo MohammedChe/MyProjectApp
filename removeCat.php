@@ -4,7 +4,7 @@ require_once 'includes/global.inc.php';
 
 
 if(!isset($_SESSION['logged_in'])) {
-	header("Location: index.php");
+	header('Location: index.php');
     exit;
 }
 
@@ -20,7 +20,7 @@ else{
   $userTools->removeCategory($c, $user->id);
 
   }
-    header("Location: index.php");
+    header('Location: index.php');
     exit;
 }
 ?>
