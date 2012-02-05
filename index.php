@@ -34,7 +34,6 @@ if (isset($_SESSION['logged_in'])) {
 <?php
  if (isset($_SESSION['logged_in'])) {
 ?>
-    ?>
     <script>
         window.location = "myprojectapp.orchestra.io/"
     </script>

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,14 +28,14 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="42" selection-start="609" selection-end="609" vertical-scroll-proportion="0.6632653">
+            <state line="35" column="2" selection-start="971" selection-end="971" vertical-scroll-proportion="0.53571427">
               <folding>
-                <marker date="1328484092000" expanded="true" signature="324:3750" placeholder="..." />
-                <marker date="1328484092000" expanded="true" signature="331:1016" placeholder="..." />
-                <marker date="1328484092000" expanded="true" signature="331:350" placeholder="..." />
-                <marker date="1328484092000" expanded="true" signature="331:350" placeholder="..." />
-                <marker date="1328484092000" expanded="true" signature="331:350" placeholder="..." />
-                <marker date="1328484092000" expanded="true" signature="1023:3750" placeholder="..." />
+                <marker date="1328484730000" expanded="true" signature="324:3813" placeholder="..." />
+                <marker date="1328484730000" expanded="true" signature="331:1079" placeholder="..." />
+                <marker date="1328484730000" expanded="true" signature="331:350" placeholder="..." />
+                <marker date="1328484730000" expanded="true" signature="331:350" placeholder="..." />
+                <marker date="1328484730000" expanded="true" signature="331:350" placeholder="..." />
+                <marker date="1328484730000" expanded="true" signature="1086:3813" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -286,7 +287,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="806" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -444,14 +445,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="609" selection-end="609" vertical-scroll-proportion="0.6632653">
+        <state line="35" column="2" selection-start="971" selection-end="971" vertical-scroll-proportion="0.53571427">
           <folding>
-            <marker date="1328484092000" expanded="true" signature="324:3750" placeholder="..." />
-            <marker date="1328484092000" expanded="true" signature="331:1016" placeholder="..." />
-            <marker date="1328484092000" expanded="true" signature="331:350" placeholder="..." />
-            <marker date="1328484092000" expanded="true" signature="331:350" placeholder="..." />
-            <marker date="1328484092000" expanded="true" signature="331:350" placeholder="..." />
-            <marker date="1328484092000" expanded="true" signature="1023:3750" placeholder="..." />
+            <marker date="1328484730000" expanded="true" signature="324:3813" placeholder="..." />
+            <marker date="1328484730000" expanded="true" signature="331:1079" placeholder="..." />
+            <marker date="1328484730000" expanded="true" signature="331:350" placeholder="..." />
+            <marker date="1328484730000" expanded="true" signature="331:350" placeholder="..." />
+            <marker date="1328484730000" expanded="true" signature="331:350" placeholder="..." />
+            <marker date="1328484730000" expanded="true" signature="1086:3813" placeholder="..." />
           </folding>
         </state>
       </provider>
