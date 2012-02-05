@@ -18,28 +18,10 @@ require_once 'includes/global.inc.php';
 if (!isset($_SESSION['logged_in'])) {
     $login = false;
 
-    $error = "";
     $errorReg = "";
     $email = "";
     $password = "";
     $password_confirm = "";
-
-
-    //check to see if they've submitted the login form
-    if(isset($_POST['submit-login'])) {
-
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-
-        $userTools = new UserTools();
-        if($userTools->login($email, $password)){
-            //successful login, redirect them to a page
-            header("Location: index.php");
-            exit;
-        }else{
-            $error = "Incorrect email or password. Please try again.";
-        }
-    }
 
 
     //////////////////////////////////////////////////////////
@@ -248,7 +230,7 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form action="index.php?r=1" method="post">
+        <form action="login.php" method="post">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
@@ -697,7 +679,7 @@ else{
 
 ?>
 
-<script>
+<!--<script>
 
 
     // Set up name space
@@ -732,7 +714,7 @@ else{
         }
     };
 
-</script>
+</script>-->
 
 </body>
 </html>
