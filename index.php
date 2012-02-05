@@ -19,7 +19,7 @@ require_once 'includes/global.inc.php';
 
 if(isset($_SESSION['refreshed'])){
     unset($_SESSION["refreshed"]);
-    header('Location: http://myprojectapp.orchestra.io/index.php');
+    header('Location: '.$_SERVER['REQUEST_URI']);
 }
 
 
