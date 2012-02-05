@@ -24,8 +24,6 @@ if (isset($_SESSION['logged_in'])) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <meta http-equiv="refresh" content="10;url=http://myprojectapp.orchestra.io/">
-
     <title>MyProjectApp</title>
 
     <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
@@ -33,7 +31,16 @@ if (isset($_SESSION['logged_in'])) {
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
-
+<?php
+ if (isset($_SESSION['logged_in'])) {
+?>
+    ?>
+    <script>
+        window.location = "myprojectapp.orchestra.io/"
+    </script>
+    <?php
+}
+    ?>
 </head>
 <body>
 
