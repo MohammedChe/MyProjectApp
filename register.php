@@ -6,7 +6,7 @@
  * Time: 18:19
  * To change this template use File | Settings | File Templates.
  */
-
+require_once 'includes/global.inc.php';
 
 $errorReg = "";
 $email = "";
