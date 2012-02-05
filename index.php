@@ -9,14 +9,6 @@
 
 require_once 'includes/global.inc.php';
 
-
-
-
-//if(isset($_GET['r'])) {
-//    header("Location: index.php");
-//    exit;
-//}
-
 if(isset($_SESSION['refreshed'])){
     unset($_SESSION["refreshed"]);
     header('Location: '.$_SERVER['REQUEST_URI']);
