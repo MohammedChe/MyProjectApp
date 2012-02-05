@@ -720,7 +720,7 @@ else{
         var r = getUrlVars()["r"];
 
         if(r == 1){
-            location.reload();
+            window.location.replace("http://myprojectapp.orchestra.io/");
         }
 
         alert(r)
