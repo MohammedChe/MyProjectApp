@@ -17,6 +17,11 @@ require_once 'includes/global.inc.php';
 //    exit;
 //}
 
+if(isset($_SESSION['refreshed'])){
+    unset($_SESSION["refreshed"]);
+    header('Location: http://myprojectapp.orchestra.io/index.php');
+}
+
 
 if (!isset($_SESSION['logged_in'])) {
     $login = false;
@@ -24,11 +29,6 @@ if (!isset($_SESSION['logged_in'])) {
 
 else {
     $login = true;
-
-    if(isset($_SESSION['refreshed'])){
-        unset($_SESSION["refreshed"]);
-        header('Location: index.php');
-    }
 
     $user = unserialize($_SESSION['user']);
 
