@@ -28,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="704" column="30" selection-start="24820" selection-end="24820" vertical-scroll-proportion="0.4723618">
+            <state line="36" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.879397">
               <folding />
             </state>
           </provider>
@@ -37,7 +37,7 @@
       <file leaf-file-name="logout.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logout.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="5" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+            <state line="7" column="60" selection-start="119" selection-end="161" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -340,13 +340,6 @@
         <state line="55" column="5" selection-start="1860" selection-end="1860" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/removeMark.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="9" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
@@ -361,9 +354,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="60" selection-start="119" selection-end="161" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="704" column="30" selection-start="24820" selection-end="24820" vertical-scroll-proportion="0.4723618">
+        <state line="36" column="39" selection-start="809" selection-end="809" vertical-scroll-proportion="0.879397">
           <folding />
         </state>
       </provider>
