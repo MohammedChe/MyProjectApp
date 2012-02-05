@@ -9,88 +9,10 @@
 
 require_once 'includes/global.inc.php';
 
-if (!isset($_SESSION['logged_in'])) {
-    $login = false;
+if (isset($_SESSION['logged_in'])) {
+    header('Location: home.php');
 }
 
-else {
-    $login = true;
-
-    $user = unserialize($_SESSION['user']);
-
-    $title = "";
-    $error2 = "";
-    $url = "";
-
-    //check to see that the form has been submitted
-    if (isset($_POST['submit-form3'])) {
-
-        //retrieve the $_POST variables
-        $title = $_POST['title'];
-        $owner = $_POST['owner'];
-
-        //initialize variables for form validation
-        $success = true;
-        $userTools = new UserTools();
-
-        if ($success) {
-            //prep the data for saving in a new user object
-            $data['title'] = $title;
-            $data['owner'] = $owner;
-            //create the new user object
-            $newCat = new Category($data);
-
-            //save the new user to the database
-            $newCat->save(true);
-
-            //redirect them to a welcome page
-            header('Location: index.php');
-            exit;
-        }
-
-    }
-
-    if (isset($_POST['submit-form2'])) {
-
-        //retrieve the $_POST variables
-        $url = $_POST['url'];
-        $owner = $_POST['owner'];
-        $cat = $_POST['select-choice-a'];
-        $note = $_POST['note'];
-
-        //initialize variables for form validation
-        $userTools = new UserTools();
-        $checkedURL = $userTools->checkURL($url);
-
-        if (isset($checkedURL) && $checkedURL != false) {
-            //prep the data for saving in a new user object
-            $data['category'] = $cat;
-            $data['owner'] = $owner;
-            $data['url'] = $checkedURL;
-            $data['note'] = $note;
-            //create the new user object
-            $newBookmark = new Bookmark($data);
-
-            //save the new user to the database
-            $newBookmark->save(true);
-
-            //redirect them to a welcome page
-            header('Location: index.php');
-            exit;
-
-        }
-        else
-        {
-            echo "URL doesnt exist";
-        }
-    }
-
-
-    $cat = $userTools->getCategories($user->id);
-
-    $recentMarks = $userTools->getRecentBookmarks(12, $user->id);
-
-}
 
 ?>
 
