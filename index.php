@@ -117,7 +117,9 @@ else {
         unset($_SESSION["refreshed"]);
 //        header('Location: '.$_SERVER['REQUEST_URI']);
         ?>
-        window.location.reload(true);
+        <script type="text/javascript">
+            window.location.reload(true);
+        </script>
         <?php
     }
 ?>
