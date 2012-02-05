@@ -27,7 +27,7 @@ else{
         if($userTools->login($email, $password)){
             //successful login, redirect them to a page
             header('Location: http://myprojectapp.orchestra.io/index.php');
-]            exit;
+            exit;
         }else{
             $error = "Incorrect email or password. Please try again.";
         }
