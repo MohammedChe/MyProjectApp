@@ -28,7 +28,7 @@ else{
             //successful login, redirect them to a page
             header('Location: http://myprojectapp.orchestra.io/index.php',TRUE,301);
 
-            exit;
+            exit();
         }else{
             $error = "Incorrect email or password. Please try again.";
         }
