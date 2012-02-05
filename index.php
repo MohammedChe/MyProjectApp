@@ -25,7 +25,10 @@ if (!isset($_SESSION['logged_in'])) {
 else {
     $login = true;
 
-    header( 'refresh: 1; url=/location/' );
+    if(isset($_SESSION['refreshed'])){
+        unset($_SESSION["refreshed"]);
+        header('Location: index.php');
+    }
 
     $user = unserialize($_SESSION['user']);
 
