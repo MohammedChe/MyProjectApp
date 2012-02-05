@@ -35,7 +35,11 @@ if (isset($_SESSION['logged_in'])) {
  if (isset($_SESSION['logged_in'])) {
 ?>
     <script>
-        window.location = "myprojectapp.orchestra.io/"
+
+        function redirect(){
+            window.location = "myprojectapp.orchestra.io/"
+        }
+
     </script>
     <?php
 }
@@ -86,7 +90,7 @@ if (isset($_SESSION['logged_in'])) {
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value=""  />
-            <button data-inline="true" data-theme="b"  type="submit" name="submit-login">Login</button>
+            <button data-inline="true" data-theme="b" onclick="setTimeout('redirect()', 2000)"  type="submit" name="submit-login">Login</button>
 
         </form>
     </div><!-- /content -->
