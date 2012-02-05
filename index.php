@@ -9,6 +9,12 @@
 
 require_once 'includes/global.inc.php';
 
+if(isset($_GET['r'])) {
+    header("Location: index.php");
+    exit;
+}
+
+
 if (!isset($_SESSION['logged_in'])) {
     $login = false;
 
@@ -91,7 +97,7 @@ if (!isset($_SESSION['logged_in'])) {
             $userTools->login($email, $password);
 
             //redirect them to a welcome page
-            header("Location: index.php");
+            header("Location: index.php?r=true");
             exit;
         }
 
