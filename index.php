@@ -248,7 +248,7 @@ if (!$login){
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form action="index.php" method="post">
+        <form action="index.php?r=1" method="post">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
