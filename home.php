@@ -115,14 +115,13 @@ else {
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 
     <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
-    <script type='text/javascript' src="https://getfirebug.com/firebug-lite.js"></script>
 
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
 
     <script type="text/javascript">
-        $("#frmMarks").validate({
+        $("#formCat").validate({
             submitHandler: function(form) {
                 console.log("Call Login Action");
             }
@@ -503,7 +502,7 @@ else {
             </form>
         </div>
         <div class="content-primary">
-            <form id="frmMarks" class="validate" method="post" data-ajax="false">
+            <form id="formCat" class="validate" data-ajax="false">
 
                 <h2>Add Category</h2>
 
