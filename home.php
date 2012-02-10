@@ -152,7 +152,10 @@ else {
 
               <?php
                 if(!empty($errorMark)){
-                    echo "<p class='error'>". $errorMark ."</p>";
+                    ?>
+                    $.mobile.changePage( "#add", { transition: "flip"} );
+                    <?php
+                   // echo "<p class='error'>". $errorMark ."</p>";
                 }
 
                 ?>
@@ -509,6 +512,14 @@ else {
                 <div data-role="fieldcontain">
                     <label for="url">Save URL:</label>
                     <input class="required" type="text" name="url" id="url" value=""  />
+
+                    <?php
+                    if(!empty($errorMark)){
+                        echo "<p class='error'>". $errorMark ."</p>";
+                    }
+
+                    ?>
+
 
                     <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
