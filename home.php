@@ -512,13 +512,6 @@ else {
                 <?php
                 if(!empty($errorCat)){
                     echo "<p class='error'>". $errorCat ."</p>";
-
-                    ?>
-                    <script>
-                        $.mobile.changePage($("#add:jqmData(role='dialog')"), {transition : "flip"});
-                    </script>
-
-                    <?php
                 }
 
                 ?>
