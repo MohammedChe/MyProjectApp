@@ -36,7 +36,16 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="272" column="0" selection-start="8392" selection-end="8392" vertical-scroll-proportion="-0.7336683">
+            <state line="272" column="0" selection-start="8392" selection-end="8392" vertical-scroll-proportion="-0.7085427">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="removeMark.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/removeMark.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -394,11 +403,6 @@
         <state line="22" column="32" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/removeMark.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="6" selection-start="293" selection-end="293" vertical-scroll-proportion="220.91667">
@@ -448,9 +452,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/removeMark.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="0" selection-start="8392" selection-end="8392" vertical-scroll-proportion="-0.7336683">
+        <state line="272" column="0" selection-start="8392" selection-end="8392" vertical-scroll-proportion="-0.7085427">
           <folding />
         </state>
       </provider>
