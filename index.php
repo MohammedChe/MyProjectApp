@@ -133,7 +133,7 @@ if (isset($_SESSION['logged_in'])) {
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form id="formRegister" class="validate" data-ajax="false"  method="post">
+        <form id="formRegister" class="validate" action="register.php" data-ajax="false"  method="post">
             <label for="email">Email:</label>
             <input type="text" class="required email" name="email" id="email" value=""  />
             <label for="password">Password:</label>
