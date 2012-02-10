@@ -13,6 +13,10 @@
     margin-top: 12px;
 }
 
+.desc{
+    margin-top: -20px;
+}
+
 .smallText{
     font-size: 60%;
 }

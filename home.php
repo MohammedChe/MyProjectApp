@@ -150,15 +150,15 @@ else {
                 }
             });
 
-              <?php
-                if(!empty($errorMark)){
-                    ?>
-                    $.mobile.changePage( "#add", { transition: "flip"} );
-                    <?php
-                   // echo "<p class='error'>". $errorMark ."</p>";
-                }
+        <?php
+        if(!empty($errorMark)){
+            ?>
+            $.mobile.changePage( "#add", { transition: "flip"} );
+            <?php
+            // echo "<p class='error'>". $errorMark ."</p>";
+        }
 
-                ?>
+        ?>
         });
     </script>
 
@@ -204,9 +204,11 @@ else {
 
                         <li><a href="<?php echo htmlentities($value["url"]);?>">
                             <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
-                            <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                            <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
-                            <p class="addLeftMargin note"><?php echo $value["note"]; ?></p>
+                            <div class="desc">
+                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
+                                <p class="addLeftMargin note"><?php echo $value["note"]; ?></p>
+                            </div>
                         </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
                         </a></li>
 
@@ -225,9 +227,11 @@ else {
 
                         <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
                             <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
-                            <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                            <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
-                            <p class="addLeftMargin note"><?php echo $recentMarks["note"]; ?></p>
+                            <div class="desc">
+                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
+                                <p class="addLeftMargin note"><?php echo $recentMarks["note"]; ?></p>
+                            </div>
                         </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
                         </a></li>
 
