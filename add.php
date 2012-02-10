@@ -32,6 +32,7 @@ else {
         if(empty($title)){
             $success = false;
             $errorCat = "The title is empty!!";
+            header('Location: add.php');
         }
 
         else{
