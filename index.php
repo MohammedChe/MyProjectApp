@@ -39,7 +39,7 @@ if (isset($_SESSION['logged_in'])) {
                 rules: {
                     email: {
                         required: true,
-                        email: true
+                        email: false
                     },
                     password: {
                         required: true,

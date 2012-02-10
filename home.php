@@ -131,7 +131,7 @@ else {
                     }
                 },
                 messages: {
-                    required: "The title cant be blank"
+                    title: "The title cant be blank"
                 }
             });
 
@@ -144,11 +144,9 @@ else {
                         required: true
                     }
                 },
-                url: {
-                    required: "The title cant be blank"
-                },
-                select_choice_a: {
-                    required: "The title cant be blank"
+                messages: {
+                    url: "The URL cant be blank",
+                    select_choice_a: "The title cant be blank",
                 }
             });
         });
