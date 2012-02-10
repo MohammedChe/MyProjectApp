@@ -113,6 +113,23 @@ else {
 
     <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+            // Your jQuery commands go here before the mobile reference
+    <?php
+    if(!empty($errorCat)){
+        echo "<p class='error'>". $errorCat ."</p>";
+
+        ?>
+        <script>
+        $(document).ready(function() {
+               $.mobile.changePage($("#add:jqmData(role='dialog')"), {transition : "flip"});
+        });
+        </script>
+                        <?php
+    }
+
+    ?>
+
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
