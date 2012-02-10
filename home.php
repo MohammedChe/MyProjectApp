@@ -215,7 +215,7 @@ else {
                 <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
                 <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="pop">Add</a></li>
-                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="logout.php" data-ajax="false" relid="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
         </div>
@@ -406,7 +406,7 @@ else {
                 <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
                 <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
                 <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="pop">Add</a></li>
-                <li><a href="logout.php" id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="logout.php" data-ajax="false" id="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
         </div>
