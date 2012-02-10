@@ -223,7 +223,7 @@ else {
 
                 <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
-                <li><a href="add.php" data-ajax="false" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="add.php" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false" relid="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
@@ -313,7 +313,7 @@ else {
 
                             else{
                                 ?>
-                                <li><a href="add.php" data-ajax="false" data-rel="dialog" data-transition="flip">
+                                <li><a href="add.php" data-rel="dialog" data-transition="flip">
                                     <h3 class="addLeftMargin">Empty Category</h3>
                                     <p class="addLeftMargin note">Add A Bookmark</p>
                                 </a></li>
@@ -414,7 +414,7 @@ else {
 
                 <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
                 <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="add.php" data-ajax="false" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="add.php" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false" id="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
