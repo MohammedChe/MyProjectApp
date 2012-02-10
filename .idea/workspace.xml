@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="none">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -29,7 +28,16 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-0.9672131">
+            <state line="135" column="48" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.40983605">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="45" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,7 +119,6 @@
         <option value="$PROJECT_DIR$/classes/Bookmark.class.php" />
         <option value="$PROJECT_DIR$/classes/UserTools.class.php" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/removeCat.php" />
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/redirect.php" />
@@ -119,6 +126,7 @@
         <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -372,13 +380,6 @@
         <state line="14" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="20" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="39" selection-start="802" selection-end="833" vertical-scroll-proportion="0.0" />
@@ -441,9 +442,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="45" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-0.9672131">
+        <state line="135" column="48" selection-start="4388" selection-end="4388" vertical-scroll-proportion="0.40983605">
           <folding />
         </state>
       </provider>
