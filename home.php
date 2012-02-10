@@ -62,7 +62,7 @@ else {
         //retrieve the $_POST variables
         $url = $_POST['url'];
         $owner = $_POST['owner'];
-        $cat = $_POST['select-choice-a'];
+        $cat = $_POST['select_choice_a'];
         $note = $_POST['note'];
 
         //initialize variables for form validation
