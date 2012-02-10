@@ -146,7 +146,7 @@ else {
                 },
                 messages: {
                     url: "The URL cant be blank",
-                    select_choice_a: "The title cant be blank",
+                    select_choice_a: "Please Choose a Category"
                 }
             });
         });
