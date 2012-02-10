@@ -127,10 +127,21 @@ else {
             $("#formCat").validate({
                 rules: {
                     title: {
-                        required: true,
+                        required: true
                     }
                 },
                 messages: {
+                    title: "The title cant be blank"
+                }
+            });
+
+            $("#formMarks").validate({
+                rules: {
+                    url: {
+                        required: true
+                    }
+                },
+                url: {
                     title: "The title cant be blank"
                 }
             });
@@ -476,7 +487,7 @@ else {
     <div data-role="content">
 
         <div class="content-secondary">
-            <form name="addBookmarkForm" method="post" data-ajax="false">
+            <form id="formMarks" class="validate" name="addBookmarkForm" method="post" data-ajax="false">
 
                 <h2>Add Bookmark</h2>
 
@@ -486,13 +497,13 @@ else {
 
                 <div data-role="fieldcontain">
                     <label for="url">Save URL:</label>
-                    <input type="text" name="url" id="url" value=""  />
+                    <input class="required" type="text" name="url" id="url" value=""  />
 
                     <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
 
                     <label for="select-choice-a" class="select">In:</label>
-                    <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+                    <select class="required" name="select-choice-a" id="select-choice-a" data-native-menu="false">
                         <option>Categories</option>
                         <?php
                         foreach ($cat as $key => $value)
