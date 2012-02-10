@@ -131,7 +131,7 @@ else {
                     }
                 },
                 messages: {
-                    title: "The title cant be blank"
+                    required: "The title cant be blank"
                 }
             });
 
@@ -139,10 +139,16 @@ else {
                 rules: {
                     url: {
                         required: true
+                    },
+                    select_choice_a: {
+                        required: true
                     }
                 },
                 url: {
-                    title: "The title cant be blank"
+                    required: "The title cant be blank"
+                },
+                select_choice_a: {
+                    required: "The title cant be blank"
                 }
             });
         });
@@ -502,8 +508,8 @@ else {
                     <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
 
-                    <label for="select-choice-a" class="select">In:</label>
-                    <select class="required" name="select-choice-a" id="select-choice-a" data-native-menu="false">
+                    <label for="select_choice_a" class="select">In:</label>
+                    <select class="required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
                         <option>Categories</option>
                         <?php
                         foreach ($cat as $key => $value)
