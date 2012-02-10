@@ -517,8 +517,8 @@ else {
 
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
-                    <input type="text" class="required" name="title" id="title" value=""  />
-                    <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
+                    <input type="text" class="required" name="title" id="title" />
+<!--                    <input type="hidden" value="--><?php //echo $user->id; ?><!--" name="owner"/>-->
                     <button type="submit"  >Add</button>
                 </div>
             </form>
