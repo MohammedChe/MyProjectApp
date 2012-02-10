@@ -317,7 +317,7 @@ else {
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                        </span><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false"><span class="ui-li-count">x</span></a></li>
+                        </span><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false"><span class="ui-li-count">x</a></span></li>
 
                         <?php
 
