@@ -465,6 +465,10 @@ else {
                 <?php
                     if(!empty($errorCat)){
                         echo "<p class='error'>". $errorCat ."</p>";
+
+                        ?>
+                        openDialog('add','flip');
+                        <?php
                     }
                     
                     ?>
@@ -520,5 +524,12 @@ else {
 
 </div><!-- /page -->
 
+<script>
+    function openDialog(strPageId, strTransition){
+
+        $.mobile.changePage($("#"+strPageId+":jqmData(role='dialog')"), {transition : ""+strTransition+""});
+
+    }
+</script>
 </body>
 </html>

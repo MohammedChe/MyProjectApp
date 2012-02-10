@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mobile.css" afterPath="$PROJECT_DIR$/styles/mobile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,21 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="316" column="45" selection-start="11781" selection-end="11781" vertical-scroll-proportion="-4.88">
+            <state line="469" column="39" selection-start="18221" selection-end="18221" vertical-scroll-proportion="0.42215088">
               <folding>
-                <marker date="1328877493000" expanded="true" signature="18124:18153" placeholder="..." />
+                <marker date="1328878058000" expanded="true" signature="18124:18153" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobile.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="15" selection-start="67" selection-end="67" vertical-scroll-proportion="0.1590909">
+            <state line="7" column="15" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,8 +96,8 @@
         <option value="$PROJECT_DIR$/redirect.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
+        <option value="$PROJECT_DIR$/home.php" />
       </list>
     </option>
   </component>
@@ -400,19 +400,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
+    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="316" column="45" selection-start="11781" selection-end="11781" vertical-scroll-proportion="-4.88">
-          <folding>
-            <marker date="1328877493000" expanded="true" signature="18124:18153" placeholder="..." />
-          </folding>
+        <state line="7" column="15" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+    <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="15" selection-start="67" selection-end="67" vertical-scroll-proportion="0.1590909">
-          <folding />
+        <state line="469" column="39" selection-start="18221" selection-end="18221" vertical-scroll-proportion="0.42215088">
+          <folding>
+            <marker date="1328878058000" expanded="true" signature="18124:18153" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
