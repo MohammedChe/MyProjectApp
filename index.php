@@ -24,11 +24,49 @@ if (isset($_SESSION['logged_in'])) {
 
     <title>MyProjectApp</title>
 
-    <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
+    <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
 
+
+    <script type="text/javascript">
+
+        $().ready(function() {
+
+            $("#formRegister").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    confirm_password: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password"
+                    }
+                },
+                messages: {
+                    email: "Please enter a valid email address",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    confirm_password: {
+                        required: "Please confirm your password",
+                        minlength: "Your password must be at least 5 characters long",
+                        equalTo: "Please enter the same password as above"
+                    }
+
+                }
+            });
+        });
+            </script>
 </head>
 <body>
 
@@ -95,13 +133,13 @@ if (isset($_SESSION['logged_in'])) {
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form action="register.php" data-ajax="false"  method="post">
+        <form id="formRegister" class="validate" action="register.php" data-ajax="false"  method="post">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value=""  />
+            <input type="text" class="required email" name="email" id="email" value=""  />
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value=""  />
-            <label for="password-confirm">Password:</label>
-            <input type="password" name="password-confirm" id="password-confirm" value=""  />
+            <input type="password" class="required" name="password" id="password" value=""  />
+            <label for="password_confirm">Password:</label>
+            <input type="password" class="required" name="password_confirm" id="password_confirm" value=""  />
             <button data-inline="true" data-theme="b" type="submit" name="submit-form">Register</button>
         </form>
 

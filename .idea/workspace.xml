@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,15 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="31" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-2.0">
-              <folding>
-                <marker date="1328883974000" expanded="true" signature="322:3717" placeholder="..." />
-                <marker date="1328883974000" expanded="true" signature="329:348" placeholder="..." />
-                <marker date="1328883974000" expanded="true" signature="936:3717" placeholder="..." />
-              </folding>
+            <state line="37" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-0.9672131">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="520" column="26" selection-start="20289" selection-end="20394" vertical-scroll-proportion="0.6482412">
+            <state line="116" column="30" selection-start="2946" selection-end="3071" vertical-scroll-proportion="-5.4">
               <folding />
             </state>
           </provider>
@@ -118,10 +116,10 @@
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/redirect.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/add.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -401,13 +399,6 @@
         <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="1" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home3.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="6" selection-start="293" selection-end="293" vertical-scroll-proportion="220.91667">
@@ -436,20 +427,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="31" selection-start="2657" selection-end="2657" vertical-scroll-proportion="-2.0">
-          <folding>
-            <marker date="1328883974000" expanded="true" signature="322:3717" placeholder="..." />
-            <marker date="1328883974000" expanded="true" signature="329:348" placeholder="..." />
-            <marker date="1328883974000" expanded="true" signature="936:3717" placeholder="..." />
-          </folding>
+        <state line="30" column="1" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="520" column="26" selection-start="20289" selection-end="20394" vertical-scroll-proportion="0.6482412">
+        <state line="116" column="30" selection-start="2946" selection-end="3071" vertical-scroll-proportion="-5.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-0.9672131">
           <folding />
         </state>
       </provider>
