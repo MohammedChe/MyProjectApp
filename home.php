@@ -468,7 +468,7 @@ else {
 
                         ?>
                         <script>
-                            openDialog('add','flip');
+                            $.mobile.changePage($("#add:jqmData(role='dialog')"), {transition : "flip"});
                         </script>
 
                         <?php
@@ -527,12 +527,5 @@ else {
 
 </div><!-- /page -->
 
-<script>
-    function openDialog(strPageId, strTransition){
-
-        $.mobile.changePage($("#"+strPageId+":jqmData(role='dialog')"), {transition : ""+strTransition+""});
-
-    }
-</script>
 </body>
 </html>
