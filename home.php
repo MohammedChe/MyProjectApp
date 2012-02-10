@@ -88,7 +88,7 @@ else {
         }
         else
         {
-            echo "URL doesnt exist";
+            $errorMark = "URL doesn't exist";
         }
     }
 
@@ -149,6 +149,13 @@ else {
                     select_choice_a: "Please Choose a Category"
                 }
             });
+
+              <?php
+                if(!empty($errorMark)){
+                    echo "<p class='error'>". $errorMark ."</p>";
+                }
+
+                ?>
         });
     </script>
 
@@ -531,13 +538,6 @@ else {
                 <h2>Add Category</h2>
 
                 <p>Enter a title for your new category.</p>
-
-<!--                --><?php
-//                if(!empty($errorCat)){
-//                    echo "<p class='error'>". $errorCat ."</p>";
-//                }
-//
-//                ?>
 
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
