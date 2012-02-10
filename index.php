@@ -55,7 +55,7 @@ if (isset($_SESSION['logged_in'])) {
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>MyProjectApp - Che</h4>
+        <h4>MyProjectApp|MohammedChe</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
@@ -81,7 +81,7 @@ if (isset($_SESSION['logged_in'])) {
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>MyProjectApp - Che</h4>
+        <h4>MyProjectApp|MohammedChe</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
@@ -108,7 +108,7 @@ if (isset($_SESSION['logged_in'])) {
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>MyProjectApp - Che</h4>
+        <h4>MyProjectApp|MohammedChe</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 

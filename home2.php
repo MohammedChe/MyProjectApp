@@ -223,7 +223,7 @@ else {
 
                 <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
-                <li><a href="add.php" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false" relid="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
@@ -313,7 +313,7 @@ else {
 
                             else{
                                 ?>
-                                <li><a href="add.php" data-rel="dialog" data-transition="flip">
+                                <li><a href="#add" data-rel="dialog" data-transition="flip">
                                     <h3 class="addLeftMargin">Empty Category</h3>
                                     <p class="addLeftMargin note">Add A Bookmark</p>
                                 </a></li>
@@ -414,13 +414,117 @@ else {
 
                 <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
                 <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="add.php" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false" id="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
         </div>
 
     </div>
+</div><!-- /page -->
+
+
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////START OF ADD PAGE////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<div data-role="page" id="add">
+<!--    <script type="text/javascript">-->
+<!---->
+<!--        function PasteFromClipboard()-->
+<!---->
+<!--        {-->
+<!---->
+<!--            document.addBookmarkForm.url.focus();-->
+<!---->
+<!--            PastedText = document.addBookmarkForm.url.createTextRange();-->
+<!---->
+<!--            PastedText.execCommand("Paste");-->
+<!---->
+<!--        }-->
+<!---->
+<!--    </script>-->
+
+
+    <div data-role="header">
+        <h1>Add</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">
+
+        <div class="content-secondary">
+            <form method="post" data-ajax="false">
+
+                <h2>Add Category</h2>
+
+                <p>Enter a title for your new category.</p>
+                <p class="smallText">Or skip this and add a bookmark to an existing category.</p>
+
+                <?php
+                    if(!empty($errorCat)){
+                        echo "<p class='error'>". $errorCat ."</p>";
+
+                        ?>
+                        <script>
+                            $.mobile.changePage($("#add:jqmData(role='dialog')"), {transition : "flip"});
+                        </script>
+
+                        <?php
+                    }
+                    
+                    ?>
+
+                <div data-role="fieldcontain">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" value=""  />
+                    <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
+                    <button type="submit" name="submit-form3" >Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="content-primary">
+            <form name="addBookmarkForm" method="post" data-ajax="false">
+
+                <h2>Add Bookmark</h2>
+
+                <p>Enter the URL and choose a category.</p>
+                <p class="smallText">You can add a note with your bookmark to remind you why you saved it.</p>
+
+                <div data-role="fieldcontain">
+                    <label for="url">Save URL:</label>
+                    <input type="text" name="url" id="url" value=""  />
+
+                    <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
+
+
+                    <label for="select-choice-a" class="select">In:</label>
+                    <select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+                        <option>Categories</option>
+                        <?php
+                        foreach ($cat as $key => $value)
+                        {
+                            echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                        }
+
+                        ?>
+                    </select>
+                    <label for="note">Note:</label>
+                    <input type="text" name="note" id="note" value=""  />
+                    <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
+                    <button type="submit" name="submit-form2" >Save</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>MyProjectApp - Che</h4>
+    </div>
+
 </div><!-- /page -->
 
 </body>
