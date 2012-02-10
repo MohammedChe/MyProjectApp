@@ -121,10 +121,39 @@ else {
 
 
     <script type="text/javascript">
-        $("#formCat").validate({
-            submitHandler: function(form) {
-                console.log("Call Login Action");
-            }
+
+        $().ready(function() {
+
+            $("#formCat").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    },
+                    confirm_password: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password2"
+                    }
+                },
+                messages: {
+                    email: "Please enter a valid email address",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    confirm_password: {
+                        required: "Please confirm your password",
+                        minlength: "Your password must be at least 5 characters long",
+                        equalTo: "Please enter the same password as above"
+                    }
+
+                }
+            });
         });
     </script>
 
@@ -502,7 +531,7 @@ else {
             </form>
         </div>
         <div class="content-primary">
-            <form id="formCat" class="validate" data-ajax="false">
+            <form id="formCat" method="post" class="validate" data-ajax="false">
 
                 <h2>Add Category</h2>
 
@@ -518,8 +547,8 @@ else {
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
                     <input type="text" class="required" name="title" id="title" />
-<!--                    <input type="hidden" value="--><?php //echo $user->id; ?><!--" name="owner"/>-->
-                    <button type="submit"  >Add</button>
+                    <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
+                    <button type="submit" name="submit-form3"  >Add</button>
                 </div>
             </form>
 
