@@ -446,7 +446,7 @@ else {
     <div data-role="content">
 
         <div class="content-secondary">
-            <form method="post">
+            <form method="post" data-ajax="false">
 
                 <h2>Add Category</h2>
 
@@ -462,7 +462,7 @@ else {
             </form>
         </div>
         <div class="content-primary">
-            <form name="addBookmarkForm" method="post">
+            <form name="addBookmarkForm" method="post" data-ajax="false">
 
                 <h2>Add Bookmark</h2>
 
