@@ -509,18 +509,18 @@ else {
 
                 <p>Enter a title for your new category.</p>
 
-                <?php
-                if(!empty($errorCat)){
-                    echo "<p class='error'>". $errorCat ."</p>";
-                }
-
-                ?>
+<!--                --><?php
+//                if(!empty($errorCat)){
+//                    echo "<p class='error'>". $errorCat ."</p>";
+//                }
+//
+//                ?>
 
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
                     <input type="text" class="required" name="title" id="title" value=""  />
                     <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
-                    <button type="submit" name="submit-form3" >Add</button>
+                    <button type="submit"  >Add</button>
                 </div>
             </form>
 
