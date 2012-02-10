@@ -467,7 +467,10 @@ else {
                         echo "<p class='error'>". $errorCat ."</p>";
 
                         ?>
-                        openDialog('add','flip');
+                        <script>
+                            openDialog('add','flip');
+                        </script>
+
                         <?php
                     }
                     
