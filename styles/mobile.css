@@ -4,10 +4,6 @@
     margin-left: 30px;
 }
 
-.error{
-    color: red;
-}
-
 .note{
     font-style: italic;
 }
@@ -45,3 +41,20 @@
     background:  url(../images/runner.png)) 50% 50% no-repeat;
     background-size: 20px 26px;
 }
+
+
+.portrait label.error, .landscape label.error {
+    color: red;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-top: 0.5em;
+    width: 100%;
+    float: none;
+}
+
+.landscape label.error { display: inline-block; margin-left: 22%; }
+
+.portrait label.error { margin-left: 0; display: block; }
+
+em { color: red; font-weight: bold; padding-right: .25em; }

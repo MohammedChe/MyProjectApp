@@ -113,8 +113,21 @@ else {
 
     <link href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+
+    <script type='text/javascript' src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>vvv
+    <script type='text/javascript' src="https://getfirebug.com/firebug-lite.js"></script>
+
     <script src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
     <link rel="stylesheet" href="styles/mobile.css" />
+
+
+    <script type="text/javascript">
+        $("#frmMarks").validate({
+            submitHandler: function(form) {
+                console.log("Call Login Action");
+            }
+        });
+    </script>
 
 
 </head>
@@ -490,7 +503,7 @@ else {
             </form>
         </div>
         <div class="content-primary">
-            <form method="post" data-ajax="false">
+            <form id="frmLogin" class="validate" method="post" data-ajax="false">
 
                 <h2>Add Category</h2>
 
@@ -512,7 +525,7 @@ else {
 
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
-                    <input type="text" name="title" id="title" value=""  />
+                    <input type="text" class="required" name="title" id="title" value=""  />
                     <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
                     <button type="submit" name="submit-form3" >Add</button>
                 </div>
