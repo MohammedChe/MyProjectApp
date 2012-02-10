@@ -26,7 +26,7 @@ else{
         //retrieve the $_POST variables
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $password_confirm = $_POST['password_confirm'];
+        $password_confirm = $_POST['confirm_password'];
 
         //initialize variables for form validation
         $success = true;
@@ -73,6 +73,10 @@ else{
             $userTools->login($email, $password);
 
             //redirect them to a welcome page
+            header('Location: index.php');
+            exit;
+        }
+        else{
             header('Location: index.php');
             exit;
         }

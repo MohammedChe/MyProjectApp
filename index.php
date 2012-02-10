@@ -138,8 +138,8 @@ if (isset($_SESSION['logged_in'])) {
             <input type="text" class="required email" name="email" id="email" value=""  />
             <label for="password">Password:</label>
             <input type="password" class="required" name="password" id="password2" value=""  />
-            <label for="password_confirm"> Confirm Password:</label>
-            <input type="password" class="required" name="password_confirm" id="password_confirm" value=""  />
+            <label for="confirm_password"> Confirm Password:</label>
+            <input type="password" class="required" name="confirm_password" id="confirm_password" value=""  />
             <button data-inline="true" data-theme="b" type="submit" name="submit-form">Register</button>
         </form>
 
