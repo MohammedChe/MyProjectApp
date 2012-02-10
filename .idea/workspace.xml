@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="54" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.8584906">
+            <state line="72" column="50" selection-start="2052" selection-end="2069" vertical-scroll-proportion="-7.125">
               <folding>
                 <marker date="1328875858000" expanded="true" signature="322:3699" placeholder="..." />
                 <marker date="1328875858000" expanded="true" signature="329:348" placeholder="..." />
@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="31" selection-start="2592" selection-end="2592" vertical-scroll-proportion="-5.625">
+            <state line="347" column="25" selection-start="13333" selection-end="13333" vertical-scroll-proportion="0.22110553">
               <folding />
             </state>
           </provider>
@@ -85,8 +85,8 @@
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/redirect.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/home.php" />
       </list>
     </option>
   </component>
@@ -362,13 +362,6 @@
         <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="31" selection-start="2592" selection-end="2592" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="1" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
@@ -378,12 +371,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="54" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.8584906">
+        <state line="72" column="50" selection-start="2052" selection-end="2069" vertical-scroll-proportion="-7.125">
           <folding>
             <marker date="1328875858000" expanded="true" signature="322:3699" placeholder="..." />
             <marker date="1328875858000" expanded="true" signature="329:348" placeholder="..." />
             <marker date="1328875858000" expanded="true" signature="936:3699" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="347" column="25" selection-start="13333" selection-end="13333" vertical-scroll-proportion="0.22110553">
+          <folding />
         </state>
       </provider>
     </entry>
