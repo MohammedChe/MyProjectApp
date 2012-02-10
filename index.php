@@ -48,7 +48,7 @@ if (isset($_SESSION['logged_in'])) {
                     confirm_password: {
                         required: true,
                         minlength: 5,
-                        equalTo: "#password"
+                        equalTo: "#password2"
                     }
                 },
                 messages: {
@@ -137,8 +137,8 @@ if (isset($_SESSION['logged_in'])) {
             <label for="email">Email:</label>
             <input type="text" class="required email" name="email" id="email" value=""  />
             <label for="password">Password:</label>
-            <input type="password" class="required" name="password" id="password" value=""  />
-            <label for="password_confirm">Password:</label>
+            <input type="password" class="required" name="password" id="password2" value=""  />
+            <label for="password_confirm"> Confirm Password:</label>
             <input type="password" class="required" name="password_confirm" id="password_confirm" value=""  />
             <button data-inline="true" data-theme="b" type="submit" name="submit-form">Register</button>
         </form>
