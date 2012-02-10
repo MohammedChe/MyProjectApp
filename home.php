@@ -17,7 +17,8 @@ else {
     $user = unserialize($_SESSION['user']);
 
     $title = "";
-    $error2 = "";
+    $errorCat = "";
+    $errorMark = "";
     $url = "";
 
     //check to see that the form has been submitted
@@ -28,7 +29,15 @@ else {
         $owner = $_POST['owner'];
 
         //initialize variables for form validation
-        $success = true;
+        if(empty($title)){
+            $success = false;
+            $errorCat = "The title is empty!!";
+        }
+
+        else{
+            $success = true;
+        }
+
         $userTools = new UserTools();
 
         if ($success) {
@@ -422,21 +431,21 @@ else {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -->
 <div data-role="page" id="add">
-    <script type="text/javascript">
-
-        function PasteFromClipboard()
-
-        {
-
-            document.addBookmarkForm.url.focus();
-
-            PastedText = document.addBookmarkForm.url.createTextRange();
-
-            PastedText.execCommand("Paste");
-
-        }
-
-    </script>
+<!--    <script type="text/javascript">-->
+<!---->
+<!--        function PasteFromClipboard()-->
+<!---->
+<!--        {-->
+<!---->
+<!--            document.addBookmarkForm.url.focus();-->
+<!---->
+<!--            PastedText = document.addBookmarkForm.url.createTextRange();-->
+<!---->
+<!--            PastedText.execCommand("Paste");-->
+<!---->
+<!--        }-->
+<!---->
+<!--    </script>-->
 
 
     <div data-role="header">
@@ -452,6 +461,10 @@ else {
 
                 <p>Enter a title for your new category.</p>
                 <p class="smallText">Or skip this and add a bookmark to an existing category.</p>
+
+                <p class="error"><?php
+                    $errorCat;
+                    ?></p>
 
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
