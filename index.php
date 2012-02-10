@@ -65,6 +65,26 @@ if (isset($_SESSION['logged_in'])) {
 
                 }
             });
+
+            $("#formLogin").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+                messages: {
+                    email: "Please enter a valid email address",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    }
+                }
+            });
         });
             </script>
 </head>
@@ -108,11 +128,11 @@ if (isset($_SESSION['logged_in'])) {
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form action="login.php" data-ajax="false" method="post">
+        <form id="formLogin" action="login.php" data-ajax="false" method="post">
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value=""  />
+            <input class="required email" type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value=""  />
+            <input class="required" type="password" name="password" id="password" value=""  />
             <button data-inline="true" data-theme="b" type="submit" name="submit-login">Login</button>
 
         </form>
