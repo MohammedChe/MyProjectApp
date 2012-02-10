@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -26,33 +25,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="28" selection-start="781" selection-end="867" vertical-scroll-proportion="-13.75">
+            <state line="97" column="54" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.8584906">
               <folding>
-                <marker date="1328874886000" expanded="true" signature="322:3662" placeholder="..." />
-                <marker date="1328874886000" expanded="true" signature="329:348" placeholder="..." />
-                <marker date="1328874886000" expanded="true" signature="936:3662" placeholder="..." />
+                <marker date="1328875858000" expanded="true" signature="322:3699" placeholder="..." />
+                <marker date="1328875858000" expanded="true" signature="329:348" placeholder="..." />
+                <marker date="1328875858000" expanded="true" signature="936:3699" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="redirect.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/redirect.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/register.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="20" selection-start="2151" selection-end="2151" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -66,46 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="6" selection-start="2777" selection-end="2863" vertical-scroll-proportion="0.32445922">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTools.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="39" selection-start="802" selection-end="833" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="61" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="removeCat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/removeCat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="32" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="removeMark.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/removeMark.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="102" column="31" selection-start="2592" selection-end="2592" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -140,8 +85,8 @@
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/redirect.php" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/home.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -417,6 +362,13 @@
         <state line="22" column="12" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="31" selection-start="2592" selection-end="2592" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="1" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
@@ -426,19 +378,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="781" selection-end="867" vertical-scroll-proportion="-13.75">
+        <state line="97" column="54" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.8584906">
           <folding>
-            <marker date="1328874886000" expanded="true" signature="322:3662" placeholder="..." />
-            <marker date="1328874886000" expanded="true" signature="329:348" placeholder="..." />
-            <marker date="1328874886000" expanded="true" signature="936:3662" placeholder="..." />
+            <marker date="1328875858000" expanded="true" signature="322:3699" placeholder="..." />
+            <marker date="1328875858000" expanded="true" signature="329:348" placeholder="..." />
+            <marker date="1328875858000" expanded="true" signature="936:3699" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="6" selection-start="2777" selection-end="2863" vertical-scroll-proportion="0.32445922">
-          <folding />
         </state>
       </provider>
     </entry>

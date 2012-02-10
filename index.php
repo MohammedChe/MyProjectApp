@@ -95,7 +95,7 @@ if (isset($_SESSION['logged_in'])) {
 
     <div data-role="content">
         <p>This is the login page</p>
-        <form action="register.php" data-ajax="false" method="post">
+        <form action="register.php" data-ajax="false"  method="post">
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
