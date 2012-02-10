@@ -317,7 +317,7 @@ else {
 
                         <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                        </span><span class="ui-icon ui-icon-plus ui-icon-shadow" data-iconpos="right" id="add"><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false"></a></span></li>
+                        </span><span data-icon="delete" data-iconpos="right"><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false"></a></span></li>
 
                         <?php
 
@@ -387,7 +387,7 @@ else {
 
                         <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                    </span><span class="ui-icon ui-icon-plus ui-icon-shadow" id="add" data-iconpos="right"><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false"></a></span></li>
+                    </span><span data-icon="delete" data-iconpos="right"><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false"></a></span></li>
 
                         <?php
 
