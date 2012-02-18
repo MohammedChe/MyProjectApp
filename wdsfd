@@ -1,0 +1,67 @@
+<?php
+
+foreach ($friends as $key=>$value) {
+    echo count($value);
+
+    echo '<br>';
+    echo '<br>';
+
+    foreach ($value as $fkey=>$fvalue) {
+
+        echo '<div id="status">';
+        echo '</div>';
+
+
+
+        $fb_gender=$fvalue["gender"];
+
+        if ($fb_gender=="female")
+        {
+            echo '<div id="holderfemale" class="slidingDiv2">';
+
+            echo '<div id="photo">';
+            ?>
+        <a onClick="  getStatus(<?php $fvalue["id"] ?>)" href="#"class="show_hide">
+            <?php
+            echo '
+            <img src="https://graph.facebook.com/' . $fvalue["id"] . '/picture " title="' .
+                $fvalue["name"]. '" height="35" width="35" />';
+            ?>
+        </a>
+        <?php
+
+            echo '</div>';
+
+            echo '</div>';
+
+        }
+        if ($fb_gender=="male")
+        {
+            echo '<div id="holdermale" class="slidingDiv3">';
+
+            echo '<div id="photo">';
+            ?>
+        <a onClick="  getStatus(<?php $fvalue["id"] ?>)" href="#"class="show_hide">
+            <?php
+            echo '
+            <img src="https://graph.facebook.com/' . $fvalue["id"] . '/picture " title="' .
+                $fvalue["name"]. '" height="35" width="35" />';
+            ?>
+        </a>
+        <?php
+
+
+            echo '</div>';
+
+            echo '</div>';
+        }
+
+
+
+
+
+
+    }
+
+}
+?>
