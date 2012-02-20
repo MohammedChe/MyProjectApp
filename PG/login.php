@@ -14,8 +14,8 @@ $email = "";
 $password = "";
 
 
-    $email = $_GET['e'];
-    $password = $_GET['p'];
+    $email = $_POST['e'];
+    $password = $_POST['p'];
 
     $userTools = new UserTools();
     if($userTools->login($email, $password)){
