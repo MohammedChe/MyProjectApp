@@ -20,10 +20,10 @@ $password = "";
     $userTools = new UserTools();
     if($userTools->login($email, $password)){
         //successful login, redirect them to a page
-        echo = "login";
+        echo "login";
     }else{
         $error = "Incorrect email or password. Please try again.";
-        echo = $error;
+        echo $error;
     }
 
 ?>
