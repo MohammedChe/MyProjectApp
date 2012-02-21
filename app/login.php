@@ -21,9 +21,15 @@ if (isset($_GET["email"])  && isset($_GET["password"]) ){
     $password = $_GET["password"];
 
     $userTools = new UserTools();
-    $result = $userTools->login($email, $password)
     
-    echo $result;
+    if($userTools->login($email, $password))
+    {
+    	echo "1";
+    }
+    else
+    {
+        echo "0";
+    }
 }
 
 ?>
