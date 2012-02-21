@@ -15,10 +15,10 @@ $password = "";
 
 
 //check to see if they've submitted the login form
-if(isset($_GET['email']) && isset($_GET['password'])) {
+if (isset($_GET["email"])  && isset($_GET["password"]) ){
 
-    $email = $_GET['email'];
-    $password = $_GET['password'];
+    $email = $_GET["email"];
+    $password = $_GET["password"];
 
     $userTools = new UserTools();
     $result = $userTools->login($email, $password)
