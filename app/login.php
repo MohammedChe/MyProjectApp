@@ -14,16 +14,16 @@ $email = "";
 $password = "";
 
 
-    $email = $_POST['e'];
-    $password = $_POST['p'];
+//check to see if they've submitted the login form
+if(isset($_GET['email']) && isset($_GET['password'])) {
+
+    $email = $_GET['email'];
+    $password = $_GET['password'];
 
     $userTools = new UserTools();
-    if($userTools->login($email, $password)){
-        //successful login, redirect them to a page
-        echo "login";
-    }else{
-        $error = "Incorrect email or password. Please try again.";
-        echo $error;
-    }
+    $result = $userTools->login($email, $password)
+    
+    echo $result;
+}
 
 ?>
