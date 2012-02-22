@@ -17,7 +17,7 @@ else{
 
 	$recentMarks = $userTools->getRecentBookmarks(12, $user->id);
 
-	echo $recentMarks;
+	echo json_encode($recentMarks);
 }
 	    
 
