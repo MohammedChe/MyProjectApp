@@ -23,7 +23,7 @@ else {
 
     //prep the data for saving in a new user object
     $data['title'] = $title;
-    $data['owner'] = $user;
+    $data['owner'] = $user->id;
     
     //create the new user object
     $newCat = new Category($data);

@@ -28,7 +28,7 @@ else {
     if (isset($checkedURL) && $checkedURL != false) {
         //prep the data for saving in a new user object
         $data['category'] = $cat;
-        $data['owner'] = $user;
+        $data['owner'] = $user->id;
         $data['url'] = $checkedURL;
         $data['note'] = $note;
 
