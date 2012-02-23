@@ -17,9 +17,9 @@ else {
     $user = unserialize($_SESSION['user']);
 
     
-    $url = $_GET['url'];
-    $cat = $_GET['select-choice-a'];
-    $note = $_GET['note'];
+    $url = $_GET['u'];
+    $cat = $_GET['c'];
+    $note = $_GET['n'];
 
         //initialize variables for form validation
     $userTools = new UserTools();
