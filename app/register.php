@@ -16,6 +16,8 @@ else{
         //retrieve the $_POST variables
         $email = $_GET['e'];
         $password = $_GET['p'];
+        
+        $success = true;
 
         $userTools = new UserTools();
 
@@ -23,11 +25,13 @@ else{
         //check to see if user name already exists
         if($userTools->checkEmailExists($email))
         {
+        	$success = false;
             echo = "This email is already registered";
         }
 
         if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE)
         {
+        	$success = false;
             echo = "Email address not valid";
         }
 
