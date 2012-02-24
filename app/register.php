@@ -26,13 +26,13 @@ else{
         if($userTools->checkEmailExists($email))
         {
         	$success = false;
-            echo = "This email is already registered";
+            echo "This email is already registered";
         }
 
         if ( filter_var($email, FILTER_VALIDATE_EMAIL)  == FALSE)
         {
         	$success = false;
-            echo = "Email address not valid";
+            echo "Email address not valid";
         }
 
         if($success)
