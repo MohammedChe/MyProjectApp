@@ -11,9 +11,10 @@ require_once 'includes/global.inc.php';
 if (isset($_SESSION['logged_in'])) {
     header('Location: index.php');
 }
-else{
+else
+{
 
-        //retrieve the $_POST variables
+    //retrieve the $_POST variables
         $email = $_GET['e'];
         $password = $_GET['p'];
         
@@ -37,23 +38,22 @@ else{
 
         if($success)
         {
-            //prep the data for saving in a new user object
-            $data['email'] = $email;
-            $data['password'] = md5($password); //encrypt the password for storage
+        //prep the data for saving in a new user object
+        $data['email'] = $email;
+        $data['password'] = md5($password); //encrypt the password for storage
 
-            //create the new user object
-            $newUser = new User($data);
+        //create the new user object
+        $newUser = new User($data);
 
-            //save the new user to the database
-            $newUser->save(true);
+        //save the new user to the database
+        $newUser->save(true);
 
-            //log them in
-            $userTools->login($email, $password);
+        //log them in
+        $userTools->login($email, $password);
             
-            echo "1";
-        }
-
+          echo "1";
     }
+
 }
 
 ?>
