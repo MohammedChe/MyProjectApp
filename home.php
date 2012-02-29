@@ -228,16 +228,15 @@ else {
 
     </div><!-- /content -->
 
-    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+    <div data-role="footer" data-id="tabs" data-position="fixed">
+        <div data-role="navbar">
             <ul>
-                <li><a href="#" data-icon="custom" class="latestIco ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories" data-icon="custom" class="categoriesIco" >Categories</a></li>
-                <li><a href="#add" data-icon="custom" class="addIco" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-icon="custom" class="logoutIco" data-ajax="false">Logout</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
+                <li><a href="#categories" >Categories</a></li>
+                <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-ajax="false">Logout</a></li>
             </ul>
-        </div>
-
+        </div><!-- /navbar -->
     </div>
 
 </div><!-- /page -->
@@ -415,16 +414,15 @@ else {
 
     </div><!-- /content -->
 
-    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+    <div data-role="footer" data-id="tabs" data-position="fixed">
+        <div data-role="navbar">
             <ul>
-                <li><a href="#home" data-icon="custom" class="latestIco">Recent</a></li>
-                <li><a href="#" data-icon="custom" class="categoriesIco ui-btn-active ui-state-persist" >Categories</a></li>
-                <li><a href="#add" data-icon="custom" class="addIco" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-icon="custom" class="logoutIco" data-ajax="false">Logout</a></li>
+                <li><a href="#home" >Recent</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-ajax="false">Logout</a></li>
             </ul>
-        </div>
-
+        </div><!-- /navbar -->
     </div>
 </div><!-- /page -->
 
