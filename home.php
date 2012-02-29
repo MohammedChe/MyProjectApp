@@ -85,7 +85,7 @@ else {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>CloudMark</title>
+    <title>MarkCloud</title>
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
@@ -232,7 +232,7 @@ else {
         <div data-role="navbar">
             <ul>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories" data-transition="flow" >Categories</a></li>
+                <li><a href="#categories" data-transition="none" >Categories</a></li>
                 <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false">Logout</a></li>
             </ul>
@@ -417,7 +417,7 @@ else {
     <div data-role="footer" data-id="tabs" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#home" data-transition="flow">Recent</a></li>
+                <li><a href="#home" data-transition="none">Recent</a></li>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
                 <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false">Logout</a></li>

@@ -204,7 +204,7 @@ else{
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>MarkCloud</h4>
+        <h4>MohammedChe</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
@@ -221,7 +221,7 @@ else{
         <p>This is the login page</p>
         <?php
         if(isset($error)) {
-            echo $error;
+            echo '<div class"error">'. $error . '</div>';
         }?>
         <form id="formLogin" action="" data-ajax="false" method="post">
             <label for="email">Email:</label>
@@ -234,7 +234,7 @@ else{
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>CloudMark</h4>
+        <h4>MarkCloud</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
@@ -250,7 +250,7 @@ else{
         <p>This is the register page</p>
         <?php
     if(isset($errorReg)) {
-        echo $errorReg;
+        echo '<div class"error">'. $errorReg . '</div>';
     }?>
         <form id="formRegister" class="validate" action="" data-ajax="false"  method="post">
             <label for="email">Email:</label>
