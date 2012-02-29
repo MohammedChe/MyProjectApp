@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="none">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
     </list>
@@ -37,7 +37,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="541" column="31" selection-start="21175" selection-end="21175" vertical-scroll-proportion="0.7351525">
+            <state line="559" column="3" selection-start="21652" selection-end="21652" vertical-scroll-proportion="1.6500802">
               <folding />
             </state>
           </provider>
@@ -376,7 +376,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="541" column="31" selection-start="21175" selection-end="21175" vertical-scroll-proportion="0.7351525">
+        <state line="559" column="3" selection-start="21652" selection-end="21652" vertical-scroll-proportion="1.6500802">
           <folding />
         </state>
       </provider>

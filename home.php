@@ -492,8 +492,8 @@ else {
                 <h2>Add Bookmark</h2>
 
                 <p>Enter the URL and choose a category.</p>
-                <p class="smallText">You can add a note with your bookmark to remind you why you saved it.</p>
-                <p class="smallText">Or skip this and add a category.</p>
+                <p class="smallText">Or you can add a new Category.</p>
+                <p class="smallText">You can also add a note with your bookmark to remind you why you saved it.</p>
 
                 <div data-role="fieldcontain">
                     <label for="url">Save URL:</label>
@@ -529,6 +529,9 @@ else {
                     </select>
 
 
+                    <label for="or">Or Create A New Category:</label>
+                    <input type="text" name="or" id="or" value=""  />
+
                     <label for="note">Note:</label>
                     <input type="text" name="note" id="note" value=""  />
                     <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
@@ -537,6 +540,7 @@ else {
 
             </form>
         </div>
+        <!--
         <div class="content-primary">
             <form id="formCat" method="post" class="validate" data-ajax="false">
 
@@ -553,7 +557,7 @@ else {
             </form>
 
         </div>
-
+-->
     </div><!-- /content -->
 
     <div data-role="footer">
