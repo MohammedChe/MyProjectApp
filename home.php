@@ -16,57 +16,33 @@ if (!isset($_SESSION['logged_in'])) {
 else {
     $user = unserialize($_SESSION['user']);
 
-    $title = "";
-    $errorCat = "";
     $errorMark = "";
-    $url = "";
-
-    //check to see that the form has been submitted
-    if (isset($_POST['submit-form3'])) {
-
-        //retrieve the $_POST variables
-        $title = $_POST['title'];
-        $owner = $_POST['owner'];
-
-        //initialize variables for form validation
-        if(empty($title)){
-            $success = false;
-            $errorCat = "The title is empty!!";
-        }
-
-        else{
-            $success = true;
-        }
-
-        $userTools = new UserTools();
-
-        if ($success) {
-            //prep the data for saving in a new user object
-            $data['title'] = $title;
-            $data['owner'] = $owner;
-            //create the new user object
-            $newCat = new Category($data);
-
-            //save the new user to the database
-            $newCat->save(true);
-
-            //redirect them to a welcome page
-            header('Location: index.php');
-            exit;
-        }
-
-    }
 
     if (isset($_POST['submit-form2'])) {
 
         //retrieve the $_POST variables
         $url = $_POST['url'];
         $owner = $_POST['owner'];
-        $cat = $_POST['select_choice_a'];
+        $cat = $_POST['cat'];
         $note = $_POST['note'];
+
+        if(empty($cat)){
+            $cat = $_POST['select_choice_a'];
+        }
+        else
+        {
+            $data['title'] = $cat;
+            $data['owner'] = $owner;
+
+            $newCat = new Category($data);
+
+            $newCat->save(true);
+            $cat = $newCat->id;
+        }
 
         //initialize variables for form validation
         $userTools = new UserTools();
+
         $checkedURL = $userTools->checkURL($url);
 
         if (isset($checkedURL) && $checkedURL != false) {
@@ -82,7 +58,7 @@ else {
             $newBookmark->save(true);
 
             //redirect them to a welcome page
-            header('Location: index.php');
+            header('Location: home.php');
             exit;
 
         }
@@ -124,29 +100,14 @@ else {
 
         $().ready(function() {
 
-            $("#formCat").validate({
-                rules: {
-                    title: {
-                        required: true
-                    }
-                },
-                messages: {
-                    title: "The title cant be blank"
-                }
-            });
-
             $("#formMarks").validate({
                 rules: {
                     url: {
                         required: true
-                    },
-                    select_choice_a: {
-                        required: true
                     }
                 },
                 messages: {
-                    url: "The URL cant be blank",
-                    select_choice_a: "Please Choose a Category"
+                    url: "The URL can't be blank"
                 }
             });
 
@@ -529,8 +490,8 @@ else {
                     </select>
 
 
-                    <label for="or">Or Create A New Category:</label>
-                    <input type="text" name="or" id="or" value=""  />
+                    <label for="cat">Category:</label>
+                    <input type="text" name="cat" id="cat" value=""  />
 
                     <label for="note">Note:</label>
                     <input type="text" name="note" id="note" value=""  />
@@ -551,7 +512,7 @@ else {
                 <div data-role="fieldcontain">
                     <label for="title">Title:</label>
                     <input type="text" class="required" name="title" id="title" />
-                    <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
+                    <input type="hidden" value="<?php //echo $user->id; ?>" name="owner"/>
                     <button type="submit" name="submit-form3"  >Add</button>
                 </div>
             </form>
