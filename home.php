@@ -243,7 +243,7 @@ else {
                     else{
                         ?>
 
-                        <li><a href="#">
+                        <li><a href="#addCategory">
                             <img src="images/default.png" />
                             <h3 class="addLeftMargin">None</h3>
                             <p class="addLeftMargin">Add a New Bookmark</p>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="none">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,7 +29,7 @@
       <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="23" selection-start="6674" selection-end="6674" vertical-scroll-proportion="-0.32423756">
+            <state line="174" column="68" selection-start="5356" selection-end="5356" vertical-scroll-proportion="1.1075442">
               <folding />
             </state>
           </provider>
@@ -36,7 +38,7 @@
       <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="524" column="106" selection-start="20389" selection-end="20389" vertical-scroll-proportion="-1.5833334">
+            <state line="258" column="18" selection-start="8122" selection-end="8122" vertical-scroll-proportion="-161.25">
               <folding />
             </state>
           </provider>
@@ -360,14 +362,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="524" column="106" selection-start="20389" selection-end="20389" vertical-scroll-proportion="-1.5833334">
+        <state line="258" column="18" selection-start="8122" selection-end="8122" vertical-scroll-proportion="-161.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="23" selection-start="6674" selection-end="6674" vertical-scroll-proportion="-0.32423756">
+        <state line="174" column="68" selection-start="5356" selection-end="5356" vertical-scroll-proportion="1.1075442">
           <folding />
         </state>
       </provider>
