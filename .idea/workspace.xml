@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeCat.php" afterPath="$PROJECT_DIR$/removeCat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeMark.php" afterPath="$PROJECT_DIR$/removeMark.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +28,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="50" selection-start="1492" selection-end="1531" vertical-scroll-proportion="-15.625">
+            <state line="115" column="20" selection-start="3069" selection-end="3069" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
@@ -38,7 +37,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="425" column="108" selection-start="16784" selection-end="16784" vertical-scroll-proportion="0.4574639">
+            <state line="519" column="21" selection-start="20369" selection-end="20369" vertical-scroll-proportion="1.024077">
               <folding />
             </state>
           </provider>
@@ -73,10 +72,10 @@
         <option value="$PROJECT_DIR$/styles/mobile.css" />
         <option value="$PROJECT_DIR$/home3.php" />
         <option value="$PROJECT_DIR$/wdsfd" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$USER_HOME$/Dropbox/Alan Shared/source.php" />
         <option value="$PROJECT_DIR$/removeCat.php" />
         <option value="$PROJECT_DIR$/removeMark.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/home.php" />
       </list>
     </option>
@@ -329,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="50" selection-start="1492" selection-end="1531" vertical-scroll-proportion="-15.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/removeCat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="26" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
@@ -357,9 +349,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="20" selection-start="3069" selection-end="3069" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="425" column="108" selection-start="16784" selection-end="16784" vertical-scroll-proportion="0.4574639">
+        <state line="519" column="21" selection-start="20369" selection-end="20369" vertical-scroll-proportion="1.024077">
           <folding />
         </state>
       </provider>
