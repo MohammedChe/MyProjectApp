@@ -235,7 +235,7 @@ else {
                 <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
                 <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
                 <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php"  id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="logout.php"  id="latestIco" data-icon="custom">Logout</a></li>
             </ul>
         </div>
 
@@ -467,7 +467,7 @@ else {
                 <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
 
-                <label for="select_choice_a" class="select">In:</label>
+                <label for="select_choice_a" class="select">In Category:</label>
                 <select class="required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
                     <option>Categories</option>
                     <?php
@@ -486,7 +486,7 @@ else {
                 </select>
 
 
-                <label for="cat">Category:</label>
+                <label for="cat">Or Add New:</label>
                 <input type="text" name="cat" id="cat" value=""  />
 
                 <label for="note">Note:</label>
