@@ -224,7 +224,7 @@ else{
         if(isset($error)) {
             echo $error;
         }?>
-        <form id="formLogin" action="login.php" data-ajax="false" method="post">
+        <form id="formLogin" action="" data-ajax="false" method="post">
             <label for="email">Email:</label>
             <input class="required email" type="text" name="email" id="email" value=""  />
             <label for="password">Password:</label>
@@ -253,7 +253,7 @@ else{
     if(isset($errorReg)) {
         echo $errorReg;
     }?>
-        <form id="formRegister" class="validate" action="register.php" data-ajax="false"  method="post">
+        <form id="formRegister" class="validate" action="" data-ajax="false"  method="post">
             <label for="email">Email:</label>
             <input type="text" class="required email" name="email" id="email" value=""  />
             <label for="password">Password:</label>
