@@ -479,22 +479,6 @@ else {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -->
 <div data-role="page" id="add">
-    <!--    <script type="text/javascript">-->
-    <!---->
-    <!--        function PasteFromClipboard()-->
-    <!---->
-    <!--        {-->
-    <!---->
-    <!--            document.addBookmarkForm.url.focus();-->
-    <!---->
-    <!--            PastedText = document.addBookmarkForm.url.createTextRange();-->
-    <!---->
-    <!--            PastedText.execCommand("Paste");-->
-    <!---->
-    <!--        }-->
-    <!---->
-    <!--    </script>-->
-
 
     <div data-role="header">
         <h1>Add</h1>
@@ -530,9 +514,15 @@ else {
                     <select class="required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
                         <option>Categories</option>
                         <?php
-                        foreach ($cat as $key => $value)
-                        {
-                            echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                        if (isset($cat[0])) {
+                            foreach ($cat as $key => $value)
+                            {
+                                echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                            }
+                        }
+
+                        else{
+                            echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
                         }
 
                         ?>

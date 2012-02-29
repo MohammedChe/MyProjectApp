@@ -13,6 +13,97 @@ require_once 'includes/global.inc.php';
 if (isset($_SESSION['logged_in'])) {
     header('Location: home.php');
 }
+else{
+
+    $error = "";
+    $email = "";
+    $password = "";
+
+
+    //check to see if they've submitted the login form
+    if(isset($_POST['submit-login'])) {
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $userTools = new UserTools();
+        if($userTools->login($email, $password)){
+            //successful login, redirect them to a page
+            header('Location: home.php');
+            exit;
+        }else{
+            $error = "Incorrect email or password. Please try again.";
+        }
+    }
+
+    $errorReg = "";
+    $emailReg = "";
+    $passwordReg = "";
+    $password_confirmReg = "";
+
+
+    //////////////////////////////////////////////////////////
+    //check to see that the form has been submitted
+    if(isset($_POST['submit-form'])) {
+
+        //retrieve the $_POST variables
+        $emailReg = $_POST['email'];
+        $passwordReg = $_POST['password'];
+        $password_confirmReg = $_POST['confirm_password'];
+
+        //initialize variables for form validation
+        $success = true;
+        $userTools = new UserTools();
+
+        //validate that the form was filled out correctly
+        //check to see if user name already exists
+        if($userTools->checkEmailExists($emailReg))
+        {
+            $errorReg .= "This email is already registered.<br/> \n\r";
+            $success = false;
+        }
+
+        if(strlen($passwordReg) < 6)
+        {
+            $errorReg .= "Password must be 6 characters or over.<br/> \n\r";
+            $success = false;
+        }
+        //check to see if passwords match
+        if($passwordReg != $password_confirmReg) {
+            $errorReg .= "Passwords do not match.<br/> \n\r";
+            $success = false;
+        }
+
+        if ( filter_var($emailReg, FILTER_VALIDATE_EMAIL)  == FALSE)
+        {
+            $errorReg .= "Email address not valid.<br/> \n\r";
+            $success = false;
+        }
+
+        if($success)
+        {
+            //prep the data for saving in a new user object
+            $data['email'] = $emailReg;
+            $data['password'] = md5($passwordReg); //encrypt the password for storage
+
+            //create the new user object
+            $newUser = new User($data);
+
+            //save the new user to the database
+            $newUser->save(true);
+
+            //log them in
+            $userTools->login($emailReg, $passwordReg);
+
+            header('Location: home.php');
+            exit;
+        }
+        else{
+            header('Location: index.php');
+        }
+
+    }
+}
 ?>
 
 <!DOCTYPE HTML>
@@ -129,6 +220,7 @@ if (isset($_SESSION['logged_in'])) {
 
     <div data-role="content">
         <p>This is the login page</p>
+        <?php$error?>
         <form id="formLogin" action="login.php" data-ajax="false" method="post">
             <label for="email">Email:</label>
             <input class="required email" type="text" name="email" id="email" value=""  />
@@ -149,11 +241,12 @@ if (isset($_SESSION['logged_in'])) {
 
     <div data-role="header" data-position="fixed">
         <a href="#intro" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
-        <h1>Login</h1>
+        <h1>Register</h1>
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>This is the login page</p>
+        <p>This is the register page</p>
+        <?php$errorReg?>
         <form id="formRegister" class="validate" action="register.php" data-ajax="false"  method="post">
             <label for="email">Email:</label>
             <input type="text" class="required email" name="email" id="email" value=""  />
