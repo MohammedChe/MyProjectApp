@@ -417,7 +417,7 @@ else {
     <div data-role="footer" data-id="tabs" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#home" data-transition="back">Recent</a></li>
+                <li><a href="#home" data-rel="back">Recent</a></li>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
                 <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false">Logout</a></li>
