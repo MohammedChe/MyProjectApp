@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="" />
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+    </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,25 +36,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="-1.7094703">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="removeMark.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/removeMark.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/mobile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="15" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
+            <state line="206" column="41" selection-start="6651" selection-end="6651" vertical-scroll-proportion="0.3611557">
               <folding />
             </state>
           </provider>
@@ -69,6 +53,9 @@
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
     <option name="UPDATE_CHANGES_POLICY" value="STASH" />
     <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/home.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -350,6 +337,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/Category.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="50" selection-start="1492" selection-end="1531" vertical-scroll-proportion="-15.625">
@@ -359,7 +353,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="-1.7094703">
+        <state line="206" column="41" selection-start="6651" selection-end="6651" vertical-scroll-proportion="0.3611557">
           <folding />
         </state>
       </provider>

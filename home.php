@@ -204,7 +204,7 @@ else {
                     else{
                         ?>
 
-                        <li><a href="#addCategory">
+                        <li><a href="#add">
                             <img src="images/default.png" />
                             <h3 class="addLeftMargin">None</h3>
                             <p class="addLeftMargin">Add a New Bookmark</p>
@@ -446,61 +446,57 @@ else {
     </div><!-- /header -->
 
     <div data-role="content">
+        <form id="formMarks" class="validate" name="addBookmarkForm" method="post" data-ajax="false">
+            <h2>Add Bookmark</h2>
 
-        <div class="content-secondary">
-            <form id="formMarks" class="validate" name="addBookmarkForm" method="post" data-ajax="false">
+            <p>Enter the URL and choose a category.</p>
+            <p class="smallText">Or you can add a new Category.</p>
+            <p class="smallText">You can also add a note with your bookmark to remind you why you saved it.</p>
 
-                <h2>Add Bookmark</h2>
+            <div data-role="fieldcontain">
+                <label for="url">Save URL:</label>
+                <input class="required" type="text" name="url" id="url" value=""  />
 
-                <p>Enter the URL and choose a category.</p>
-                <p class="smallText">Or you can add a new Category.</p>
-                <p class="smallText">You can also add a note with your bookmark to remind you why you saved it.</p>
+                <?php
+                if(!empty($errorMark)){
+                    echo "<p class='error'>". $errorMark ."</p>";
+                }
 
-                <div data-role="fieldcontain">
-                    <label for="url">Save URL:</label>
-                    <input class="required" type="text" name="url" id="url" value=""  />
+                ?>
 
+
+                <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
+
+
+                <label for="select_choice_a" class="select">In:</label>
+                <select class="required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
+                    <option>Categories</option>
                     <?php
-                    if(!empty($errorMark)){
-                        echo "<p class='error'>". $errorMark ."</p>";
+                    if (isset($cat[0])) {
+                        foreach ($cat as $key => $value)
+                        {
+                            echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
+                        }
+                    }
+
+                    else{
+                        echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
                     }
 
                     ?>
+                </select>
 
 
-                    <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
+                <label for="cat">Category:</label>
+                <input type="text" name="cat" id="cat" value=""  />
 
+                <label for="note">Note:</label>
+                <input type="text" name="note" id="note" value=""  />
+                <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
+                <button type="submit" name="submit-form2" >Save</button>
+            </div>
 
-                    <label for="select_choice_a" class="select">In:</label>
-                    <select class="required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
-                        <option>Categories</option>
-                        <?php
-                        if (isset($cat[0])) {
-                            foreach ($cat as $key => $value)
-                            {
-                                echo "<option value=\"" . htmlentities($value["id"]) . "\">" . htmlentities($value["title"]) . "</option>";
-                            }
-                        }
-
-                        else{
-                            echo "<option value=\"" . htmlentities($cat["id"]) . "\">" . htmlentities($cat["title"]) . "</option>";
-                        }
-
-                        ?>
-                    </select>
-
-
-                    <label for="cat">Category:</label>
-                    <input type="text" name="cat" id="cat" value=""  />
-
-                    <label for="note">Note:</label>
-                    <input type="text" name="note" id="note" value=""  />
-                    <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
-                    <button type="submit" name="submit-form2" >Save</button>
-                </div>
-
-            </form>
-        </div>
+        </form>
         <!--
         <div class="content-primary">
             <form id="formCat" method="post" class="validate" data-ajax="false">
