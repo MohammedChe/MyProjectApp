@@ -229,13 +229,12 @@ else {
     </div><!-- /content -->
 
     <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div class="smallText" data-role="navbar" class="nav-glyphish-example" data-grid="c">
+        <div data-role="navbar" class="nav-glyphish-example" data-grid="c">
             <ul>
-
                 <li><a href="#" data-icon="custom" class="latestIco ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories" class="categoriesIco" data-icon="custom" >Categories</a></li>
-                <li><a href="#add" class="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-ajax="false" class="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="#categories" data-icon="custom" class="categoriesIco" >Categories</a></li>
+                <li><a href="#add" data-icon="custom" class="addIco" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-icon="custom" class="logoutIco" data-ajax="false">Logout</a></li>
             </ul>
         </div>
 
@@ -417,14 +416,12 @@ else {
     </div><!-- /content -->
 
     <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div class="smallText" data-role="navbar" class="nav-glyphish-example" data-grid="c">
+        <div data-role="navbar" class="nav-glyphish-example" data-grid="c">
             <ul>
-
-                <li><a href="#home" class="latestIco" data-icon="custom">Recent</a></li>
-                <li><a href="#" data-icon="custom" class="categoriesIco ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="#add" class="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-ajax="false" class="logoutIco" data-icon="custom">Logout</a></li>
-
+                <li><a href="#home" data-icon="custom" class="latestIco">Recent</a></li>
+                <li><a href="#" data-icon="custom" class="categoriesIco ui-btn-active ui-state-persist" >Categories</a></li>
+                <li><a href="#add" data-icon="custom" class="addIco" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-icon="custom" class="logoutIco" data-ajax="false">Logout</a></li>
             </ul>
         </div>
 
