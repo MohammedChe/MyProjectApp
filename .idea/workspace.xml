@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="updated add form">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/clock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/folder.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/padlock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/plus.png" />
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/mobile.css" afterPath="$PROJECT_DIR$/styles/mobile.css" />
@@ -39,19 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="419" column="29" selection-start="16291" selection-end="16291" vertical-scroll-proportion="-13.458333">
+            <state line="425" column="75" selection-start="16789" selection-end="16789" vertical-scroll-proportion="0.75922954">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobile.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobile.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/mobile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="39" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.54545456">
+            <state line="41" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,8 +85,8 @@
         <option value="$PROJECT_DIR$/removeCat.php" />
         <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/styles/mobile.css" />
+        <option value="$PROJECT_DIR$/home.php" />
       </list>
     </option>
   </component>
@@ -318,7 +314,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated add form" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated tabbar" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -333,6 +329,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="none" />
     <MESSAGE value="updated add form" />
+    <MESSAGE value="updated tabbar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -393,16 +390,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.php">
+    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="419" column="29" selection-start="16291" selection-end="16291" vertical-scroll-proportion="-13.458333">
+        <state line="41" column="10" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/mobile.css">
+    <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="39" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.54545456">
+        <state line="425" column="75" selection-start="16789" selection-end="16789" vertical-scroll-proportion="0.75922954">
           <folding />
         </state>
       </provider>

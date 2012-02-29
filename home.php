@@ -232,10 +232,10 @@ else {
         <div class="smallText" data-role="navbar" class="nav-glyphish-example" data-grid="c">
             <ul>
 
-                <li><a href="#" id="latestIco" data-icon="custom" class="ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories" id="categoriesIco" data-icon="custom" >Categories</a></li>
-                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-ajax="false" id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="#" data-icon="custom" class="latestIco ui-btn-active ui-state-persist">Recent</a></li>
+                <li><a href="#categories" class="categoriesIco" data-icon="custom" >Categories</a></li>
+                <li><a href="#add" class="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-ajax="false" class="logoutIco" data-icon="custom">Logout</a></li>
             </ul>
         </div>
 
@@ -420,10 +420,10 @@ else {
         <div class="smallText" data-role="navbar" class="nav-glyphish-example" data-grid="c">
             <ul>
 
-                <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
-                <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-ajax="false" id="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="#home" class="latestIco" data-icon="custom">Recent</a></li>
+                <li><a href="#" data-icon="custom" class="categoriesIco ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="#add" class="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-ajax="false" class="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
         </div>
