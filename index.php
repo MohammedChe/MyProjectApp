@@ -220,7 +220,10 @@ else{
 
     <div data-role="content">
         <p>This is the login page</p>
-        <?php$error?>
+        <?php
+        if(isset($error)) {
+            echo $error;
+        }?>
         <form id="formLogin" action="login.php" data-ajax="false" method="post">
             <label for="email">Email:</label>
             <input class="required email" type="text" name="email" id="email" value=""  />
@@ -246,7 +249,10 @@ else{
 
     <div data-role="content">
         <p>This is the register page</p>
-        <?php$errorReg?>
+        <?php
+    if(isset($errorReg)) {
+        echo $errorReg;
+    }?>
         <form id="formRegister" class="validate" action="register.php" data-ajax="false"  method="post">
             <label for="email">Email:</label>
             <input type="text" class="required email" name="email" id="email" value=""  />
