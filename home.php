@@ -422,8 +422,8 @@ else {
 
                 <li><a href="#home" class="latestIco" data-icon="custom">Recent</a></li>
                 <li><a href="#" data-icon="custom" class="categoriesIco ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="#add" class="addIco" data-icon="custom">Add</a></li>
-                <li><a href="logout.php" class="logoutIco" data-icon="custom">Logout</a></li>
+                <li><a href="#add" class="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-ajax="false" class="logoutIco" data-icon="custom">Logout</a></li>
 
             </ul>
         </div>
@@ -434,9 +434,7 @@ else {
 
 <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////START OF ADD PAGE////////////////////////////////////////////////////////<li><a href="#add" class="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-ajax="false" class="logoutIco" data-icon="custom">Logout</a></li>
-
+/////////////////////////////////////////////START OF ADD PAGE////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 -->

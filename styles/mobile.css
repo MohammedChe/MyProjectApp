@@ -51,10 +51,9 @@ label{
 }
 .addIco .ui-icon {
     background:  url(../images/plus.png)) 50% 50% no-repeat;
-    background-size: 26px 26px;
 }
 .logoutIco .ui-icon {
-    background:  url(../images/padlock.png)) 50% 50% no-repeat;
+    background:  url(../images/folder.png)) 50% 50% no-repeat;
     background-size: 26px 26px;
 }
 
