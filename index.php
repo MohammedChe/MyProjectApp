@@ -113,7 +113,7 @@ else{
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>CloudMark</title>
+    <title>MarkCloud</title>
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
@@ -185,7 +185,7 @@ else{
 <div data-role="page" id="intro">
 
     <div data-role="header">
-        <h1>CloudMark</h1>
+        <h1>MarkCloud</h1>
     </div><!-- /header -->
 
     <div data-role="content">
@@ -204,7 +204,7 @@ else{
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>CloudMark|MohammedChe</h4>
+        <h4>MarkCloud</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
@@ -265,7 +265,7 @@ else{
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>CloudMark|MohammedChe</h4>
+        <h4>MarkCloud</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 
