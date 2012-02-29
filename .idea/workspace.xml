@@ -37,7 +37,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="234" column="63" selection-start="7332" selection-end="7332" vertical-scroll-proportion="0.39698493">
+            <state line="234" column="63" selection-start="7328" selection-end="7332" vertical-scroll-proportion="0.44723618">
               <folding />
             </state>
           </provider>
@@ -313,7 +313,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated tabbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated transitions" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -329,6 +329,7 @@
     <MESSAGE value="none" />
     <MESSAGE value="updated add form" />
     <MESSAGE value="updated tabbar" />
+    <MESSAGE value="updated transitions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -398,7 +399,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="63" selection-start="7332" selection-end="7332" vertical-scroll-proportion="0.39698493">
+        <state line="234" column="63" selection-start="7328" selection-end="7332" vertical-scroll-proportion="0.44723618">
           <folding />
         </state>
       </provider>
