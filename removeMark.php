@@ -20,7 +20,7 @@ else{
   $userTools->removeBookmark($m, $user->id);
 
   }
-    header('Location: index.php');
+    header('Location: home.php');
     exit;
 }
 ?>

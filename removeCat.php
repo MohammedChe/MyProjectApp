@@ -20,7 +20,7 @@ else{
   $userTools->removeCategory($c, $user->id);
 
   }
-    header('Location: index.php');
+    header('Location: home.php');
     exit;
 }
 ?>
