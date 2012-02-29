@@ -526,22 +526,7 @@ else {
                         }
 
                         ?>
-
-                        <form id="formCat" method="post" class="validate" data-ajax="false">
-
-                            <h2>Add Category</h2>
-
-                            <p>Enter a title for your new category.</p>
-
-                            <div data-role="fieldcontain">
-                                <label for="title">Title:</label>
-                                <input type="text" class="required" name="title" id="title" />
-                                <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
-                                <button type="submit" name="submit-form3"  >Add</button>
-                            </div>
-                        </form>
                     </select>
-
 
 
                     <label for="note">Note:</label>
