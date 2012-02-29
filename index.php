@@ -234,7 +234,7 @@ else{
     </div><!-- /content -->
 
     <div data-role="footer" data-position="fixed">
-        <h4>CloudMark|MohammedChe</h4>
+        <h4>CloudMark</h4>
     </div><!-- /footer -->
 </div><!-- /page -->
 

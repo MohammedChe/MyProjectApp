@@ -41,19 +41,19 @@ label{
     -webkit-border-radius: 0 !important;
     border-radius: 0 !important;
 }
-.latestIco .ui-icon {
+#latestIco .ui-icon {
     background:  url(../images/clock.png) 50% 50% no-repeat;
     background-size: 26px 26px;
 }
-.categoriesIco .ui-icon {
+#categoriesIco .ui-icon {
     background:  url(../images/folder.png) 50% 50% no-repeat;
     background-size: 26px 26px;
 }
-.addIco .ui-icon {
+#addIco .ui-icon {
     background:  url(../images/clock.png)) 50% 50% no-repeat;
     background-size: 26px 26px;
 }
-.logoutIco .ui-icon {
+#logoutIco .ui-icon {
     background:  url(../images/clock.png)) 50% 50% no-repeat;
     background-size: 26px 26px;
 }
