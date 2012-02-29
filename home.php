@@ -85,7 +85,7 @@ else {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>MarkCloud</title>
+    <title>CloudMark</title>
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
     <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
@@ -232,7 +232,7 @@ else {
         <div data-role="navbar">
             <ul>
                 <li><a href="#" class="ui-btn-active ui-state-persist">Recent</a></li>
-                <li><a href="#categories" >Categories</a></li>
+                <li><a href="#categories" data-transition="flow" >Categories</a></li>
                 <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
                 <li><a href="logout.php" data-ajax="false">Logout</a></li>
             </ul>
@@ -414,18 +414,15 @@ else {
 
     </div><!-- /content -->
 
-    <div data-role="footer" class="nav-glyphish-example" data-id="tabs" data-position="fixed">
-        <div data-role="navbar" class="nav-glyphish-example" data-grid="c">
+    <div data-role="footer" data-id="tabs" data-position="fixed">
+        <div data-role="navbar">
             <ul>
-
-                <li><a href="#home" id="latestIco" data-icon="custom">Recent</a></li>
-                <li><a href="#" id="categoriesIco" data-icon="custom" class="ui-btn-active ui-state-persist">Categories</a></li>
-                <li><a href="#add" id="addIco" data-icon="custom" data-rel="dialog" data-transition="flip">Add</a></li>
-                <li><a href="logout.php" data-ajax="false" id="logoutIco" data-icon="custom">Logout</a></li>
-
+                <li><a href="#home" data-transition="back">Recent</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist">Categories</a></li>
+                <li><a href="#add" data-rel="dialog" data-transition="flip">Add</a></li>
+                <li><a href="logout.php" data-ajax="false">Logout</a></li>
             </ul>
-        </div>
-
+        </div><!-- /navbar -->
     </div>
 </div><!-- /page -->
 
