@@ -169,7 +169,7 @@ else {
                             <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
                             <p class="addLeftMargin note"><?php echo $value["note"]; ?></p>
                         </div>
-                    </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                    </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup" data-ajax="false">Delete Bookmark
                     </a></li>
 
                     <?php
@@ -192,7 +192,7 @@ else {
                             <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
                             <p class="addLeftMargin note"><?php echo $recentMarks["note"]; ?></p>
                         </div>
-                    </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                    </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete Bookmark
                     </a></li>
 
 
@@ -269,9 +269,9 @@ else {
 
                     ?>
 
-                    <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
+                    <li data-theme="a"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                        </span><span class="ui-icon ui-icon-plus ui-icon-shadow" ><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false">Delete</a></span></li>
+                    </span><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false">Delete <?php echo htmlentities($value["title"])?></a></li>
 
                     <?php
 
@@ -289,7 +289,7 @@ else {
                                 <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
-                            </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete Bookmark
                             </a></li>
 
                             <?php
@@ -309,7 +309,7 @@ else {
                                 <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
-                            </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete Bookmark
                             </a></li>
                             <?php
 
@@ -337,9 +337,9 @@ else {
 
                     ?>
 
-                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
+                    <li data-theme="a"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                    </span><span class="ui-icon ui-icon-plus ui-icon-shadow" ><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false">Delete</a></span></li>
+                    </span><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false">Delete <?php echo htmlentities($cat["title"])?></a></li>
 
                     <?php
 
@@ -357,7 +357,7 @@ else {
                                 <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
-                            </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete Bookmark
                             </a></li>
 
                             <?php
@@ -377,7 +377,7 @@ else {
                                 <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
-                            </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete Bookmark
                             </a></li>
                             <?php
 
