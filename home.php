@@ -269,9 +269,9 @@ else {
 
                     ?>
 
-                    <li data-theme="a"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
+                    <li data-theme="a"><a href="#"> <?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                    </span><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false">Delete <?php echo htmlentities($value["title"])?></a></li>
+                    </span></a><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false">Delete <?php echo htmlentities($value["title"])?></a></li>
 
                     <?php
 
@@ -337,9 +337,9 @@ else {
 
                     ?>
 
-                    <li data-theme="a"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
+                    <li data-theme="a"><a href="#"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
-                    </span><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false">Delete <?php echo htmlentities($cat["title"])?></a></li>
+                    </span></a><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false">Delete <?php echo htmlentities($cat["title"])?></a></li>
 
                     <?php
 
