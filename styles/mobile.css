@@ -90,6 +90,10 @@ label.error {
         margin-top: -10px;
     }
 
+    h3{
+        font-size: 60%;
+    }
+
     .addLeftMargin{
         margin-left: 0px;
     }
