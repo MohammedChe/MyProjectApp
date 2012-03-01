@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +36,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="274" column="0" selection-start="8918" selection-end="8918" vertical-scroll-proportion="-2.9329984">
+            <state line="341" column="31" selection-start="12198" selection-end="12198" vertical-scroll-proportion="1.3634841">
               <folding />
             </state>
           </provider>
@@ -313,7 +312,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="none" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated List Dividers" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -330,6 +329,7 @@
     <MESSAGE value="updated tabbar" />
     <MESSAGE value="updated transitions" />
     <MESSAGE value="none" />
+    <MESSAGE value="Updated List Dividers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -391,7 +391,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="0" selection-start="8918" selection-end="8918" vertical-scroll-proportion="-2.9329984">
+        <state line="341" column="31" selection-start="12198" selection-end="12198" vertical-scroll-proportion="1.3634841">
           <folding />
         </state>
       </provider>
