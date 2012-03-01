@@ -221,7 +221,7 @@ else{
         <p>This is the login page</p>
         <?php
         if(isset($error)) {
-            echo '<div class"error">'. $error . '</div>';
+            echo '<div class="error">'. $error . '</div>';
         }?>
         <form id="formLogin" action="" data-ajax="false" method="post">
             <label for="email">Email:</label>
@@ -250,7 +250,7 @@ else{
         <p>This is the register page</p>
         <?php
     if(isset($errorReg)) {
-        echo '<div class"error">'. $errorReg . '</div>';
+        echo '<div class="error">'. $errorReg . '</div>';
     }?>
         <form id="formRegister" class="validate" action="" data-ajax="false"  method="post">
             <label for="email">Email:</label>

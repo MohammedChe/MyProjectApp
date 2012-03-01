@@ -164,7 +164,7 @@ else {
 
 
                         <li><a href="<?php echo htmlentities($value["url"]);?>">
-                            <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
+                            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <div class="desc">
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
@@ -187,7 +187,7 @@ else {
                         ?>
 
                         <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
-                            <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
+                            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
                             <div class="desc">
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
