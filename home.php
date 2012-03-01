@@ -143,87 +143,84 @@ else {
 
 
 
-        <div class="content-primary">
-            <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
+        <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
 
 
-                <?php
+            <?php
 
 
-                if(isset($recentMarks[0])) {
+            if(isset($recentMarks[0])) {
 
 
-                    foreach ($recentMarks as $key => $value)
-                    {
-                        $scheme = parse_url($value["url"], PHP_URL_SCHEME);
-                        $host = parse_url($value["url"], PHP_URL_HOST);
-                        $theURL = $scheme . "://" . $host;
+                foreach ($recentMarks as $key => $value)
+                {
+                    $scheme = parse_url($value["url"], PHP_URL_SCHEME);
+                    $host = parse_url($value["url"], PHP_URL_HOST);
+                    $theURL = $scheme . "://" . $host;
 
-                        $catTitle = $userTools->getCatTitle($value["category"], $user->id);
-                        ?>
+                    $catTitle = $userTools->getCatTitle($value["category"], $user->id);
+                    ?>
 
 
-                        <li><a href="<?php echo htmlentities($value["url"]);?>">
-                            <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
-                            <div class="desc">
-                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
-                                <p class="addLeftMargin note"><?php echo $value["note"]; ?></p>
-                            </div>
-                        </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
-                        </a></li>
+                    <li><a href="<?php echo htmlentities($value["url"]);?>">
+                        <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
+                        <div class="desc">
+                            <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                            <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
+                            <p class="addLeftMargin note"><?php echo $value["note"]; ?></p>
+                        </div>
+                    </a><a href="removeMark.php?m=<?php echo $value["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                    </a></li>
 
-                        <?php
-                    }
+                    <?php
                 }
+            }
+            else{
+
+                if(isset($recentMarks["url"])){
+                    $scheme = parse_url($recentMarks["url"], PHP_URL_SCHEME);
+                    $host = parse_url($recentMarks["url"], PHP_URL_HOST);
+                    $theURL = $scheme . "://" . $host;
+
+                    $catTitle = $userTools->getCatTitle($recentMarks["category"], $user->id);
+                    ?>
+
+                    <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
+                        <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
+                        <div class="desc">
+                            <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                            <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
+                            <p class="addLeftMargin note"><?php echo $recentMarks["note"]; ?></p>
+                        </div>
+                    </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                    </a></li>
+
+
+                    <?php
+
+                }
+
                 else{
+                    ?>
 
-                    if(isset($recentMarks["url"])){
-                        $scheme = parse_url($recentMarks["url"], PHP_URL_SCHEME);
-                        $host = parse_url($recentMarks["url"], PHP_URL_HOST);
-                        $theURL = $scheme . "://" . $host;
-
-                        $catTitle = $userTools->getCatTitle($recentMarks["category"], $user->id);
-                        ?>
-
-                        <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
-                            <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
-                            <div class="desc">
-                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
-                                <p class="addLeftMargin note"><?php echo $recentMarks["note"]; ?></p>
-                            </div>
-                        </a><a href="removeMark.php?m=<?php echo $recentMarks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
-                        </a></li>
-
-
-                        <?php
-
-                    }
-
-                    else{
-                        ?>
-
-                        <li><a href="#add">
-                            <img src="images/default.png" />
-                            <h3 class="addLeftMargin">None</h3>
-                            <p class="addLeftMargin">Add a New Bookmark</p>
-                        </a></li>
+                    <li><a href="#add">
+                        <img src="images/default.png" />
+                        <h3 class="addLeftMargin">None</h3>
+                        <p class="addLeftMargin">Add a New Bookmark</p>
+                    </a></li>
 
 
 
-                        <?php
-                    }
+                    <?php
                 }
+            }
 
 
-                ?>
+            ?>
 
 
 
-            </ul>
-        </div><!--/content-primary -->
-
+        </ul>
 
 
     </div><!-- /content -->
@@ -258,159 +255,156 @@ else {
 
     <div data-role="content">
 
-        <div class="content-primary">
 
-            <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
+        <ul data-role="listview" data-split-icon="delete" data-split-theme="d">
 
-                <?php
-                if (isset($cat[0])) {
+            <?php
+            if (isset($cat[0])) {
 
-                    foreach ($cat as $key => $value)
-                    {
+                foreach ($cat as $key => $value)
+                {
 
-                        $catCount = $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);
-                        $marks = $userTools->getBookmarks($value["id"], $user->id);
+                    $catCount = $userTools->getCategoryCount( htmlentities($value["id"]), $user->id);
+                    $marks = $userTools->getBookmarks($value["id"], $user->id);
 
-                        ?>
+                    ?>
 
-                        <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
+                    <li data-role="list-divider"><?php echo htmlentities($value["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                         </span><span class="ui-icon ui-icon-plus ui-icon-shadow" ><a href="removeCat.php?c=<?php echo $value["id"];?>" data-ajax="false">Delete</a></span></li>
 
-                        <?php
+                    <?php
 
-                        if(isset($marks[0])) {
+                    if(isset($marks[0])) {
 
-                            foreach ($marks as $key => $value2)
-                            {
-                                $scheme = parse_url($value2["url"], PHP_URL_SCHEME);
-                                $host = parse_url($value2["url"], PHP_URL_HOST);
-                                $theURL2 = $scheme . "://" . $host;
+                        foreach ($marks as $key => $value2)
+                        {
+                            $scheme = parse_url($value2["url"], PHP_URL_SCHEME);
+                            $host = parse_url($value2["url"], PHP_URL_HOST);
+                            $theURL2 = $scheme . "://" . $host;
 
-                                ?>
+                            ?>
 
-                                <li><a href="<?php echo htmlentities($value2["url"]);?>">
-                                    <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
-                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
-                                </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
-                                </a></li>
+                            <li><a href="<?php echo htmlentities($value2["url"]);?>">
+                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
+                            </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a></li>
 
-                                <?php
-                            }
+                            <?php
                         }
-                        else{
-
-                            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            if(isset($marks["url"])){
-                                $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
-                                $host = parse_url($marks["url"], PHP_URL_HOST);
-                                $theURL2 = $scheme . "://" . $host;
-
-                                ?>
-
-                                <li><a href="<?php echo htmlentities($marks["url"]);?>">
-                                    <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
-                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
-                                </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
-                                </a></li>
-                                <?php
-
-                            }
-
-                            else{
-                                ?>
-                                <li><a href="#add" data-rel="dialog" data-transition="flip">
-                                    <h3 class="addLeftMargin">Empty Category</h3>
-                                    <p class="addLeftMargin note">Add A Bookmark</p>
-                                </a></li>
-                                <?php
-                            }
-                        }
-
-
                     }
+                    else{
+
+                        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        if(isset($marks["url"])){
+                            $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+                            $host = parse_url($marks["url"], PHP_URL_HOST);
+                            $theURL2 = $scheme . "://" . $host;
+
+                            ?>
+
+                            <li><a href="<?php echo htmlentities($marks["url"]);?>">
+                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
+                            </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a></li>
+                            <?php
+
+                        }
+
+                        else{
+                            ?>
+                            <li><a href="#add" data-rel="dialog" data-transition="flip">
+                                <h3 class="addLeftMargin">Empty Category</h3>
+                                <p class="addLeftMargin note">Add A Bookmark</p>
+                            </a></li>
+                            <?php
+                        }
+                    }
+
+
                 }
-                else
-                {
-                    if (isset($cat["id"])) {
+            }
+            else
+            {
+                if (isset($cat["id"])) {
 
-                        $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
-                        $marks = $userTools->getBookmarks($cat["id"], $user->id);
+                    $catCount = $userTools->getCategoryCount( htmlentities($cat["id"]), $user->id);
+                    $marks = $userTools->getBookmarks($cat["id"], $user->id);
 
-                        ?>
+                    ?>
 
-                        <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
+                    <li data-role="list-divider"><?php echo htmlentities($cat["title"])?><span class="ui-li-count">
                         <?php echo $catCount["total"];?>
                     </span><span class="ui-icon ui-icon-plus ui-icon-shadow" ><a href="removeCat.php?c=<?php echo $cat["id"];?>" data-ajax="false">Delete</a></span></li>
 
-                        <?php
+                    <?php
 
-                        if(isset($marks[0])) {
+                    if(isset($marks[0])) {
 
-                            foreach ($marks as $key => $value2)
-                            {
-                                $scheme = parse_url($value2["url"], PHP_URL_SCHEME);
-                                $host = parse_url($value2["url"], PHP_URL_HOST);
-                                $theURL2 = $scheme . "://" . $host;
+                        foreach ($marks as $key => $value2)
+                        {
+                            $scheme = parse_url($value2["url"], PHP_URL_SCHEME);
+                            $host = parse_url($value2["url"], PHP_URL_HOST);
+                            $theURL2 = $scheme . "://" . $host;
 
-                                ?>
+                            ?>
 
-                                <li><a href="<?php echo htmlentities($value2["url"]);?>">
-                                    <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
-                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
-                                </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
-                                </a></li>
+                            <li><a href="<?php echo htmlentities($value2["url"]);?>">
+                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
+                            </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a></li>
 
-                                <?php
-                            }
-                        }
-                        else{
-
-                            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            if(isset($marks["url"])){
-                                $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
-                                $host = parse_url($marks["url"], PHP_URL_HOST);
-                                $theURL2 = $scheme . "://" . $host;
-
-                                ?>
-
-                                <li><a href="<?php echo htmlentities($marks["url"]);?>">
-                                    <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
-                                    <h3 class="addLeftMargin"><?php echo $host;?></h3>
-                                    <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
-                                </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
-                                </a></li>
-                                <?php
-
-                            }
-
-                            else{
-                                ?>
-                                <div id="main" class="box grid_4">
-                                    <div class="content round_all clearfix">
-                                        <a href="#"><img class="screenshot" src="images/default.png" /></a>
-                                    </div>
-                                </div>
-
-
-                                <?php
-                            }
+                            <?php
                         }
                     }
-                    else {
-                        ?>
-                        <li>No Categories</li>
-                        <?php
+                    else{
+
+                        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        if(isset($marks["url"])){
+                            $scheme = parse_url($marks["url"], PHP_URL_SCHEME);
+                            $host = parse_url($marks["url"], PHP_URL_HOST);
+                            $theURL2 = $scheme . "://" . $host;
+
+                            ?>
+
+                            <li><a href="<?php echo htmlentities($marks["url"]);?>">
+                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <h3 class="addLeftMargin"><?php echo $host;?></h3>
+                                <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
+                            </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
+                            </a></li>
+                            <?php
+
+                        }
+
+                        else{
+                            ?>
+                            <div id="main" class="box grid_4">
+                                <div class="content round_all clearfix">
+                                    <a href="#"><img class="screenshot" src="images/default.png" /></a>
+                                </div>
+                            </div>
+
+
+                            <?php
+                        }
                     }
                 }
-                ?>
+                else {
+                    ?>
+                    <li>No Categories</li>
+                    <?php
+                }
+            }
+            ?>
 
-            </ul>
-
-        </div>
+        </ul>
 
     </div><!-- /content -->
 
