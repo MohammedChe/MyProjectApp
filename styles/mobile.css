@@ -68,6 +68,10 @@ label.error {
     float: none;
 }
 
+.screenshot {
+    height: 200px;
+}
+
 @media screen and (orientation: portrait){
     label.error { margin-left: 0; display: block; }
 }
@@ -84,6 +88,14 @@ label.error {
 
     .desc{
         margin-top: -10px;
+    }
+
+    .addLeftMargin{
+        margin-left: 0px;
+    }
+
+    .addRightMargin{
+        margin-left: 0px;
     }
 }
 

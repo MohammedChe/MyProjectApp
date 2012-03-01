@@ -163,7 +163,7 @@ else {
 
 
                     <li><a href="<?php echo htmlentities($value["url"]);?>">
-                        <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
+                        <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
                         <div class="desc">
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
@@ -186,7 +186,7 @@ else {
                     ?>
 
                     <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
-                        <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
+                        <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
                         <div class="desc">
                             <h3 class="addLeftMargin"><?php echo $host;?></h3>
                             <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
@@ -286,7 +286,7 @@ else {
                             ?>
 
                             <li><a href="<?php echo htmlentities($value2["url"]);?>">
-                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
                             </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
@@ -306,7 +306,7 @@ else {
                             ?>
 
                             <li><a href="<?php echo htmlentities($marks["url"]);?>">
-                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
                             </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
@@ -354,7 +354,7 @@ else {
                             ?>
 
                             <li><a href="<?php echo htmlentities($value2["url"]);?>">
-                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $value2["note"]; ?></p>
                             </a><a href="removeMark.php?m=<?php echo $value2["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
@@ -374,7 +374,7 @@ else {
                             ?>
 
                             <li><a href="<?php echo htmlentities($marks["url"]);?>">
-                                <img src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
+                                <img  class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL2;?>" />
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin note"><?php echo $marks["note"]; ?></p>
                             </a><a href="removeMark.php?m=<?php echo $marks["id"]; ?>" data-transition="slideup" data-ajax="false">Delete
