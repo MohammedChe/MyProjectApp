@@ -8,16 +8,16 @@
     margin-left: 10px;
 }
 
+.desc{
+    margin-top: -10px;
+}
+
 .note{
     font-style: italic;
 }
 
 .rightSide{
     float: right;
-}
-
-.screenshot img{
-    margin-bottom: -10px;
 }
 
 .label{
