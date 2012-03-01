@@ -164,7 +164,7 @@ else {
 
 
                         <li><a href="<?php echo htmlentities($value["url"]);?>">
-                            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
+                            <img class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
                             <div class="desc">
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
@@ -187,7 +187,7 @@ else {
                         ?>
 
                         <li><a href="<?php echo htmlentities($recentMarks["url"]);?>">
-                            <img src="http://immediatenet.com/t/fs?Size=800x600&URL=<?php echo $theURL;?>" />
+                            <img class="screenshot" src="http://immediatenet.com/t/l?Size=800x600&URL=<?php echo $theURL;?>" />
                             <div class="desc">
                                 <h3 class="addLeftMargin"><?php echo $host;?></h3>
                                 <p class="addLeftMargin rightSide"><?php echo $catTitle["title"]; ?></p>
@@ -448,8 +448,8 @@ else {
             <p class="smallText">You can also add a note with your bookmark to remind you why you saved it.</p>
 
             <div data-role="fieldcontain">
-                <label for="url">Save URL:</label>
-                <input class="required" type="text" name="url" id="url" value=""  />
+                <label class="label" for="url">Save URL:</label>
+                <input class="label required" type="text" name="url" id="url" value=""  />
 
                 <?php
                 if(!empty($errorMark)){
@@ -462,8 +462,8 @@ else {
                 <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
 
-                <label for="select_choice_a" class="select">In Category:</label>
-                <select class="required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
+                <label class="label" for="select_choice_a" class="select">In Category:</label>
+                <select class="label required" name="select_choice_a" id="select_choice_a" data-native-menu="false">
                     <option>Categories</option>
                     <?php
                     if (isset($cat[0])) {
@@ -481,34 +481,16 @@ else {
                 </select>
 
 
-                <label for="cat">Or Add New:</label>
-                <input type="text" name="cat" id="cat" value=""  />
+                <label class="label" for="cat">Or Add New:</label>
+                <input class="label" type="text" name="cat" id="cat" value=""  />
 
-                <label for="note">Note:</label>
-                <input type="text" name="note" id="note" value=""  />
+                <label class="label" for="note">Note:</label>
+                <input class="label" type="text" name="note" id="note" value=""  />
                 <input type="hidden" value="<?php echo $user->id; ?>" name="owner"/>
-                <button type="submit" name="submit-form2" >Save</button>
+                <button class="label" type="submit" name="submit-form2" >Save</button>
             </div>
 
         </form>
-        <!--
-        <div class="content-primary">
-            <form id="formCat" method="post" class="validate" data-ajax="false">
-
-                <h2>Add Category</h2>
-
-                <p>Enter a title for your new category.</p>
-
-                <div data-role="fieldcontain">
-                    <label for="title">Title:</label>
-                    <input type="text" class="required" name="title" id="title" />
-                    <input type="hidden" value="<?php //echo $user->id; ?>" name="owner"/>
-                    <button type="submit" name="submit-form3"  >Add</button>
-                </div>
-            </form>
-
-        </div>
--->
     </div><!-- /content -->
 
     <div data-role="footer">

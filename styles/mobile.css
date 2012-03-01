@@ -16,10 +16,11 @@
     float: right;
 }
 
-.desc{
+.screenshot img{
+    margin-bottom: -10px;
 }
 
-label{
+.label{
     margin-bottom: 10px;
 }
 
