@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/classes/Bookmark.class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/classes/Category.class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/classes/DB.class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/classes/User.class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/classes/UserTools.class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/includes/global.inc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/cabinet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/calendar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/clock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/folder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/padlock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/runner.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="Updated List Dividers">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/addBookmark.php" afterPath="$PROJECT_DIR$/app/addBookmark.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/addCategory.php" afterPath="$PROJECT_DIR$/app/addCategory.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/getBookmarks.php" afterPath="$PROJECT_DIR$/app/getBookmarks.php" />
@@ -24,9 +10,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login.php" afterPath="$PROJECT_DIR$/app/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/register.php" afterPath="$PROJECT_DIR$/app/register.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/removeMark.php" afterPath="$PROJECT_DIR$/app/removeMark.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeCat.php" afterPath="$PROJECT_DIR$/removeCat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/removeMark.php" afterPath="$PROJECT_DIR$/removeMark.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,10 +31,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="removeMark.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/removeMark.php">
+      <file leaf-file-name="addBookmark.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/addBookmark.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="23" selection-start="209" selection-end="209" vertical-scroll-proportion="0.3181818">
+            <state line="9" column="14" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addCategory.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/addCategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="14" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getBookmarks.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/getBookmarks.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getCategories.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/getCategories.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getRecent.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/getRecent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/register.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="removeMark.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/removeMark.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="14" selection-start="21" selection-end="21" vertical-scroll-proportion="0.047021944">
               <folding />
             </state>
           </provider>
@@ -80,6 +126,9 @@
         <option value="$PROJECT_DIR$/app/classes/DB.class.php" />
         <option value="$PROJECT_DIR$/app/classes/User.class.php" />
         <option value="$PROJECT_DIR$/app/classes/UserTools.class.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/removeCat.php" />
+        <option value="$PROJECT_DIR$/removeMark.php" />
         <option value="$PROJECT_DIR$/app/addBookmark.php" />
         <option value="$PROJECT_DIR$/app/addCategory.php" />
         <option value="$PROJECT_DIR$/app/getBookmarks.php" />
@@ -88,9 +137,6 @@
         <option value="$PROJECT_DIR$/app/login.php" />
         <option value="$PROJECT_DIR$/app/register.php" />
         <option value="$PROJECT_DIR$/app/removeMark.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/removeCat.php" />
-        <option value="$PROJECT_DIR$/removeMark.php" />
       </list>
     </option>
   </component>
@@ -142,6 +188,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyProjectApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,49 +378,9 @@
         <state line="93" column="23" selection-start="1704" selection-end="1704" vertical-scroll-proportion="0.5" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/addBookmark.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/addCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/getBookmarks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/getCategories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/getRecent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/global.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/removeMark.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
@@ -385,7 +405,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/removeMark.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="209" selection-end="209" vertical-scroll-proportion="0.3181818" />
+        <state line="14" column="23" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/addBookmark.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="14" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/addCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="14" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/getBookmarks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/getCategories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/getRecent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/removeMark.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="21" selection-end="21" vertical-scroll-proportion="0.047021944">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
