@@ -9,25 +9,23 @@
 
 require_once 'includes/global.inc.php';
 
-if (!isset($_SESSION['logged_in']))
-{
+if (!isset($_SESSION['logged_in'])) {
     header('Location: index.php');
 }
 
-else
-{
+else {
     $user = unserialize($_SESSION['user']);
 
+    
     $url = $_GET['u'];
     $cat = $_GET['c'];
     $note = $_GET['n'];
 
-    //initialize variables for form validation
+        //initialize variables for form validation
     $userTools = new UserTools();
     $checkedURL = $userTools->checkURL($url);
 
-    if (isset($checkedURL) && $checkedURL != false)
-    {
+    if (isset($checkedURL) && $checkedURL != false) {
         //prep the data for saving in a new user object
         $data['category'] = $cat;
         $data['owner'] = $user->id;
@@ -38,11 +36,11 @@ else
 
         if($newBookmark->save(true))
         {
-            echo "Bookmark Added";
+        	echo "Bookmark Added";
         }
         else
         {
-            echo "Sorry your bookmark was not added, Please try again later";
+        	echo "Sorry your bookmark was not added, Please try again later";
         }
 
     }

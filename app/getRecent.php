@@ -8,18 +8,17 @@
  */
 require_once 'includes/global.inc.php';
 
-if (!isset($_SESSION['logged_in']))
-{
+if (!isset($_SESSION['logged_in'])) {
     echo "not logged in";
 }
-else
-{
-    $user = unserialize($_SESSION['user']);
-    $userTools = new UserTools();
+else{
+	$user = unserialize($_SESSION['user']);
+	$userTools = new UserTools();
 
-    $recentMarks = $userTools->getRecentBookmarks(12, $user->id);
+	$recentMarks = $userTools->getRecentBookmarks(12, $user->id);
 
-    echo json_encode($recentMarks);
+	echo json_encode($recentMarks);
 }
+	    
 
 ?>
