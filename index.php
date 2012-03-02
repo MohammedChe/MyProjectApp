@@ -177,7 +177,7 @@ else{
                 }
             });
         });
-            </script>
+    </script>
 </head>
 <body>
 
@@ -249,9 +249,9 @@ else{
     <div data-role="content">
         <p>This is the register page</p>
         <?php
-    if(isset($errorReg)) {
-        echo '<div class="error">'. $errorReg . '</div>';
-    }?>
+        if(isset($errorReg)) {
+            echo '<div class="error">'. $errorReg . '</div>';
+        }?>
         <form id="formRegister" class="validate" action="" data-ajax="false"  method="post">
             <label for="email">Email:</label>
             <input type="text" class="required email" name="email" id="email" value=""  />
