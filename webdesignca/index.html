@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/media-queries.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<title>My News Site</title>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$(window).load(function () {
+		smartColumns();
+		$("div.story").hide();
+	});
+	
+	
+//	$("div.block").click(function() {
+//		$(this).find("div.story").slideToggle();
+//		return false; 
+//	});
+	
+	
+	$('a[href^="http://"]')	.attr({ target: "_blank" });
+
+	function smartColumns() {
+		
+		$("ul.column").css({ 'width' : "100%"});
+		
+		var colWrap = $("ul.column").width();
+		var colNum = Math.floor(colWrap / 300);
+		var colFixed = Math.floor(colWrap / colNum);
+		
+		$("ul.column").css({ 'width' : colWrap});
+		$("ul.column li").css({ 'width' : colFixed});
+		
+		//$("#shadow").hide();
+
+	}	
+	
+
+	$(window).resize(function () {
+		smartColumns();
+		$("div.bigBlock").removeClass("right");
+
+				
+	}); 
+	
+	$("#shadow").click(function () {
+		$("#shadow").hide();
+		//$("div.bigBlock").css("background","#fff");
+		$("div.block").removeClass("bigBlock");
+		$("div.story").hide("fast");
+		$('header').css("color","#2a2a2a");
+		$('.category').css("color","#2a2a2a");
+		
+	});
+	 
+
+$("div.block").click(function () {
+	
+	//var w = "" + (300) + "px";
+	
+	if($(this).hasClass('bigBlock'))
+	{
+		//$(this).find("div.story").hide("fast");
+//		$(this).removeClass("right");
+//		$(this).removeClass('bigBlock');
+//		$("#shadow").hide();
+//		$('header').css("color","#2a2a2a");
+//		$('.category').css("color","#2a2a2a");
+		
+		
+	//	$(this).css("background","#fff");
+		
+	}
+	
+	else
+	{
+		$("div.bigBlock").removeClass("right");
+		$("div.block").find("div.story").hide("fast");
+		$("div.block").removeClass("bigBlock");
+		
+		$(this).find("div.story").show("fast");	
+      	$(this).addClass("bigBlock");
+		
+		$('header').css("color","#CCC");
+		$('.category').css("color","#CCC");
+		$("#shadow").css("height", ($(document).height()+10)).show();
+		//This finds the block that is furthest right and adds a "right:10px"
+		//so that when the user clicks on it they wont need to scroll to the right to read
+		offset=$(this).offset();
+   		offsetRight=$(window).width()-$(this).width()-offset.left;
+		
+   		if (offsetRight<80)
+		{ 
+			$("div.bigBlock").addClass("right");
+		}
+   		else 
+		{ 	
+		}
+					
+	}
+	
+		$('html, body').animate({ scrollTop: ($(this).offset().top -70) }, 'slow');  
+
+ });
+
+});
+
+</script>
+</head>
+
+<body>
+<div id="container">
+  <header class="showIt">Just News</header>
+  <article id="nav"> <a href="#" class="menu slideNav showBackColor">Headlines</a> <a href="sports.html" class="menu slideNav hideBackColor">Sports</a> <a href="#" class="menu slideNav hideBackColor">Business</a> <a href="#" class="menu slideNav hideBackColor">Finance</a> <a href="#" class="menu slideNav hideBackColor">Society</a> <a href="#" class="menu slideNav hideBackColor">Culture</a> <a href="#" class="menu slideNav hideBackColor">Life</a> </article>
+  <div class="spacer";>&nbsp;</div>
+  <h1 id="sports" class="category showIt">Sports</h1>
+  <ul id="columns" class="column">
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Uefa fine Celtic over illicit chanting</h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> Soccer </span> <span class="author"> John Stack </span> <span class="date"> 10 jan 2011 </span> </div>
+        <div class="summary">
+        <p> CELTIC HAVE BEEN HIT with a fine of €15,000 after their fans were reported for "illicit chanting" during the Europa League match against Rennes last month.
+          
+          Uefa's control and disciplinary panel imposed the fine after the match delegate was informed of pro-IRA chanting by the Strathclyde police match commander on November 3rd.
+          
+          The fine was announced by the European governing body this afternoon after a decision was taken on Friday.
+          
+          Celtic expressed their surprise at the charge when it was announced last month and said they would cooperate fully with any investigation. </p>
+          </div>
+        <div class="story">
+          <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        <div class="story">
+          <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        <div class="story">
+          <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        <div class="story">
+          <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        <div class="story">
+          <p> Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis 
+            Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="clear";>&nbsp;</div>
+  <div class="spacer";>&nbsp;</div>
+  <h1 id="business" class="category showIt">Business</h1>
+  <ul id="columns" class="column">
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+  </ul>
+  <div class="clear";>&nbsp;</div>
+  <div class="spacer";>&nbsp;</div>
+</div>
+<div id="shadow"></div>
+</body>
+</html>

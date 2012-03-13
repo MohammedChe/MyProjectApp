@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/media-queries.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+<title>My News Site</title>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$(window).load(function () {
+		smartColumns();
+		$("div.story").hide();
+	});
+	
+	
+//	$("div.block").click(function() {
+//		$(this).find("div.story").slideToggle();
+//		return false; 
+//	});
+	
+	
+	$('a[href^="http://"]')	.attr({ target: "_blank" });
+
+	function smartColumns() {
+		
+		$("ul.column").css({ 'width' : "100%"});
+		
+		var colWrap = $("ul.column").width();
+		var colNum = Math.floor(colWrap / 300);
+		var colFixed = Math.floor(colWrap / colNum);
+		
+		$("ul.column").css({ 'width' : colWrap});
+		$("ul.column li").css({ 'width' : colFixed});
+		
+		//$("#shadow").hide();
+
+	}	
+	
+
+	$(window).resize(function () {
+		smartColumns();
+		$("div.bigBlock").removeClass("right");
+
+				
+	}); 
+	
+	$("#shadow").click(function () {
+		$("#shadow").hide();
+		//$("div.bigBlock").css("background","#fff");
+		$("div.block").removeClass("bigBlock");
+		$("div.story").hide("fast");
+		$('header').css("color","#2a2a2a");
+		$('.category').css("color","#2a2a2a");
+		
+	});
+	 
+
+$("div.block").click(function () {
+	
+	//var w = "" + (300) + "px";
+	
+	if($(this).hasClass('bigBlock'))
+	{
+		//$(this).find("div.story").hide("fast");
+//		$(this).removeClass("right");
+//		$(this).removeClass('bigBlock');
+//		$("#shadow").hide();
+//		$('header').css("color","#2a2a2a");
+//		$('.category').css("color","#2a2a2a");
+		
+		
+	//	$(this).css("background","#fff");
+		
+	}
+	
+	else
+	{
+		$("div.bigBlock").removeClass("right");
+		$("div.block").find("div.story").hide("fast");
+		$("div.block").removeClass("bigBlock");
+		
+		$(this).find("div.story").show("fast");	
+      	$(this).addClass("bigBlock");
+		
+		$('header').css("color","#CCC");
+		$('.category').css("color","#CCC");
+		$("#shadow").css("height", ($(document).height()+10)).show();
+		offset=$(this).offset();
+   		offsetRight=$(window).width()-$(this).width()-offset.left;
+		
+   		if (offsetRight<80)
+		{ 
+			$("div.bigBlock").addClass("right");
+		}
+   		else 
+		{ 	
+		}
+					
+	}
+	
+		$('html, body').animate({ scrollTop: ($(this).offset().top -70) }, 'slow');  
+
+ });
+
+});
+
+</script>
+</head>
+
+<body>
+<div id="container">
+  <header class="showIt">Just News</header>
+  <article id="nav"> <a href="index.html" class="menu slideNav hideBackColor">Headlines</a> <a href="#" class="menu slideNav showBackColor">Sports</a> <a href="#" class="menu slideNav hideBackColor">Business</a> <a href="#" class="menu slideNav hideBackColor">Finance</a> <a href="#" class="menu slideNav hideBackColor">Society</a> <a href="#" class="menu slideNav hideBackColor">Culture</a> <a href="#" class="menu slideNav hideBackColor">Life</a> </article>
+  <div class="spacer";>&nbsp;</div>
+  <h1 id="sports" class="category showIt">Soccer</h1>
+  <ul id="columns" class="column">
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>O'Neill, Rovers and Spurs take final bow</h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> Soccer </span> <span class="author"> John Stack </span> <span class="date"> 10 jan 2011 </span> </div>
+        <div class="summary">
+        <p> SHAMROCK ROVERS 0 TOTTENHAM 4: Nobody left Tallaght Stadium happy this evening, after Michael O'Neill's final game in charge of Shamrock Rovers ended in a 4-0 defeat to Spurs, whose efforts were rendered obsolete by the 1-1 draw between PAOK Salonika and Rubin Kazan. For Rovers, it means ending an historic campaign and O'Neill's tenure with no points from their six group games, but the manager and players were applauded off having at least scored in four of those games and not rolled over in any. They were unlucky not to score tonight, as well, as they chased a three-goal deficit in the second half. They'll feel there should have been a sending off and a penalty in separate incidents,</p>
+          </div>
+        <div class="story">
+          <p> 
+          but the result was never in doubt.
+
+Spurs scored three in 16 first half minutes to lay the foundation through Steven Pienaar, Andros Townsend and Jermain Defoe, while Harry Kane added a fourth in injury time.
+
+"Disappointed with the game never like getting beat and we were beaten well tonight," O'Neill told e3 afterwards, adding he'll remember his time in Tallaght &ldquo;fondly&rdquo;.
+
+O'Neill insisted his differences with the club were not because he was demanding "vast sums of money to invest in the team", but suggested improving on this landmark season will be difficult if the money isn't there.
+
+<span class="bigger quote">&ldquo;</span>At this level of football it's about the quality of individuals on the pitch and that's shone through, not just today but throughout the campaign.<span class="bigger quote">&rdquo;</span>
+          </p>
+          <p> 
+           <span class="bigger quote">&ldquo;</span>The reality of the situation is that if we had players who can compete with these players on a consistent level they wouldn't be here.<span class="bigger quote">&rdquo;</span>
+A Tottenham team containing nine changes started the half rustily, and Rovers looked comfortable early on. Ken Oman fired wide before a mix-up between Younes Kaboul and Carlo Cudicini almost allowed the Irish champions in.
+
+Richard Brush was barely tested until Danny Rose's miscued shot flew goalwards and the Rovers goalkeeper back-tracked to tip on to the crossbar with 25
+
+minutes gone. The move seemed to spark Tottenham in to life and they started to play with more confidence.
+
+Pienaar helped them take the lead just before the half hour when he was given space in the box and fired into the far corner with a deflected effort from 18 yards.
+          </p>
+          <a href="#"><img src="images/fb.png" width="40" height="40" alt="Facebook" /></a><a href="#"><img src="images/tw.png" width="40" height="40" alt="Twitter" /></a>
+        </div>
+      </div>
+    </li>
+        <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>Fulham crash not so bad</h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> Soccer </span> <span class="author"> Tim Stack </span> <span class="date"> 10 jan 2011 </span> </div>
+        <div class="summary">
+        <p> MARTIN JOL ATTEMPTED TO PUT A positive spin on things after Fulham's untimely exit from the Europa League on Wednesday night.
+
+The Cottagers crashed out of Europe after substitute Djiby Fall secured Odense a 2-2 draw deep into stoppage time.
+
+Wisla Krakow finished second in Group K as a result and Jol is now hoping Fulham can improve their Premier League form.
+
+<span class="bigger quote">&ldquo;</span>It is awful to go out of the competition in the way we did but hopefully we will gain something from the fact we don't have to play these Thursday matches,<span class="bigger quote">&rdquo;</span> he said.
+
+"I think it is a big blow for the club but every disadvantage has an advantage.</p>
+          </div>
+        <div class="story">
+          <p> 
+          There were positive things in the first half, like how much we put them under pressure and the players that made the difference, like [Kerim] Frei with a cross and a goal.
+
+<span class="bigger quote">&ldquo;</span>In the second half our best players were probably almost worn out. They were tired.<span class="bigger quote">&rdquo;</span>
+
+<span class="bigger quote">&ldquo;</span>It is probably the 30th game for a few of them and that is not an excuse because we are a team that can defend a lead.<span class="bigger quote">&rdquo;</span>
+
+<span class="bigger quote">&ldquo;</span>We were 2-1 up and then 30 seconds from the end we did not have the cleverness or experience to keep it in their half.<span class="bigger quote">&rdquo;</span>
+</p>
+<p>
+The west Londoners' safe passage seemed all but secured at the interval after two goals in four first-half minutes through Clint Dempsey and Frei.
+
+However, Fulham capitulated in the second period as Hans Henrik Andreasen's low free-kick and Fall's last-gasp header saw them drop out of the competition.
+
+<span class="bigger quote">&ldquo;</span>We had so many players in there that wanted to do well,<span class="bigger quote">&rdquo;</span> Jol said.
+
+"Bairdy (Chris Baird), [Marcel] Gecov, Kerim Frei and even Mousa Dembele did everything in the first half.
+</p>
+<p>
+"At the back, Aaron Hughes got his chance again so they were passionate to do well.
+
+"It was more that we could not pressurise them in the second half and they scored pretty quickly to make it 2-1.
+
+"And, of course, you are caught in two minds whether to hold back or look for the third one. That is always a problem in football."
+
+Fulham's exit from the Europa League compounded a difficult day for Jol, who earlier saw goalkeeper Mark Schwarzer ruled out for up to six weeks after suffering a compression injury to his thoracic spine.
+</p>
+<p>
+While Jol was left ruing a miserable day, Odense manager Henrik Clausen was delighted by his side's performance at Craven Cottage.
+
+"I have to say Fulham looked very sharp in the first half and we had trouble with their deep balls and play down the middle," he said.
+
+"But without doing that much different in the second half and scoring through the only two real chances we had, we managed to get a draw.
+
+"I was very pleased with the performance from my players."
+           </p>
+          <a href="#"><img src="images/fb.png" width="40" height="40" alt="Facebook" /></a><a href="#"><img src="images/tw.png" width="40" height="40" alt="Twitter" /></a>
+        </div>
+      </div>
+    </li>
+     <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>O'Neill, Rovers and Spurs take final bow</h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> Soccer </span> <span class="author"> John Stack </span> <span class="date"> 10 jan 2011 </span> </div>
+        <div class="summary">
+        <p> SHAMROCK ROVERS 0 TOTTENHAM 4: Nobody left Tallaght Stadium happy this evening, after Michael O'Neill's final game in charge of Shamrock Rovers ended in a 4-0 defeat to Spurs, whose efforts were rendered obsolete by the 1-1 draw between PAOK Salonika and Rubin Kazan. For Rovers, it means ending an historic campaign and O'Neill's tenure with no points from their six group games, but the manager and players were applauded off having at least scored in four of those games and not rolled over in any. They were unlucky not to score tonight, as well, as they chased a three-goal deficit in the second half. They'll feel there should have been a sending off and a penalty in separate incidents,</p>
+          </div>
+        <div class="story">
+          <p> 
+          but the result was never in doubt.
+
+Spurs scored three in 16 first half minutes to lay the foundation through Steven Pienaar, Andros Townsend and Jermain Defoe, while Harry Kane added a fourth in injury time.
+
+"Disappointed with the game never like getting beat and we were beaten well tonight," O'Neill told e3 afterwards, adding he'll remember his time in Tallaght &ldquo;fondly&rdquo;.
+
+O'Neill insisted his differences with the club were not because he was demanding "vast sums of money to invest in the team", but suggested improving on this landmark season will be difficult if the money isn't there.
+
+<span class="bigger quote">&ldquo;</span>At this level of football it's about the quality of individuals on the pitch and that's shone through, not just today but throughout the campaign.<span class="bigger quote">&rdquo;</span>
+           </p>
+           <p> 
+           <span class="bigger quote">&ldquo;</span>The reality of the situation is that if we had players who can compete with these players on a consistent level they wouldn't be here.<span class="bigger quote">&rdquo;</span>
+A Tottenham team containing nine changes started the half rustily, and Rovers looked comfortable early on. Ken Oman fired wide before a mix-up between Younes Kaboul and Carlo Cudicini almost allowed the Irish champions in.
+
+Richard Brush was barely tested until Danny Rose's miscued shot flew goalwards and the Rovers goalkeeper back-tracked to tip on to the crossbar with 25
+
+minutes gone. The move seemed to spark Tottenham in to life and they started to play with more confidence.
+
+Pienaar helped them take the lead just before the half hour when he was given space in the box and fired into the far corner with a deflected effort from 18 yards.
+           </p>
+          <a href="#"><img src="images/fb.png" width="40" height="40" alt="Facebook" /></a><a href="#"><img src="images/tw.png" width="40" height="40" alt="Twitter" /></a>
+        </div>
+      </div>
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>
+          
+          </h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> 
+        
+         </span> 
+         <span class="author"> 
+         
+         </span> 
+         <span class="date"> 
+          
+         </span> 
+         </div>
+        <div class="summary">
+        <p> 
+        
+        </p>
+        </div>
+        <div class="story">
+          <p> 
+          
+          </p>
+        </div>
+      </div>
+    </li>
+     <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>
+          
+          </h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> 
+        
+         </span> 
+         <span class="author"> 
+         
+         </span> 
+         <span class="date"> 
+          
+         </span> 
+         </div>
+        <div class="summary">
+        <p> 
+        
+        </p>
+        </div>
+        <div class="story">
+          <p> 
+          
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div class="clear";>&nbsp;</div>
+  <div class="spacer";>&nbsp;</div>
+  <h1 id="business" class="category showIt">Rugby</h1>
+  <ul id="columns" class="column">
+    <li>
+      <div class="block sports">
+        <div class="heading showIt">
+          <h2>
+          
+          </h2>
+        </div>
+        <div class="dateAuthor showIt"> <span class="subCat"> 
+        
+         </span> 
+         <span class="author"> 
+         
+         </span> 
+         <span class="date"> 
+          
+         </span> 
+         </div>
+        <div class="summary">
+        <p> 
+        
+        </p>
+        </div>
+        <div class="story">
+          <p> 
+          
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+    <li>
+      <div class="block business">
+        <div class="heading showIt">
+          <h2>Too Much Tweet</h2>
+        </div>
+        Odio velit vulpes zelus elit euismod. Singularis abluo autem saepius tego quod letatio meus. Os, tamen, tincidunt facilisi laoreet consectetuer quis. Feugiat ille, indoles, turpis </div>
+    </li>
+  </ul>
+  <div class="clear";>&nbsp;</div>
+  <div class="spacer";>&nbsp;</div>
+</div>
+<div id="shadow"></div>
+</body>
+</html>
