@@ -203,8 +203,8 @@ else {
                 else{
                     ?>
 
-                    <li><a href="#add">
-                        <img src="images/default.png" />
+                    <li><a href="#add" data-rel="dialog" data-transition="flip">
+                        <img class="screenshot" src="images/default.png" />
                         <h3 class="addLeftMargin">None</h3>
                         <p class="addLeftMargin">Add a New Bookmark</p>
                     </a></li>
@@ -451,9 +451,6 @@ else {
                 }
 
                 ?>
-
-
-                <!--            <input type="button" onClick="PasteFromClipboard()" value="Paste" />-->
 
 
                 <label class="label" for="select_choice_a" class="select">In Category:</label>
