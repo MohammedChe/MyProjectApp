@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="Updated image">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
-    </list>
+    <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="Updated image" />
     <ignored path="MyProjectApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,7 +101,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="62" selection-start="6596" selection-end="6596" vertical-scroll-proportion="0.9500832">
+            <state line="191" column="45" selection-start="5999" selection-end="5999" vertical-scroll-proportion="0.47587353">
               <folding />
             </state>
           </provider>
@@ -440,7 +437,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="62" selection-start="6596" selection-end="6596" vertical-scroll-proportion="0.9500832">
+        <state line="191" column="45" selection-start="5999" selection-end="5999" vertical-scroll-proportion="0.47587353">
           <folding />
         </state>
       </provider>
