@@ -191,6 +191,9 @@ else{
     <div data-role="content">
 
         <div class="content-secondary">
+
+            <p>Welcome to MarkCloud, here you can save all your bookmarks in one place and access them from anywhere.</p>
+
             <div data-role="controlgroup">
                 <a href="#login" data-role="button">Login</a>
                 <a href="#register" data-role="button">Register</a>
@@ -218,7 +221,7 @@ else{
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>This is the login page</p>
+        <p>Please Login to Continue</p>
         <?php
         if(isset($error)) {
             echo '<div class="error">'. $error . '</div>';
@@ -247,7 +250,7 @@ else{
     </div><!-- /header -->
 
     <div data-role="content">
-        <p>This is the register page</p>
+        <p>Please Register to Continue</p>
         <?php
         if(isset($errorReg)) {
             echo '<div class="error">'. $errorReg . '</div>';
