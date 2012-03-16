@@ -27,7 +27,7 @@ else {
         $cat = $_POST['cat'];
         $note = $_POST['note'];
 
-        if(empty($cat)){
+        if(!isset($_POST['cat']) || empty($cat)){
             if (isset($_POST['select_choice_a']) && !empty($_POST['select_choice_a'])) {
                 $cat = $_POST['select_choice_a'];
             }
