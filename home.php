@@ -27,7 +27,12 @@ else {
         $note = $_POST['note'];
 
         if(empty($cat)){
-            $cat = $_POST['select_choice_a'];
+            if (isset($_POST['select_choice_a'])) {
+                $cat = $_POST['select_choice_a'];
+            }
+            else{
+                $errorMark = "Please select a category or create a new one.";
+            }
         }
         else
         {
