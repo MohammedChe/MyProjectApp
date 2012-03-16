@@ -17,6 +17,7 @@ else {
     $user = unserialize($_SESSION['user']);
 
     $errorMark = "";
+    $errorMark2 = "";
 
     if (isset($_POST['submit-form2'])) {
 
@@ -27,11 +28,11 @@ else {
         $note = $_POST['note'];
 
         if(empty($cat)){
-            if (isset($_POST['select_choice_a'])) {
+            if (isset($_POST['select_choice_a']) && !empty($_POST['select_choice_a'])) {
                 $cat = $_POST['select_choice_a'];
             }
             else{
-                $errorMark = "Please select a category or create a new one.";
+                $errorMark2 = "Please select a category or create a new one.";
             }
         }
         else
@@ -454,7 +455,6 @@ else {
                 if(!empty($errorMark)){
                     echo "<p class='error'>". $errorMark ."</p>";
                 }
-
                 ?>
 
 
@@ -476,6 +476,11 @@ else {
                     ?>
                 </select>
 
+                <?php
+                if(!empty($errorMark2)){
+                    echo "<p class='error'>". $errorMark2 ."</p>";
+                }
+                ?>
 
                 <label class="label" for="cat">Or Add New:</label>
                 <input class="label" type="text" name="cat" id="cat" value=""  />

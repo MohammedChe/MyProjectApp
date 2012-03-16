@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c949640e-eb9f-4f8a-af95-94e873a6fc0c" name="Default" comment="Updated image">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
     </list>
     <ignored path="MyProjectApp.iws" />
@@ -37,7 +36,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="75" selection-start="804" selection-end="804" vertical-scroll-proportion="0.036918137">
+            <state line="480" column="57" selection-start="18575" selection-end="18575" vertical-scroll-proportion="0.8555377">
               <folding />
             </state>
           </provider>
@@ -448,7 +447,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="75" selection-start="804" selection-end="804" vertical-scroll-proportion="0.036918137">
+        <state line="480" column="57" selection-start="18575" selection-end="18575" vertical-scroll-proportion="0.8555377">
           <folding />
         </state>
       </provider>
