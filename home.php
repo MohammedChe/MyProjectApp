@@ -17,7 +17,7 @@ else {
     $user = unserialize($_SESSION['user']);
 
     $errorMark = "";
-    $errorMark2 = "";
+    $success = true;
 
     if (isset($_POST['submit-form2'])) {
 
@@ -32,7 +32,8 @@ else {
                 $cat = $_POST['select_choice_a'];
             }
             else{
-                $errorMark2 = "Please select a category or create a new one.";
+                $errorMark = "Please select a category or create a new one.";
+                $success = false;
             }
         }
         else
@@ -46,31 +47,34 @@ else {
             $cat = $newCat->id;
         }
 
-        //initialize variables for form validation
-        $userTools = new UserTools();
+        if($success){
 
-        $checkedURL = $userTools->checkURL($url);
+            //initialize variables for form validation
+            $userTools = new UserTools();
 
-        if (isset($checkedURL) && $checkedURL != false) {
-            //prep the data for saving in a new user object
-            $data['category'] = $cat;
-            $data['owner'] = $owner;
-            $data['url'] = $checkedURL;
-            $data['note'] = $note;
-            //create the new user object
-            $newBookmark = new Bookmark($data);
+            $checkedURL = $userTools->checkURL($url);
 
-            //save the new user to the database
-            $newBookmark->save(true);
+            if (isset($checkedURL) && $checkedURL != false) {
+                //prep the data for saving in a new user object
+                $data['category'] = $cat;
+                $data['owner'] = $owner;
+                $data['url'] = $checkedURL;
+                $data['note'] = $note;
+                //create the new user object
+                $newBookmark = new Bookmark($data);
 
-            //redirect them to a welcome page
-            header('Location: home.php');
-            exit;
+                //save the new user to the database
+                $newBookmark->save(true);
 
-        }
-        else
-        {
-            $errorMark = "URL doesn't exist";
+                //redirect them to a welcome page
+                header('Location: home.php');
+                exit;
+
+            }
+            else
+            {
+                $errorMark = "URL doesn't exist";
+            }
         }
     }
 
@@ -475,12 +479,6 @@ else {
 
                     ?>
                 </select>
-
-                <?php
-                if(!empty($errorMark2)){
-                    echo "<p class='error'>". $errorMark2 ."</p>";
-                }
-                ?>
 
                 <label class="label" for="cat">Or Add New:</label>
                 <input class="label" type="text" name="cat" id="cat" value=""  />
