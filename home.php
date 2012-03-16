@@ -27,14 +27,16 @@ else {
         $cat = $_POST['cat'];
         $note = $_POST['note'];
 
-        if(!isset($_POST['cat']) || empty($cat)){
-            if (isset($_POST['select_choice_a']) && !empty($_POST['select_choice_a'])) {
+        if(!isset($_POST['cat'])){
+            if (isset($_POST['select_choice_a'])) {
                 $cat = $_POST['select_choice_a'];
             }
-            else{
-                $errorMark = "Please select a category or create a new one.";
+            else
+            {
+                $errorMark = "Please select a category or add a new one";
                 $success = false;
             }
+
         }
         else
         {
@@ -47,8 +49,8 @@ else {
             $cat = $newCat->id;
         }
 
-        if($success){
-
+        if($success)
+        {
             //initialize variables for form validation
             $userTools = new UserTools();
 
@@ -76,6 +78,8 @@ else {
                 $errorMark = "URL doesn't exist";
             }
         }
+
+
     }
 
 
@@ -459,6 +463,7 @@ else {
                 if(!empty($errorMark)){
                     echo "<p class='error'>". $errorMark ."</p>";
                 }
+
                 ?>
 
 
@@ -479,6 +484,7 @@ else {
 
                     ?>
                 </select>
+
 
                 <label class="label" for="cat">Or Add New:</label>
                 <input class="label" type="text" name="cat" id="cat" value=""  />

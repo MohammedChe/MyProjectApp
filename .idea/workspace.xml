@@ -36,7 +36,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="31" selection-start="622" selection-end="622" vertical-scroll-proportion="0.28892455">
+            <state line="36" column="33" selection-start="863" selection-end="880" vertical-scroll-proportion="0.3258427">
               <folding />
             </state>
           </provider>
@@ -63,7 +63,7 @@
       <file leaf-file-name="UserTools.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="5" selection-start="2047" selection-end="2206" vertical-scroll-proportion="0.0">
+            <state line="165" column="42" selection-start="3739" selection-end="3739" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -431,13 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="5" selection-start="2047" selection-end="2206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/DB.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="2" selection-start="992" selection-end="992" vertical-scroll-proportion="0.0">
@@ -445,9 +438,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/UserTools.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="42" selection-start="3739" selection-end="3739" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="31" selection-start="622" selection-end="622" vertical-scroll-proportion="0.28892455">
+        <state line="36" column="33" selection-start="863" selection-end="880" vertical-scroll-proportion="0.3258427">
           <folding />
         </state>
       </provider>
