@@ -27,12 +27,16 @@ a{
 	z-index: 21;		
 }
 
+ul{
+	list-style: none;
+}
+
 .logo_wrapper{
 	text-align: center;
 }
 
 .me{
-	margin-top: 30px;
+	margin-top: 40px;
 	text-align: center;
 }
 
