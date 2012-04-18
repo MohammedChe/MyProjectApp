@@ -1,5 +1,3 @@
-body {
-}
 
 .page{
 	background-image:url(../img/bg.png);
@@ -25,7 +23,6 @@ a{
 }
 
 .logo{
-	width: 136px;
 	margin-top: 0px;	
 	z-index: 21;		
 }
