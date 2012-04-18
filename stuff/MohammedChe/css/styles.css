@@ -338,9 +338,6 @@ nav li a.selected {
 	/* #Tablet (Portrait) width of 768px */  
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
 		
-		nav {
-			float: left;
-		}
 
 	}
 	
@@ -350,10 +347,6 @@ nav li a.selected {
 		
 		nav {
 			float: left;
-		}
-		
-		nav li {
-			display: block;
 		}
 		
  	}

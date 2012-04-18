@@ -1,0 +1,44 @@
+body {
+}
+
+.page{
+	background-image:url(../img/bg.png);
+	font-family: 'HabibiRegular', Arial, sans-serif;
+}
+
+p:first-child{
+	margin-top: 20px;
+}
+
+.header{
+	background-image:url(../img/header.png);
+	height: 60px;
+}
+
+.footer{
+	background-image:url(../img/header.png);
+	height: 50px;
+}
+
+a{
+	color: #088253;
+}
+
+.logo{
+	width: 136px;
+	margin-top: 0px;	
+	z-index: 21;		
+}
+
+.logo_wrapper{
+	text-align: center;
+	margin: auto;}
+
+.me{
+	text-align: center;
+	margin: auto;
+}
+
+.share{
+	margin-top: 20px;
+}
