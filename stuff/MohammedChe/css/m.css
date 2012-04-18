@@ -6,7 +6,7 @@ body {
 	font-family: 'HabibiRegular', Arial, sans-serif;
 }
 
-p:first-child{
+.tex{
 	margin-top: 20px;
 }
 
@@ -21,7 +21,7 @@ p:first-child{
 }
 
 a{
-	color: #088253;
+	color: #088253 !important;
 }
 
 .logo{
@@ -35,8 +35,8 @@ a{
 	margin: auto;}
 
 .me{
+	margin-top: 30px;
 	text-align: center;
-	margin: auto;
 }
 
 .share{
