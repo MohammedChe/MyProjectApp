@@ -1,0 +1,657 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mohammed Che's Website</title>
+    <meta name="description" content="Mohammed Che's Portfolio website, About Me, My skills and other cool stuff. ">
+    <meta name="author" content="Mohammed Cherbatji">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 
+    <!--css-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="all" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/960.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/portfolio.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css" />
+    <link href="css/tipsy.css" type="text/css" rel="stylesheet"/>
+
+
+    <script src="js/protovis.js" type="text/javascript"></script>
+    
+    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
+    
+    <script src="js/jquery.tipsy.js" type="text/javascript"></script>
+    <script src="js/tipsy.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" src="js/jquery.aw-showcase.min.js"></script>
+    
+	<script src="js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+	<script src="js/waypoints.min.js" type="text/javascript"></script>
+	<script src="js/navbar2.js" type="text/javascript"></script>
+	
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	
+	<script src="js/form.js"></script>
+	<script src="js/mobile.js" type="text/javascript"></script>
+
+    
+	<script>
+   	 	$(document).ready(function(){	 		
+   	 	
+   	 	    $('#myForm').html5form({
+            	allBrowsers : true,
+            	async : false,
+            	responseDiv : '#response',
+            	messages: 'en',
+            	method : 'GET',
+            	colorOn :'#6b6764',
+            	colorOff :'#088253'
+       		});
+       		
+       		
+       		$("#showcase").awShowcase(
+			{
+				content_width:			820,
+				content_height:			300,
+				fit_to_parent:			false,
+				auto:					false,
+				interval:				3000,
+				continuous:				false,
+				loading:				true,
+				tooltip_width:			200,
+				tooltip_icon_width:		32,
+				tooltip_icon_height:	32,
+				tooltip_offsetx:		18,
+				tooltip_offsety:		0,
+				arrows:					true,
+				buttons:				true,
+				btn_numbers:			false,
+				keybord_keys:			true,
+				mousetrace:				false, /* Trace x and y coordinates for the mouse */
+				pauseonover:			true,
+				stoponclick:			false,
+				transition:				'hslide', /* hslide/vslide/fade */
+				transition_delay:		0,
+				transition_speed:		500,
+				show_caption:			'onload', /* onload/onhover/show */
+				thumbnails:				false,
+				thumbnails_position:	'outside-last', /* outside-last/outside-first/inside-last/inside-first */
+				thumbnails_direction:	'vertical', /* vertical/horizontal */
+				thumbnails_slidex:		1, /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
+				dynamic_height:			false, /* For dynamic height to work in webkit you need to set the width and height of images in the source. Usually works to only set the dimension of the first slide in the showcase. */
+				speed_change:			true, /* Set to true to prevent users from swithing more then one slide at once. */
+				viewline:				false, /* If set to true content_width, thumbnails, transition and dynamic_height will be disabled. As for dynamic height you need to set the width and height of images in the source. */
+				custom_function:		null /* Define a custom function that runs on content change */
+			});
+			
+			
+			$("#myPic img")
+        		.mouseover(function() { 
+            		var src = $(this).attr("src").match(/[^\.]+/) + "2.jpg";
+            		$(this).attr("src", src);
+        		})
+        		.mouseout(function() {
+           			var src = $(this).attr("src").replace("2.jpg", ".jpg");
+            		$(this).attr("src", src);
+        		});
+        		
+        	$("#myForm")
+        		.mouseover(function() { 
+        			var src = $("#myPic2 img").attr("src").replace("2.jpg", "3.jpg");
+            		$("#myPic2 img").attr("src", src);
+        		})
+        		.mouseout(function() {
+           			var src = $("#myPic2 img").attr("src").replace("3.jpg", "2.jpg");
+            		$("#myPic2 img").attr("src", src);
+        		});
+        		
+        	$(".social")
+        		.mouseover(function() { 
+        			var src = $("#myPic2 img").attr("src").replace("2.jpg", "4.jpg");
+            		$("#myPic2 img").attr("src", src);
+        		})
+        		.mouseout(function() {
+           			var src = $("#myPic2 img").attr("src").replace("4.jpg", "2.jpg");
+            		$("#myPic2 img").attr("src", src);
+        		});
+        		
+        	$('.topBtn').click(function() {
+				$('body,html').animate({scrollTop:0},800);
+			});
+			
+			$('.con').click(function() {
+				goToByScroll("contact");
+			});
+			$('.port').click(function() {
+				goToByScroll("portfolio");
+			});
+			$('.abt').click(function() {
+				goToByScroll("about");
+			});
+			$('.cool').click(function() {
+				goToByScroll("stuff");
+			});
+			
+			
+			function goToByScroll(id){
+     		 	$('html,body').animate({scrollTop: $("#"+id).offset().top - 109},'slow');
+			}
+			
+			
+			
+
+  
+   	 	});
+   	 	
+   	 	function onSubmit(){
+   	 		var name = myForm.elements["name"].value;
+   	 		var email = myForm.elements["email"].value;
+   	 		var message = myForm.elements["comment"].value;
+   	 		
+   	 		if(name != 'Name' && email != 'Email Address' && message != 'Message...(250)'){
+   	 			var reply = "Thank You " + name +". I'l be in touch shortly.";
+   				alert(reply);
+   			}
+   			
+   		};
+   		
+	</script>
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+ 
+</head>
+<body>
+	<header id="mainHeader">
+		<div class="container_16 nav-container">   
+			<div id="logo" class="grid_4">
+				<a href="#" class="topBtn"><img alt="CHE" src="img/logo.png" width="161"></a>
+    		</div>
+       		<div class="grid_10 prefix_6">
+       			<nav>
+					<ul>
+						<li><a href="#about" class="selected">About Me</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact Me</a></li>
+						<li><a href="#stuff">Cool Stuff</a></li>			 
+					</ul>
+				</nav>
+			</div>
+		</div>	
+	</header>
+	
+	<div class="container_16 bg">
+		<div id="blank" class="grid_16">&nbsp;</div>
+		<div class="clear"></div>
+	
+		<section id="welcome" class="grid_16">
+			<article>
+				<header>
+					<hgroup>
+						<h1>WELCOME</h1>
+						<h2>Hey! I'm Mohammed Che.</h2>
+					</hrgroup>
+					<div class="dashed_line">
+					</div>
+				</header>
+				<div class="grid_8 alpha">
+					<p>
+						Welcome to my portfolio. I'm a web designer, developer and programmer. I design websites with an emphasis on simplicity, usability and beauty. Please feel free to look around. 
+						
+					</p>
+					<p>
+						You can see some of my latest work in the <a href="#" class="port">portfolio section</a>, 
+						learn more <a href="#" class="abt">about me</a> and my skillset or you can have a look at some <a href="#" class="cool">things I find interesting</a>. 
+						Or just skip all that cool stuff and <a href="#" class="con">contact me</a>.
+					</p>
+				</div>
+				<div id="myPic" class="grid_4 shadow_lite">
+					<img src="img/me.jpg" alt="Me" title="Me" />
+				</div>
+				<div class="grid_4 share omega">
+					<ul>
+       					<li>
+       						<iframe id="tweet-button" allowtransparency="true" frameborder="0" scrolling="no"
+            					src="http://platform.twitter.com/widgets/tweet_button.html?via=TheRealMoChe&amp;text=Check This Out&amp;count=horizontal"
+            					style="width:110px; height:20px;">
+            				</iframe>
+            			</li>
+            			<li>
+            				<g:plusone href="http://www.MohammedChe.com/" annotation="inline"></g:plusone>
+        				</li>
+        				<li>
+        					<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+							<script type="IN/Share" data-showzero="true" data-url="www.MohammedChe.com" data-counter="right"></script>    						
+       					</li>
+        				<li>
+							<iframe src="https://www.facebook.com/plugins/like.php?href=www.MohammedChe.com"
+       						 	scrolling="no" frameborder="0" show_faces="false"
+       						 	style="border:none; width:220px; height:80px">
+       						</iframe>       						
+       					</li>
+        			</ul>
+					
+				</div>
+				
+			</article>
+		</section>
+		
+		<div class="clear"></div>
+		<div class="spacer">&nbsp;</div>
+		<div class="clear"></div>
+		
+		<section id="about" class="grid_16 box">
+			<article>
+				<header>
+					<hgroup>
+						<h1>ABOUT ME</h1>
+						<h2>A little more about me.</h2>
+					</hrgroup>
+					<div class="dashed_line">
+					</div>
+				</header>
+				
+				
+				<div class="grid_7 alpha">
+					<p>
+						My name is Mohammed Che, a Web Designer/Developer/Programmer/Poet/ Songwriter/Rapper who is passionate about all of the above!
+					</p>
+					<p>
+						I’m an Irish-Syrian, based in the beautiful county Wexford. I have a degree in Multimedia Programming and I am currently studying for my honours degree in Multimedia Systems and Web Engineering. I have worked on all kinds of projects including websites, web apps, games, desktop apps and mobile apps. You can see some of my work below.
+					</p>
+					<p>
+						I'm always on the road to increase my knowledge bank and improve my skill set. Take a look at my skills in this cool graph.
+					</p>
+				</div>
+				
+				<h2 id="graph_title" class="grid_5 prefix_2">A cool graph displaying my skills</h2>		
+				<script type="text/javascript+protovis">
+				
+					var skills = ["HTML/CSS","JS/JQuery","PHP","JSP","ASP.NET","MySQL","XML & JSON","AS3","Java","Objective-C","C#"];
+					var labels = ["","Inexperienced","Poor","Average","Good","Expert"];
+					var tips = ["HTML5/CSS3","JS Ninja","PHP Is Cool","Good","Still Learning","Expert","Average","AS3 Is Cool","I Like Java","Obj-C Is Great","Yay C#"];
+
+					var data = [0.8,0.9,0.85,0.8,0.6,0.8,0.6,0.85,0.9,0.85,0.8],
+  	 	 				w = 400,
+    					h = 300,
+    					x = pv.Scale.linear(0, 1).range(0, w),
+    					y = pv.Scale.ordinal(pv.range(11)).splitBanded(0, h, 4/5);
+
+					var vis = new pv.Panel()
+    					.width(w)
+    					.height(h)
+    					.bottom(20)
+    					.left(75)
+    					.right(15)
+    					.top(20);
+    					
+
+					var bar = vis.add(pv.Bar)
+    					.data(data)
+    					.top(function() y(this.index))
+    					.height(y.range().band)
+    					.left(0)
+   						.width(x)
+   						.fillStyle('#088253')
+    					.title(function() tips[this.index])
+    					.event("mouseover", pv.Behavior.tipsy({gravity: "w", fade: true}));
+
+					bar.anchor("left").add(pv.Label)
+    					.textMargin(6)
+    					.textAlign("right")
+    					.text(function() skills[this.index]);
+
+					vis.add(pv.Rule)
+    					.data(pv.range(0, 2, .2))
+    					.left(function(d) Math.round(x(d)) - .5)
+    					.strokeStyle(function(d) d ? "rgba(60,60,60,.5)" : "#000")
+  						.add(pv.Rule)
+    					.bottom(0)
+    					.height(5)
+    					.strokeStyle("#000")
+  						.anchor("bottom").add(pv.Label)
+    					.text(function() labels[this.index]);
+    					
+    				vis.add(pv.Rule)
+   						.bottom(0.5)
+  						.add(pv.Rule)
+    					.bottom(.5)
+    					.width(5);
+
+					vis.render();
+    			</script>
+    			
+    			<div class="grid_9" id="graph">&nbsp;</div>
+			</article>
+		</section>
+		
+		<div class="clear"></div>
+		<div class="spacer">&nbsp;</div>
+		<div class="clear"></div>
+		
+		<section id="portfolio" class="grid_16">
+			<article>
+				<header>
+					<hgroup>
+						<h1>PORTFOLIO</h1>
+						<h2>A few of my most recent projects.</h2>
+						<h5><a id="awOnePageButton" href="#showcase"><span class="view-page">View As One Page</span><span class="view-slide">View As Slideshow</span></a></h5>
+					</hrgroup>
+					<div class="dashed_line">
+					</div>
+				</header>
+				<div class="grid_14 prefix_1 suffix_1 alpha">
+					<div id="showcase" class="showcase">
+						<div class="showcase-slide">
+							<div class="showcase-content">
+								<div class="showcase-content-wrapper">
+									<div class="grid_5 alpha"">
+				 						<h6 class="project_title">MyNotes iPhone app</h6>
+				 						<p>
+				 							This is a simple note taking app. 
+											You can create notes, edit notes, 
+											add an image to a note, categorise 
+											notes and of course delete notes. 
+				 						</p>
+				 						<p>
+											It’s a simple iPhone app that showcases 
+											some of the main aspects of iPhone 
+											development from View Controllers (tableviews, tabbars etc.) 
+											to Core Data.
+				 						</p>
+				 					</div>
+				 
+					 				<img class="grid_3 " src="img/portfolio/1.png" alt="MyNotes app" height="300px" />
+					 				<img class="grid_3" src="img/portfolio/3.png" alt="MyNotes app" height="300px" />
+					 				<img class="grid_3 omega" src="img/portfolio/2.png" alt="MyNotes app" height="300px" />
+								</div>
+							</div>
+							<div class="showcase-tooltips">
+								<a href="#" coords="560,230">
+									The notes are categorised, and each category is displayed in the tab bar.
+								</a>
+								<a href="#" coords="690,235">
+									This button displays the user's photos to allow them to add one with the note.
+								</a>
+								<a href="#" coords="350, 100">
+									Each note is displayed in a list.
+								</a>
+							</div>
+						</div>
+						<div class="showcase-slide">
+							<div class="showcase-content">
+								<div class="showcase-content-wrapper">
+									<div class="grid_5 alpha"">
+				 						<h6 class="project_title">Nalamo.com</h6>
+				 						<p>
+				 							Nalamo.com is not only a social networking website, 
+				 							it is also an online world where your actions and decisions 
+				 							within it affect how your homepage looks, how fellow Namolians 
+				 							treat you and your overall experience in Nalamo.  
+				 						</p>
+				 					</div>
+				 									 
+					 				<img class="grid_9 omega " src="img/portfolio/nal2.png" alt="Nalamo"  />
+								</div>
+							</div>
+						</div>
+						<div class="showcase-slide">
+							<div class="showcase-content">
+								<div class="showcase-content-wrapper">
+									<div class="grid_5 alpha"">
+				 						<h6 class="project_title">Just News</h6>
+				 						<p>
+				 							Just News is a typographic based responsive news site
+				 							The aim of this project was to create a news website with no graphics or color. 
+				 						</p>
+				 						<p>
+				 							The site is responsive which means that it will respond to the size of the browser. 
+				 							It does this by resizing some elements and bringing other elements closer together 
+				 							or by arranging them vertically. <a href="http://myprojectapp2.orchestra.io/webdesignca/index.html" target="_blank">Check it out</a>
+				 						</p>
+				 							
+				 					</div>
+				 					
+					 				<img class="grid_3 " src="img/portfolio/news2.png" alt="My News Site" height="300px" />
+				 					<img class="grid_6 omega " src="img/portfolio/news.png" alt="My News Site"  />
+					 				
+								</div>
+							</div>
+							<div class="showcase-tooltips">
+								<a href="#" coords="350, 100">
+									The website re-aligns and adjusts the elements automatically, depending on the size of the screen.
+								</a>
+							</div>
+						</div>
+						<div class="showcase-slide">
+							<div class="showcase-content">
+								<div class="showcase-content-wrapper">
+									<div class="grid_5 alpha"">
+				 						<h6 class="project_title">CloudMark</h6>
+				 						<p>
+				 							CloudMark is an application that allows you to create bookmarks and access them from anywhere with 
+				 							an internet connection and a web browser. 
+				 						</p>
+				 						<p>
+				 							I’ve developed an iOS Version, 
+				 							an Android Version and a Windows Phone 7 Version. The web app was created using JQuery 
+				 							Mobile. </br><a href="http://myprojectapp2.orchestra.io" target="_blank">Check it out</a>
+				 						</p>
+				 					</div>
+				 					
+					 				<img class="grid_3 " src="img/portfolio/web.png" alt="CloudMark" height="300px" />
+					 				<img class="grid_3 " src="img/portfolio/e3.png" alt="CloudMark" height="300px" />
+					 				<img class="grid_3 omega" src="img/portfolio/e2.png" alt="CloudMark" height="300px" />
+
+								</div>
+							</div>
+							<div class="showcase-tooltips">
+								<a href="#" coords="350, 100">
+									This is the web version. It runs on the device's web browser. The web app works on any modern smartphone.
+								</a>
+								<a href="#" coords="600, 155">
+									This is the iOS native version. It runs on the iPhone, iPod and iPad.
+								</a>
+								<a href="#" coords="793, 90">
+									This is the add screen on the iOS version. Users can add a bookmark or category in this section.
+								</a>
+							</div>
+						</div>
+						<div class="showcase-slide">
+							<div class="showcase-content">
+								<div class="showcase-content-wrapper">
+									<div class="grid_5 alpha"">
+				 						<h6 class="project_title">College Hoops</h6>
+				 						<p>
+				 							College Hoops is an interactive video created in flash. You can select a character, select their outfit and then try to score as many free throws as you can. 
+				 						</p>
+				 						<p>
+				 							The characters and objects in this game are real, a video is played or looped depending on your actions.
+				 						</p>
+				 					</div>
+					 				<img class="grid_9 omega" src="img/portfolio/hoops.png" alt="College Hoops - Street Edition" title="College Hoops - Street Edition" height="300px" />
+								</div>
+							</div>
+						</div>
+						<div class="showcase-slide">
+							<div class="showcase-content">
+								<div class="showcase-content-wrapper">
+									<div class="grid_5 alpha"">
+				 						<h6 class="project_title">The Solar System</h6>
+				 						<p>
+				 							The aim of this project was to create an educational flash application using a video made from 3D models. 
+				 						</p>
+				 						<p>
+				 							I created an interactive solar system that allows users to click on any planet and get interesting facts about it . 
+				 							The user can also choose if they want to hear a voice over while they view the planets.
+				 						</p>
+				 					</div>
+					 				<img class="grid_9 omega" src="img/portfolio/solar.png" alt="The Solar System" height="300px" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+		
+		<div class="clear"></div>
+		<div class="spacer">&nbsp;</div>
+		<div class="clear"></div>
+		
+		<section id="contact" class="grid_16 box">
+			<article>
+				<header>
+					<hgroup>
+						<h1>CONTACT ME</h1>
+						<h2>Here's a simple form for you to contact me.</h2>
+					</hrgroup>
+					<div class="dashed_line">
+					</div>
+				</header>
+				
+				
+				<div class="grid_6 alpha">
+					<form action="#" method="post" id="myForm">
+    					<fieldset>        
+        					<input type="text" name="name" id="name" title="Name" maxlength="60" placeholder="Name" autocomplete="off" required/>
+        
+        					<input type="email" name="email" id="email" title="Email Address" maxlength="40" placeholder="Email Address" autocomplete="off" required/>
+        
+        					<input type="url" name="website" id="website" title="Web Site" maxlength="40" placeholder="http://" autocomplete="off"/>
+		
+        					<textarea name="comment" id="comment" title="Message" cols="30" rows="5" maxlength="250" placeholder="Message...(250)" required>
+        					</textarea>
+        
+        					<input type="submit" value="Send" class="submit shadow_text" onClick="onSubmit()"/>
+   		 					<div id="response">&nbsp;</div>
+    					</fieldset>
+    
+    				</form>
+				</div>
+				<div id="myPic2" class="grid_5 shadow_lite">
+					<img src="img/me2.jpg" alt="Me" title="Me" />
+				</div>
+				
+				<div class="grid_4 omega">
+					<ul class="social">
+						<li class="follow">
+							<iframe id="follow-button" allowtransparency="true" frameborder="0" show_screen_name="true" scrolling="no"
+            					src="http://platform.twitter.com/widgets/follow_button.html?screen_name=TheRealMoChe"
+            					style="width:230px; height:20px;">
+            				</iframe>
+            			</li>
+						<li>
+							<iframe src="https://www.facebook.com/plugins/subscribe.php?href=https://www.facebook.com/MohammedChe&amp;show_faces=false&amp;appId=APP_ID" scrolling="no"frameborder="0" style="border:none; overflow:hidden; width:230px; height:40px;"allowTransparency="true">
+							</iframe>
+						</li> 
+						<li>
+							<a href="http://ie.linkedin.com/in/mohammedche">
+          						<img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Mohammed Cherbatji's profile on LinkedIn">
+    						</a>
+						</li> 
+						<li>
+							<script type="text/javascript">
+								window.___gcfg = {lang: 'en'};
+									(function() 
+									{var po = document.createElement("script");
+									po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+									var s = document.getElementsByTagName("script")[0];
+									s.parentNode.insertBefore(po, s);
+									})();
+							</script>
+							<div class="g-plus" data-href="https://plus.google.com/106285434752577723659?rel=publisher" data-width="230" data-height="69" data-theme="light"></div>
+						</li>
+						<li>
+							<iframe src="http://followgram.me/mohammedche/widget" style="height:27px;" frameborder="0"></iframe>
+						</li>
+						<li id="cv">
+							<a href="cv.pdf" target="_blank" class="cv_btn"><img src="img/cv.png" alt="My CV" height="25"/></a>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</article>
+		</section>
+		
+		<div class="clear"></div>
+		<div class="spacer">&nbsp;</div>
+		<div class="clear"></div>
+		
+		<section id="stuff" class="grid_16">
+			<article>
+				<header>
+					<hgroup>
+						<h1>COOL STUFF</h1>
+						<h2>Things i find interesting.</h2>
+					</hrgroup>
+					<div class="dashed_line">
+					</div>
+				</header>
+				<div class="grid_10 alpha">
+					<iframe src="http://player.vimeo.com/video/40479187?title=0&amp;byline=0&amp;portrait=0&amp;color=088253" width="640" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<p class="vid_title">A hologram of Tupac Live At Coachella 2012</p>
+				</div>
+				
+				<div class="grid_5 omega twitter">
+					<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+					<script>
+						new TWTR.Widget({
+  							version: 2,
+  							type: 'list',
+  							rpp: 30,
+  							interval: 30000,
+  							title: '',
+  							subject: 'Design Stuff',
+  							width: 'auto',
+  							height: 300,
+  							theme: {
+    							shell: {
+      								background: '#c2c2c2',
+      								color: '#383838'
+    							},
+    							tweets: {
+      								background: '#ffffff',
+      								color: '#383838',
+      								links: '#088253'
+    							}
+  							},
+  							features: {
+    							scrollbar: true,
+    							loop: false,
+    							live: true,
+    							behavior: 'all'
+  							}
+						}).render().setList('@imrogb', 'design').start();
+					</script>
+				</div>
+			</article>
+			<div id="insta" class="clear"></div>
+			<div class="small_spacer">&nbsp;</div>
+			<div class="clear"></div>
+			<aside>
+				<hgroup>
+					<h3><a href="#insta" >My Instagram</a></h3>
+					<h4>Follow me <a href="http://followgram.me/mohammedche" target="_blank">@MohammedChe</a>.</h4>
+				</hrgroup>
+				
+				<div class="grid_16 alpha">
+				</br>
+				<!-- SnapWidget -->				
+				<iframe src="http://snapwidget.com/in/?u=bW9oYW1tZWRjaGV8aW58MTI1fDd8Nnx8eWVzfDA=" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:945px; height: 810px" ></iframe>
+				</div>
+			</aside>
+		</section>
+		
+		<div class="clear"></div>
+		<div class="spacer">&nbsp;</div>
+		<div class="clear"></div>
+		<div class="spacer">&nbsp;</div>
+		<div class="clear"></div>		
+ 	</div>
+ 	
+ 	<footer class="shadow_text"> 
+ 		<h1>CHE</h1>		
+ 		<p>Copyright &copy; Mohammed Cherbatji 2012</p>
+ 		<a href="#" class="topBtn">Back to Top</a>
+ 	</footer>
+</body>
+</html>
